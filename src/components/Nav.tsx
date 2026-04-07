@@ -1,49 +1,65 @@
-import { useState, useEffect } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { useTranslation } from '../contexts/TranslationContext'
 
 const SECTIONS = ['hero', 'about', 'skills', 'projects', 'contact']
-
 const NAV_KEYS = ['#about', '#skills', '#projects', '#contact'] as const
+
 type NavKey = (typeof NAV_KEYS)[number]
 
 export default function Nav() {
-  const { language, toggleLanguage, t } = useTranslation()
+  const { t } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
 
-  // Scroll → blurred background
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60)
+    const onScroll = () => setScrolled(window.scrollY > 32)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // IntersectionObserver for active section
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id)
           }
         })
       },
-      { threshold: 0.35 }
+      { threshold: 0.4 },
     )
 
-    SECTIONS.forEach((id) => {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
+    SECTIONS.forEach(id => {
+      const element = document.getElementById(id)
+      if (element) {
+        observer.observe(element)
+      }
     })
 
     return () => observer.disconnect()
   }, [])
 
-  // Lock body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileOpen])
+
+  useEffect(() => {
+    if (!mobileOpen) {
+      return undefined
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setMobileOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
   }, [mobileOpen])
 
   const navLabels: Record<NavKey, string> = {
@@ -60,41 +76,49 @@ export default function Nav() {
     '#contact': 'contact',
   }
 
-  const handleNavClick = (href: NavKey) => {
+  const handleNavClick = (href: NavKey | '#hero') => {
     setMobileOpen(false)
-    const el = document.querySelector(href)
-    el?.scrollIntoView({ behavior: 'smooth' })
+    const element = document.querySelector(href)
+    element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
   return (
     <>
-      <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
+      <nav className={`nav ${scrolled ? 'scrolled' : ''}`} aria-label="Primary">
         <div className="nav-inner">
-          <a href="#hero" className="nav-logo">PS</a>
+          <button
+            type="button"
+            className="nav-logo"
+            onClick={() => handleNavClick('#hero')}
+            aria-label="Back to top"
+          >
+            PS
+          </button>
 
           <div className="nav-desktop">
-            {NAV_KEYS.map((key) => (
+            {NAV_KEYS.map(key => (
               <a
                 key={key}
                 href={key}
                 className={`nav-link ${activeSection === navIds[key] ? 'active' : ''}`}
-                onClick={(e) => {
-                  e.preventDefault()
+                aria-current={activeSection === navIds[key] ? 'page' : undefined}
+                onClick={event => {
+                  event.preventDefault()
                   handleNavClick(key)
                 }}
               >
                 {navLabels[key]}
               </a>
             ))}
-            <button className="nav-lang" onClick={toggleLanguage}>
-              {language === 'pt' ? 'EN' : 'PT'}
-            </button>
           </div>
 
           <button
+            type="button"
             className="nav-hamburger"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
+            onClick={() => setMobileOpen(value => !value)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
           >
             <span className={mobileOpen ? 'open' : ''} />
             <span className={mobileOpen ? 'open' : ''} />
@@ -103,25 +127,26 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
-      <div className={`mobile-overlay ${mobileOpen ? 'open' : ''}`}>
+      <div
+        id="mobile-nav"
+        className={`mobile-overlay ${mobileOpen ? 'open' : ''}`}
+        aria-hidden={!mobileOpen}
+      >
         <div className="mobile-inner">
-          {NAV_KEYS.map((key) => (
+          {NAV_KEYS.map(key => (
             <a
               key={key}
               href={key}
               className={`mobile-link ${activeSection === navIds[key] ? 'active' : ''}`}
-              onClick={(e) => {
-                e.preventDefault()
+              aria-current={activeSection === navIds[key] ? 'page' : undefined}
+              onClick={event => {
+                event.preventDefault()
                 handleNavClick(key)
               }}
             >
               {navLabels[key]}
             </a>
           ))}
-          <button className="mobile-lang" onClick={toggleLanguage}>
-            {language === 'pt' ? 'EN' : 'PT'}
-          </button>
         </div>
       </div>
     </>

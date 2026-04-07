@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 
-// Tipos para dados do GitHub
+// GitHub data types
 export interface GitHubUser {
   login: string;
   name: string;
@@ -17,6 +17,7 @@ export interface GitHubRepo {
   id: number;
   name: string;
   full_name: string;
+  fork: boolean;
   description: string | null;
   html_url: string;
   homepage: string | null;
@@ -47,6 +48,7 @@ interface GitHubContextType {
   stats: GitHubStats | null;
   loading: boolean;
   error: string | null;
+  refresh: () => Promise<void>;
   getRepoByName: (name: string) => GitHubRepo | undefined;
 }
 
@@ -54,13 +56,22 @@ const GitHubContext = createContext<GitHubContextType | undefined>(undefined);
 
 const GITHUB_USERNAME = 'Shizu0n';
 const CACHE_KEY = 'github_data_cache';
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutos
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+export const EXCLUDED_REPOS = ['e-commerce-api', 'ecommerce-api', 'gym-app', 'gymapp', 'gym-app-mobile'];
 
 interface CachedData {
   user: GitHubUser;
   repos: GitHubRepo[];
   timestamp: number;
 }
+
+const filterRepos = (repos: GitHubRepo[]): GitHubRepo[] => {
+  return repos.filter(repo =>
+    !repo.fork &&
+    !repo.name.startsWith('.') &&
+    !EXCLUDED_REPOS.includes(repo.name.toLowerCase()),
+  );
+};
 
 export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<GitHubUser | null>(null);
@@ -72,21 +83,21 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const calculateStats = (userData: GitHubUser, reposData: GitHubRepo[]): GitHubStats => {
     const totalStars = reposData.reduce((acc, repo) => acc + repo.stargazers_count, 0);
     const totalForks = reposData.reduce((acc, repo) => acc + repo.forks_count, 0);
-    
-    // Calcular linguagens mais usadas
+
+    // Calculate most used languages
     const languageCount: Record<string, number> = {};
     reposData.forEach(repo => {
       if (repo.language) {
         languageCount[repo.language] = (languageCount[repo.language] || 0) + 1;
       }
     });
-    
+
     const topLanguages = Object.entries(languageCount)
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count)
       .slice(0, 5);
 
-    // Repos mais recentes (ordenados por última atualização)
+    // Most recent repos (sorted by last update)
     const recentActivity = [...reposData]
       .sort((a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime())
       .slice(0, 5);
@@ -103,15 +114,16 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   };
 
   const fetchGitHubData = useCallback(async () => {
-    // Verificar cache
+    // Check cache
     const cached = localStorage.getItem(CACHE_KEY);
     if (cached) {
       try {
         const data: CachedData = JSON.parse(cached);
         if (Date.now() - data.timestamp < CACHE_DURATION) {
+          const filteredRepos = filterRepos(data.repos);
           setUser(data.user);
-          setRepos(data.repos);
-          setStats(calculateStats(data.user, data.repos));
+          setRepos(filteredRepos);
+          setStats(calculateStats(data.user, filteredRepos));
           setLoading(false);
           return;
         }
@@ -127,7 +139,7 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       // Fetch user data
       const userResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
       if (!userResponse.ok) {
-        throw new Error('Falha ao carregar dados do usuário');
+        throw new Error('Failed to load user data');
       }
       const userData: GitHubUser = await userResponse.json();
 
@@ -136,21 +148,18 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         `https://api.github.com/users/${GITHUB_USERNAME}/repos?per_page=100&sort=updated`,
       );
       if (!reposResponse.ok) {
-        throw new Error('Falha ao carregar repositórios');
+        throw new Error('Failed to load repositories');
       }
       const reposData: GitHubRepo[] = await reposResponse.json();
 
-      // Filtrar repos não-fork e públicos
-      const EXCLUDED_REPOS = ['e-commerce-api', 'ecommerce-api', 'gym-app', 'gymapp', 'gym-app-mobile'];
-      const filteredRepos = reposData.filter(repo =>
-        !repo.name.startsWith('.') && !EXCLUDED_REPOS.includes(repo.name.toLowerCase()),
-      );
+      // Filter non-fork and public repos
+      const filteredRepos = filterRepos(reposData);
 
       setUser(userData);
       setRepos(filteredRepos);
       setStats(calculateStats(userData, filteredRepos));
 
-      // Salvar no cache
+      // Save to cache
       const cacheData: CachedData = {
         user: userData,
         repos: filteredRepos,
@@ -159,14 +168,14 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       localStorage.setItem(CACHE_KEY, JSON.stringify(cacheData));
 
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erro ao carregar dados do GitHub');
+      setError(err instanceof Error ? err.message : 'Error loading GitHub data');
     } finally {
       setLoading(false);
     }
   }, []);
 
   const getRepoByName = (name: string): GitHubRepo | undefined => {
-    return repos.find(repo => 
+    return repos.find(repo =>
       repo.name.toLowerCase() === name.toLowerCase() ||
       repo.name.toLowerCase().replace(/-/g, '') === name.toLowerCase().replace(/-/g, ''),
     );
@@ -177,7 +186,7 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   }, [fetchGitHubData]);
 
   return (
-    <GitHubContext.Provider value={{ user, repos, stats, loading, error, getRepoByName }}>
+    <GitHubContext.Provider value={{ user, repos, stats, loading, error, refresh: fetchGitHubData, getRepoByName }}>
       {children}
     </GitHubContext.Provider>
   );

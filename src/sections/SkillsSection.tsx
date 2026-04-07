@@ -1,82 +1,84 @@
-import { useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
-import { useTranslation } from '../contexts/TranslationContext'
+﻿import { motion, type Variants } from 'framer-motion'
 
-const ROW_1 = [
-  'TypeScript', 'React', 'Node.js', 'NestJS', 'Ruby on Rails',
-  'PostgreSQL', 'Docker', 'REST APIs', 'JWT', 'Spring Boot',
+const CAPABILITIES = [
+  {
+    title: 'Front-end systems',
+    summary: 'React 19, TypeScript, Vite, Tailwind 4, and Framer Motion shaped into interfaces that feel calm but intentional.',
+  },
+  {
+    title: 'Back-end thinking',
+    summary: 'NestJS, Java, Spring Boot, relational data, and REST APIs built with clear rules and maintainable structure.',
+  },
+  {
+    title: 'Product delivery',
+    summary: 'Responsive layout systems, GitHub workflows, documentation, and implementation detail that holds up in production.',
+  },
 ]
 
-const ROW_2 = [
-  'Java', 'Kotlin', 'Python', 'Git', 'Vite',
-  'Tailwind', 'Framer Motion', 'Firebase', 'SQLite', 'Android',
+const STACK_LOOP = [
+  'React 19',
+  'TypeScript',
+  'Framer Motion',
+  'Editorial UI',
+  'API Architecture',
+  'Tailwind 4',
+  'Responsive Systems',
+  'GitHub',
 ]
+
+const reveal: Variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+}
 
 export default function SkillsSection() {
-  const { t } = useTranslation()
-  const ref = useRef<HTMLDivElement>(null)
-  const inView = useInView(ref, { once: true, margin: '-100px' })
-  const [paused, setPaused] = useState(false)
-
-  const pauseClass = paused ? 'skills-marquee-paused' : ''
-
   return (
-    <section id="skills" ref={ref} className="skills-section">
-      <div className="skills-inner">
-        {/* Decorative number */}
-        <span className="skills-deco-number" aria-hidden="true">
-          02
-        </span>
-
-        {/* Header */}
-        <motion.p
-          className="skills-label"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+    <section id="skills" className="skills-section">
+      <div className="skills-shell">
+        <motion.div
+          className="skills-header"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-80px' }}
+          variants={reveal}
         >
-          {t('skills.title').toUpperCase()}
-        </motion.p>
+          <p className="section-kicker">Act 03 / Capabilities</p>
+          <h2 className="section-title">
+            Design restraint, motion discipline, and full-stack execution working as one system.
+          </h2>
+          <p className="section-body">
+            Each layer has a single job: guide the eye, support the story, and keep the interface feeling deliberate instead of busy.
+          </p>
+        </motion.div>
 
-        <motion.h2
-          className="skills-headline"
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.1 }}
-        >
-          Tools I work{'\n'}
-          with daily&nbsp;<em>today.</em>
-        </motion.h2>
+        <div className="skills-columns">
+          {CAPABILITIES.map((capability, index) => (
+            <motion.article
+              key={capability.title}
+              className="skills-column"
+              initial={{ opacity: 0, y: 36 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.65, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <span className="skills-column-index">0{index + 1}</span>
+              <h3 className="skills-column-title">{capability.title}</h3>
+              <p className="skills-column-summary">{capability.summary}</p>
+            </motion.article>
+          ))}
+        </div>
 
-        <motion.hr
-          className="skills-rule"
-          initial={{ scaleX: 0 }}
-          animate={inView ? { scaleX: 1 } : {}}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        />
-
-        {/* Marquee rows */}
-        <div
-          className="skills-marquee-wrap"
-          onMouseEnter={() => setPaused(true)}
-          onMouseLeave={() => setPaused(false)}
-        >
-          {/* Row 1 — left */}
-          <div className={`skills-marquee skills-marquee--left ${pauseClass}`}>
-            <div className="skills-marquee-track">
-              {[...ROW_1, ...ROW_1].map((s, i) => (
-                <span key={`r1-${i}`} className="skills-tag">{s}</span>
-              ))}
-            </div>
-          </div>
-
-          {/* Row 2 — right */}
-          <div className={`skills-marquee skills-marquee--right ${pauseClass}`}>
-            <div className="skills-marquee-track">
-              {[...ROW_2, ...ROW_2].map((s, i) => (
-                <span key={`r2-${i}`} className="skills-tag">{s}</span>
-              ))}
-            </div>
+        <div className="skills-ticker" aria-label="Selected tools">
+          <div className="skills-ticker-track">
+            {[...STACK_LOOP, ...STACK_LOOP].map((item, index) => (
+              <span key={`${item}-${index}`} className="skills-ticker-item">
+                {item}
+              </span>
+            ))}
           </div>
         </div>
       </div>

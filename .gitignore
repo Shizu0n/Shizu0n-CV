@@ -31,3 +31,7 @@ dist-ssr
 # Claude
 .claude/
 CLAUDE.md
+.codex/
+AGENTS.md
+AI_SESSION_CACHE/
+.anthropic/

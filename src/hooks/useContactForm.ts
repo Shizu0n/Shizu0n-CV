@@ -1,119 +1,115 @@
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { FormData } from '../types';
+﻿import { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import type { FormData } from '../types'
 
-const CONTACT_EMAIL = 'paulosvtatibana@gmail.com';
+const CONTACT_EMAIL = 'paulosvtatibana@gmail.com'
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID'
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID'
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
 
-// EmailJS Configuration
-// Para configurar, crie uma conta em https://emailjs.com
-// e substitua estes valores pelas suas credenciais
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY';
+type SendStatus = 'idle' | 'sending' | 'success' | 'error'
 
-type SendStatus = 'idle' | 'sending' | 'success' | 'error';
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 export const useContactForm = () => {
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef<HTMLFormElement>(null)
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     subject: '',
     message: '',
-  });
-  const [copyButtonText, setCopyButtonText] = useState('Copiar email');
-  const [sendStatus, setSendStatus] = useState<SendStatus>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
+  })
+  const [sendStatus, setSendStatus] = useState<SendStatus>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    const { name, value } = event.target
+
+    setFormData(previous => ({
+      ...previous,
       [name]: value,
-    }));
-  };
+    }))
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const { name, subject, message } = formData;
+    if (sendStatus !== 'idle' || errorMessage) {
+      setSendStatus('idle')
+      setErrorMessage('')
+    }
+  }
 
-    if (!name.trim() || !message.trim()) {
-      setErrorMessage('Preencha seu nome e mensagem, por favor.');
-      setSendStatus('error');
-      setTimeout(() => {
-        setSendStatus('idle');
-        setErrorMessage('');
-      }, 3000);
-      return;
+  const resetStatusLater = (milliseconds: number) => {
+    window.setTimeout(() => {
+      setSendStatus('idle')
+      setErrorMessage('')
+    }, milliseconds)
+  }
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+
+    const name = formData.name.trim()
+    const email = formData.email.trim()
+    const subject = formData.subject.trim()
+    const message = formData.message.trim()
+
+    if (!name || !email || !message) {
+      setSendStatus('error')
+      setErrorMessage('Add your name, email, and message before sending.')
+      resetStatusLater(3500)
+      return
     }
 
-    // Verificar se EmailJS está configurado
-    const isEmailJSConfigured = 
-      EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID' && 
-      EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID' && 
-      EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY';
+    if (!EMAIL_PATTERN.test(email)) {
+      setSendStatus('error')
+      setErrorMessage('Your email looks incomplete. Double-check it and try again.')
+      resetStatusLater(3500)
+      return
+    }
+
+    const isEmailJSConfigured =
+      EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID' &&
+      EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID' &&
+      EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY'
 
     if (isEmailJSConfigured && formRef.current) {
-      // Usar EmailJS
-      setSendStatus('sending');
-      
+      setSendStatus('sending')
+      setErrorMessage('')
+
       try {
         await emailjs.sendForm(
           EMAILJS_SERVICE_ID,
           EMAILJS_TEMPLATE_ID,
           formRef.current,
           EMAILJS_PUBLIC_KEY,
-        );
-        
-        setSendStatus('success');
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        
-        setTimeout(() => {
-          setSendStatus('idle');
-        }, 3000);
+        )
+
+        setSendStatus('success')
+        setFormData({ name: '', email: '', subject: '', message: '' })
+        resetStatusLater(3200)
+        return
       } catch {
-        setSendStatus('error');
-        setErrorMessage('Erro ao enviar. Tente novamente ou use o email direto.');
-        
-        setTimeout(() => {
-          setSendStatus('idle');
-          setErrorMessage('');
-        }, 5000);
+        setSendStatus('error')
+        setErrorMessage('Message failed to send. Try again or use the direct email link.')
+        resetStatusLater(5000)
+        return
       }
-    } else {
-      // Fallback para mailto
-      const finalSubject = subject.trim() || 'Contato via portfólio';
-      const body = encodeURIComponent(
-        `Nome: ${name}\n\nMensagem:\n${message}\n\n---\nEnviado via portfólio`,
-      );
-      const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(finalSubject)}&body=${body}`;
-      window.location.href = mailto;
     }
-  };
 
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(CONTACT_EMAIL);
-      setCopyButtonText('Copiado!');
-      setTimeout(() => setCopyButtonText('Copiar email'), 1400);
-    } catch {
-      prompt('Copie este e-mail:', CONTACT_EMAIL);
-    }
-  };
-
-  const updateCopyButtonText = (text: string) => {
-    setCopyButtonText(text);
-  };
+    const finalSubject = subject || 'Contact via portfolio'
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nSent via portfolio`,
+    )
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(finalSubject)}&body=${body}`
+    window.location.href = mailto
+  }
 
   return {
     formRef,
     formData,
-    copyButtonText,
     sendStatus,
     errorMessage,
     handleInputChange,
     handleSubmit,
-    handleCopyEmail,
-    updateCopyButtonText,
-  };
-};
+  }
+}

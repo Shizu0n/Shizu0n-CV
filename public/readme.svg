@@ -20,7 +20,8 @@
         --color-link: #ffffffff;
         --color-link-active: #ffffffff;
         --gradient-start: #ffffff;
-        --gradient-end: #000000;
+        --gradient-mid: #888888;
+        --gradient-end: #ffffff;
 
         height: 400px;
         width: 100%;
@@ -29,7 +30,7 @@
         align-items: center;
         justify-content: center;
 
-        background-image: linear-gradient(135deg, #ffffff, #888888, #ffffff);
+        background-image: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
         border: 24px solid;
         border-color: var(--color-background);
       }
@@ -52,7 +53,7 @@
       }
       h1 a {
         display: block;
-        background: linear-gradient(90deg, #ffffff, #888888, #ffffff);
+        background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
@@ -119,13 +120,14 @@
 
       @media (prefers-color-scheme: light) {
         .body {
-          --color-main: #ffffffff;
-          --color-primary: #ffffffff;
-          --color-secondary: #ffffffff;
+          --color-main: #000000ff;
+          --color-primary: #000000ff;
+          --color-secondary: #000000ff;
           --color-background: #ffffff;
-          --color-link: #ffffffff;
-          --color-link-active: #ffffffff;
-          --gradient-start: #ffffff;
+          --color-link: #000000ff;
+          --color-link-active: #000000ff;
+          --gradient-start: #000000;
+          --gradient-mid: #777777;
           --gradient-end: #000000;
         }
       }
@@ -156,13 +158,13 @@
         </h1>
         <section class='items'>
           <ul>
-            <li>CS Student &#38; Full Stack Developer</li>
+            <li>Full Stack Developer &#38; CS Student</li>
           </ul>
           <ul>
-            <li>at <a href="https://shizu0n.vercel.app">Shizu0n</a></li>
+            <li>at UNIFOR</li>
           </ul>
           <ul>
-            <li><a href="mailto:paulosvtatibana@gmail.com" role="button"><span class='hi'>👋</span></a></li>
+            <li><span class='hi'>👋</span></li>
           </ul>
         </section>
       </div>

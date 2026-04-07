@@ -1,93 +1,132 @@
+﻿import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion'
-import '../index.css'
 
-/* --- helpers --- */
 const range = (
   progress: ReturnType<typeof useSpring>,
   inputRange: number[],
-  outputRange: [number, ...number[]]
+  outputRange: [number, ...number[]],
 ) => useTransform(progress, inputRange, outputRange)
 
 export default function HeroSection() {
   const sectionRef = useRef<HTMLDivElement>(null)
-
+  const prefersReducedMotion = useReducedMotion()
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end end'],
   })
 
-  const spring = useSpring(scrollYProgress, { stiffness: 80, damping: 20, restDelta: 0.001 })
+  const progress = useSpring(scrollYProgress, {
+    stiffness: prefersReducedMotion ? 220 : 120,
+    damping: prefersReducedMotion ? 36 : 24,
+    restDelta: 0.001,
+  })
 
-  /* ───── LAYER 1 — top-left identity ───── */
-  const l1Opacity = range(spring, [0, 0.15, 0.3, 0.45], [0, 1, 1, 0])
-  const l1Y = range(spring, [0, 0.15, 0.3, 0.45], [20, 0, 0, -20])
+  const introOpacity = range(progress, [0, 0.035, 0.1], [1, 1, 0])
+  const introY = range(progress, [0, 0.1], [0, prefersReducedMotion ? 0 : -18])
 
-  /* ───── LAYER 2 — centre headline ───── */
-  const l2BuildingOpacity = range(spring, [0.05, 0.15, 0.5], [0, 1, 1])
-  const l2BuildingY = range(spring, [0.05, 0.15], [60, 0])
+  const titleOpacity = range(progress, [0.14, 0.19, 0.4, 0.44], [0, 1, 1, 0])
+  const titleY = range(progress, [0.14, 0.2, 0.44], [26, 0, prefersReducedMotion ? 0 : -34])
+  const wordOneOpacity = range(progress, [0.14, 0.18, 0.32], [0, 1, 1])
+  const wordTwoOpacity = range(progress, [0.18, 0.22, 0.36], [0, 1, 1])
+  const wordThreeOpacity = range(progress, [0.22, 0.27, 0.4], [0, 1, 1])
+  const wordOneY = range(progress, [0.14, 0.18], [20, 0])
+  const wordTwoY = range(progress, [0.18, 0.22], [24, 0])
+  const wordThreeY = range(progress, [0.22, 0.27], [28, 0])
 
-  const l2SoftwareOpacity = range(spring, [0.1, 0.2, 0.5], [0, 1, 1])
-  const l2SoftwareY = range(spring, [0.1, 0.2], [60, 0])
+  const visualScale = range(progress, [0, 0.26, 0.64, 1], [0.9, 0.98, 1.06, prefersReducedMotion ? 1 : 1.16])
+  const visualRotate = range(progress, [0, 0.62, 1], [prefersReducedMotion ? 0 : -4, prefersReducedMotion ? 0 : 1.5, prefersReducedMotion ? 0 : 6])
+  const visualOpacity = range(progress, [0.02, 0.12, 0.94], [0.28, 1, 0.7])
+  const visualY = range(progress, [0, 0.62, 1], [prefersReducedMotion ? 0 : 16, 0, prefersReducedMotion ? 0 : -28])
+  const lineScale = range(progress, [0.06, 0.18, 0.88], [0.45, 1, 1])
+  const lineOpacity = range(progress, [0.02, 0.12, 0.88], [0, 1, 0.2])
 
-  const l2MattersOpacity = range(spring, [0.15, 0.25, 0.5], [0, 1, 1])
-  const l2MattersY = range(spring, [0.15, 0.25], [60, 0])
+  const overlayOpacity = range(progress, [0.46, 0.5, 0.6, 0.66], [0, 0.72, 0.72, 0])
+  const overlayLeftY = range(progress, [0.46, 0.64], [prefersReducedMotion ? 0 : 14, prefersReducedMotion ? 0 : -12])
+  const overlayRightY = range(progress, [0.46, 0.64], [prefersReducedMotion ? 0 : -12, prefersReducedMotion ? 0 : 14])
 
-  /* ───── LAYER 3 — right-aligned block ───── */
-  const l3Opacity = range(spring, [0.5, 0.65, 0.85, 0.95], [0, 1, 1, 0])
-  const l3X = range(spring, [0.5, 0.65], [40, 0])
-
-  /* ───── LAYER 4 — scroll arrow ───── */
-  const arrowOpacity = range(spring, [0.7, 0.85, 0.95], [0, 1, 0])
-
-  /* ───── Parallax horizontal line ───── */
-  const lineY = range(spring, [0, 1], [-100, 100])
+  const outroOpacity = range(progress, [0.74, 0.8, 0.92], [0, 1, 1])
+  const outroY = range(progress, [0.74, 0.8], [18, 0])
+  const hintOpacity = range(progress, [0, 0.06, 0.14], [0, 1, 0])
 
   return (
-    <div ref={sectionRef} id="hero" className="hero-scroll-container">
+    <section ref={sectionRef} id="hero" className="hero-scroll-container">
       <div className="hero-sticky">
-        {/* Grain overlay */}
-        <div className="hero-grain" />
+        <div className="hero-noise" />
+        <div className="hero-gradient" />
 
-        {/* Parallax thin line */}
-        <motion.div className="hero-line" style={{ y: lineY }} />
-
-        {/* ── LAYER 1 ── */}
         <motion.div
-          className="hero-layer hero-layer-1"
-          style={{ opacity: l1Opacity, y: l1Y }}
+          className="hero-axis"
+          style={{ opacity: lineOpacity, scaleY: lineScale }}
+        />
+
+        <motion.div
+          className="hero-visual-shell"
+          style={{
+            opacity: visualOpacity,
+            scale: visualScale,
+            rotate: visualRotate,
+            y: visualY,
+          }}
         >
-          <span>PAULO SHIZUO</span>
-          <span>COMPUTER SCIENCE</span>
+          <div className="hero-visual-ring hero-visual-ring--outer" />
+          <div className="hero-visual-ring hero-visual-ring--middle" />
+          <div className="hero-visual-ring hero-visual-ring--inner" />
+          <div className="hero-visual-beam hero-visual-beam--horizontal" />
+          <div className="hero-visual-beam hero-visual-beam--vertical" />
+          <div className="hero-visual-core">
+            <span className="hero-visual-index">01 / sequence</span>
+            <span className="hero-visual-word">Build</span>
+          </div>
         </motion.div>
 
-        {/* ── LAYER 2 ── */}
-        <div className="hero-layer hero-layer-2">
-          <motion.span style={{ opacity: l2BuildingOpacity, y: l2BuildingY }}>
-            Building
-          </motion.span>
-          <motion.span style={{ opacity: l2SoftwareOpacity, y: l2SoftwareY }}>
-            software that
-          </motion.span>
-          <motion.span style={{ opacity: l2MattersOpacity, y: l2MattersY }}>
-            <span className="hero-matters-muted">matters.</span>
-          </motion.span>
-        </div>
-
-        {/* ── LAYER 3 ── */}
-        <motion.div
-          className="hero-layer hero-layer-3"
-          style={{ opacity: l3Opacity, x: l3X }}
-        >
-          <span className="hero-role">Full Stack Developer</span>
-          <span className="hero-location">Fortaleza, CE — Brazil</span>
+        <motion.div className="hero-intro" style={{ opacity: introOpacity, y: introY }}>
+          <span className="hero-kicker">Paulo Shizuo</span>
+          <span className="hero-meta">Full stack developer / Fortaleza, Brazil</span>
         </motion.div>
 
-        {/* ── LAYER 4 ── */}
-        <motion.div className="hero-layer hero-layer-4" style={{ opacity: arrowOpacity }}>
-          <span className="hero-scroll-arrow">↓</span>
+        <motion.div className="hero-copy" style={{ opacity: titleOpacity, y: titleY }}>
+          <p className="hero-caption">Editorial systems for products, code, and motion.</p>
+          <h1 className="hero-title">
+            <motion.span style={{ opacity: wordOneOpacity, y: wordOneY }}>
+              Calm
+            </motion.span>
+            <motion.span style={{ opacity: wordTwoOpacity, y: wordTwoY }}>
+              interfaces.
+            </motion.span>
+            <motion.span
+              className="hero-title-emphasis"
+              style={{ opacity: wordThreeOpacity, y: wordThreeY }}
+            >
+              Precise software.
+            </motion.span>
+          </h1>
+        </motion.div>
+
+        <motion.aside
+          className="hero-overlay hero-overlay--left"
+          style={{ opacity: overlayOpacity, y: overlayLeftY }}
+        >
+          <span className="hero-overlay-label">Act 01</span>
+          <p>Scroll-linked pacing, restrained contrast, and one visual plane doing the heavy lifting.</p>
+        </motion.aside>
+
+        <motion.aside
+          className="hero-overlay hero-overlay--right"
+          style={{ opacity: overlayOpacity, y: overlayRightY }}
+        >
+          <span className="hero-overlay-label">Parallax</span>
+          <p>Type, motion, and hierarchy moving in lockstep with the page instead of competing for attention.</p>
+        </motion.aside>
+
+        <motion.div className="hero-outro" style={{ opacity: outroOpacity, y: outroY }}>
+          <span className="hero-outro-label">Entering selected work</span>
+          <p>Curated case studies, product thinking, and front-end direction built to feel production ready.</p>
+        </motion.div>
+
+        <motion.div className="hero-scroll-hint" style={{ opacity: hintOpacity }}>
+          <span>Scroll to enter the story</span>
         </motion.div>
       </div>
-    </div>
+    </section>
   )
 }

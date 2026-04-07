@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+﻿import { useEffect, useRef } from 'react'
 import Lenis from 'lenis'
 import { GitHubProvider } from './contexts/GitHubContext'
 import { TranslationProvider } from './contexts/TranslationContext'
@@ -22,6 +22,7 @@ export default function App() {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
+
     requestAnimationFrame(raf)
 
     return () => lenis.destroy()
@@ -30,9 +31,12 @@ export default function App() {
   return (
     <TranslationProvider>
       <GitHubProvider>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <ScrollProgress />
         <Nav />
-        <main>
+        <main id="main-content" className="app-shell">
           <HeroSection />
           <AboutSection />
           <SkillsSection />
