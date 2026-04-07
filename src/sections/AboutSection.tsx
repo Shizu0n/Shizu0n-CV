@@ -51,8 +51,7 @@ export default function AboutSection() {
 
             <motion.h2 className="about-headline" variants={item}>
               CS Student &amp;{'\n'}
-              AI Engineer{'\n'}
-              in the <em>making.</em>
+              Full Stack Developer
             </motion.h2>
 
             <motion.hr className="about-rule" variants={item} />

@@ -80,7 +80,7 @@ export default function HeroSection() {
           style={{ opacity: l3Opacity, x: l3X }}
         >
           <span className="hero-role">Full Stack Developer</span>
-          <span className="hero-location">Fortaleza, CE — 2024</span>
+          <span className="hero-location">Fortaleza, CE — Brazil</span>
         </motion.div>
 
         {/* ── LAYER 4 ── */}

@@ -3,7 +3,7 @@ import { motion, AnimatePresence, Variants } from 'framer-motion'
 import { useContactForm } from '../hooks/useContactForm'
 
 const CONTACT_EMAIL = 'paulosvtatibana@gmail.com'
-const LINKEDIN_URL = 'https://www.linkedin.com/in/paulosvtatibana/'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/paulo-shizuo/'
 const GITHUB_URL = 'https://github.com/Shizu0n'
 
 const itemVariants: Variants = {

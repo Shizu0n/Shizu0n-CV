@@ -21,14 +21,6 @@ const projects = [
     url: 'https://github.com/Shizu0n/DeliverySystem',
   },
   {
-    id: 'api-ecommerce',
-    title: 'E-commerce API',
-    tags: ['Ruby on Rails', 'PostgreSQL', 'Docker'],
-    year: '2025',
-    category: 'Backend',
-    url: 'https://github.com/Shizu0n',
-  },
-  {
     id: 'academic-system',
     title: 'AcademicSystem',
     tags: ['Java', 'MySQL', 'JDBC'],
@@ -38,12 +30,12 @@ const projects = [
     wide: true,
   },
   {
-    id: 'gym-app',
-    title: 'GymApp Mobile',
-    tags: ['Kotlin', 'Firebase', 'Android'],
+    id: 'gym-management',
+    title: 'GymManagement',
+    tags: ['Java', 'SpringBoot', 'MySQL'],
     year: '2025',
-    category: 'Mobile',
-    url: 'https://github.com/Shizu0n',
+    category: 'Backend',
+    url: 'https://github.com/Shizu0n/GymManagement',
   },
   {
     id: 'portfolio',

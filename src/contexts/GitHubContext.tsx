@@ -141,7 +141,10 @@ export const GitHubProvider: React.FC<{ children: ReactNode }> = ({ children }) 
       const reposData: GitHubRepo[] = await reposResponse.json();
 
       // Filtrar repos não-fork e públicos
-      const filteredRepos = reposData.filter(repo => !repo.name.startsWith('.'));
+      const EXCLUDED_REPOS = ['e-commerce-api', 'ecommerce-api', 'gym-app', 'gymapp', 'gym-app-mobile'];
+      const filteredRepos = reposData.filter(repo =>
+        !repo.name.startsWith('.') && !EXCLUDED_REPOS.includes(repo.name.toLowerCase()),
+      );
 
       setUser(userData);
       setRepos(filteredRepos);
