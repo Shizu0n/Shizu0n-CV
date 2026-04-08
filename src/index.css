@@ -35,10 +35,6 @@ main {
   background: #000;
 }
 
-section[id] {
-  scroll-margin-top: 6rem;
-}
-
 img,
 svg,
 canvas {
@@ -510,7 +506,7 @@ button {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 11.5vh clamp(1.25rem, 4vw, 3rem) 10vh;
+  padding: 10vh clamp(1.25rem, 4vw, 3rem) 9vh;
 }
 
 .about-grid {
@@ -625,7 +621,7 @@ button {
 .skills-section {
   position: relative;
   overflow: hidden;
-  padding: 14vh 0 9.5vh;
+  padding: 12.5vh 0 8.5vh;
   background: #000;
 }
 
@@ -710,7 +706,7 @@ button {
 }
 
 .projects-section {
-  padding: 12vh 0 15vh;
+  padding: 10.5vh 0 13.5vh;
   background: #000;
 }
 
@@ -1228,7 +1224,7 @@ button {
 }
 
 .contact-section {
-  padding: 18vh 0 16vh;
+  padding: 15vh 0 14vh;
   background: #000;
 }
 
@@ -1435,7 +1431,7 @@ button {
   .about-sticky {
     position: relative;
     min-height: auto;
-    padding: 12vh clamp(1.25rem, 4vw, 3rem) 9vh;
+    padding: 10.5vh clamp(1.25rem, 4vw, 3rem) 8vh;
   }
 
   .about-proof-panel {
@@ -1643,7 +1639,7 @@ button {
   }
 
   .contact-section {
-    padding: 15vh 0 13vh;
+    padding: 13vh 0 11vh;
   }
 
   .contact-links {
