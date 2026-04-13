@@ -1,0 +1,123 @@
+{
+  "personal": {
+    "name": "Paulo Shizuo Vasconcelos Tatibana",
+    "title": "Full stack developer",
+    "location": "Fortaleza, Brazil",
+    "email": "paulosvtatibana@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/paulo-shizuo/",
+    "github": "https://github.com/Shizu0n",
+    "bio": {
+      "en": "Computer Science student with hands-on experience building interfaces, APIs, and polished front-end work that balances clarity with atmosphere. Focuses on clean systems, measured motion, and product-ready delivery.",
+      "pt": "Estudante de Ciência da Computação com experiência prática no desenvolvimento de interfaces, APIs e front-end polido que equilibra clareza e imersão. Focado em sistemas limpos, animações comedidas e entregas com qualidade de produção."
+    }
+  },
+  "education": [
+    {
+      "institution": "Universidade de Fortaleza (UNIFOR)",
+      "degree": "Computer Science (Ciência da Computação)",
+      "period": "Current",
+      "description": {
+        "en": "Computer Science student building software through product thinking, interface restraint, and full-stack implementation.",
+        "pt": "Estudante de Ciência da Computação construindo software através de mentalidade de produto, restrição de interface e implementação full-stack."
+      }
+    }
+  ],
+  "experience": [
+    {
+      "company": "Not Provided",
+      "role": "Not Provided",
+      "period": "Not Provided",
+      "highlights": {
+        "en": ["Please ask Paulo directly via email or LinkedIn for detailed employment history."],
+        "pt": ["Por favor, pergunte ao Paulo diretamente via email ou LinkedIn para o histórico de emprego detalhado."]
+      },
+      "technologies": []
+    }
+  ],
+  "projects": [
+    {
+      "id": "referral-system",
+      "name": "Referral System",
+      "category": "Full-stack product flow",
+      "description": {
+        "en": "A referral workflow shaped around authentication, point logic, and a cleaner dashboard rhythm from first action to reward tracking.",
+        "pt": "Um fluxo de indicações moldado em torno de autenticação, lógica de pontos e um ritmo de dashboard mais limpo da primeira ação ao acompanhamento de recompensas."
+      },
+      "stack": ["TypeScript", "NestJS", "React", "SQLite"],
+      "github_url": "https://github.com/Shizu0n/ReferralSystem"
+    },
+    {
+      "id": "delivery-system",
+      "name": "Delivery System",
+      "category": "Operations interface",
+      "description": {
+        "en": "Order management, product flow, and delivery handling structured for clarity instead of dashboard clutter.",
+        "pt": "Gerenciamento de pedidos, fluxo de produtos e manuseio de entregas estruturados para clareza no lugar de poluição do dashboard."
+      },
+      "stack": ["JavaScript", "React", "Node.js", "MySQL"],
+      "github_url": "https://github.com/Shizu0n/DeliverySystem"
+    },
+    {
+      "id": "academic-system",
+      "name": "Academic System",
+      "category": "Structured backend logic",
+      "description": {
+        "en": "A Java-based academic management system centered on dependable rules, relational data, and maintainable domain logic.",
+        "pt": "Um sistema de gerenciamento acadêmico em Java centrado em regras confiáveis, dados relacionais e lógica de domínio sustentável."
+      },
+      "stack": ["Java", "MySQL", "JDBC"],
+      "github_url": "https://github.com/Shizu0n/AcademicSystem"
+    },
+    {
+      "id": "portfolio-sequence",
+      "name": "Portfolio Sequence (This very website)",
+      "category": "Editorial front-end direction",
+      "description": {
+        "en": "This portfolio rebuilt as a single-page story with motion-led pacing, black-and-white restraint, and sharper presentation hierarchy.",
+        "pt": "Este portfólio reconstruído como uma história de página única com ritmo guiado por movimento, restrição preto-e-branco e hierarquia de apresentação mais nítida."
+      },
+      "stack": ["React", "TypeScript", "Framer Motion", "Vite", "Tailwind 4"],
+      "github_url": "https://github.com/Shizu0n/Shizu0n.github.io"
+    }
+  ],
+  "skills": {
+    "capabilities": [
+      {
+        "title": "Front-end systems",
+        "summary": {
+          "en": "React 19, TypeScript, Vite, Tailwind 4, and Framer Motion shaped into interfaces that feel calm but intentional.",
+          "pt": "React 19, TypeScript, Vite, Tailwind 4 e Framer Motion moldados em interfaces que transmitem calma, mas com intencionalidade."
+        }
+      },
+      {
+        "title": "Back-end thinking",
+        "summary": {
+          "en": "NestJS, Java, Spring Boot, relational data, and REST APIs built with clear rules and maintainable structure.",
+          "pt": "NestJS, Java, Spring Boot, dados relacionais e REST APIs construídas com regras claras e estrutura sustentável."
+        }
+      },
+      {
+        "title": "Product delivery",
+        "summary": {
+          "en": "Responsive layout systems, GitHub workflows, documentation, and implementation detail that holds up in production.",
+          "pt": "Sistemas de layout responsivos, workflows de GitHub, documentação e detalhes de implementação que se mantêm em produção."
+        }
+      }
+    ],
+    "languages": ["TypeScript", "JavaScript", "Java", "Python"],
+    "frameworks": ["React 19", "NestJS", "Spring Boot", "Tailwind 4", "Framer Motion", "Vite"],
+    "tools": ["GitHub", "Vercel", "MySQL", "SQLite", "PostgreSQL"],
+    "concepts": ["Editorial UI", "API Architecture", "Responsive Systems", "Minimal interfaces", "Product thinking"]
+  },
+  "personality": {
+    "tone": "minimal, direct, professional, clear, unpretentious",
+    "values": [
+      "Precision",
+      "Clean systems",
+      "Measured motion",
+      "Restraint (black and white design)",
+      "Product-ready delivery"
+    ],
+    "working_style": "Minimal interfaces, strong hierarchy, dependable implementation. Editorial restraint with enough motion to feel alive."
+  }
+}

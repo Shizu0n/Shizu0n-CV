@@ -1,5 +1,6 @@
-﻿import { motion, type Variants } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 import { useGitHub } from '../contexts/GitHubContext'
+import { useTranslation } from '../contexts/TranslationContext'
 
 const PROJECTS = [
   {
@@ -66,6 +67,7 @@ const headerVariants: Variants = {
 }
 
 export default function ProjectsSection() {
+  const { t } = useTranslation()
   const { user } = useGitHub()
   const githubProfileUrl = user?.html_url ?? 'https://github.com/Shizu0n'
 
@@ -79,12 +81,12 @@ export default function ProjectsSection() {
           viewport={{ once: true, margin: '-80px' }}
           variants={headerVariants}
         >
-          <p className="section-kicker">Act 04 / Selected work</p>
+          <p className="section-kicker">{t('projects.kicker')}</p>
           <h2 className="section-title">
-            A curated showcase designed to read like a portfolio, not a repository dump.
+            {t('projects.title')}
           </h2>
           <p className="section-body">
-            Four projects, each presented for its product thinking, technical structure, and the visual clarity behind how it is experienced.
+            {t('projects.body')}
           </p>
         </motion.div>
 
@@ -144,9 +146,9 @@ export default function ProjectsSection() {
           viewport={{ once: true, margin: '-80px' }}
           variants={headerVariants}
         >
-          <p>For the live repository archive and ongoing experiments, visit GitHub.</p>
+          <p>{t('projects.archive.msg')}</p>
           <a href={githubProfileUrl} target="_blank" rel="noopener noreferrer">
-            Open full GitHub archive &rarr;
+            {t('projects.archive.link')}
           </a>
         </motion.div>
       </div>

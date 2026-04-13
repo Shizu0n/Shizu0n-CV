@@ -1,5 +1,6 @@
-﻿import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { useTranslation } from '../contexts/TranslationContext'
 
 const range = (
   progress: ReturnType<typeof useSpring>,
@@ -8,6 +9,7 @@ const range = (
 ) => useTransform(progress, inputRange, outputRange)
 
 export default function HeroSection() {
+  const { t } = useTranslation()
   const sectionRef = useRef<HTMLDivElement>(null)
   const prefersReducedMotion = useReducedMotion()
   const { scrollYProgress } = useScroll({
@@ -82,24 +84,24 @@ export default function HeroSection() {
         </div>
 
         <motion.div className="hero-intro" style={{ opacity: introOpacity, y: introY }}>
-          <span className="hero-kicker">Paulo Shizuo</span>
-          <span className="hero-meta">Full stack developer / Fortaleza, Brazil</span>
+          <span className="hero-kicker">{t('hero.kicker')}</span>
+          <span className="hero-meta">{t('hero.meta')}</span>
         </motion.div>
 
         <motion.div className="hero-copy" style={{ opacity: titleOpacity, y: titleY }}>
-          <p className="hero-caption">Editorial systems for products, code, and motion.</p>
+          <p className="hero-caption">{t('hero.caption')}</p>
           <h1 className="hero-title">
             <motion.span style={{ opacity: wordOneOpacity, y: wordOneY }}>
-              Calm
+              {t('hero.title.one')}
             </motion.span>
             <motion.span style={{ opacity: wordTwoOpacity, y: wordTwoY }}>
-              interfaces.
+              {t('hero.title.two')}
             </motion.span>
             <motion.span
               className="hero-title-emphasis"
               style={{ opacity: wordThreeOpacity, y: wordThreeY }}
             >
-              Precise software.
+              {t('hero.title.three')}
             </motion.span>
           </h1>
         </motion.div>
@@ -108,25 +110,25 @@ export default function HeroSection() {
           className="hero-overlay hero-overlay--left"
           style={{ opacity: overlayOpacity, y: overlayLeftY }}
         >
-          <span className="hero-overlay-label">Act 01</span>
-          <p>Scroll-linked pacing, restrained contrast, and one visual plane doing the heavy lifting.</p>
+          <span className="hero-overlay-label">{t('hero.overlay.left')}</span>
+          <p>{t('hero.overlay.left.desc')}</p>
         </motion.aside>
 
         <motion.aside
           className="hero-overlay hero-overlay--right"
           style={{ opacity: overlayOpacity, y: overlayRightY }}
         >
-          <span className="hero-overlay-label">Parallax</span>
-          <p>Type, motion, and hierarchy moving in lockstep with the page instead of competing for attention.</p>
+          <span className="hero-overlay-label">{t('hero.overlay.right')}</span>
+          <p>{t('hero.overlay.right.desc')}</p>
         </motion.aside>
 
         <motion.div className="hero-outro" style={{ opacity: outroOpacity, y: outroY }}>
-          <span className="hero-outro-label">Entering selected work</span>
-          <p>Curated case studies, product thinking, and front-end direction built to feel production ready.</p>
+          <span className="hero-outro-label">{t('hero.outro')}</span>
+          <p>{t('hero.outro.desc')}</p>
         </motion.div>
 
         <motion.div className="hero-scroll-hint" style={{ opacity: hintOpacity }}>
-          <span>Scroll to enter the story</span>
+          <span>{t('hero.hint')}</span>
         </motion.div>
       </div>
     </section>

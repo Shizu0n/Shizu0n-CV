@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from '../contexts/TranslationContext'
 
 const SECTIONS = ['hero', 'about', 'skills', 'projects', 'contact']
@@ -7,7 +7,7 @@ const NAV_KEYS = ['#about', '#skills', '#projects', '#contact'] as const
 type NavKey = (typeof NAV_KEYS)[number]
 
 export default function Nav() {
-  const { t } = useTranslation()
+  const { t, language, toggleLanguage } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
@@ -96,6 +96,15 @@ export default function Nav() {
           </button>
 
           <div className="nav-desktop">
+            <button 
+              className="nav-lang-toggle" 
+              onClick={toggleLanguage}
+              aria-label="Toggle language"
+            >
+              <span className={language === 'pt' ? 'active' : ''}>PT</span>
+              <span>/</span>
+              <span className={language === 'en' ? 'active' : ''}>EN</span>
+            </button>
             {NAV_KEYS.map(key => (
               <a
                 key={key}
@@ -133,6 +142,15 @@ export default function Nav() {
         aria-hidden={!mobileOpen}
       >
         <div className="mobile-inner">
+          <button 
+            className="mobile-lang-toggle" 
+            onClick={toggleLanguage}
+            aria-label="Toggle language"
+          >
+            <span className={language === 'pt' ? 'active' : ''}>PT</span>
+            <span>/</span>
+            <span className={language === 'en' ? 'active' : ''}>EN</span>
+          </button>
           {NAV_KEYS.map(key => (
             <a
               key={key}

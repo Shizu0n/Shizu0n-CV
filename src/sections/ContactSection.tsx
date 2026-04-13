@@ -1,6 +1,7 @@
-﻿import { useState } from 'react'
+import { useState } from 'react'
 import { motion, type Variants } from 'framer-motion'
 import { useContactForm } from '../hooks/useContactForm'
+import { useTranslation } from '../contexts/TranslationContext'
 
 const CONTACT_EMAIL = 'paulosvtatibana@gmail.com'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/paulo-shizuo/'
@@ -16,6 +17,7 @@ const itemVariants: Variants = {
 }
 
 export default function ContactSection() {
+  const { t } = useTranslation()
   const {
     formRef,
     formData,
@@ -54,12 +56,12 @@ export default function ContactSection() {
           viewport={{ once: true, margin: '-80px' }}
           variants={itemVariants}
         >
-          <p className="section-kicker">Act 05 / Contact</p>
+          <p className="section-kicker">{t('contact.kicker')}</p>
           <h2 className="section-title">
-            If the brief needs clarity, polish, and working code, let&apos;s talk.
+            {t('contact.title')}
           </h2>
           <p className="section-body">
-            Available for internships, freelance collaborations, and product-minded builds that need both design restraint and implementation depth.
+            {t('contact.body')}
           </p>
 
           <div className="contact-links">
@@ -100,14 +102,14 @@ export default function ContactSection() {
         >
           <form ref={formRef} className="contact-form" noValidate onSubmit={handleSubmit}>
             <label className="contact-field" htmlFor="contact-name">
-              <span className="contact-field-label">Name</span>
+              <span className="contact-field-label">{t('contact.form.name')}</span>
               <input
                 id="contact-name"
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                placeholder="Your name"
+                placeholder={t('contact.form.name')}
                 autoComplete="name"
                 className="contact-input"
                 required
@@ -115,7 +117,7 @@ export default function ContactSection() {
             </label>
 
             <label className="contact-field" htmlFor="contact-email">
-              <span className="contact-field-label">Email</span>
+              <span className="contact-field-label">{t('contact.form.email')}</span>
               <input
                 id="contact-email"
                 type="email"
@@ -131,27 +133,27 @@ export default function ContactSection() {
             </label>
 
             <label className="contact-field" htmlFor="contact-subject">
-              <span className="contact-field-label">Subject</span>
+              <span className="contact-field-label">{t('contact.form.subject')}</span>
               <input
                 id="contact-subject"
                 type="text"
                 name="subject"
                 value={formData.subject}
                 onChange={handleInputChange}
-                placeholder="Project, internship, or collaboration"
+                placeholder={t('contact.form.subject')}
                 autoComplete="off"
                 className="contact-input"
               />
             </label>
 
             <label className="contact-field" htmlFor="contact-message">
-              <span className="contact-field-label">Message</span>
+              <span className="contact-field-label">{t('contact.form.message')}</span>
               <textarea
                 id="contact-message"
                 name="message"
                 value={formData.message}
                 onChange={handleInputChange}
-                placeholder="Tell me about the brief and what you need help building."
+                placeholder={t('contact.form.message')}
                 className="contact-input contact-textarea"
                 rows={5}
                 autoComplete="off"
@@ -164,7 +166,7 @@ export default function ContactSection() {
               className="contact-submit-btn"
               disabled={sendStatus === 'sending'}
             >
-              {sendStatus === 'sending' ? 'Sending...' : 'Send message'}
+              {sendStatus === 'sending' ? t('contact.form.sending') : t('contact.form.send')}
             </button>
 
             {statusMessage ? (

@@ -1,6 +1,7 @@
-﻿import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
+import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useMemo, useRef } from 'react'
 import { useGitHub } from '../contexts/GitHubContext'
+import { useTranslation } from '../contexts/TranslationContext'
 
 const range = (
   progress: ReturnType<typeof useSpring>,
@@ -9,6 +10,7 @@ const range = (
 ) => useTransform(progress, inputRange, outputRange)
 
 export default function AboutSection() {
+  const { t } = useTranslation()
   const { stats, user } = useGitHub()
   const sectionRef = useRef<HTMLDivElement>(null)
   const prefersReducedMotion = useReducedMotion()
@@ -58,12 +60,12 @@ export default function AboutSection() {
 
           <div className="about-grid">
             <motion.div className="about-intro" style={{ y: headlineY }}>
-              <p className="section-kicker">Act 02 / Credentials</p>
+              <p className="section-kicker">{t('about.kicker')}</p>
               <h2 className="section-title">
-                A developer focused on clean systems, measured motion, and product-ready delivery.
+                {t('about.title')}
               </h2>
               <p className="section-body">
-                Computer Science student with hands-on experience building interfaces, APIs, and polished front-end work that balances clarity with atmosphere.
+                {t('about.body')}
               </p>
             </motion.div>
 
@@ -71,45 +73,45 @@ export default function AboutSection() {
               <div className="about-stat-grid">
                 <div className="about-stat-block">
                   <span className="about-stat-value">{stats?.totalRepos ?? 0}</span>
-                  <span className="about-stat-label">Public repos</span>
+                  <span className="about-stat-label">{t('about.stats.repos')}</span>
                 </div>
                 <div className="about-stat-block">
                   <span className="about-stat-value">{stats?.totalStars ?? 0}</span>
-                  <span className="about-stat-label">Stars earned</span>
+                  <span className="about-stat-label">{t('about.stats.stars')}</span>
                 </div>
                 <div className="about-stat-block">
                   <span className="about-stat-value">{startedYear}</span>
-                  <span className="about-stat-label">Started coding</span>
+                  <span className="about-stat-label">{t('about.stats.started')}</span>
                 </div>
                 <div className="about-stat-block">
                   <span className="about-stat-value">{stats?.followers ?? 0}</span>
-                  <span className="about-stat-label">GitHub followers</span>
+                  <span className="about-stat-label">{t('about.stats.followers')}</span>
                 </div>
               </div>
 
               <div className="about-proof-list">
                 <div className="about-proof-item">
-                  <span className="about-proof-eyebrow">Current base</span>
-                  <strong>Fortaleza, Brazil</strong>
+                  <span className="about-proof-eyebrow">{t('about.proof.base')}</span>
+                  <strong>{t('about.proof.base.val')}</strong>
                 </div>
                 <div className="about-proof-item">
-                  <span className="about-proof-eyebrow">Most used stack</span>
+                  <span className="about-proof-eyebrow">{t('about.proof.stack')}</span>
                   <strong>{topLanguages}</strong>
                 </div>
                 <div className="about-proof-item">
-                  <span className="about-proof-eyebrow">Working style</span>
-                  <strong>Minimal interfaces, strong hierarchy, dependable implementation.</strong>
+                  <span className="about-proof-eyebrow">{t('about.proof.style')}</span>
+                  <strong>{t('about.proof.style.val')}</strong>
                 </div>
               </div>
             </motion.div>
           </div>
 
           <motion.div className="about-floating-note about-floating-note--one" style={{ y: noteY }}>
-            Building across front-end surfaces and backend rules.
+            {t('about.note.one')}
           </motion.div>
 
           <motion.div className="about-floating-note about-floating-note--two" style={{ y: useTransform(noteY, value => value * -1) }}>
-            Editorial restraint with enough motion to feel alive.
+            {t('about.note.two')}
           </motion.div>
         </div>
       </div>

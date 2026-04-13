@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import Lenis from 'lenis'
 import { GitHubProvider } from './contexts/GitHubContext'
 import { TranslationProvider } from './contexts/TranslationContext'
@@ -10,6 +10,7 @@ import ContactSection from './sections/ContactSection'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
+import FloatingChat from './components/FloatingChat'
 
 export default function App() {
   const lenisRef = useRef<Lenis | null>(null)
@@ -28,6 +29,25 @@ export default function App() {
     return () => lenis.destroy()
   }, [])
 
+  // Inject JSON-LD structured data for SEO
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Paulo Shizuo',
+      url: 'https://shizu0n.vercel.app/',
+      jobTitle: 'Computer Scientist & Full Stack Developer',
+      sameAs: [
+        'https://github.com/Shizu0n',
+        'https://www.linkedin.com/in/paulo-shizuo/',
+      ],
+    })
+    document.head.appendChild(script)
+    return () => { document.head.removeChild(script) }
+  }, [])
+
   return (
     <TranslationProvider>
       <GitHubProvider>
@@ -44,6 +64,7 @@ export default function App() {
           <ContactSection />
         </main>
         <Footer />
+        <FloatingChat />
       </GitHubProvider>
     </TranslationProvider>
   )

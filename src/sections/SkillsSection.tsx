@@ -1,4 +1,4 @@
-﻿import { motion, type Variants } from 'framer-motion'
+import { motion, type Variants } from 'framer-motion'
 
 const CAPABILITIES = [
   {
@@ -35,7 +35,10 @@ const reveal: Variants = {
   },
 }
 
+import { useTranslation } from '../contexts/TranslationContext'
+
 export default function SkillsSection() {
+  const { t } = useTranslation()
   return (
     <section id="skills" className="skills-section">
       <div className="skills-shell">
@@ -46,12 +49,12 @@ export default function SkillsSection() {
           viewport={{ once: true, margin: '-80px' }}
           variants={reveal}
         >
-          <p className="section-kicker">Act 03 / Capabilities</p>
+          <p className="section-kicker">{t('skills.kicker')}</p>
           <h2 className="section-title">
-            Design restraint, motion discipline, and full-stack execution working as one system.
+            {t('skills.title')}
           </h2>
           <p className="section-body">
-            Each layer has a single job: guide the eye, support the story, and keep the interface feeling deliberate instead of busy.
+            {t('skills.body')}
           </p>
         </motion.div>
 
