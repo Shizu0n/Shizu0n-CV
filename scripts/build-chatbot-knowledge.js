@@ -368,6 +368,7 @@ function buildCanonicalProfile(profile) {
   return [
     `Name: ${profile.personal.name}`,
     `Title: ${profile.personal.title}`,
+    'Primary focus: AI / ML engineering (LLM agents, hybrid RAG, fine-tuning), built on a full-stack foundation.',
     `Headline EN: ${profile.personal.headline.en}`,
     `Headline PT: ${profile.personal.headline.pt}`,
     `Location: ${profile.personal.location}`,
@@ -385,13 +386,15 @@ function buildCanonicalProfile(profile) {
 
 function buildGlobalSkillsSummary(profile, declaredSkills) {
   return [
+    'Primary focus: AI / ML Engineering (LLM agents, RAG, fine-tuning), on a full-stack foundation.',
+    `AI/ML engineering skills: ${(declaredSkills.ai_ml || []).join(', ')}`,
     `Declared languages: ${declaredSkills.languages.join(', ')}`,
     `Declared frontend skills: ${declaredSkills.frontend.join(', ')}`,
     `Declared backend skills: ${declaredSkills.backend.join(', ')}`,
     `Declared databases: ${declaredSkills.databases.join(', ')}`,
     `Declared tools: ${declaredSkills.tools.join(', ')}`,
     `Declared methodologies: ${declaredSkills.methodologies.join(', ')}`,
-    `Additional declared skills without scoped project evidence: ${declaredSkills.additional_declared_skills.join(', ') || 'none'}`,
+    `Additional declared skills and concepts: ${declaredSkills.additional_declared_skills.join(', ') || 'none'}`,
     `Working bio EN: ${profile.bios.en}`,
     `Working bio PT: ${profile.bios.pt}`
   ].join('\n');
@@ -523,7 +526,8 @@ function buildStackChunks(stackInventory) {
   }));
 }
 
-function buildRankingChunks(rankings) {
+function buildRankingChunks(rankings, nameById) {
+  const nameOf = (projectId) => nameById.get(projectId) || projectId;
   const chunks = [
     {
       id: 'ranking:overall',
@@ -536,7 +540,7 @@ function buildRankingChunks(rankings) {
       stacks: [],
       content: [
         'Overall ranking of projects by deterministic weighted score:',
-        ...rankings.overall.map((entry, index) => `${index + 1}. ${entry.project_id} => ${entry.overall_score}`)
+        ...rankings.overall.map((entry, index) => `${index + 1}. ${nameOf(entry.project_id)} => ${entry.overall_score}`)
       ].join('\n')
     }
   ];
@@ -553,7 +557,7 @@ function buildRankingChunks(rankings) {
       stacks: [],
       content: [
         `Criterion ranking: ${criterion}`,
-        ...ranking.map((entry, index) => `${index + 1}. ${entry.project_id} => ${entry.score}/5 | EN: ${entry.reason_en} | PT: ${entry.reason_pt}`)
+        ...ranking.map((entry, index) => `${index + 1}. ${nameOf(entry.project_id)} => ${entry.score}/5 | EN: ${entry.reason_en} | PT: ${entry.reason_pt}`)
       ].join('\n')
     });
   }
@@ -637,6 +641,7 @@ async function main() {
   const rankings = buildRankings(recommendations.project_scorecards, recommendations.criteria_weights);
   const stackRankings = buildStackRankings(projects, scoreCardsById);
   const aliasMaps = buildAliasMaps(projects, profile, stackInventory);
+  const nameById = new Map(projects.map((project) => [project.id, project.display_name]));
   const canonicalProfile = buildCanonicalProfile(profile);
   const globalSkillsSummary = buildGlobalSkillsSummary(profile, declaredSkills);
 
@@ -665,7 +670,7 @@ async function main() {
     },
     ...buildStackChunks(stackInventory),
     ...projects.flatMap((project) => buildProjectChunks(project, scoreCardsById.get(project.id))),
-    ...buildRankingChunks(rankings),
+    ...buildRankingChunks(rankings, nameById),
     ...buildSpotlightStackChunks(stackRankings)
   ];
 

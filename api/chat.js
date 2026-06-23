@@ -88,12 +88,19 @@ const COMPARISON_KEYWORDS = [
   'best',
   'strongest',
   'most complete',
+  'most impressive',
+  'impressive',
+  'standout',
+  'stand out',
   'better',
   'compare',
   'comparison',
   'mais completo',
   'melhor',
   'mais forte',
+  'mais impressionante',
+  'impressionante',
+  'destaque',
   'comparar',
   'comparacao',
   'comparação'
@@ -314,6 +321,7 @@ function extractMentions(normalizedText, aliasMap) {
 }
 
 function detectComparisonCriterion(normalizedText) {
+  if (/\b(ai|ml|llm|llms|rag|agent|agents|agente|agentes|fine[ -]?tun\w*|machine learning|artificial intelligence|inteligencia artificial|aprendizado de maquina)\b/.test(normalizedText)) return 'ai_ml_depth';
   if (normalizedText.includes('backend')) return 'backend_depth';
   if (normalizedText.includes('frontend') || normalizedText.includes('ui') || normalizedText.includes('polish')) return 'frontend_polish';
   if (normalizedText.includes('complete') || normalizedText.includes('completo')) return 'completeness';

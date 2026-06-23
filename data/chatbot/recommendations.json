@@ -1,14 +1,15 @@
 {
   "criteria_weights": {
-    "completeness": 0.18,
-    "backend_depth": 0.12,
-    "frontend_polish": 0.14,
-    "architecture_maturity": 0.14,
-    "security_auth": 0.08,
-    "data_modeling": 0.1,
-    "functional_scope": 0.1,
-    "documentation_quality": 0.07,
-    "production_readiness": 0.07
+    "ai_ml_depth": 0.18,
+    "completeness": 0.13,
+    "backend_depth": 0.11,
+    "frontend_polish": 0.1,
+    "architecture_maturity": 0.12,
+    "security_auth": 0.07,
+    "data_modeling": 0.09,
+    "functional_scope": 0.09,
+    "documentation_quality": 0.06,
+    "production_readiness": 0.05
   },
   "project_scorecards": [
     {
@@ -60,6 +61,11 @@
           "score": 2,
           "reason_pt": "Não há evidência clara de deploy, testes automatizados ou operação em produção.",
           "reason_en": "There is no clear evidence of deployment, automated tests, or production operation."
+        },
+        "ai_ml_depth": {
+          "score": 1,
+          "reason_pt": "Não é um projeto de IA/ML; é um sistema de domínio em Java, sem componente de machine learning ou LLM.",
+          "reason_en": "Not an AI/ML project; it is a Java domain system with no machine learning or LLM component."
         }
       }
     },
@@ -112,6 +118,11 @@
           "score": 3,
           "reason_pt": "O sistema mostra estrutura sólida, mas sem deploy público ou testes claramente apresentados.",
           "reason_en": "The system shows a solid structure, but without public deployment or clearly presented tests."
+        },
+        "ai_ml_depth": {
+          "score": 1,
+          "reason_pt": "Não é um projeto de IA/ML; o valor está no domínio operacional full-stack, não em machine learning.",
+          "reason_en": "Not an AI/ML project; the value is in the full-stack operational domain, not machine learning."
         }
       }
     },
@@ -164,6 +175,11 @@
           "score": 2,
           "reason_pt": "Não há evidência clara de deploy, testes ou operação mais madura.",
           "reason_en": "There is no clear evidence of deployment, tests, or more mature operation."
+        },
+        "ai_ml_depth": {
+          "score": 1,
+          "reason_pt": "Sem IA/ML envolvido; é um sistema administrativo desktop e backend.",
+          "reason_en": "No AI/ML involved; it is an administrative desktop and backend system."
         }
       }
     },
@@ -216,6 +232,11 @@
           "score": 3,
           "reason_pt": "A arquitetura é boa, mas não há forte evidência de deploy e operação pública.",
           "reason_en": "The architecture is good, but there is no strong evidence of public deployment and operation."
+        },
+        "ai_ml_depth": {
+          "score": 1,
+          "reason_pt": "Sem IA/ML no produto; o foco é NestJS, autenticação e modelagem relacional recursiva.",
+          "reason_en": "No AI/ML in the product; the focus is NestJS, authentication, and recursive relational modeling."
         }
       }
     },
@@ -268,6 +289,11 @@
           "score": 5,
           "reason_pt": "É o projeto com deploy público e o melhor sinal de uso real contínuo.",
           "reason_en": "It is the project with public deployment and the strongest signal of ongoing real use."
+        },
+        "ai_ml_depth": {
+          "score": 4,
+          "reason_pt": "IA aplicada em produção: RAG sobre base de conhecimento pessoal, embeddings de query, classificação de intenção, fallback multi-provedor de LLM e canário anti-injeção de prompt.",
+          "reason_en": "Applied AI in production: RAG over a personal knowledge base, query embeddings, intent classification, multi-provider LLM fallback, and a prompt-injection canary guard."
         }
       }
     },
@@ -320,6 +346,11 @@
           "score": 4,
           "reason_pt": "Deploy público na Vercel e avaliação publicada como baseline, ainda que o sandbox de execução precise de reforço.",
           "reason_en": "Public Vercel deployment and a published evaluation baseline, though the execution sandbox still needs hardening."
+        },
+        "ai_ml_depth": {
+          "score": 5,
+          "reason_pt": "Engenharia de agentes forte: laço ReAct em LangGraph com ferramentas, traço observável de raciocínio/ação via SSE e harness de avaliação sobre o grafo real.",
+          "reason_en": "Strong agent engineering: a LangGraph ReAct loop with tools, an observable reasoning/action trace over SSE, and an evaluation harness running over the real graph."
         }
       }
     },
@@ -372,6 +403,11 @@
           "score": 4,
           "reason_pt": "Deploy público em Streamlit e suíte de testes extensa, embora a persistência do Chroma precise de hosting deliberado.",
           "reason_en": "Public Streamlit deployment and an extensive test suite, though persistent Chroma data needs a deliberate host."
+        },
+        "ai_ml_depth": {
+          "score": 5,
+          "reason_pt": "RAG construído como sistema de engenharia completo: retrieval híbrido (BM25 + denso + fusão reciprocal-rank + reranking) com avaliação offline e RAGAS e estados de degradação explícitos.",
+          "reason_en": "RAG built as a full engineering system: hybrid retrieval (BM25 + dense + reciprocal-rank fusion + reranking) with offline and RAGAS evaluation and explicit degradation states."
         }
       }
     },
@@ -424,6 +460,11 @@
           "score": 4,
           "reason_pt": "Artefatos publicados no Hugging Face Hub e demo pública em Spaces, com métrica de avaliação clara.",
           "reason_en": "Artifacts published on the Hugging Face Hub and a public Spaces demo, with a clear evaluation metric."
+        },
+        "ai_ml_depth": {
+          "score": 5,
+          "reason_pt": "Trabalho de treino de modelo mais profundo: fine-tuning QLoRA (4-bit NF4) do Phi-3 Mini para text-to-SQL com ganho de exact-match mensurável de 2% para 73,5%, publicado no Hugging Face Hub.",
+          "reason_en": "Deepest model-training work: a QLoRA (4-bit NF4) fine-tune of Phi-3 Mini for text-to-SQL with a measured exact-match jump from 2% to 73.5%, published to the Hugging Face Hub."
         }
       }
     }

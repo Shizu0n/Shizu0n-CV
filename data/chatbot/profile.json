@@ -1,10 +1,10 @@
 {
   "personal": {
     "name": "Paulo Shizuo Vasconcelos Tatibana",
-    "title": "Full stack developer",
+    "title": "AI Engineer & Full-Stack Developer",
     "headline": {
-      "pt": "Desenvolvedor Full Stack | Estudante de Ciência da Computação",
-      "en": "Full Stack Developer | Computer Science Student"
+      "pt": "Engenheiro de IA / ML & Desenvolvedor Full-Stack | Estudante de Ciência da Computação",
+      "en": "AI / ML Engineer & Full-Stack Developer | Computer Science Student"
     },
     "location": "Fortaleza, CE, Brazil",
     "email": "paulosvtatibana@gmail.com",
@@ -14,8 +14,8 @@
     "portfolio": "https://shizu0n.vercel.app"
   },
   "bios": {
-    "pt": "Estudante de Ciência da Computação com projetos práticos em Java, Spring Boot, TypeScript e React, focado em desenvolver soluções escaláveis, seguras e com boa clareza de produto. Trabalha com APIs RESTful, arquitetura em camadas, princípios SOLID e persistência relacional, utilizando IA generativa como ferramenta de produtividade sem abrir mão de propriedade técnica e revisão crítica.",
-    "en": "Computer Science student with hands-on projects in Java, Spring Boot, TypeScript, and React, focused on building scalable, secure solutions with clear product thinking. Works with REST APIs, layered architecture, SOLID principles, and relational persistence, using generative AI as a productivity tool while keeping technical ownership and critical review."
+    "pt": "Estudante de Ciência da Computação e engenheiro de IA que constrói sistemas de LLM como software de engenharia: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Trata IA como disciplina de engenharia — observabilidade, avaliação por métricas e fallbacks honestos — sobre uma base full-stack de arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.",
+    "en": "Computer Science student and AI engineer who builds LLM systems as engineered software: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. Treats AI as an engineering discipline — observability, evaluation by metrics, and honest fallbacks — on top of a full-stack foundation of layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code."
   },
   "education": [
     {
@@ -64,12 +64,31 @@
   ],
   "declared_skills": {
     "languages": [
-      "Java",
+      "Python",
       "TypeScript",
       "JavaScript",
-      "Python",
-      "Kotlin",
-      "Ruby"
+      "Java",
+      "SQL"
+    ],
+    "ai_ml": [
+      "LangGraph",
+      "LLM Agents",
+      "Retrieval-Augmented Generation",
+      "Hybrid Retrieval",
+      "BM25",
+      "Reciprocal Rank Fusion",
+      "Cross-Encoder Reranking",
+      "RAGAS",
+      "LLM Evaluation",
+      "QLoRA",
+      "LoRA",
+      "PEFT",
+      "bitsandbytes",
+      "PyTorch",
+      "Transformers",
+      "Hugging Face",
+      "ChromaDB",
+      "pgvector"
     ],
     "frontend": [
       "React",
@@ -80,10 +99,10 @@
       "Tailwind CSS"
     ],
     "backend": [
+      "FastAPI",
       "Spring Boot",
       "NestJS",
       "Node.js",
-      "Ruby on Rails",
       "REST APIs",
       "Layered Architecture"
     ],

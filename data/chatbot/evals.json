@@ -137,5 +137,47 @@
       "not in",
       "contact"
     ]
+  },
+  {
+    "id": "en-ai-phi3-detail",
+    "language": "en",
+    "question": "Tell me about the Phi-3 fine-tuning project in detail.",
+    "must_include": [
+      "Phi-3",
+      "QLoRA",
+      "73.5",
+      "Hugging Face"
+    ]
+  },
+  {
+    "id": "en-ai-rag",
+    "language": "en",
+    "question": "Explain Paulo's Advanced RAG project and why it matters.",
+    "must_include": [
+      "Advanced RAG",
+      "BM25",
+      "RAGAS",
+      "hybrid"
+    ]
+  },
+  {
+    "id": "en-ai-agent",
+    "language": "en",
+    "question": "What does the ReAct Agent project do?",
+    "must_include": [
+      "ReAct Agent",
+      "LangGraph",
+      "trace"
+    ]
+  },
+  {
+    "id": "pt-ai-engineering",
+    "language": "pt",
+    "question": "Quais projetos provam a experiência do Paulo em engenharia de IA?",
+    "must_include": [
+      "ReAct Agent",
+      "Advanced RAG",
+      "Phi-3"
+    ]
   }
 ]

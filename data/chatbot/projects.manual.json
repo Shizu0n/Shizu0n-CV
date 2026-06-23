@@ -126,11 +126,11 @@
       "pt": "Integra persistência relacional, autenticação JWT e camadas básicas de segurança no backend.",
       "en": "It integrates relational persistence, JWT authentication, and baseline backend security layers."
     },
-    "frontend_stack": ["React", "JavaScript", "CSS", "Context API"],
-    "backend_stack": ["Node.js", "JavaScript", "JWT", "bcrypt.js", "Helmet", "CORS"],
+    "frontend_stack": ["React 19", "Vite", "React Router DOM", "JavaScript", "CSS", "Context API"],
+    "backend_stack": ["Node.js", "Express", "JavaScript", "JWT", "bcrypt.js", "Helmet", "CORS"],
     "database_stack": ["MySQL"],
     "tooling_stack": ["npm", "Environment variables", "Diagrams"],
-    "all_stacks": ["React", "JavaScript", "Node.js", "MySQL", "JWT", "bcrypt.js", "Helmet", "CORS", "Context API", "REST API"],
+    "all_stacks": ["React 19", "JavaScript", "Node.js", "Express", "MySQL", "JWT", "bcrypt.js", "Helmet", "CORS", "Vite", "React Router DOM", "Context API", "REST API"],
     "metrics_engineering": {
       "api_surface": {
         "endpoint_groups": ["Authentication", "Addresses", "Restaurant categories", "Menu items", "Orders", "Couriers", "Reviews"]
@@ -203,10 +203,10 @@
       "en": "It integrates a desktop UI, Java/Spring Boot backend, and a MySQL relational database."
     },
     "frontend_stack": ["Java Swing"],
-    "backend_stack": ["Java", "Spring Boot"],
+    "backend_stack": ["Java", "Spring Boot", "JPA"],
     "database_stack": ["MySQL"],
     "tooling_stack": ["Gradle", "MySQL Workbench", "Environment variables"],
-    "all_stacks": ["Java", "Spring Boot", "Java Swing", "MySQL", "Gradle"],
+    "all_stacks": ["Java", "Spring Boot", "JPA", "Java Swing", "MySQL", "Gradle"],
     "metrics_engineering": {
       "api_surface": {
         "external_services_count": 0,
@@ -248,15 +248,15 @@
       "en": "A TypeScript React SPA with a NestJS and SQLite backend, using JWT, referral links, a profile page, validation, and Context API to orchestrate authentication and user experience."
     },
     "what_it_solves": {
-      "pt": "Entrega um fluxo completo de registro, login, indicação e acompanhamento de perfil em um sistema de escopo enxuto, porém tecnicamente consistente.",
-      "en": "It delivers a complete registration, login, referral, and profile flow in a lean but technically consistent system."
+      "pt": "Entrega um fluxo completo de registro, login, indicação com pontuação automática por conversão e acompanhamento de perfil em um sistema de escopo enxuto, porém tecnicamente consistente.",
+      "en": "It delivers a complete registration, login, referral with automatic conversion scoring, and profile flow in a lean but technically consistent system."
     },
     "target_users": {
       "roles": ["Registered users", "Invited users"],
       "pt": "Usuários que se cadastram, entram no sistema e compartilham links de indicação.",
       "en": "Users who sign up, log in, and share referral links."
     },
-    "key_features": ["Secure login", "Registration flow", "Session persistence", "Referral link generation", "Copy referral link", "Profile page", "Protected routes", "Toasts and feedback states", "404 page", "JWT auth decorators and guards"],
+    "key_features": ["Secure login", "Registration flow", "Session persistence", "Referral link generation", "Copy referral link", "Automatic conversion scoring (referrer score increments on each new signup)", "Profile page with referrer score", "Protected routes", "Toasts and feedback states", "404 page", "JWT auth decorators and guards"],
     "architecture": {
       "style": "Modular full-stack architecture",
       "pt": "Backend NestJS organizado em módulos de auth, users, common e database; frontend React organizado por componentes, contexts, pages, services, utils e config.",
@@ -278,11 +278,11 @@
       "pt": "Integra TypeORM, SQLite e autenticação JWT para um fluxo completo de usuários.",
       "en": "It integrates TypeORM, SQLite, and JWT authentication for a complete user flow."
     },
-    "frontend_stack": ["React 18", "TypeScript", "Vite", "React Router DOM", "CSS", "Context API"],
+    "frontend_stack": ["React 19", "TypeScript", "Vite", "React Router DOM", "CSS", "Context API"],
     "backend_stack": ["NestJS", "TypeScript", "TypeORM", "class-validator", "JWT", "bcrypt"],
     "database_stack": ["SQLite"],
     "tooling_stack": ["npm", "Environment variables", "Cursor AI"],
-    "all_stacks": ["NestJS", "TypeScript", "React 18", "Vite", "React Router DOM", "SQLite", "TypeORM", "JWT", "bcrypt", "Context API", "CSS", "class-validator"],
+    "all_stacks": ["NestJS", "TypeScript", "React 19", "Vite", "React Router DOM", "SQLite", "TypeORM", "JWT", "bcrypt", "Context API", "CSS", "class-validator"],
     "metrics_engineering": {
       "api_surface": {
         "backend_modules": ["auth", "users", "common", "database"]
@@ -509,10 +509,10 @@
       "en": "It integrates ChromaDB, lexical and dense retrieval, reranking, LLM providers, and optional cloud RAGAS."
     },
     "frontend_stack": ["Streamlit"],
-    "backend_stack": ["Python", "ChromaDB", "BM25", "Sentence reranking", "RAGAS"],
+    "backend_stack": ["Python", "LlamaIndex", "ChromaDB", "BM25", "Sentence reranking", "RAGAS"],
     "database_stack": ["ChromaDB"],
     "tooling_stack": ["Streamlit Cloud", "Pytest", "Golden datasets", "Git"],
-    "all_stacks": ["Python", "Streamlit", "ChromaDB", "BM25", "Hybrid Retrieval", "Reciprocal Rank Fusion", "Cross-Encoder Reranking", "RAGAS", "Retrieval-Augmented Generation", "LLM Evaluation"],
+    "all_stacks": ["Python", "Streamlit", "LlamaIndex", "ChromaDB", "BM25", "Hybrid Retrieval", "Reciprocal Rank Fusion", "Cross-Encoder Reranking", "RAGAS", "Retrieval-Augmented Generation", "LLM Evaluation"],
     "metrics_engineering": {
       "graph": {
         "nodes": 1206,
