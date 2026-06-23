@@ -20,7 +20,7 @@ const MAX_MESSAGE_COUNT = 20;
 const MAX_MESSAGE_LENGTH = 2000;
 const MAX_TOTAL_CONTENT_LENGTH = 10000;
 const ALLOWED_ORIGINS = buildAllowedOrigins(process.env.ALLOWED_ORIGINS);
-const PROVIDER_CHAIN = ['gemini', 'groq', 'openrouter', 'cloudflare'];
+const PROVIDER_CHAIN = ['gemini', 'groq'];
 
 const hashQuery = (text) =>
   crypto.createHash('md5').update((text || '').trim().toLowerCase()).digest('hex');
@@ -225,39 +225,6 @@ async function* parseOpenAIStream(response) {
   }
 }
 
-async function* parseCFStream(response) {
-  const reader = response.body.getReader();
-  const decoder = new TextDecoder();
-  let buffer = '';
-
-  try {
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      buffer += decoder.decode(value, { stream: true });
-      const lines = buffer.split('\n');
-      buffer = lines.pop() ?? '';
-
-      for (const line of lines) {
-        const trimmed = line.trim();
-        if (!trimmed.startsWith('data: ')) continue;
-        const data = trimmed.slice(6);
-        if (data === '[DONE]') return;
-
-        try {
-          const parsed = JSON.parse(data);
-          const text = parsed.response;
-          if (text) yield text;
-        } catch {
-          // Ignore malformed chunks.
-        }
-      }
-    }
-  } finally {
-    reader.releaseLock();
-  }
-}
-
 function toOpenAIMessages(systemPrompt, history) {
   return [
     { role: 'system', content: systemPrompt },
@@ -330,84 +297,6 @@ const providers = {
       return parseOpenAIStream(response);
     }
   },
-  openrouter: {
-    name: 'openrouter/llama-3.1-8b-instruct:free',
-    isAvailable: () => Boolean(process.env.OPENROUTER_API_KEY),
-    async createStream(systemPrompt, history) {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 15000);
-      let response;
-
-      try {
-        response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
-            'Content-Type': 'application/json',
-            'HTTP-Referer': 'https://shizu0n.vercel.app',
-            'X-Title': 'Shizu0n Portfolio'
-          },
-          body: JSON.stringify({
-            model: 'meta-llama/llama-3.1-8b-instruct:free',
-            messages: toOpenAIMessages(systemPrompt, history),
-            stream: true,
-            max_tokens: 1024
-          }),
-          signal: controller.signal
-        });
-      } finally {
-        clearTimeout(timeout);
-      }
-
-      if (!response.ok) {
-        const errBody = await response.json().catch(() => ({}));
-        const err = new Error(errBody?.error?.message || `OpenRouter responded with ${response.status}`);
-        err.status = response.status;
-        throw err;
-      }
-
-      return parseOpenAIStream(response);
-    }
-  },
-  cloudflare: {
-    name: 'cloudflare/@cf/meta/llama-3-8b-instruct',
-    isAvailable: () => Boolean(process.env.CF_ACCOUNT_ID && process.env.CF_WORKERS_AI_TOKEN),
-    async createStream(systemPrompt, history) {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 20000);
-      let response;
-
-      try {
-        response = await fetch(
-          `https://api.cloudflare.com/client/v4/accounts/${process.env.CF_ACCOUNT_ID}/ai/run/@cf/meta/llama-3-8b-instruct`,
-          {
-            method: 'POST',
-            headers: {
-              Authorization: `Bearer ${process.env.CF_WORKERS_AI_TOKEN}`,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              messages: toOpenAIMessages(systemPrompt, history),
-              stream: true,
-              max_tokens: 1024
-            }),
-            signal: controller.signal
-          }
-        );
-      } finally {
-        clearTimeout(timeout);
-      }
-
-      if (!response.ok) {
-        const errBody = await response.json().catch(() => ({}));
-        const err = new Error(errBody?.errors?.[0]?.message || `Cloudflare responded with ${response.status}`);
-        err.status = response.status;
-        throw err;
-      }
-
-      return parseCFStream(response);
-    }
-  }
 };
 
 function extractMentions(normalizedText, aliasMap) {

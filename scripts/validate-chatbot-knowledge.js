@@ -16,7 +16,7 @@ async function main() {
   const knowledge = JSON.parse(await fs.readFile(KNOWLEDGE_PATH, 'utf8'));
   const evals = JSON.parse(await fs.readFile(EVALS_PATH, 'utf8'));
 
-  assert(Array.isArray(knowledge.projects) && knowledge.projects.length === 5, 'Expected 5 scoped projects.');
+  assert(Array.isArray(knowledge.projects) && knowledge.projects.length === 8, 'Expected 8 scoped projects.');
   assert(Array.isArray(knowledge.stack_inventory) && knowledge.stack_inventory.length > 0, 'Stack inventory is empty.');
   assert(Array.isArray(knowledge.chat_runtime?.chunks) && knowledge.chat_runtime.chunks.length > 0, 'Runtime chunks are missing.');
   assert(typeof knowledge.chat_runtime?.canonical_profile === 'string', 'Canonical profile is missing.');

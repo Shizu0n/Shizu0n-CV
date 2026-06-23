@@ -1,61 +1,9 @@
 import { motion, type Variants } from 'framer-motion'
 import { useGitHub } from '../contexts/GitHubContext'
 import { useTranslation } from '../contexts/TranslationContext'
-
-const PROJECTS = [
-  {
-    id: 'referral-system',
-    title: 'Referral System',
-    label: 'Case study 01',
-    category: 'Full-stack product flow',
-    summary:
-      'A referral workflow shaped around authentication, point logic, and a cleaner dashboard rhythm from first action to reward tracking.',
-    technologies: ['TypeScript', 'NestJS', 'React', 'SQLite'],
-    href: 'https://github.com/Shizu0n/ReferralSystem',
-    accent: 'Signal',
-    variant: 'feature',
-    visual: 'network',
-  },
-  {
-    id: 'delivery-system',
-    title: 'Delivery System',
-    label: 'Case study 02',
-    category: 'Operations interface',
-    summary:
-      'Order management, product flow, and delivery handling structured for clarity instead of dashboard clutter.',
-    technologies: ['JavaScript', 'React', 'Node.js', 'MySQL'],
-    href: 'https://github.com/Shizu0n/DeliverySystem',
-    accent: 'Flow',
-    variant: 'tall',
-    visual: 'route',
-  },
-  {
-    id: 'academic-system',
-    title: 'Academic System',
-    label: 'Case study 03',
-    category: 'Structured backend logic',
-    summary:
-      'A Java-based academic management system centered on dependable rules, relational data, and maintainable domain logic.',
-    technologies: ['Java', 'MySQL', 'JDBC'],
-    href: 'https://github.com/Shizu0n/AcademicSystem',
-    accent: 'Structure',
-    variant: 'standard',
-    visual: 'ledger',
-  },
-  {
-    id: 'portfolio-sequence',
-    title: 'Portfolio Sequence',
-    label: 'Case study 04',
-    category: 'Editorial front-end direction',
-    summary:
-      'This portfolio rebuilt as a single-page story with motion-led pacing, black-and-white restraint, and sharper presentation hierarchy.',
-    technologies: ['React', 'TypeScript', 'Framer Motion'],
-    href: 'https://github.com/Shizu0n/Shizu0n.github.io',
-    accent: 'Presence',
-    variant: 'wide',
-    visual: 'sequence',
-  },
-] as const
+import { getShowcaseProjects, type ChatProjectAction } from '../components/chatProjectCatalog'
+import { usePointerTilt } from '../hooks/usePointerTilt'
+import { PROJECT_PRESENTATION, type ProjectPresentation } from './projectsPresentation'
 
 const headerVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -66,10 +14,79 @@ const headerVariants: Variants = {
   },
 }
 
+interface ProjectShowcaseTileProps {
+  project: ChatProjectAction
+  presentation: ProjectPresentation
+  index: number
+  labelPrefix: string
+  language: 'en' | 'pt'
+}
+
+function ProjectShowcaseTile({ project, presentation, index, labelPrefix, language }: ProjectShowcaseTileProps) {
+  const tiltRef = usePointerTilt<HTMLAnchorElement>()
+  const label = `${labelPrefix} ${String(index + 1).padStart(2, '0')}`
+  // AI projects lead with their live demo (the deployed showcase); app projects link to the repo.
+  const href = presentation.group === 'ai' ? project.live ?? project.github : project.github
+
+  return (
+    <motion.a
+      ref={tiltRef}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`project-showcase project-showcase--${presentation.variant} project-showcase--${presentation.visual}`}
+      initial={{ opacity: 0, y: index === 0 ? 18 : 14 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-80px' }}
+      transition={{ duration: 0.58, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
+    >
+      <div className={`project-showcase-visual project-showcase-visual--${presentation.visual}`} aria-hidden="true">
+        <span className="project-showcase-word">{presentation.accent}</span>
+        <span className="project-showcase-gridline project-showcase-gridline--top" />
+        <span className="project-showcase-gridline project-showcase-gridline--bottom" />
+        <span className="project-showcase-frame" />
+        <span className="project-showcase-frame-break" />
+        <span className="project-showcase-panel project-showcase-panel--primary" />
+        <span className="project-showcase-panel project-showcase-panel--secondary" />
+        <span className="project-showcase-vector project-showcase-vector--one" />
+        <span className="project-showcase-vector project-showcase-vector--two" />
+        <span className="project-showcase-vector project-showcase-vector--three" />
+        <span className="project-showcase-dot project-showcase-dot--one" />
+        <span className="project-showcase-dot project-showcase-dot--two" />
+        <span className="project-showcase-marker project-showcase-marker--one" />
+        <span className="project-showcase-marker project-showcase-marker--two" />
+        <span className="project-showcase-marker project-showcase-marker--three" />
+        <span className="project-showcase-code">{label}</span>
+        {/* matte matcap sphere — lifts on a nearer plane on hover/focus (set-piece C) */}
+        <span className="project-showcase-sphere" />
+      </div>
+
+      <div className="project-showcase-copy">
+        <div className="project-showcase-meta">
+          <span>{label}</span>
+          <span>{presentation.category[language]}</span>
+        </div>
+        <h3 className="project-showcase-title">{project.name}</h3>
+        <p className="project-showcase-summary">{project.summary[language]}</p>
+        <div className="project-showcase-stack">
+          {project.stacks.slice(0, 4).map(technology => (
+            <span key={technology}>{technology}</span>
+          ))}
+        </div>
+        {presentation.group === 'ai' && project.live && (
+          <span className="project-showcase-live">{language === 'pt' ? 'Demo ao vivo' : 'Live demo'} ↗</span>
+        )}
+      </div>
+    </motion.a>
+  )
+}
+
 export default function ProjectsSection() {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
   const { user } = useGitHub()
   const githubProfileUrl = user?.html_url ?? 'https://github.com/Shizu0n'
+
+  const projects = getShowcaseProjects()
 
   return (
     <section id="projects" className="projects-section">
@@ -91,51 +108,15 @@ export default function ProjectsSection() {
         </motion.div>
 
         <div className="projects-showcase-grid">
-          {PROJECTS.map((project, index) => (
-            <motion.a
+          {projects.map((project, index) => (
+            <ProjectShowcaseTile
               key={project.id}
-              href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`project-showcase project-showcase--${project.variant} project-showcase--${project.visual}`}
-              initial={{ opacity: 0, y: index === 0 ? 18 : 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 0.58, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
-            >
-              <div className={`project-showcase-visual project-showcase-visual--${project.visual}`} aria-hidden="true">
-                <span className="project-showcase-word">{project.accent}</span>
-                <span className="project-showcase-gridline project-showcase-gridline--top" />
-                <span className="project-showcase-gridline project-showcase-gridline--bottom" />
-                <span className="project-showcase-frame" />
-                <span className="project-showcase-frame-break" />
-                <span className="project-showcase-panel project-showcase-panel--primary" />
-                <span className="project-showcase-panel project-showcase-panel--secondary" />
-                <span className="project-showcase-vector project-showcase-vector--one" />
-                <span className="project-showcase-vector project-showcase-vector--two" />
-                <span className="project-showcase-vector project-showcase-vector--three" />
-                <span className="project-showcase-dot project-showcase-dot--one" />
-                <span className="project-showcase-dot project-showcase-dot--two" />
-                <span className="project-showcase-marker project-showcase-marker--one" />
-                <span className="project-showcase-marker project-showcase-marker--two" />
-                <span className="project-showcase-marker project-showcase-marker--three" />
-                <span className="project-showcase-code">{project.label}</span>
-              </div>
-
-              <div className="project-showcase-copy">
-                <div className="project-showcase-meta">
-                  <span>{project.label}</span>
-                  <span>{project.category}</span>
-                </div>
-                <h3 className="project-showcase-title">{project.title}</h3>
-                <p className="project-showcase-summary">{project.summary}</p>
-                <div className="project-showcase-stack">
-                  {project.technologies.map(technology => (
-                    <span key={technology}>{technology}</span>
-                  ))}
-                </div>
-              </div>
-            </motion.a>
+              project={project}
+              presentation={PROJECT_PRESENTATION[project.id]}
+              index={index}
+              labelPrefix="Case study"
+              language={language}
+            />
           ))}
         </div>
 

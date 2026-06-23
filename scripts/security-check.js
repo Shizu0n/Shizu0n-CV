@@ -7,10 +7,8 @@ const rootDir = process.cwd();
 const KNOWN_SECRET_PATTERNS = [
   { name: 'Google API key', regex: /AIza[0-9A-Za-z_-]{20,}/g },
   { name: 'Groq key', regex: /gsk_[0-9A-Za-z]{20,}/g },
-  { name: 'OpenRouter key', regex: /sk-or-v1-[0-9A-Za-z]{20,}/g },
   { name: 'Supabase service role key', regex: /sb_secret_[0-9A-Za-z_-]{20,}/g },
   { name: 'GitHub personal access token', regex: /github_pat_[0-9A-Za-z_]{20,}/g },
-  { name: 'Cloudflare token', regex: /cfut_[0-9A-Za-z]{20,}/g },
   { name: 'Generic bearer token', regex: /Bearer\s+[A-Za-z0-9._-]{20,}/gi },
 ];
 

@@ -270,6 +270,162 @@
           "reason_en": "It is the project with public deployment and the strongest signal of ongoing real use."
         }
       }
+    },
+    {
+      "project_id": "react-agent",
+      "summary_pt": "Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, avaliação sobre o grafo real e deploy público.",
+      "summary_en": "The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, evaluation over the real graph, and public deployment.",
+      "scores": {
+        "completeness": {
+          "score": 4,
+          "reason_pt": "Cobre agente, ferramentas, API de streaming, frontend de inspeção e avaliação, com deploy público.",
+          "reason_en": "It covers the agent, tools, a streaming API, an inspection frontend, and evaluation, with public deployment."
+        },
+        "backend_depth": {
+          "score": 4,
+          "reason_pt": "StateGraph LangGraph, wrappers de LLM com rastreio de uso, ferramentas isoladas e camada FastAPI com SSE.",
+          "reason_en": "A LangGraph StateGraph, usage-tracking LLM wrappers, isolated tools, and a FastAPI layer with SSE."
+        },
+        "frontend_polish": {
+          "score": 4,
+          "reason_pt": "Frontend React/Vite com Framer Motion e Radix que separa conversa e raciocínio em painéis dedicados.",
+          "reason_en": "A React/Vite frontend with Framer Motion and Radix that separates conversation and reasoning into dedicated panels."
+        },
+        "architecture_maturity": {
+          "score": 4,
+          "reason_pt": "Grafo compilado, camada de provedores normalizada e separação clara entre orquestração, API e UI.",
+          "reason_en": "A compiled graph, a normalized provider layer, and clear separation between orchestration, API, and UI."
+        },
+        "security_auth": {
+          "score": 2,
+          "reason_pt": "Sem autenticação; a execução de Python e math é a superfície mais sensível e ainda exige isolamento.",
+          "reason_en": "No authentication; Python and math execution is the most sensitive surface and still requires isolation."
+        },
+        "data_modeling": {
+          "score": 3,
+          "reason_pt": "O estado é orientado a mensagens, chamadas de ferramentas e uso por execução, não a um domínio relacional.",
+          "reason_en": "State is oriented around messages, tool calls, and per-run usage rather than a relational domain."
+        },
+        "functional_scope": {
+          "score": 4,
+          "reason_pt": "Cobre o ciclo de agente com múltiplas ferramentas, observabilidade de traço e harness de avaliação.",
+          "reason_en": "It covers the agent cycle with multiple tools, trace observability, and an evaluation harness."
+        },
+        "documentation_quality": {
+          "score": 4,
+          "reason_pt": "README e estrutura identificam claramente backend FastAPI, frontend React/Vite e o StateGraph LangGraph.",
+          "reason_en": "The README and structure clearly identify the FastAPI backend, React/Vite frontend, and the LangGraph StateGraph."
+        },
+        "production_readiness": {
+          "score": 4,
+          "reason_pt": "Deploy público na Vercel e avaliação publicada como baseline, ainda que o sandbox de execução precise de reforço.",
+          "reason_en": "Public Vercel deployment and a published evaluation baseline, though the execution sandbox still needs hardening."
+        }
+      }
+    },
+    {
+      "project_id": "advanced-rag",
+      "summary_pt": "RAG tratado como sistema de engenharia completo, com retrieval híbrido, avaliação honesta offline/RAGAS e deploy público.",
+      "summary_en": "RAG treated as a full engineering system, with hybrid retrieval, honest offline/RAGAS evaluation, and public deployment.",
+      "scores": {
+        "completeness": {
+          "score": 5,
+          "reason_pt": "Cobre todo o ciclo: ingestão, indexação, retrieval híbrido, síntese, avaliação e revisão em Streamlit.",
+          "reason_en": "It covers the full cycle: ingestion, indexing, hybrid retrieval, synthesis, evaluation, and Streamlit review."
+        },
+        "backend_depth": {
+          "score": 4,
+          "reason_pt": "Retrieval híbrido com BM25, denso, fusão por reciprocal-rank e reranking, com políticas de provedor e fallbacks.",
+          "reason_en": "Hybrid retrieval with BM25, dense, reciprocal-rank fusion, and reranking, with provider policies and fallbacks."
+        },
+        "frontend_polish": {
+          "score": 3,
+          "reason_pt": "A interface Streamlit é funcional e voltada à revisão, não a um acabamento visual editorial.",
+          "reason_en": "The Streamlit interface is functional and review-oriented rather than editorially polished."
+        },
+        "architecture_maturity": {
+          "score": 4,
+          "reason_pt": "Camadas bem separadas de ingestão, retrieval, síntese, orquestração e avaliação, trocáveis de forma independente.",
+          "reason_en": "Well-separated ingestion, retrieval, synthesis, orchestration, and evaluation layers that swap independently."
+        },
+        "security_auth": {
+          "score": 2,
+          "reason_pt": "Sem autenticação de usuários; o foco é avaliação reprodutível e políticas explícitas de provedor.",
+          "reason_en": "No user authentication; the focus is reproducible evaluation and explicit provider policies."
+        },
+        "data_modeling": {
+          "score": 3,
+          "reason_pt": "Modela fontes versionadas, chunks vetoriais, golden datasets e relatórios, mais documental que relacional.",
+          "reason_en": "It models versioned sources, vector chunks, golden datasets, and reports, more documental than relational."
+        },
+        "functional_scope": {
+          "score": 5,
+          "reason_pt": "Escopo amplo de RAG: da aquisição de fontes à avaliação, com estratégias de retrieval ablatáveis.",
+          "reason_en": "Broad RAG scope: from source acquisition to evaluation, with ablatable retrieval strategies."
+        },
+        "documentation_quality": {
+          "score": 4,
+          "reason_pt": "Decisões de engenharia e estados de degradação são documentados de forma honesta e auditável.",
+          "reason_en": "Engineering decisions and degradation states are documented honestly and auditably."
+        },
+        "production_readiness": {
+          "score": 4,
+          "reason_pt": "Deploy público em Streamlit e suíte de testes extensa, embora a persistência do Chroma precise de hosting deliberado.",
+          "reason_en": "Public Streamlit deployment and an extensive test suite, though persistent Chroma data needs a deliberate host."
+        }
+      }
+    },
+    {
+      "project_id": "phi3-mini-sql",
+      "summary_pt": "Melhor vitrine de ML ops e fine-tuning eficiente: QLoRA do Phi-3 Mini para SQL com ganho mensurável de 2% para 73,5%.",
+      "summary_en": "The best showcase of ML ops and efficient fine-tuning: a QLoRA of Phi-3 Mini for SQL with a measurable jump from 2% to 73.5%.",
+      "scores": {
+        "completeness": {
+          "score": 4,
+          "reason_pt": "Pipeline completo do dataset ao modelo publicado, com adapter, modelo mesclado e demo pública.",
+          "reason_en": "A complete pipeline from dataset to published model, with adapter, merged model, and public demo."
+        },
+        "backend_depth": {
+          "score": 3,
+          "reason_pt": "Profundidade está no pipeline de ML (QLoRA, quantização 4-bit, PEFT), não em um backend de aplicação.",
+          "reason_en": "Depth is in the ML pipeline (QLoRA, 4-bit quantization, PEFT) rather than an application backend."
+        },
+        "frontend_polish": {
+          "score": 3,
+          "reason_pt": "A interface é uma demo no Hugging Face Spaces, suficiente para testar o modelo.",
+          "reason_en": "The interface is a Hugging Face Spaces demo, sufficient for trying the model."
+        },
+        "architecture_maturity": {
+          "score": 3,
+          "reason_pt": "Pipeline em notebooks bem definido (dataset, treino, avaliação), com escopo de treino mais que de aplicação.",
+          "reason_en": "A well-defined notebook pipeline (dataset, training, evaluation), scoped to training rather than an application."
+        },
+        "security_auth": {
+          "score": 1,
+          "reason_pt": "Não se aplica: é treino e publicação de modelo, sem autenticação de usuários.",
+          "reason_en": "Not applicable: it is model training and publishing, without user authentication."
+        },
+        "data_modeling": {
+          "score": 3,
+          "reason_pt": "Dados de instrução derivados do SQL Create Context, com contexto de schema, mais que modelagem relacional própria.",
+          "reason_en": "Instruction data derived from SQL Create Context with schema context, rather than its own relational modeling."
+        },
+        "functional_scope": {
+          "score": 3,
+          "reason_pt": "Foco em text-to-SQL apenas com SELECT, forte no objetivo mas estreito por design.",
+          "reason_en": "Focused on SELECT-only text-to-SQL, strong at its goal but narrow by design."
+        },
+        "documentation_quality": {
+          "score": 5,
+          "reason_pt": "Documentação detalhada de dataset, hiperparâmetros, métricas, capacidades e limitações do modelo.",
+          "reason_en": "Detailed documentation of dataset, hyperparameters, metrics, capabilities, and model limitations."
+        },
+        "production_readiness": {
+          "score": 4,
+          "reason_pt": "Artefatos publicados no Hugging Face Hub e demo pública em Spaces, com métrica de avaliação clara.",
+          "reason_en": "Artifacts published on the Hugging Face Hub and a public Spaces demo, with a clear evaluation metric."
+        }
+      }
     }
   ]
 }

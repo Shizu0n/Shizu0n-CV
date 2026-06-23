@@ -16,6 +16,9 @@ dist-ssr
 .env*
 !.env.example
 
+# Personal CV (contact details); content is embedded into data/portfolio-knowledge.json
+cv.md
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

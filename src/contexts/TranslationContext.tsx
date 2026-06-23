@@ -81,7 +81,7 @@ const translations = {
     // Projects
     'projects.kicker': 'Act 04 / Selected work',
     'projects.title': 'A curated showcase designed to read like a portfolio, not a repository dump.',
-    'projects.body': 'Four projects, each presented for its product thinking, technical structure, and the visual clarity behind how it is experienced.',
+    'projects.body': 'Eight projects spanning application systems and applied AI — agents, retrieval, and model fine-tuning — each presented for its product thinking, technical structure, and the clarity behind how it is experienced.',
     'projects.archive.msg': 'For the live repository archive and ongoing experiments, visit GitHub.',
     'projects.archive.link': 'Open full GitHub archive \u2192',
 
@@ -163,7 +163,7 @@ const translations = {
     // Projects
     'projects.kicker': 'Ato 04 / Trabalhos selecionados',
     'projects.title': 'Uma vitrine curada para ser lida como portfólio, não como um despejo de código.',
-    'projects.body': 'Quatro projetos, cada um selecionado pelo pensamento de produto, estrutura técnica e clareza visual de como é experienciado.',
+    'projects.body': 'Oito projetos entre sistemas de aplicação e IA aplicada — agentes, retrieval e fine-tuning de modelos — cada um selecionado pelo pensamento de produto, estrutura técnica e clareza de como é experienciado.',
     'projects.archive.msg': 'Para o arquivo remoto de repositórios e projetos paralelos, acesse o GitHub.',
     'projects.archive.link': 'Abrir arquivo completo do GitHub \u2192',
 

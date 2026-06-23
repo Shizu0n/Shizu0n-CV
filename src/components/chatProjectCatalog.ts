@@ -67,7 +67,43 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
     },
     github: 'https://github.com/Shizu0n/Shizu0n-CV',
     live: 'https://shizu0n.vercel.app',
-    stacks: ['React 19', 'TypeScript', 'Vite 7', 'Framer Motion 12', 'Lenis', 'Tailwind CSS 4', 'JavaScript', 'Vercel Functions', 'Server-Sent Events', 'Gemini API', 'Groq', 'OpenRouter', 'Cloudflare Workers AI', 'Supabase', 'PostgreSQL', 'pgvector', 'GitHub API', 'EmailJS', 'ESLint', 'Prettier', 'Playwright'],
+    stacks: ['React 19', 'TypeScript', 'Vite 7', 'Framer Motion 12', 'Lenis', 'Tailwind CSS 4', 'JavaScript', 'Vercel Functions', 'Server-Sent Events', 'Gemini API', 'Groq', 'Supabase', 'PostgreSQL', 'pgvector', 'GitHub API', 'EmailJS', 'ESLint', 'Prettier', 'Playwright'],
+  },
+  {
+    id: 'react-agent',
+    name: 'ReAct Agent',
+    aliases: ['react agent', 'reactagent', 're-act agent', 'react-agent', 'agente react', 'langgraph agent', 'tool agent'],
+    summary: {
+      en: 'Observable tool-using ReAct agent — a LangGraph backend that streams its full reasoning/action trace over SSE to a React inspector UI, with an evaluation harness over the real graph.',
+      pt: 'Agente ReAct observável — backend LangGraph que transmite todo o traço de raciocínio/ação via SSE para uma UI React de inspeção, com harness de avaliação sobre o grafo real.',
+    },
+    github: 'https://github.com/Shizu0n/ReAct-Agent',
+    live: 'https://react-agent-ml.vercel.app',
+    stacks: ['Python', 'LangGraph', 'FastAPI', 'Server-Sent Events', 'React', 'Vite', 'TypeScript', 'Tavily', 'LLM Agents'],
+  },
+  {
+    id: 'advanced-rag',
+    name: 'Advanced RAG',
+    aliases: ['advanced rag', 'advancedrag', 'advanced-rag', 'rag system', 'ragas', 'hybrid retrieval'],
+    summary: {
+      en: 'End-to-end, offline-capable RAG: ChromaDB indexing, hybrid retrieval (BM25 + dense + reciprocal-rank fusion + reranking), LLM synthesis with extractive fallback, and offline + RAGAS evaluation in a Streamlit app.',
+      pt: 'RAG completo e capaz de operar offline: indexação ChromaDB, retrieval híbrido (BM25 + denso + fusão por reciprocal-rank + reranking), síntese por LLM com fallback extrativo e avaliação offline + RAGAS em app Streamlit.',
+    },
+    github: 'https://github.com/Shizu0n/Advanced-RAG',
+    live: 'https://advanced-ragas.streamlit.app',
+    stacks: ['Python', 'Streamlit', 'ChromaDB', 'BM25', 'Hybrid Retrieval', 'Reciprocal Rank Fusion', 'Cross-Encoder Reranking', 'RAGAS', 'Retrieval-Augmented Generation', 'LLM Evaluation'],
+  },
+  {
+    id: 'phi3-mini-sql',
+    name: 'Phi-3 Mini SQL Generator',
+    aliases: ['phi-3 mini sql generator', 'phi3 mini sql', 'phi-3 mini sql', 'phi3-mini-sql-generator', 'phi3 mini', 'phi-3 mini', 'phi3', 'phi-3', 'sql generator', 'qlora', 'text-to-sql', 'text to sql'],
+    summary: {
+      en: 'QLoRA fine-tune of Phi-3 Mini (3.8B) for natural-language-to-SQL — trained 4-bit on a single T4, lifting exact-match accuracy from 2% to 73.5%, published to the Hugging Face Hub with a public Spaces demo.',
+      pt: 'Fine-tuning QLoRA do Phi-3 Mini (3.8B) para linguagem natural em SQL — treinado em 4-bit numa única T4, elevando o exact-match de 2% para 73,5%, publicado no Hugging Face Hub com demo pública no Spaces.',
+    },
+    github: 'https://github.com/Shizu0n/phi3-mini-sql-generator',
+    live: 'https://huggingface.co/spaces/Shizu0n/phi3-mini-sql-generator-demo',
+    stacks: ['Python', 'PyTorch', 'Transformers', 'PEFT', 'QLoRA', 'LoRA', 'bitsandbytes', 'Phi-3 Mini', 'Hugging Face', 'Text-to-SQL'],
   },
 ]
 
@@ -118,6 +154,12 @@ function scoreProjectMentions(content: string, project: ChatProjectAction) {
 
 export function getAllProjectActions(limit = MAX_PROJECT_CARDS) {
   return CHAT_PROJECT_ACTIONS.slice(0, Math.max(0, limit))
+}
+
+// Full project list for the visible portfolio showcase grid (not capped at the chat
+// card limit). The grid groups these by category via projectsPresentation.
+export function getShowcaseProjects() {
+  return CHAT_PROJECT_ACTIONS.slice()
 }
 
 export function getProjectActionsByIds(projectIds: string[]) {

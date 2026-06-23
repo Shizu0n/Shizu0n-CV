@@ -8,7 +8,16 @@ const CHATBOT_DIR = path.join(DATA_DIR, 'chatbot');
 const OUTPUT_PATH = path.join(DATA_DIR, 'portfolio-knowledge.json');
 const CV_PATH = path.join(ROOT, 'cv.md');
 
-const REPO_ORDER = ['AcademicSystem', 'DeliverySystem', 'GymManagement', 'ReferralSystem', 'Shizu0n-CV'];
+const REPO_ORDER = [
+  'AcademicSystem',
+  'DeliverySystem',
+  'GymManagement',
+  'ReferralSystem',
+  'Shizu0n-CV',
+  'ReAct-Agent',
+  'Advanced-RAG',
+  'phi3-mini-sql-generator'
+];
 const STACK_SPOTLIGHTS = ['java', 'react', 'nestjs', 'spring-boot', 'typescript', 'mysql'];
 
 const STACK_ALIAS_OVERRIDES = {
@@ -39,7 +48,32 @@ const STACK_ALIAS_OVERRIDES = {
   framer: 'Framer Motion 12',
   tailwind: 'Tailwind CSS 4',
   supabase: 'Supabase',
-  vercel: 'Vercel Functions'
+  vercel: 'Vercel Functions',
+  python: 'Python',
+  py: 'Python',
+  fastapi: 'FastAPI',
+  langgraph: 'LangGraph',
+  streamlit: 'Streamlit',
+  chromadb: 'ChromaDB',
+  chroma: 'ChromaDB',
+  ragas: 'RAGAS',
+  rag: 'Retrieval-Augmented Generation',
+  sse: 'Server-Sent Events',
+  bm25: 'BM25',
+  pytorch: 'PyTorch',
+  transformers: 'Transformers',
+  peft: 'PEFT',
+  qlora: 'QLoRA',
+  lora: 'LoRA',
+  bitsandbytes: 'bitsandbytes',
+  huggingface: 'Hugging Face',
+  'hugging face': 'Hugging Face',
+  hf: 'Hugging Face',
+  phi3: 'Phi-3 Mini',
+  'phi-3': 'Phi-3 Mini',
+  'phi 3': 'Phi-3 Mini',
+  'text to sql': 'Text-to-SQL',
+  'text-to-sql': 'Text-to-SQL'
 };
 
 const STACK_RANKING_RULES = {
@@ -68,6 +102,28 @@ function unique(list) {
 async function readJson(filePath) {
   const raw = await fs.readFile(filePath, 'utf8');
   return JSON.parse(raw);
+}
+
+// cv.md holds personal contact details and is gitignored, so it may be absent on fresh
+// clones/CI. When missing, reuse the cv_excerpt already embedded in the previously built
+// artifact instead of failing the build.
+async function readCvText() {
+  try {
+    return await fs.readFile(CV_PATH, 'utf8');
+  } catch (error) {
+    if (error.code !== 'ENOENT') throw error;
+    try {
+      const existing = await readJson(OUTPUT_PATH);
+      if (typeof existing.cv_excerpt === 'string' && existing.cv_excerpt.length > 0) {
+        console.warn('cv.md not found; reusing cv_excerpt from existing portfolio-knowledge.json.');
+        return existing.cv_excerpt;
+      }
+    } catch {
+      // fall through to empty CV text
+    }
+    console.warn('cv.md not found and no existing cv_excerpt available; using empty CV text.');
+    return '';
+  }
 }
 
 async function fetchGitHubJson(url) {
@@ -566,7 +622,7 @@ async function main() {
     readJson(path.join(CHATBOT_DIR, 'profile.json')),
     readJson(path.join(CHATBOT_DIR, 'projects.manual.json')),
     readJson(path.join(CHATBOT_DIR, 'recommendations.json')),
-    fs.readFile(CV_PATH, 'utf8')
+    readCvText()
   ]);
 
   const repoSnapshots = new Map();

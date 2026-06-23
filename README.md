@@ -63,8 +63,6 @@ This repository goes beyond a traditional portfolio page: it includes a serverle
 
 - `@google/generative-ai` (Gemini)
 - Groq API
-- OpenRouter API
-- Cloudflare Workers AI
 - Supabase (`@supabase/supabase-js`, `@supabase/ssr`)
 - PostgreSQL + pgvector (migrations in `supabase/migrations`)
 
@@ -166,8 +164,6 @@ flowchart LR
   API --> P{Provider chain}
   P --> G[Gemini]
   P --> GR[Groq]
-  P --> OR[OpenRouter]
-  P --> CF[Cloudflare AI]
   API -->|SSE + x-chat-intent| HC
   HC --> PM[chatProjectCardPolicy]
   PM --> CC[ChatMessageContent + cards]
@@ -276,11 +272,8 @@ GEMINI_API_KEY=your_gemini_api_key_here
 SUPABASE_URL=https://your-project-ref.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_secret_or_service_role_key
 
-# AI fallbacks (optional)
+# AI fallback
 GROQ_API_KEY=gsk_your_groq_key_here
-OPENROUTER_API_KEY=sk-or-your_openrouter_key_here
-CF_ACCOUNT_ID=your_cloudflare_account_id_here
-CF_WORKERS_AI_TOKEN=your_cloudflare_workers_ai_token_here
 ```
 
 ## Security
