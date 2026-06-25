@@ -119,6 +119,15 @@ const RECOMMENDATION_KEYWORDS = [
   'me mostre'
 ];
 
+const PROJECT_KEYWORDS = [
+  'project',
+  'projects',
+  'projeto',
+  'projetos',
+  'portfolio',
+  'portfólio'
+];
+
 function readFileCached(filePath, parser = (value) => value) {
   const stat = fs.statSync(filePath);
   const cached = fileCache.get(filePath);
@@ -346,10 +355,18 @@ function classifyIntent(userText, knowledge) {
     intent = 'comparison';
   } else if (hasKeyword(RECOMMENDATION_KEYWORDS)) {
     intent = 'recommendation';
-  } else if (stackMentions.length || hasKeyword(STACK_KEYWORDS)) {
+  } else if (hasKeyword(STACK_KEYWORDS)) {
+    // Explicit stack/technology question (e.g. "which stack", "what frameworks").
     intent = 'stack_lookup';
-  } else if (projectIds.length) {
+  } else if (projectIds.length || hasKeyword(PROJECT_KEYWORDS)) {
+    // A specific project is named, or a general "your projects"/portfolio question.
+    // Takes precedence over an incidental tech token (e.g. "SQL" in "Phi-3 Mini SQL
+    // project") so project questions are not misrouted to stack_lookup.
     intent = 'project_lookup';
+  } else if (stackMentions.length) {
+    // A technology was mentioned without a project or an explicit stack keyword
+    // (e.g. "do you know React?").
+    intent = 'stack_lookup';
   } else if (hasKeyword(PERSONAL_KEYWORDS)) {
     intent = 'personal';
   }
@@ -373,6 +390,18 @@ function getProjectChunks(knowledge, projectId) {
   );
 }
 
+function getProjectOverviewChunks(knowledge) {
+  return knowledge.chat_runtime.chunks.filter(
+    (chunk) => chunk.type === 'project' && chunk.facet === 'overview'
+  );
+}
+
+function getProjectStackUsageChunks(knowledge) {
+  return knowledge.chat_runtime.chunks.filter(
+    (chunk) => chunk.type === 'project' && chunk.facet === 'stack-usage'
+  );
+}
+
 function getStackChunks(knowledge, stackMentions) {
   return knowledge.chat_runtime.chunks.filter(
     (chunk) => chunk.type === 'stack' && stackMentions.includes(chunk.stack)
@@ -393,11 +422,27 @@ function buildLocalContext(knowledge, analysis) {
     addChunk(getChunkById(knowledge, 'skills:global-summary'));
   }
 
+  // Grounded narrative for soft/personal questions (motivation, goals, learning,
+  // process, availability) so the model answers from documented facts instead of
+  // fabricating — covers the open-ended/fallback path too.
+  if (analysis.intent === 'personal' || analysis.intent === 'contact' || analysis.intent === 'fallback') {
+    addChunk(getChunkById(knowledge, 'identity:about-narrative'));
+    addChunk(getChunkById(knowledge, 'identity:ways-of-working'));
+  }
+
   if (analysis.projectIds.length) {
     for (const projectId of analysis.projectIds) {
       for (const chunk of getProjectChunks(knowledge, projectId)) {
         addChunk(chunk);
       }
+    }
+  }
+
+  if (analysis.intent === 'project_lookup' && !analysis.projectIds.length) {
+    // Generic "list/show me your projects" — load one overview per project so the
+    // model can name the full roster (and the frontend can render every card).
+    for (const chunk of getProjectOverviewChunks(knowledge)) {
+      addChunk(chunk);
     }
   }
 
@@ -408,7 +453,10 @@ function buildLocalContext(knowledge, analysis) {
         addChunk(chunk);
       }
     } else {
-      for (const chunk of knowledge.chat_runtime.chunks.filter((entry) => entry.type === 'stack').slice(0, 16)) {
+      // Broad stack question with no specific tech: use each project's stack-usage
+      // facet so technologies stay bound to the right project, instead of a flat
+      // slice of stack chunks that invites cross-project misattribution.
+      for (const chunk of getProjectStackUsageChunks(knowledge)) {
         addChunk(chunk);
       }
     }
@@ -638,6 +686,95 @@ function buildSystemInstruction(prompt, knowledge, analysis, localChunks, vector
   return { instruction, canary };
 }
 
+function parseSuggestionList(raw) {
+  if (typeof raw !== 'string') return [];
+  // Prefer a JSON array when present (structured output or inline).
+  const arrayMatch = raw.match(/\[[\s\S]*\]/);
+  if (arrayMatch) {
+    try {
+      const arr = JSON.parse(arrayMatch[0]);
+      if (Array.isArray(arr)) {
+        return arr.filter((item) => typeof item === 'string' && item.trim().length > 0).map((item) => item.trim());
+      }
+    } catch {
+      // fall through to line parsing
+    }
+  }
+  // Fallback: one suggestion per line, stripping bullets/numbering, keeping questions.
+  return raw
+    .split('\n')
+    .map((line) => line.replace(/^[\s>*\-•\d.)]+/, '').trim())
+    .filter((line) => line.length > 4 && line.includes('?'));
+}
+
+async function generateSuggestions(userText, answerText) {
+  // Generated with Groq (not Gemini) so follow-ups do not consume the Gemini
+  // answer quota. Any failure returns [] and the UI falls back to the static pool.
+  if (!process.env.GROQ_API_KEY) return [];
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 7000);
+  try {
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: 'llama-3.3-70b-versatile',
+        response_format: { type: 'json_object' },
+        temperature: 0.4,
+        max_tokens: 256,
+        messages: [
+          {
+            role: 'system',
+            content: [
+              'You generate follow-up questions a portfolio visitor might click next about Paulo.',
+              "Given the visitor's last question and the assistant's answer, produce 3 concise, distinct follow-ups,",
+              'phrased in the first person as the visitor speaking to Paulo (e.g. "Can you show me...?").',
+              "CRITICAL: only suggest follow-ups that CAN be answered from Paulo's documented portfolio — his background, education, projects, skills and stacks, how he works, how he learns, goals, availability, or contact.",
+              'NEVER suggest questions about private details, personal opinions, hobbies, salary, or any specific a portfolio would not contain — those would have no answer and must be avoided.',
+              'Prefer follow-ups that go deeper into what the answer already covered, or into his projects and skills.',
+              'Write them in the SAME language as the visitor question; keep each under 60 characters;',
+              'make them follow naturally from the answer; do not repeat the visitor question.',
+              'Respond ONLY with JSON of the form {"suggestions": ["...", "...", "..."]}.'
+            ].join(' ')
+          },
+          {
+            role: 'user',
+            content: `Visitor question: ${userText}\nAssistant answer: ${answerText.slice(0, 1500)}`
+          }
+        ]
+      }),
+      signal: controller.signal
+    });
+
+    if (!response.ok) return [];
+    const data = await response.json();
+    const content = data?.choices?.[0]?.message?.content;
+    if (typeof content !== 'string') return [];
+
+    try {
+      const obj = JSON.parse(content);
+      if (Array.isArray(obj?.suggestions)) {
+        return obj.suggestions
+          .filter((item) => typeof item === 'string' && item.trim().length > 0)
+          .map((item) => item.trim())
+          .slice(0, 3);
+      }
+    } catch {
+      // fall through to tolerant parsing
+    }
+
+    return parseSuggestionList(content).slice(0, 3);
+  } catch (error) {
+    console.error('Suggestion generation failed.', sanitizeErrorForLogs(error));
+    return [];
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 export default async function handler(req, res) {
   setSecurityHeaders(res);
   const { allowed } = applyCors(req, res, {
@@ -817,6 +954,11 @@ export default async function handler(req, res) {
         response: fullResponseText,
         timestamp: Date.now()
       });
+
+      const suggestions = await generateSuggestions(lastUserMessage.content, fullResponseText);
+      if (suggestions.length) {
+        res.write(`data: ${JSON.stringify({ suggestions })}\n\n`);
+      }
     }
 
     res.write('data: [DONE]\n\n');

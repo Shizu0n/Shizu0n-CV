@@ -12,63 +12,12 @@ export interface ChatProjectAction {
 
 const MAX_PROJECT_CARDS = 5
 
+// Catalog order is AI-first by design: the three applied-AI builds lead, then the
+// portfolio itself, then the full-stack application systems. getAllProjectActions and
+// getShowcaseProjects both read this order, so the chat "list" cards and the visible grid
+// stay AI-first. projectsPresentation is keyed by id and its variants are assigned to keep
+// each consecutive grid pair filling a 12-column row.
 const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
-  {
-    id: 'academic-system',
-    name: 'Academic System',
-    aliases: ['academic system', 'academicsystem', 'sistema academico', 'sistema acadêmico', 'unifor system'],
-    summary: {
-      en: 'Java academic management system for enrollment and library operations, with explicit business rules, MySQL persistence, and integration with external microservices.',
-      pt: 'Sistema acadêmico em Java para matrícula e biblioteca, com regras de negócio explícitas, persistência em MySQL e integração com microsserviços externos.',
-    },
-    github: 'https://github.com/Shizu0n/AcademicSystem',
-    stacks: ['Java', 'Java 21', 'MySQL 8.0', 'JDBC', 'Gson', 'dotenv-java', 'REST APIs', 'Layered Architecture'],
-  },
-  {
-    id: 'delivery-system',
-    name: 'Delivery System',
-    aliases: ['delivery system', 'deliverysystem', 'sistema de delivery', 'delivery app'],
-    summary: {
-      en: 'Full-stack delivery system with multiple user roles, JWT authentication, operational CRUD flows, and a broader domain covering orders, menus, deliveries, and reviews.',
-      pt: 'Sistema full stack de delivery com múltiplos papéis, autenticação JWT, CRUD operacional e domínio amplo de pedidos, cardápio, entregas e avaliações.',
-    },
-    github: 'https://github.com/Shizu0n/DeliverySystem',
-    stacks: ['React', 'JavaScript', 'Node.js', 'MySQL', 'JWT', 'bcrypt.js', 'Helmet', 'CORS', 'Context API', 'REST API'],
-  },
-  {
-    id: 'gym-management',
-    name: 'Gym Management System',
-    aliases: ['gym management', 'gym management system', 'gymmanagement', 'sistema de academia'],
-    summary: {
-      en: 'Gym management system focused on administering students, plans, payments, workouts, physical assessments, and attendance.',
-      pt: 'Sistema de gestão de academia com foco em administração de alunos, planos, pagamentos, treinos, avaliações físicas e frequência.',
-    },
-    github: 'https://github.com/Shizu0n/GymManagement',
-    stacks: ['Java', 'Spring Boot', 'Java Swing', 'MySQL', 'Gradle'],
-  },
-  {
-    id: 'referral-system',
-    name: 'Referral System',
-    aliases: ['referral system', 'referralsystem', 'sistema de indicação', 'sistema de indicacao'],
-    summary: {
-      en: 'Full-stack referral system with React, TypeScript, NestJS, SQLite, and JWT authentication, built to demonstrate user flows, authentication, and recursive relational modeling.',
-      pt: 'Sistema full stack de indicação com React, TypeScript, NestJS, SQLite e autenticação JWT, construído para demonstrar fluxo de usuários, autenticação e modelagem relacional recursiva.',
-    },
-    github: 'https://github.com/Shizu0n/ReferralSystem',
-    stacks: ['NestJS', 'TypeScript', 'React 18', 'Vite', 'React Router DOM', 'SQLite', 'TypeORM', 'JWT', 'bcrypt', 'Context API', 'CSS', 'class-validator'],
-  },
-  {
-    id: 'shizu0n-cv',
-    name: 'Shizu0n CV',
-    aliases: ['shizu0n cv', 'portfolio site', 'shizu0n-cv', 'this portfolio'],
-    summary: {
-      en: 'Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo\'s own technical history.',
-      pt: 'Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.',
-    },
-    github: 'https://github.com/Shizu0n/Shizu0n-CV',
-    live: 'https://shizu0n.vercel.app',
-    stacks: ['React 19', 'TypeScript', 'Vite 7', 'Framer Motion 12', 'Lenis', 'Tailwind CSS 4', 'JavaScript', 'Vercel Functions', 'Server-Sent Events', 'Gemini API', 'Groq', 'Supabase', 'PostgreSQL', 'pgvector', 'GitHub API', 'EmailJS', 'ESLint', 'Prettier', 'Playwright'],
-  },
   {
     id: 'react-agent',
     name: 'ReAct Agent',
@@ -105,12 +54,68 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
     live: 'https://huggingface.co/spaces/Shizu0n/phi3-mini-sql-generator-demo',
     stacks: ['Python', 'PyTorch', 'Transformers', 'PEFT', 'QLoRA', 'LoRA', 'bitsandbytes', 'Phi-3 Mini', 'Hugging Face', 'Text-to-SQL'],
   },
+  {
+    id: 'shizu0n-cv',
+    name: 'Shizu0n CV',
+    aliases: ['shizu0n cv', 'portfolio site', 'shizu0n-cv', 'this portfolio'],
+    summary: {
+      en: 'Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo\'s own technical history.',
+      pt: 'Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.',
+    },
+    github: 'https://github.com/Shizu0n/Shizu0n-CV',
+    live: 'https://shizu0n.vercel.app',
+    stacks: ['React 19', 'TypeScript', 'Vite 7', 'Framer Motion 12', 'Lenis', 'Tailwind CSS 4', 'JavaScript', 'Vercel Functions', 'Server-Sent Events', 'Gemini API', 'Groq', 'Supabase', 'PostgreSQL', 'pgvector', 'GitHub API', 'EmailJS', 'ESLint', 'Prettier', 'Playwright'],
+  },
+  {
+    id: 'referral-system',
+    name: 'Referral System',
+    aliases: ['referral system', 'referralsystem', 'sistema de indicação', 'sistema de indicacao'],
+    summary: {
+      en: 'Full-stack referral system with React, TypeScript, NestJS, SQLite, and JWT authentication, built to demonstrate user flows, authentication, and recursive relational modeling.',
+      pt: 'Sistema full stack de indicação com React, TypeScript, NestJS, SQLite e autenticação JWT, construído para demonstrar fluxo de usuários, autenticação e modelagem relacional recursiva.',
+    },
+    github: 'https://github.com/Shizu0n/ReferralSystem',
+    stacks: ['NestJS', 'TypeScript', 'React 18', 'Vite', 'React Router DOM', 'SQLite', 'TypeORM', 'JWT', 'bcrypt', 'Context API', 'CSS', 'class-validator'],
+  },
+  {
+    id: 'delivery-system',
+    name: 'Delivery System',
+    aliases: ['delivery system', 'deliverysystem', 'sistema de delivery', 'delivery app'],
+    summary: {
+      en: 'Full-stack delivery system with multiple user roles, JWT authentication, operational CRUD flows, and a broader domain covering orders, menus, deliveries, and reviews.',
+      pt: 'Sistema full stack de delivery com múltiplos papéis, autenticação JWT, CRUD operacional e domínio amplo de pedidos, cardápio, entregas e avaliações.',
+    },
+    github: 'https://github.com/Shizu0n/DeliverySystem',
+    stacks: ['React', 'JavaScript', 'Node.js', 'MySQL', 'JWT', 'bcrypt.js', 'Helmet', 'CORS', 'Context API', 'REST API'],
+  },
+  {
+    id: 'academic-system',
+    name: 'Academic System',
+    aliases: ['academic system', 'academicsystem', 'sistema academico', 'sistema acadêmico', 'unifor system'],
+    summary: {
+      en: 'Java academic management system for enrollment and library operations, with explicit business rules, MySQL persistence, and integration with external microservices.',
+      pt: 'Sistema acadêmico em Java para matrícula e biblioteca, com regras de negócio explícitas, persistência em MySQL e integração com microsserviços externos.',
+    },
+    github: 'https://github.com/Shizu0n/AcademicSystem',
+    stacks: ['Java', 'Java 21', 'MySQL 8.0', 'JDBC', 'Gson', 'dotenv-java', 'REST APIs', 'Layered Architecture'],
+  },
+  {
+    id: 'gym-management',
+    name: 'Gym Management System',
+    aliases: ['gym management', 'gym management system', 'gymmanagement', 'sistema de academia'],
+    summary: {
+      en: 'Gym management system focused on administering students, plans, payments, workouts, physical assessments, and attendance.',
+      pt: 'Sistema de gestão de academia com foco em administração de alunos, planos, pagamentos, treinos, avaliações físicas e frequência.',
+    },
+    github: 'https://github.com/Shizu0n/GymManagement',
+    stacks: ['Java', 'Spring Boot', 'Java Swing', 'MySQL', 'Gradle'],
+  },
 ]
 
 function normalizeText(value: string) {
   return value
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[̀-ͯ]/g, '')
     .toLowerCase()
 }
 

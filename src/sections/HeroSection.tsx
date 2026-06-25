@@ -1,5 +1,5 @@
 import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, type MouseEvent } from 'react'
 import { useTranslation } from '../contexts/TranslationContext'
 
 const range = (
@@ -12,6 +12,11 @@ export default function HeroSection() {
   const { t } = useTranslation()
   const sectionRef = useRef<HTMLDivElement>(null)
   const prefersReducedMotion = useReducedMotion()
+
+  const handleJump = (href: string) => (event: MouseEvent) => {
+    event.preventDefault()
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end end'],
@@ -42,13 +47,22 @@ export default function HeroSection() {
   const lineScale = range(progress, [0.06, 0.18, 0.88], [0.45, 1, 1])
   const lineOpacity = range(progress, [0.02, 0.12, 0.88], [0, 1, 0.2])
 
-  const overlayOpacity = range(progress, [0.46, 0.5, 0.6, 0.66], [0, 0.72, 0.72, 0])
-  const overlayLeftY = range(progress, [0.46, 0.64], [prefersReducedMotion ? 0 : 14, prefersReducedMotion ? 0 : -12])
-  const overlayRightY = range(progress, [0.46, 0.64], [prefersReducedMotion ? 0 : -12, prefersReducedMotion ? 0 : 14])
+  // The two overlays reveal in sequence (Why, then Lesson) rather than together.
+  const overlayLeftOpacity = range(progress, [0.44, 0.49, 0.58, 0.62], [0, 0.82, 0.82, 0])
+  const overlayRightOpacity = range(progress, [0.6, 0.65, 0.72, 0.76], [0, 0.82, 0.82, 0])
+  const overlayLeftY = range(progress, [0.44, 0.62], [prefersReducedMotion ? 0 : 14, prefersReducedMotion ? 0 : -12])
+  const overlayRightY = range(progress, [0.6, 0.76], [prefersReducedMotion ? 0 : 14, prefersReducedMotion ? 0 : -12])
 
-  const outroOpacity = range(progress, [0.74, 0.8, 0.92], [0, 1, 1])
-  const outroY = range(progress, [0.74, 0.8], [18, 0])
-  const hintOpacity = range(progress, [0, 0.06, 0.14], [0, 1, 0])
+  const outroOpacity = range(progress, [0.78, 0.84, 0.96], [0, 1, 1])
+  const outroY = range(progress, [0.78, 0.84], [18, 0])
+  const hintOpacity = range(progress, [0, 0.06, 0.14], [1, 1, 0])
+
+  // Stagger the title word by word (last word emphasized). A fixed pool of three
+  // transforms keeps the hook count stable across language switches (EN has 3
+  // words, PT has 2); extra words fall back to the last transform.
+  const titleWords = t('hero.title').split(' ').filter(Boolean)
+  const wordOpacities = [wordOneOpacity, wordTwoOpacity, wordThreeOpacity]
+  const wordYs = [wordOneY, wordTwoY, wordThreeY]
 
   return (
     <section ref={sectionRef} id="hero" className="hero-scroll-container">
@@ -86,29 +100,44 @@ export default function HeroSection() {
         <motion.div className="hero-intro" style={{ opacity: introOpacity, y: introY }}>
           <span className="hero-kicker">{t('hero.kicker')}</span>
           <span className="hero-meta">{t('hero.meta')}</span>
+          <div className="hero-cta">
+            <a
+              className="hero-cta-link hero-cta-link--primary"
+              href="#projects"
+              onClick={handleJump('#projects')}
+            >
+              {t('hero.cta.work')}
+            </a>
+            <a className="hero-cta-link" href="#contact" onClick={handleJump('#contact')}>
+              {t('hero.cta.contact')}
+            </a>
+          </div>
         </motion.div>
 
         <motion.div className="hero-copy" style={{ opacity: titleOpacity, y: titleY }}>
           <p className="hero-caption">{t('hero.caption')}</p>
           <h1 className="hero-title">
-            <motion.span style={{ opacity: wordOneOpacity, y: wordOneY }}>
-              {t('hero.title.one')}
-            </motion.span>
-            <motion.span style={{ opacity: wordTwoOpacity, y: wordTwoY }}>
-              {t('hero.title.two')}
-            </motion.span>
-            <motion.span
-              className="hero-title-emphasis"
-              style={{ opacity: wordThreeOpacity, y: wordThreeY }}
-            >
-              {t('hero.title.three')}
-            </motion.span>
+            {titleWords.map((word, index) => {
+              const isLast = index === titleWords.length - 1
+              return (
+                <motion.span
+                  key={`${word}-${index}`}
+                  className={isLast ? 'hero-title-emphasis' : undefined}
+                  style={{
+                    opacity: wordOpacities[index] ?? wordOpacities[wordOpacities.length - 1],
+                    y: wordYs[index] ?? wordYs[wordYs.length - 1],
+                  }}
+                >
+                  {word}
+                </motion.span>
+              )
+            })}
           </h1>
         </motion.div>
 
         <motion.aside
           className="hero-overlay hero-overlay--left"
-          style={{ opacity: overlayOpacity, y: overlayLeftY }}
+          style={{ opacity: overlayLeftOpacity, y: overlayLeftY }}
         >
           <span className="hero-overlay-label">{t('hero.overlay.left')}</span>
           <p>{t('hero.overlay.left.desc')}</p>
@@ -116,7 +145,7 @@ export default function HeroSection() {
 
         <motion.aside
           className="hero-overlay hero-overlay--right"
-          style={{ opacity: overlayOpacity, y: overlayRightY }}
+          style={{ opacity: overlayRightOpacity, y: overlayRightY }}
         >
           <span className="hero-overlay-label">{t('hero.overlay.right')}</span>
           <p>{t('hero.overlay.right.desc')}</p>

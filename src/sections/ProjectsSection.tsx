@@ -63,11 +63,11 @@ function ProjectShowcaseTile({ project, presentation, index, labelPrefix, langua
 
       <div className="project-showcase-copy">
         <div className="project-showcase-meta">
-          <span>{label}</span>
           <span>{presentation.category[language]}</span>
         </div>
         <h3 className="project-showcase-title">{project.name}</h3>
         <p className="project-showcase-summary">{project.summary[language]}</p>
+        <p className="project-showcase-metric">{presentation.metric[language]}</p>
         <div className="project-showcase-stack">
           {project.stacks.slice(0, 4).map(technology => (
             <span key={technology}>{technology}</span>

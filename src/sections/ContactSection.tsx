@@ -6,6 +6,7 @@ import { useTranslation } from '../contexts/TranslationContext'
 const CONTACT_EMAIL = 'paulosvtatibana@gmail.com'
 const LINKEDIN_URL = 'https://www.linkedin.com/in/paulo-shizuo/'
 const GITHUB_URL = 'https://github.com/Shizu0n'
+const HUGGINGFACE_URL = 'https://huggingface.co/Shizu0n'
 
 const itemVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -89,6 +90,15 @@ export default function ContactSection() {
               className="contact-link"
             >
               GitHub &rarr;
+            </a>
+
+            <a
+              href={HUGGINGFACE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link"
+            >
+              Hugging Face &rarr;
             </a>
           </div>
         </motion.div>

@@ -1,29 +1,22 @@
 import { motion, type Variants } from 'framer-motion'
 
-const CAPABILITIES = [
-  {
-    title: 'Front-end systems',
-    summary: 'React 19, TypeScript, Vite, Tailwind 4, and Framer Motion shaped into interfaces that feel calm but intentional.',
-  },
-  {
-    title: 'Back-end thinking',
-    summary: 'NestJS, Java, Spring Boot, relational data, and REST APIs built with clear rules and maintainable structure.',
-  },
-  {
-    title: 'Product delivery',
-    summary: 'Responsive layout systems, GitHub workflows, documentation, and implementation detail that holds up in production.',
-  },
-]
+// Capability copy is i18n-driven (keys in TranslationContext). AI/LLM leads, then
+// full-stack engineering, then production delivery — matching the AI-first positioning.
+const CAPABILITY_KEYS = ['skills.cap.1', 'skills.cap.2', 'skills.cap.3'] as const
 
 const STACK_LOOP = [
+  'Python',
+  'PyTorch',
+  'Transformers',
+  'LangGraph',
+  'RAG',
+  'QLoRA',
+  'RAGAS',
+  'FastAPI',
   'React 19',
   'TypeScript',
-  'Framer Motion',
-  'Editorial UI',
-  'API Architecture',
+  'NestJS',
   'Tailwind 4',
-  'Responsive Systems',
-  'GitHub',
 ]
 
 const reveal: Variants = {
@@ -59,9 +52,9 @@ export default function SkillsSection() {
         </motion.div>
 
         <div className="skills-columns">
-          {CAPABILITIES.map((capability, index) => (
+          {CAPABILITY_KEYS.map((capabilityKey, index) => (
             <motion.article
-              key={capability.title}
+              key={capabilityKey}
               className="skills-column"
               initial={{ opacity: 0, y: 36 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -69,8 +62,8 @@ export default function SkillsSection() {
               transition={{ duration: 0.65, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
               <span className="skills-column-index">0{index + 1}</span>
-              <h3 className="skills-column-title">{capability.title}</h3>
-              <p className="skills-column-summary">{capability.summary}</p>
+              <h3 className="skills-column-title">{t(`${capabilityKey}.title`)}</h3>
+              <p className="skills-column-summary">{t(`${capabilityKey}.summary`)}</p>
             </motion.article>
           ))}
         </div>

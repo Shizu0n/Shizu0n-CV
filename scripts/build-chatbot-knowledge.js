@@ -126,6 +126,17 @@ async function readCvText() {
   }
 }
 
+// Privacy: strip Brazilian phone numbers from text embedded in the public artifact
+// (cv-derived content). Matches an optional +55 / area code followed by a BR mobile
+// number (leading 9 + 4 + 4 digits). Email and links stay — phone is the only PII removed.
+function redactPhone(text) {
+  if (typeof text !== 'string') return text;
+  return text.replace(
+    /\+?\s*(?:55[\s.‑-]*)?\(?\d{2}\)?[\s.‑-]*9\d{4}[\s.‑-]*\d{4}/g,
+    '[phone redacted]',
+  );
+}
+
 async function fetchGitHubJson(url) {
   const headers = {
     'User-Agent': 'Shizu0n-CV-knowledge-builder',
@@ -373,7 +384,6 @@ function buildCanonicalProfile(profile) {
     `Headline PT: ${profile.personal.headline.pt}`,
     `Location: ${profile.personal.location}`,
     `Email: ${profile.personal.email}`,
-    `Phone: ${profile.personal.phone}`,
     `GitHub: ${profile.personal.github}`,
     `LinkedIn: ${profile.personal.linkedin}`,
     `Portfolio: ${profile.personal.portfolio}`,
@@ -398,6 +408,52 @@ function buildGlobalSkillsSummary(profile, declaredSkills) {
     `Working bio EN: ${profile.bios.en}`,
     `Working bio PT: ${profile.bios.pt}`
   ].join('\n');
+}
+
+function buildNarrativeChunks(profile) {
+  const n = profile.narrative;
+  if (!n) return [];
+  const bi = (field) => (field ? [`EN: ${field.en}`, `PT: ${field.pt}`].join('\n') : '');
+
+  return [
+    {
+      id: 'identity:about-narrative',
+      type: 'identity',
+      project_id: null,
+      facet: 'about',
+      language: 'bilingual',
+      stack: null,
+      tags: ['personal', 'about', 'goals', 'learning'],
+      stacks: [],
+      content: [
+        'About Paulo (grounded answers — only state what is written here; do not extrapolate or invent beyond it):',
+        `Motivation:\n${bi(n.motivation)}`,
+        `Goals and direction:\n${bi(n.goals)}`,
+        `How he learns and stays updated:\n${bi(n.learning_approach)}`,
+        `Current growth focus:\n${bi(n.growth_focus)}`,
+        `Proudest project:\n${bi(n.proudest_project)}`,
+        `A notable challenge and insight:\n${bi(n.notable_challenge)}`,
+        `Self-assessed strengths:\n${bi(n.strengths_self_assessment)}`
+      ].join('\n\n')
+    },
+    {
+      id: 'identity:ways-of-working',
+      type: 'identity',
+      project_id: null,
+      facet: 'ways-of-working',
+      language: 'bilingual',
+      stack: null,
+      tags: ['personal', 'process', 'availability', 'collaboration'],
+      stacks: [],
+      content: [
+        'How Paulo works and his availability (grounded answers — only state what is written here):',
+        `Working process:\n${bi(n.working_process)}`,
+        `Engineering discipline with AI tools:\n${bi(n.engineering_discipline)}`,
+        `Collaboration:\n${bi(n.collaboration)}`,
+        `Availability and logistics:\n${bi(n.availability)}`
+      ].join('\n\n')
+    }
+  ];
 }
 
 function buildProjectChunks(project, scoreCard) {
@@ -668,6 +724,7 @@ async function main() {
       stacks: [],
       content: globalSkillsSummary
     },
+    ...buildNarrativeChunks(profile),
     ...buildStackChunks(stackInventory),
     ...projects.flatMap((project) => buildProjectChunks(project, scoreCardsById.get(project.id))),
     ...buildRankingChunks(rankings, nameById),
@@ -687,7 +744,7 @@ async function main() {
     profile,
     education: profile.education,
     declared_skills: declaredSkills,
-    cv_excerpt: cvRaw,
+    cv_excerpt: redactPhone(cvRaw),
     projects,
     stack_inventory: stackInventory,
     recommendation_scorecards: recommendations.project_scorecards,

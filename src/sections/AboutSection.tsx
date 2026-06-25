@@ -91,8 +91,8 @@ export default function AboutSection() {
 
               <div className="about-proof-list">
                 <div className="about-proof-item">
-                  <span className="about-proof-eyebrow">{t('about.proof.base')}</span>
-                  <strong>{t('about.proof.base.val')}</strong>
+                  <span className="about-proof-eyebrow">{t('about.proof.focus')}</span>
+                  <strong>{t('about.proof.focus.val')}</strong>
                 </div>
                 <div className="about-proof-item">
                   <span className="about-proof-eyebrow">{t('about.proof.stack')}</span>
@@ -101,6 +101,10 @@ export default function AboutSection() {
                 <div className="about-proof-item">
                   <span className="about-proof-eyebrow">{t('about.proof.style')}</span>
                   <strong>{t('about.proof.style.val')}</strong>
+                </div>
+                <div className="about-proof-item">
+                  <span className="about-proof-eyebrow">{t('about.proof.open')}</span>
+                  <strong>{t('about.proof.open.val')}</strong>
                 </div>
               </div>
             </motion.div>

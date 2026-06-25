@@ -41,6 +41,10 @@ AI_SESSION_CACHE/
 # Visual QA artifacts
 visual-qa/
 
+# Audit specs/docs + evidence (local only)
+portfolio-audit.md
+audit-*.png
+
 # Graphify artifacts
 graphify-out/
 

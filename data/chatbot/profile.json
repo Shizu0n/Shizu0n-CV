@@ -1,21 +1,20 @@
 {
   "personal": {
     "name": "Paulo Shizuo Vasconcelos Tatibana",
-    "title": "AI Engineer & Full-Stack Developer",
+    "title": "Computer Science Student — learning and practicing AI/ML and full-stack development",
     "headline": {
-      "pt": "Engenheiro de IA / ML & Desenvolvedor Full-Stack | Estudante de Ciência da Computação",
-      "en": "AI / ML Engineer & Full-Stack Developer | Computer Science Student"
+      "pt": "Estudante de Ciência da Computação aprendendo e praticando IA/ML e desenvolvimento full-stack",
+      "en": "Computer Science Student learning and practicing AI/ML and full-stack development"
     },
     "location": "Fortaleza, CE, Brazil",
     "email": "paulosvtatibana@gmail.com",
-    "phone": "+55 (85) 98563-6838",
     "github": "https://github.com/Shizu0n",
     "linkedin": "https://linkedin.com/in/paulo-shizuo",
     "portfolio": "https://shizu0n.vercel.app"
   },
   "bios": {
-    "pt": "Estudante de Ciência da Computação e engenheiro de IA que constrói sistemas de LLM como software de engenharia: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Trata IA como disciplina de engenharia — observabilidade, avaliação por métricas e fallbacks honestos — sobre uma base full-stack de arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.",
-    "en": "Computer Science student and AI engineer who builds LLM systems as engineered software: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. Treats AI as an engineering discipline — observability, evaluation by metrics, and honest fallbacks — on top of a full-stack foundation of layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code."
+    "pt": "Estudante de Ciência da Computação que aprende construindo, praticando duas áreas em paralelo. Em IA/ML: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Em full-stack: arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Em ambas, busca observabilidade, avaliação por métricas e fallbacks honestos. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.",
+    "en": "Computer Science student who learns by building, practicing two areas in parallel. In AI/ML: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. In full-stack: layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Across both, he aims for observability, evaluation by metrics, and honest fallbacks. He also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code."
   },
   "education": [
     {
@@ -142,6 +141,52 @@
   "contact_preferences": {
     "pt": "Para oportunidades, contato técnico ou currículo em PDF, o canal preferido é email ou LinkedIn.",
     "en": "For opportunities, technical contact, or a PDF resume, the preferred channel is email or LinkedIn."
+  },
+  "narrative": {
+    "motivation": {
+      "en": "Paulo is drawn to AI/ML because he sees it as the defining direction of technology: a force multiplier for individual productivity that frees up people's time and can meaningfully support people's lives. He treats full-stack development as essential, foundational knowledge for any modern engineer, and combines both so he can take an idea all the way to a working product.",
+      "pt": "Paulo se interessa por IA/ML por enxergá-la como a direção definidora da tecnologia: um multiplicador de produtividade individual que libera tempo das pessoas e pode apoiar de forma significativa a vida delas. Ele trata o desenvolvimento full-stack como conhecimento essencial e fundamental para qualquer engenheiro moderno, e combina os dois para levar uma ideia até um produto funcional."
+    },
+    "goals": {
+      "en": "His goal is to grow into a solid professional or researcher in AI engineering, or adjacent AI-systems fields that may emerge, ideally at research-driven, frontier AI organizations where he can gain broad experience across both applied AI/ML and full-stack work.",
+      "pt": "Seu objetivo é se tornar um profissional ou pesquisador sólido em engenharia de IA, ou áreas adjacentes de sistemas com IA que possam surgir, preferencialmente em organizações de IA de ponta e orientadas a pesquisa, onde possa ganhar experiência ampla tanto em IA/ML aplicada quanto em full-stack."
+    },
+    "availability": {
+      "en": "Paulo is currently available for an internship, part-time at around 4-6 hours per day, preferably in the afternoon/evening. He is open to any work model (remote, hybrid, or on-site). He is based in Fortaleza, Brazil, and open to national and international remote work. Expected graduation: December 2027.",
+      "pt": "Paulo está disponível para estágio agora, meio período, cerca de 4-6 horas por dia, preferencialmente no período da tarde/noite. Está aberto a qualquer modalidade (remoto, híbrido ou presencial). Mora em Fortaleza, Brasil, e está aberto a trabalho remoto nacional e internacional. Formatura prevista: dezembro de 2027."
+    },
+    "learning_approach": {
+      "en": "He keeps current by following the field on social channels and doing focused, in-depth research on topics he wants, or decides he needs, to learn, using documentation, short courses, and practical guides. He is currently deepening his work on building agents and integrating them into systems, implementing RAG properly in real systems, and understanding how LLM training works.",
+      "pt": "Ele se mantém atualizado acompanhando a área em redes sociais e fazendo pesquisas focadas e aprofundadas sobre temas que quer, ou decide que precisa, aprender, usando documentação, cursos rápidos e guias práticos. Atualmente está aprofundando a construção de agentes e sua integração em sistemas, a implementação correta de RAG em sistemas reais, e o entendimento de como funciona o treino de LLMs."
+    },
+    "growth_focus": {
+      "en": "An area he is actively working to deepen is the inner workings and reliability of LLM agents: understanding why models hallucinate, where they fail to interpret prompts, and the practical limits of LLMs, alongside strengthening software-engineering fundamentals.",
+      "pt": "Uma área que ele está ativamente buscando aprofundar é o funcionamento interno e a confiabilidade de agentes de LLM: entender por que os modelos alucinam, onde falham em interpretar prompts e os limites práticos dos LLMs, além de reforçar fundamentos de engenharia de software."
+    },
+    "working_process": {
+      "en": "His process: he draws inspiration from others' work or brainstorms while studying, shapes it into an idea, uses an agent (for example Claude or Gemini) to refine and validate key points, then builds a roadmap of planned tasks to implement step by step.",
+      "pt": "Seu processo: busca inspiração no trabalho de outras pessoas ou faz brainstorming enquanto estuda, transforma em uma ideia, usa um agente (por exemplo Claude ou Gemini) para refinar e validar pontos-chave, e então monta um roadmap com tarefas planejadas para implementar passo a passo."
+    },
+    "engineering_discipline": {
+      "en": "He works with discipline when building with AI tools: he defines checkpoints, reviews specifications before and after each implementation step, sets explicit working agreements with the AI, requires specs to be documented as local artifacts, and adds automated tests and CI/CD pipelines. When a coding problem isn't solved directly, he adds structured logging for intelligent error tracing, and keeps technical ownership by reviewing each step.",
+      "pt": "Ele trabalha com disciplina ao construir com ferramentas de IA: define checkpoints, revisa as especificações antes e depois de cada etapa de implementação, estabelece acordos explícitos com a IA, exige que as specs sejam documentadas como artefatos locais e adiciona testes automatizados e pipelines de CI/CD. Quando um problema de código não é resolvido diretamente, adiciona logging estruturado para rastreamento inteligente de erros, e mantém a propriedade técnica revisando cada etapa."
+    },
+    "collaboration": {
+      "en": "His projects so far have been solo, with team experience from academic group work. When collaborating, he likes a clear division of work via GitHub issues/tasks and a contact channel, and steps in to help when a teammate is stuck.",
+      "pt": "Seus projetos até aqui foram solo, com experiência de equipe em trabalhos acadêmicos. Ao colaborar, gosta de uma divisão clara de trabalho via issues/tarefas no GitHub e um canal de contato, e aparece para ajudar quando um colega trava."
+    },
+    "proudest_project": {
+      "en": "The project he is most proud of is this portfolio itself, because it spans everything he studies and cares about, from full-stack to AI integration, and serves as the showcase of his work and story.",
+      "pt": "O projeto do qual mais se orgulha é o próprio portfólio, por cobrir tudo o que ele estuda e valoriza, de full-stack a integração com IA, e por ser a vitrine do seu trabalho e da sua história."
+    },
+    "notable_challenge": {
+      "en": "During his fine-tuning project he hit real hardware limits without a strong machine to train on, relying on Colab's free T4 with tight daily usage caps. He points to a genuine bottleneck in AI today: even simpler applications often require financial cost (APIs, compute, hosting), and building fully free, efficient AI systems remains hard.",
+      "pt": "No seu projeto de fine-tuning, enfrentou limites reais de hardware por não ter uma máquina forte para treinar, recorrendo ao T4 gratuito do Colab com limites diários apertados. Ele aponta um gargalo real na IA hoje: mesmo aplicações mais simples costumam exigir custo financeiro (APIs, computação, hospedagem), e construir sistemas de IA totalmente gratuitos e eficientes ainda é difícil."
+    },
+    "strengths_self_assessment": {
+      "en": "He is confident in full-stack architecture theory, such as layering (MVC) and design principles like SOLID, and in reading and analyzing code to understand how a system works. He is still actively learning the deeper, behind-the-scenes mechanics of AI integration and agents.",
+      "pt": "Ele é confiante na teoria de arquitetura full-stack, como camadas (MVC) e princípios de design como SOLID, e em ler e analisar código para entender como um sistema funciona. Ainda está aprendendo ativamente as mecânicas mais profundas, nos bastidores, de integração com IA e agentes."
+    }
   },
   "source_notes": [
     "Primary source: cv.md",

@@ -255,6 +255,15 @@ export default function FloatingChat() {
       return [];
     }
 
+    // Prefer model-generated follow-ups from the latest assistant turn; fall back
+    // to the static topic pool when none are available (cache hits, errors, offline).
+    const lastAssistant = [...messages]
+      .reverse()
+      .find((message) => message.role === 'assistant' && message.content.trim());
+    if (lastAssistant?.suggestions && lastAssistant.suggestions.length > 0) {
+      return lastAssistant.suggestions.slice(0, 4);
+    }
+
     return getContextualSuggestions(messages, language as Language);
   }, [hasStartedConversation, language, messages]);
   const projectCardVisibilityByMessageId = useMemo(

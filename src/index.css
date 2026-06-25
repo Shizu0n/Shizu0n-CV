@@ -102,7 +102,7 @@ button {
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2.7rem, 6vw, 5.5rem);
+  font-size: clamp(2.4rem, 4.8vw, 4.5rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
   text-wrap: balance;
@@ -165,7 +165,7 @@ button {
 }
 
 .nav-link {
-  color: #6d6d6d;
+  color: #8c8c8c;
   text-decoration: none;
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -179,13 +179,57 @@ button {
   color: #fff;
 }
 
+.nav-social {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding-left: 1.2rem;
+  margin-left: 0.2rem;
+  border-left: 1px solid #1c1c1c;
+}
+
+.nav-social-link {
+  color: #8c8c8c;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.nav-social-link:hover {
+  color: #fff;
+}
+
+.mobile-social {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.mobile-social-link {
+  color: #8b8b8b;
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.mobile-social-link:hover {
+  color: #fff;
+}
+
 .nav-lang-toggle {
   display: flex;
   align-items: center;
   gap: 0.35rem;
   background: none;
   border: none;
-  color: #6d6d6d;
+  color: #8c8c8c;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.16em;
@@ -319,6 +363,18 @@ button {
   position: absolute;
 }
 
+/* The scroll-driven text layers fade via opacity but stay in the layout while
+   transparent. Because they paint above the intro CTAs, they would swallow
+   clicks on the buttons — so the purely decorative layers never take pointer
+   events, and only the CTA links re-enable them. */
+.hero-intro,
+.hero-copy,
+.hero-overlay,
+.hero-outro,
+.hero-scroll-hint {
+  pointer-events: none;
+}
+
 .hero-noise {
   inset: 0;
   pointer-events: none;
@@ -412,7 +468,7 @@ button {
 
 .hero-visual-word {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 14vw, 8.5rem);
+  font-size: clamp(3.25rem, 10.5vw, 6.75rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
   color: rgba(255, 255, 255, 0.96);
@@ -423,7 +479,7 @@ button {
   left: clamp(1.25rem, 4vw, 3rem);
   display: grid;
   gap: 0.35rem;
-  max-width: 20rem;
+  max-width: 22rem;
 }
 
 .hero-kicker,
@@ -445,12 +501,50 @@ button {
 .hero-meta {
   font-size: 0.7rem;
   letter-spacing: 0.14em;
-  color: #6d6d6d;
+  color: #8f8f8f;
+  white-space: pre-line;
+}
+
+.hero-cta {
+  margin-top: 1.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-cta-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #cfcfcf;
+  border: 1px solid #303030;
+  padding: 0.5rem 0.85rem;
+  pointer-events: auto;
+  transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-cta-link:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.hero-cta-link--primary {
+  color: #000;
+  background: #fff;
+  border-color: #fff;
+}
+
+.hero-cta-link--primary:hover {
+  color: #000;
+  background: #e3e3e3;
+  border-color: #e3e3e3;
 }
 
 .hero-copy {
   left: clamp(1.25rem, 4vw, 3rem);
-  bottom: clamp(6.4rem, 11vh, 8.2rem);
+  bottom: clamp(8rem, 17vh, 12.5rem);
   max-width: min(31rem, calc(100vw - 3rem));
 }
 
@@ -465,7 +559,7 @@ button {
   display: flex;
   flex-direction: column;
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 8.4vw, 8rem);
+  font-size: clamp(3rem, 6.4vw, 6rem);
   line-height: 0.9;
   letter-spacing: -0.06em;
   text-wrap: balance;
@@ -531,7 +625,7 @@ button {
   transform: translateX(-50%);
   font-size: 0.68rem;
   letter-spacing: 0.18em;
-  color: #666;
+  color: #8a8a8a;
 }
 
 .about-section {
@@ -550,7 +644,7 @@ button {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 10vh clamp(1.25rem, 4vw, 3rem) 9vh;
+  padding: 8vh clamp(1.25rem, 4vw, 3rem) 7vh;
 }
 
 .about-grid {
@@ -562,7 +656,7 @@ button {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: clamp(2rem, 4vw, 4rem);
-  align-items: end;
+  align-items: start;
 }
 
 .about-intro {
@@ -662,10 +756,19 @@ button {
   text-align: right;
 }
 
+/* The floating notes only clear the centered 1200px grid on very wide viewports;
+   below that they collide with the about content, so hide them in the overlap band
+   (the <=767px rule below restores them as inline flow on mobile). */
+@media (min-width: 768px) and (max-width: 1599px) {
+  .about-floating-note {
+    display: none;
+  }
+}
+
 .skills-section {
   position: relative;
   overflow: hidden;
-  padding: 12.5vh 0 8.5vh;
+  padding: 9vh 0 7vh;
   background: #000;
 }
 
@@ -750,7 +853,7 @@ button {
 }
 
 .projects-section {
-  padding: 10.5vh 0 13.5vh;
+  padding: 8vh 0 9vh;
   background: #000;
 }
 
@@ -797,6 +900,7 @@ button {
 
 .project-showcase--standard {
   grid-column: span 5;
+  min-height: 25rem;
 }
 
 .project-showcase--wide {
@@ -1216,7 +1320,7 @@ button {
 .project-showcase-title {
   max-width: 13ch;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 4.25rem);
+  font-size: clamp(1.9rem, 3.3vw, 3.5rem);
   line-height: 0.94;
   letter-spacing: -0.05em;
   text-wrap: balance;
@@ -1226,6 +1330,17 @@ button {
   max-width: 40ch;
   color: #a1a1a1;
   line-height: 1.7;
+}
+
+.project-showcase-metric {
+  max-width: 44ch;
+  padding-left: 0.7rem;
+  border-left: 1px solid #2c2c2c;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  color: #cdcdcd;
 }
 
 .project-showcase-stack {
@@ -1268,7 +1383,7 @@ button {
 }
 
 .contact-section {
-  padding: 15vh 0 14vh;
+  padding: 9vh 0 10vh;
   background: #000;
 }
 
@@ -1455,7 +1570,9 @@ button {
   }
 
   .hero-overlay--right {
-    display: none;
+    top: 13%;
+    bottom: auto;
+    max-width: 11rem;
   }
 
   .hero-outro {
@@ -1533,11 +1650,21 @@ button {
   }
 
   .hero-axis,
-  .hero-overlay--left,
-  .hero-overlay--right,
   .hero-visual-beam--vertical,
   .hero-visual-beam--horizontal {
     display: none;
+  }
+
+  /* The two overlays reveal one at a time (sequential scroll timing), so on phones
+     they share the same band above the visual without ever overlapping. */
+  .hero-overlay--left,
+  .hero-overlay--right {
+    top: 15%;
+    bottom: auto;
+    left: 1.25rem;
+    right: 1.25rem;
+    max-width: none;
+    text-align: left;
   }
 
   .hero-visual-anchor {
@@ -2282,6 +2409,13 @@ button {
 
 .chat-rich-paragraph {
   margin: 0;
+}
+
+.chat-rich-subhead {
+  margin: 0.15rem 0 0;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: #e6e6e6;
 }
 
 .chat-rich-list {

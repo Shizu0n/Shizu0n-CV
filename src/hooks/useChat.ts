@@ -87,6 +87,7 @@ export interface ChatMessage {
   timestamp: number;
   failed?: boolean;
   intent?: string | null;
+  suggestions?: string[];
 }
 
 export interface QuotaInfo {
@@ -265,6 +266,12 @@ export function useChat() {
                       currentAssistantText += parsed.text;
                       setMessages(prev => prev.map(m =>
                         m.id === assistantMessageId ? { ...m, content: currentAssistantText } : m
+                      ));
+                    }
+                    if (Array.isArray(parsed.suggestions)) {
+                      const suggestions = parsed.suggestions.filter((s: unknown): s is string => typeof s === 'string')
+                      setMessages(prev => prev.map(m =>
+                        m.id === assistantMessageId ? { ...m, suggestions } : m
                       ));
                     }
                   } catch {

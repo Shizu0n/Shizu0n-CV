@@ -6,12 +6,13 @@ describe('chatProjectCatalog.extractProjectActions', () => {
     const result = extractProjectActions('any content', true);
 
     expect(result).toHaveLength(5);
+    // Catalog is AI-first, so the first five cards lead with the applied-AI builds.
     expect(result.map((project) => project.id)).toEqual([
-      'academic-system',
-      'delivery-system',
-      'gym-management',
-      'referral-system',
+      'react-agent',
+      'advanced-rag',
+      'phi3-mini-sql',
       'shizu0n-cv',
+      'referral-system',
     ]);
   });
 

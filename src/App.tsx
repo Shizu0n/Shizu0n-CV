@@ -38,7 +38,15 @@ export default function App() {
       '@type': 'Person',
       name: 'Paulo Shizuo',
       url: 'https://shizu0n.vercel.app/',
-      jobTitle: 'Computer Scientist & Full Stack Developer',
+      jobTitle: 'Computer Science Student',
+      knowsAbout: [
+        'AI Engineering',
+        'Machine Learning',
+        'Large Language Models',
+        'Retrieval-Augmented Generation',
+        'LLM Agents',
+        'Full-Stack Development',
+      ],
       sameAs: [
         'https://github.com/Shizu0n',
         'https://www.linkedin.com/in/paulo-shizuo/',

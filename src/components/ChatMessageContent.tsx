@@ -1,5 +1,8 @@
-import type { ReactNode } from 'react'
+import { Fragment, type ReactNode } from 'react'
 import type { ChatProjectAction, Language } from './chatProjectCatalog'
+
+const HEADING_RE = /^#{1,6}\s+/
+const LIST_ITEM_RE = /^(?:[-*]|\d+[.)])\s+/
 
 interface ChatMessageContentProps {
   content: string
@@ -95,23 +98,42 @@ function renderBlocks(content: string) {
 
   return blocks.map((block, blockIndex) => {
     const lines = block.split('\n').map((line) => line.trim()).filter(Boolean)
-    const isList = lines.every((line) => /^[-*]\s+/.test(line))
 
+    // A heading-only block (e.g. "### Tools") renders as a styled sub-heading
+    // instead of leaking the literal '#' markers into the text.
+    if (lines.length === 1 && HEADING_RE.test(lines[0])) {
+      return (
+        <p key={`subhead-${blockIndex}`} className="chat-rich-subhead">
+          <strong>{parseInline(lines[0].replace(HEADING_RE, ''), `subhead-${blockIndex}`)}</strong>
+        </p>
+      )
+    }
+
+    // Treat bullet ("- ", "* ") and numbered ("1. ", "2) ") items alike so dense
+    // numbered answers no longer collapse into an unbroken paragraph.
+    const isList = lines.length > 0 && lines.every((line) => LIST_ITEM_RE.test(line))
     if (isList) {
       return (
         <ul key={`list-${blockIndex}`} className="chat-rich-list">
           {lines.map((line, lineIndex) => (
             <li key={`list-${blockIndex}-${lineIndex}`}>
-              {parseInline(line.replace(/^[-*]\s+/, ''), `list-${blockIndex}-${lineIndex}`)}
+              {parseInline(line.replace(LIST_ITEM_RE, ''), `list-${blockIndex}-${lineIndex}`)}
             </li>
           ))}
         </ul>
       )
     }
 
+    // Paragraph block: keep intentional single line breaks and strip any stray
+    // heading markers per line.
     return (
       <p key={`paragraph-${blockIndex}`} className="chat-rich-paragraph">
-        {parseInline(block, `paragraph-${blockIndex}`)}
+        {lines.map((line, lineIndex) => (
+          <Fragment key={`paragraph-${blockIndex}-${lineIndex}`}>
+            {lineIndex > 0 && <br />}
+            {parseInline(line.replace(HEADING_RE, ''), `paragraph-${blockIndex}-${lineIndex}`)}
+          </Fragment>
+        ))}
       </p>
     )
   })
