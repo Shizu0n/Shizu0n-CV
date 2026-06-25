@@ -32,7 +32,23 @@ body {
 
 main {
   position: relative;
-  background: #000;
+  z-index: 1;
+  background: transparent;
+}
+
+/* Fixed full-page WebGL backdrop (Cosmic Dust). Sits behind all content and never
+   intercepts pointer events. Content sections are lifted above it via z-index. */
+.cosmic-dust {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cosmic-dust-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 img,
@@ -132,7 +148,7 @@ button {
 }
 
 .nav.scrolled {
-  background: rgba(0, 0, 0, 0.84);
+  background: rgba(11, 11, 11, 0.72);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -340,7 +356,9 @@ button {
   position: relative;
   height: 300vh;
   min-height: 1960px;
-  background: #000;
+  /* Same veil as the other sections so the hero shares their black tonality
+     instead of exposing the lighter raw canvas. */
+  background: rgba(0, 0, 0, 0.62);
 }
 
 .hero-sticky {
@@ -388,6 +406,14 @@ button {
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08), transparent 38%),
     radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.03), transparent 58%);
   pointer-events: none;
+}
+
+/* The hero shares the exact background of every other section: the same veil over
+   the shared dust canvas. These hero-only overlays would tint/texture it differently
+   and leave a hard seam at the sticky's edge, so they are removed for consistency. */
+.hero-noise,
+.hero-gradient {
+  display: none;
 }
 
 .hero-axis {
@@ -628,8 +654,10 @@ button {
   color: #8a8a8a;
 }
 
+/* Text-heavy sections keep a semi-transparent dark veil so the drifting dust stays
+   visible behind them without competing with the small grayscale body copy. */
 .about-section {
-  background: #000;
+  background: rgba(0, 0, 0, 0.62);
 }
 
 .about-stage {
@@ -769,7 +797,7 @@ button {
   position: relative;
   overflow: hidden;
   padding: 9vh 0 7vh;
-  background: #000;
+  background: rgba(0, 0, 0, 0.62);
 }
 
 .skills-shell {
@@ -854,7 +882,7 @@ button {
 
 .projects-section {
   padding: 8vh 0 9vh;
-  background: #000;
+  background: rgba(0, 0, 0, 0.62);
 }
 
 .projects-shell {
@@ -881,8 +909,8 @@ button {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
-  background: #040404;
-  border: 1px solid #101010;
+  background: rgba(11, 11, 11, 0.72);
+  border: 1px solid #141414;
   display: flex;
   align-items: flex-end;
   transition: border-color 0.26s ease, background 0.26s ease;
@@ -966,7 +994,7 @@ button {
   right: 22%;
   width: 18%;
   height: 2px;
-  background: #040404;
+  background: rgba(11, 11, 11, 0.72);
   transition: transform 0.4s ease, background 0.4s ease;
 }
 
@@ -1237,8 +1265,8 @@ button {
 
 @media (hover: hover) and (pointer: fine) {
   .project-showcase:hover {
-    border-color: #1f1f1f;
-    background: #070707;
+    border-color: #222222;
+    background: rgba(18, 18, 18, 0.78);
   }
 
   .project-showcase:hover .project-showcase-word {
@@ -1254,7 +1282,7 @@ button {
 
   .project-showcase:hover .project-showcase-frame-break {
     transform: translateY(-2px);
-    background: #070707;
+    background: rgba(18, 18, 18, 0.78);
   }
 
   .project-showcase:hover .project-showcase-gridline--top {
@@ -1384,7 +1412,7 @@ button {
 
 .contact-section {
   padding: 9vh 0 10vh;
-  background: #000;
+  background: rgba(0, 0, 0, 0.62);
 }
 
 .contact-shell {
@@ -1430,8 +1458,8 @@ button {
 }
 
 .contact-form-panel {
-  background: #050505;
-  border: 1px solid #111;
+  background: rgba(11, 11, 11, 0.72);
+  border: 1px solid #141414;
   padding: clamp(1.25rem, 2vw, 1.75rem);
 }
 
@@ -1513,9 +1541,11 @@ button {
 }
 
 .footer {
+  position: relative;
+  z-index: 1;
   border-top: 1px solid #111;
   padding: 1.5rem 0 2rem;
-  background: #000;
+  background: rgba(0, 0, 0, 0.62);
 }
 
 .footer-inner {

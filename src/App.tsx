@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { lazy, Suspense, useEffect, useRef } from 'react'
 import Lenis from 'lenis'
 import { GitHubProvider } from './contexts/GitHubContext'
 import { TranslationProvider } from './contexts/TranslationContext'
@@ -11,6 +11,9 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import ScrollProgress from './components/ScrollProgress'
 import FloatingChat from './components/FloatingChat'
+
+// Lazy-loaded so three.js ships in its own chunk and never blocks first paint.
+const CosmicDustBackground = lazy(() => import('./components/CosmicDustBackground'))
 
 export default function App() {
   const lenisRef = useRef<Lenis | null>(null)
@@ -59,6 +62,9 @@ export default function App() {
   return (
     <TranslationProvider>
       <GitHubProvider>
+        <Suspense fallback={null}>
+          <CosmicDustBackground />
+        </Suspense>
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
