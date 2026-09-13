@@ -3,6 +3,7 @@ import type { ChatProjectAction, Language } from './chatProjectCatalog'
 
 const HEADING_RE = /^#{1,6}\s+/
 const LIST_ITEM_RE = /^(?:[-*]|\d+[.)])\s+/
+const normalizeAssistantText = (text: string) => text.replace(/\u2014/g, ',')
 
 interface ChatMessageContentProps {
   content: string
@@ -149,7 +150,9 @@ export default function ChatMessageContent({
 
   return (
     <div className="chat-message-body">
-      <div className="chat-rich-text">{renderBlocks(content)}</div>
+      <div className="chat-rich-text">
+        {renderBlocks(role === 'assistant' ? normalizeAssistantText(content) : content)}
+      </div>
 
       {role === 'assistant' && projectActions.length > 0 && (
         <div className="chat-project-actions">

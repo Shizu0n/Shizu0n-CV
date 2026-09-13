@@ -323,13 +323,13 @@ export default function FloatingChat() {
 
   const getLoadingText = () => {
      if (language === 'pt') {
-        if (loadingStep === 0) return 'Paulo está lendo sua pergunta...';
-        if (loadingStep === 1) return 'Paulo está juntando as ideias...';
-        return 'Paulo está finalizando a resposta...';
+        if (loadingStep === 0) return 'O assistente está processando sua pergunta...';
+        if (loadingStep === 1) return 'O assistente está preparando a resposta...';
+        return 'O assistente está finalizando a resposta...';
      } else {
-        if (loadingStep === 0) return 'Paulo is reading your question...';
-        if (loadingStep === 1) return 'Paulo is putting the ideas together...';
-        return 'Paulo is finishing the reply...';
+        if (loadingStep === 0) return 'The assistant is processing your question...';
+        if (loadingStep === 1) return 'The assistant is preparing a response...';
+        return 'The assistant is finishing the response...';
      }
   }
 
@@ -485,7 +485,7 @@ export default function FloatingChat() {
               style={{ cursor: 'grab', touchAction: 'none' }}
             >
               <div className="chat-header-info">
-                <span className="chat-title">Paulo Shizuo</span>
+                <span className="chat-title">{t('chat.title')}</span>
                 <span className="chat-subtitle">{t('chat.subtitle')}</span>
               </div>
               <div className="chat-header-actions">
@@ -547,7 +547,7 @@ export default function FloatingChat() {
                 return (
                   <div key={msg.id} className={`chat-message chat-message--${msg.role}`}>
                     <span className="chat-message-role">
-                      {msg.role === 'user' ? userLabel : 'Paulo'}
+                      {msg.role === 'user' ? userLabel : t('chat.assistant')}
                     </span>
                     <div className="chat-message-content">
                       {isPendingAssistantMessage ? (

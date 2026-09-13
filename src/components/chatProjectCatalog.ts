@@ -23,8 +23,8 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
     name: 'ReAct Agent',
     aliases: ['react agent', 'reactagent', 're-act agent', 'react-agent', 'agente react', 'langgraph agent', 'tool agent'],
     summary: {
-      en: 'Observable ReAct agent on $0 free-tier spend — LangGraph backend streaming its full reasoning/action trace over SSE, with cross-conversation memory, cited document RAG, persisted replayable traces, MCP tool discovery, and a 100% eval baseline on 22 labeled cases.',
-      pt: 'Agente ReAct observável com US$ 0 de gasto — backend LangGraph transmitindo o traço completo de raciocínio/ação via SSE, com memória entre conversas, RAG de documentos com citações, traces persistidos com replay, descoberta de ferramentas MCP e baseline de 100% em 22 casos avaliados.',
+      en: 'Observable ReAct agent on $0 free-tier spend. LangGraph backend streams its full reasoning/action trace over SSE, with cross-conversation memory, cited document RAG, persisted replayable traces, MCP tool discovery, and a 100% eval baseline on 22 labeled cases.',
+      pt: 'Agente ReAct observável com US$ 0 de gasto. O backend LangGraph transmite o traço completo de raciocínio/ação via SSE, com memória entre conversas, RAG de documentos com citações, traces persistidos com replay, descoberta de ferramentas MCP e baseline de 100% em 22 casos avaliados.',
     },
     github: 'https://github.com/Shizu0n/ReAct-Agent',
     live: 'https://react-agent-ml.vercel.app',
@@ -47,8 +47,8 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
     name: 'Phi-3 Mini SQL Generator',
     aliases: ['phi-3 mini sql generator', 'phi3 mini sql', 'phi-3 mini sql', 'phi3-mini-sql-generator', 'phi3 mini', 'phi-3 mini', 'phi3', 'phi-3', 'sql generator', 'qlora', 'text-to-sql', 'text to sql'],
     summary: {
-      en: 'QLoRA fine-tune of Phi-3 Mini (3.8B) for natural-language-to-SQL — trained 4-bit on a single T4, lifting exact-match accuracy from 2% to 73.5%, published to the Hugging Face Hub with a public Spaces demo.',
-      pt: 'Fine-tuning QLoRA do Phi-3 Mini (3.8B) para linguagem natural em SQL — treinado em 4-bit numa única T4, elevando o exact-match de 2% para 73,5%, publicado no Hugging Face Hub com demo pública no Spaces.',
+      en: 'QLoRA fine-tune of Phi-3 Mini (3.8B) for natural-language-to-SQL. Trained in 4-bit on a single T4, it lifted exact-match accuracy from 2% to 73.5% and was published to the Hugging Face Hub with a public Spaces demo.',
+      pt: 'Fine-tuning QLoRA do Phi-3 Mini (3.8B) para linguagem natural em SQL. Treinado em 4-bit numa única T4, elevou o exact-match de 2% para 73,5% e foi publicado no Hugging Face Hub com demo pública no Spaces.',
     },
     github: 'https://github.com/Shizu0n/phi3-mini-sql-generator',
     live: 'https://huggingface.co/spaces/Shizu0n/phi3-mini-sql-generator-demo',

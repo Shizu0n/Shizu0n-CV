@@ -8,7 +8,7 @@
  * All projects render in one unified grid. The catalog is AI-first, so the three applied-AI
  * builds lead, then the portfolio, then the full-stack application systems. The 9 tiles fill
  * five 12-column rows (7+5, 5+7, 12, 7+5, 5+7). `group` no longer splits the section — it only
- * marks the AI/ML builds so their tiles lead with the live demo link. `metric` is a short
+ * describes the project area. Demo and code actions are available to both groups. `metric` is a short
  * outcome/evidence line surfaced on the tile (the result, not just the stack).
  */
 
@@ -23,7 +23,7 @@ export interface ProjectPresentation {
   accent: string
   category: { en: string; pt: string }
   metric: { en: string; pt: string }
-  /** Real screenshot of the live demo, served from public/projects/. Decorative (alt=""). */
+  /** Screenshot or recorded GIF served from public/projects/. GIF playback is opt-in. */
   screenshot?: string
 }
 
@@ -76,7 +76,6 @@ export const PROJECT_PRESENTATION: Record<string, ProjectPresentation> = {
       en: 'RAG over Supabase pgvector · SSE chat with provider fallback + 3 cache layers',
       pt: 'RAG sobre Supabase pgvector · chat SSE com fallback de provedores + 3 camadas de cache',
     },
-    screenshot: '/projects/shizu0n-cv.png',
   },
   // Row 3: 12 — newest full-stack application
   'campus-cycle': {

@@ -2756,3 +2756,113 @@ button {
   outline: 1px solid #ffffff;
   outline-offset: 2px;
 }
+
+/* Project cards use an explicit media and copy layout so each destination stays
+   readable and actionable without the former full-screen hover capture. */
+.projects-section .project-showcase {
+  padding: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.projects-section .project-showcase-visual {
+  position: relative;
+  inset: auto;
+  height: clamp(14rem, 24vw, 21rem);
+  flex-shrink: 0;
+  padding: 1.65rem;
+  overflow: hidden;
+  background: #080808;
+  border-bottom: 1px solid #333;
+}
+
+.projects-section .project-showcase-shot {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  opacity: 1;
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+.projects-section .project-showcase:hover .project-showcase-shot,
+.projects-section .project-showcase:focus-visible .project-showcase-shot {
+  opacity: 1;
+}
+
+.projects-section .project-showcase-copy {
+  width: 100%;
+  padding: 1.5rem;
+  flex: 1;
+  background: #101010;
+}
+
+.projects-section .project-showcase-meta,
+.projects-section .project-showcase-stack span,
+.projects-section .project-showcase-code {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.projects-section .project-showcase-meta,
+.projects-section .project-showcase-code {
+  color: #aaa;
+}
+
+.projects-section .project-showcase-title {
+  max-width: 20ch;
+  line-height: 1.1;
+}
+
+.projects-section .project-showcase-metric {
+  font-size: 0.85rem;
+}
+
+.project-preview-toggle {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid #777;
+  background: #111;
+  color: #fff;
+  font-size: 0.875rem;
+  pointer-events: auto;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.project-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.5rem 0.85rem;
+  color: #fff;
+  border: 1px solid #666;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.project-actions a:hover {
+  background: #282828;
+  border-color: #fff;
+}
+
+@media (max-width: 767px) {
+  .projects-section .project-showcase-copy {
+    padding: 1.25rem;
+  }
+}

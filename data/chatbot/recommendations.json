@@ -356,8 +356,8 @@
     },
     {
       "project_id": "react-agent",
-      "summary_pt": "Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP — tudo em free-tier, com avaliação sobre o grafo real e deploy público.",
-      "summary_en": "The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery — all on free tier, with evaluation over the real graph and public deployment.",
+      "summary_pt": "Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP, tudo em free-tier, com avaliação sobre o grafo real e deploy público.",
+      "summary_en": "The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery, all on free tier, with evaluation over the real graph and public deployment.",
       "scores": {
         "completeness": {
           "score": 4,

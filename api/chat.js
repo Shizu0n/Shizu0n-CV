@@ -276,7 +276,7 @@ const providers = {
     }
   },
   groq: {
-    name: 'groq/llama-3.3-70b-versatile',
+    name: 'groq/openai/gpt-oss-120b',
     isAvailable: () => Boolean(process.env.GROQ_API_KEY),
     async createStream(systemPrompt, history) {
       const controller = new AbortController();
@@ -291,7 +291,7 @@ const providers = {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            model: 'llama-3.3-70b-versatile',
+            model: 'openai/gpt-oss-120b',
             messages: toOpenAIMessages(systemPrompt, history),
             stream: true,
             max_tokens: 1024,
@@ -721,7 +721,7 @@ async function generateSuggestions(userText, answerText) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
+        model: 'openai/gpt-oss-120b',
         response_format: { type: 'json_object' },
         temperature: 0.4,
         max_tokens: 256,

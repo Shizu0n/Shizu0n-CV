@@ -57,6 +57,11 @@ export function usePointerTilt<T extends HTMLElement>() {
     }
 
     const onMove = (event: PointerEvent) => {
+      // Keep nested actions steady while a visitor aims at them.
+      if (event.target instanceof Element && event.target.closest('button, a')) {
+        onLeave()
+        return
+      }
       const rect = el.getBoundingClientRect()
       const px = (event.clientX - rect.left) / rect.width - 0.5
       const py = (event.clientY - rect.top) / rect.height - 0.5

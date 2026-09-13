@@ -129,13 +129,31 @@ async function readCvText() {
 
 // Privacy: strip Brazilian phone numbers from text embedded in the public artifact
 // (cv-derived content). Matches an optional +55 / area code followed by a BR mobile
-// number (leading 9 + 4 + 4 digits). Email and links stay — phone is the only PII removed.
+// number (leading 9 + 4 + 4 digits). Email and links stay. Phone is the only PII removed.
 function redactPhone(text) {
   if (typeof text !== 'string') return text;
-  return text.replace(
+  return text
+    .replace(/\s+\u2014\s+/g, ', ')
+    .replace(/\u2014/g, ',')
+    .replace(
     /\+?\s*(?:55[\s.‑-]*)?\(?\d{2}\)?[\s.‑-]*9\d{4}[\s.‑-]*\d{4}/g,
     '[phone redacted]',
-  );
+    );
+}
+
+function normalizeUiPunctuation(value) {
+  if (typeof value === 'string') {
+    return value.replace(/\s+\u2014\s+/g, ', ').replace(/\u2014/g, ',');
+  }
+  if (Array.isArray(value)) {
+    return value.map(normalizeUiPunctuation);
+  }
+  if (value && typeof value === 'object') {
+    return Object.fromEntries(
+      Object.entries(value).map(([key, entry]) => [key, normalizeUiPunctuation(entry)]),
+    );
+  }
+  return value;
 }
 
 async function fetchGitHubJson(url) {
@@ -427,7 +445,7 @@ function buildNarrativeChunks(profile) {
       tags: ['personal', 'about', 'goals', 'learning'],
       stacks: [],
       content: [
-        'About Paulo (grounded answers — only state what is written here; do not extrapolate or invent beyond it):',
+        'About Paulo (grounded answers. Only state what is written here; do not extrapolate or invent beyond it):',
         `Motivation:\n${bi(n.motivation)}`,
         `Goals and direction:\n${bi(n.goals)}`,
         `How he learns and stays updated:\n${bi(n.learning_approach)}`,
@@ -447,7 +465,7 @@ function buildNarrativeChunks(profile) {
       tags: ['personal', 'process', 'availability', 'collaboration'],
       stacks: [],
       content: [
-        'How Paulo works and his availability (grounded answers — only state what is written here):',
+        'How Paulo works and his availability (grounded answers. Only state what is written here):',
         `Working process:\n${bi(n.working_process)}`,
         `Engineering discipline with AI tools:\n${bi(n.engineering_discipline)}`,
         `Collaboration:\n${bi(n.collaboration)}`,
@@ -768,7 +786,7 @@ async function main() {
     }
   };
 
-  await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(artifact, null, 2)}\n`, 'utf8');
+  await fs.writeFile(OUTPUT_PATH, `${JSON.stringify(normalizeUiPunctuation(artifact), null, 2)}\n`, 'utf8');
   console.log(`Built chatbot knowledge artifact at ${OUTPUT_PATH}`);
 }
 
