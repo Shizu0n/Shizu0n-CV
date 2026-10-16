@@ -714,8 +714,9 @@ function parseSuggestionList(raw) {
 
 async function generateSuggestions(userText, answerText) {
   // Generated with Groq (not Gemini) so follow-ups do not consume the Gemini
-  // answer quota. Any failure returns [] and the UI falls back to the static pool.
-  if (!process.env.GROQ_API_KEY) return [];
+  // answer quota. Any failure returns no list and the UI falls back to the static pool;
+  // `skipped` names the reason, since Hobby keeps runtime logs for one hour only.
+  if (!process.env.GROQ_API_KEY) return { list: [], skipped: 'no-key' };
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 7000);
   try {
@@ -759,16 +760,17 @@ async function generateSuggestions(userText, answerText) {
 
     if (!response.ok) {
       console.error('Suggestion generation failed.', response.status);
-      return [];
+      return { list: [], skipped: `http-${response.status}` };
     }
     const data = await response.json();
     const content = data?.choices?.[0]?.message?.content;
-    if (typeof content !== 'string') return [];
+    if (typeof content !== 'string') return { list: [], skipped: 'no-content' };
 
+    let list = [];
     try {
       const obj = JSON.parse(content);
       if (Array.isArray(obj?.suggestions)) {
-        return obj.suggestions
+        list = obj.suggestions
           .filter((item) => typeof item === 'string' && item.trim().length > 0)
           .map((item) => item.trim())
           .slice(0, 3);
@@ -776,11 +778,11 @@ async function generateSuggestions(userText, answerText) {
     } catch {
       // fall through to tolerant parsing
     }
-
-    return parseSuggestionList(content).slice(0, 3);
+    if (!list.length) list = parseSuggestionList(content).slice(0, 3);
+    return { list, skipped: list.length ? null : 'unparsed' };
   } catch (error) {
     console.error('Suggestion generation failed.', sanitizeErrorForLogs(error));
-    return [];
+    return { list: [], skipped: error?.name === 'AbortError' ? 'timeout' : 'error' };
   } finally {
     clearTimeout(timeout);
   }
@@ -989,9 +991,12 @@ export default async function handler(req, res) {
         timestamp: Date.now()
       });
 
-      const suggestions = await generateSuggestions(lastUserMessage.content, fullResponseText);
+      const { list: suggestions, skipped } = await generateSuggestions(lastUserMessage.content, fullResponseText);
       if (suggestions.length) {
         res.write(`data: ${JSON.stringify({ suggestions })}\n\n`);
+      } else {
+        // An SSE comment: clients ignore it, but it shows in the raw stream when debugging.
+        res.write(`: suggestions skipped: ${skipped}\n\n`);
       }
     }
 
