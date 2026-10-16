@@ -20,7 +20,8 @@ const MAX_MESSAGE_COUNT = 20;
 const MAX_MESSAGE_LENGTH = 2000;
 const MAX_TOTAL_CONTENT_LENGTH = 10000;
 const ALLOWED_ORIGINS = buildAllowedOrigins(process.env.ALLOWED_ORIGINS);
-const PROVIDER_CHAIN = ['gemini', 'groq'];
+// Each free Gemini model has its own daily quota, so Flash-Lite still answers when Flash runs out.
+const PROVIDER_CHAIN = ['gemini', 'gemini-lite', 'groq'];
 
 const hashQuery = (text) =>
   crypto.createHash('md5').update((text || '').trim().toLowerCase()).digest('hex');
@@ -251,30 +252,33 @@ function toOpenAIMessages(systemPrompt, history) {
   ];
 }
 
+const geminiProvider = (modelId) => ({
+  name: modelId,
+  isAvailable: () => Boolean(process.env.GEMINI_API_KEY),
+  async createStream(systemPrompt, history, lastMessage) {
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    const model = genAI.getGenerativeModel({
+      model: modelId,
+      systemInstruction: systemPrompt
+    });
+    const chatHistory = history.slice(0, -1).map((message) => ({
+      role: message.role === 'user' ? 'user' : 'model',
+      parts: [{ text: message.content }]
+    }));
+    const chat = model.startChat({ history: chatHistory });
+    const result = await chat.sendMessageStream(lastMessage);
+    return (async function* streamGemini() {
+      for await (const chunk of result.stream) {
+        const text = chunk.text();
+        if (text) yield text;
+      }
+    })();
+  }
+});
+
 const providers = {
-  gemini: {
-    name: 'gemini-2.5-flash',
-    isAvailable: () => Boolean(process.env.GEMINI_API_KEY),
-    async createStream(systemPrompt, history, lastMessage) {
-      const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-      const model = genAI.getGenerativeModel({
-        model: 'gemini-2.5-flash',
-        systemInstruction: systemPrompt
-      });
-      const chatHistory = history.slice(0, -1).map((message) => ({
-        role: message.role === 'user' ? 'user' : 'model',
-        parts: [{ text: message.content }]
-      }));
-      const chat = model.startChat({ history: chatHistory });
-      const result = await chat.sendMessageStream(lastMessage);
-      return (async function* streamGemini() {
-        for await (const chunk of result.stream) {
-          const text = chunk.text();
-          if (text) yield text;
-        }
-      })();
-    }
-  },
+  gemini: geminiProvider('gemini-2.5-flash'),
+  'gemini-lite': geminiProvider('gemini-2.5-flash-lite'),
   groq: {
     name: 'groq/openai/gpt-oss-120b',
     isAvailable: () => Boolean(process.env.GROQ_API_KEY),
@@ -387,9 +391,9 @@ function getChunkById(knowledge, chunkId) {
 }
 
 function getProjectChunks(knowledge, projectId) {
-  return knowledge.chat_runtime.chunks.filter(
-    (chunk) => chunk.project_id === projectId && chunk.type === 'project'
-  );
+  // Includes the project's metrics/recommendation facet: its tradeoffs and documented
+  // failures live there, and "what does it get wrong" questions need them.
+  return knowledge.chat_runtime.chunks.filter((chunk) => chunk.project_id === projectId);
 }
 
 function getProjectOverviewChunks(knowledge) {
@@ -652,8 +656,7 @@ function buildContextBlock(localChunks, vectorChunks) {
   return lines.join('\n');
 }
 
-function buildSystemInstruction(prompt, knowledge, analysis, localChunks, vectorChunks) {
-  const canary = crypto.randomUUID ? crypto.randomUUID() : `canary-${Date.now()}`;
+function buildSystemInstruction(prompt, knowledge, analysis, localChunks, vectorChunks, canary = crypto.randomUUID ? crypto.randomUUID() : `canary-${Date.now()}`) {
   const instruction = [
     prompt,
     '',
@@ -726,7 +729,10 @@ async function generateSuggestions(userText, answerText) {
         model: 'openai/gpt-oss-120b',
         response_format: { type: 'json_object' },
         temperature: 0.4,
-        max_tokens: 256,
+        // gpt-oss reasons before answering: with 256 tokens the reasoning used the budget,
+        // the JSON came out truncated and Groq rejected every call (400 "Failed to validate JSON").
+        reasoning_effort: 'low',
+        max_tokens: 600,
         messages: [
           {
             role: 'system',
@@ -751,7 +757,10 @@ async function generateSuggestions(userText, answerText) {
       signal: controller.signal
     });
 
-    if (!response.ok) return [];
+    if (!response.ok) {
+      console.error('Suggestion generation failed.', response.status);
+      return [];
+    }
     const data = await response.json();
     const content = data?.choices?.[0]?.message?.content;
     if (typeof content !== 'string') return [];
@@ -775,6 +784,23 @@ async function generateSuggestions(userText, answerText) {
   } finally {
     clearTimeout(timeout);
   }
+}
+
+// About 6,000 prompt tokens at ~3.5 characters per token, leaving room for the 1,024-token answer.
+const GROQ_PROMPT_CHARS = 21000;
+
+// Drops the least specific context first (retrieved chunks, then local ones from the end,
+// always keeping the identity chunk) until the prompt fits.
+function fitInstruction(build, localChunks, vectorChunks) {
+  let local = localChunks;
+  let vector = vectorChunks;
+  let text = build(local, vector);
+  while (text.length > GROQ_PROMPT_CHARS && (vector.length || local.length > 1)) {
+    if (vector.length) vector = vector.slice(0, -1);
+    else local = local.slice(0, -1);
+    text = build(local, vector);
+  }
+  return text;
 }
 
 export default async function handler(req, res) {
@@ -910,8 +936,14 @@ export default async function handler(req, res) {
       const provider = providers[providerKey];
       if (!provider.isAvailable()) continue;
 
+      // Groq's free tier caps a request at 8,000 tokens per minute, answer included, so the
+      // last-resort fallback gets a trimmed prompt instead of failing with 413.
+      const systemPrompt = providerKey === 'groq'
+        ? fitInstruction((local, vector) => buildSystemInstruction(prompt, knowledge, analysis, local, vector, canary).instruction, localChunks, vectorChunks)
+        : instruction;
+
       try {
-        stream = await provider.createStream(instruction, normalizedMessages, lastUserMessage.content);
+        stream = await provider.createStream(systemPrompt, normalizedMessages, lastUserMessage.content);
         usedProvider = provider.name;
         break;
       } catch (error) {

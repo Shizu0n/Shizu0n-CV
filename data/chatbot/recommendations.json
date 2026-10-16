@@ -13,6 +13,12 @@
     "Advanced RAG: evaluated with offline heuristics and opt-in cloud RAGAS across retrieval strategies; it has no single headline accuracy number.",
     "Shizu0n CV (this portfolio) and the smaller application systems have no published accuracy or benchmark metric."
   ],
+  "project_kinds": [
+    "Full-stack (frontend, backend and database): ReAct Agent (React + FastAPI + Supabase Postgres/pgvector, around an AI agent), CampusCycle (React PWA + Express + Prisma/PostgreSQL), Shizu0n CV (React + Vercel Functions + Supabase), Referral System (React + NestJS + SQLite), Delivery System (React + Express + MySQL).",
+    "Backend with a desktop client: Gym Management System (Spring Boot REST API + Java Swing client).",
+    "Backend only: Academic System (Java 21 console application with MySQL).",
+    "AI, not full-stack: Advanced RAG (a Python/Streamlit retrieval and evaluation app) and Phi-3 Mini SQL Generator (a QLoRA fine-tune published on Hugging Face with a demo Space)."
+  ],
   "criteria_weights": {
     "ai_ml_depth": 0.18,
     "completeness": 0.13,

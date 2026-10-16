@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T22:27:48.576Z",
+  "generated_at": "2026-10-16T14:39:49.745Z",
   "sources": {
     "cv": "cv.md",
     "profile": "data/chatbot/profile.json",
@@ -474,7 +474,7 @@
         "dates": {
           "created_at": "2025-11-11T19:54:36Z",
           "pushed_at": "2026-04-19T03:40:10Z",
-          "last_activity_days": 178
+          "last_activity_days": 180
         },
         "size": {
           "repository_kb": 2717,
@@ -645,7 +645,7 @@
             }
           ]
         },
-        "last_activity_days": 178
+        "last_activity_days": 180
       }
     },
     {
@@ -814,7 +814,7 @@
         "dates": {
           "created_at": "2025-11-09T15:16:32Z",
           "pushed_at": "2026-04-19T03:41:57Z",
-          "last_activity_days": 178
+          "last_activity_days": 180
         },
         "size": {
           "repository_kb": 1612,
@@ -1029,7 +1029,7 @@
             }
           ]
         },
-        "last_activity_days": 178
+        "last_activity_days": 180
       }
     },
     {
@@ -1156,7 +1156,7 @@
         "dates": {
           "created_at": "2025-10-14T10:56:17Z",
           "pushed_at": "2026-04-19T03:42:02Z",
-          "last_activity_days": 178
+          "last_activity_days": 180
         },
         "size": {
           "repository_kb": 954,
@@ -1318,7 +1318,7 @@
             }
           ]
         },
-        "last_activity_days": 178
+        "last_activity_days": 180
       }
     },
     {
@@ -1488,7 +1488,7 @@
         "dates": {
           "created_at": "2025-10-05T22:21:26Z",
           "pushed_at": "2026-04-19T03:38:56Z",
-          "last_activity_days": 178
+          "last_activity_days": 180
         },
         "size": {
           "repository_kb": 314,
@@ -1663,7 +1663,7 @@
             }
           ]
         },
-        "last_activity_days": 178
+        "last_activity_days": 180
       }
     },
     {
@@ -1820,51 +1820,51 @@
         "languages": [
           {
             "name": "TypeScript",
-            "bytes": 147923,
-            "percentage": 52.03
+            "bytes": 179129,
+            "percentage": 58.47
           },
           {
             "name": "JavaScript",
-            "bytes": 79861,
-            "percentage": 28.09
+            "bytes": 85083,
+            "percentage": 27.77
           },
           {
             "name": "CSS",
-            "bytes": 55494,
-            "percentage": 19.52
+            "bytes": 40775,
+            "percentage": 13.31
           },
           {
             "name": "HTML",
-            "bytes": 1007,
-            "percentage": 0.35
+            "bytes": 1360,
+            "percentage": 0.44
           }
         ],
         "dates": {
           "created_at": "2025-10-04T03:42:39Z",
-          "pushed_at": "2026-10-14T18:09:09Z",
+          "pushed_at": "2026-10-16T14:09:33Z",
           "last_activity_days": 0
         },
         "size": {
-          "repository_kb": 2164,
-          "total_items": 92
+          "repository_kb": 2989,
+          "total_items": 105
         },
         "repo_tree": {
-          "total_items": 92,
-          "source_like_items": 44,
-          "test_like_items": 5,
+          "total_items": 105,
+          "source_like_items": 48,
+          "test_like_items": 6,
           "docs_like_items": 1,
           "env_example_count": 1,
           "top_level_areas": [
             {
               "name": "src",
-              "count": 40
-            },
-            {
-              "name": "data",
-              "count": 8
+              "count": 44
             },
             {
               "name": "public",
+              "count": 14
+            },
+            {
+              "name": "data",
               "count": 8
             },
             {
@@ -1873,7 +1873,7 @@
             },
             {
               "name": "scripts",
-              "count": 5
+              "count": 6
             },
             {
               "name": "api",
@@ -1882,6 +1882,10 @@
             {
               "name": ".github",
               "count": 3
+            },
+            {
+              "name": ".taste-skill",
+              "count": 2
             },
             {
               "name": ".editorconfig",
@@ -1897,10 +1901,6 @@
             },
             {
               "name": ".gitignore",
-              "count": 1
-            },
-            {
-              "name": ".prettierignore",
               "count": 1
             }
           ]
@@ -1985,30 +1985,30 @@
         "forks": 0,
         "watchers": 0,
         "open_issues": 0,
-        "size_kb": 2164,
+        "size_kb": 2989,
         "created_at": "2025-10-04T03:42:39Z",
-        "pushed_at": "2026-10-14T18:09:09Z",
+        "pushed_at": "2026-10-16T14:09:33Z",
         "topics": [],
         "language_breakdown": [
           {
             "name": "TypeScript",
-            "bytes": 147923,
-            "percentage": 52.03
+            "bytes": 179129,
+            "percentage": 58.47
           },
           {
             "name": "JavaScript",
-            "bytes": 79861,
-            "percentage": 28.09
+            "bytes": 85083,
+            "percentage": 27.77
           },
           {
             "name": "CSS",
-            "bytes": 55494,
-            "percentage": 19.52
+            "bytes": 40775,
+            "percentage": 13.31
           },
           {
             "name": "HTML",
-            "bytes": 1007,
-            "percentage": 0.35
+            "bytes": 1360,
+            "percentage": 0.44
           }
         ],
         "readme_headings": [
@@ -2049,22 +2049,22 @@
           "License"
         ],
         "tree_metrics": {
-          "total_items": 92,
-          "source_like_items": 44,
-          "test_like_items": 5,
+          "total_items": 105,
+          "source_like_items": 48,
+          "test_like_items": 6,
           "docs_like_items": 1,
           "env_example_count": 1,
           "top_level_areas": [
             {
               "name": "src",
-              "count": 40
-            },
-            {
-              "name": "data",
-              "count": 8
+              "count": 44
             },
             {
               "name": "public",
+              "count": 14
+            },
+            {
+              "name": "data",
               "count": 8
             },
             {
@@ -2073,7 +2073,7 @@
             },
             {
               "name": "scripts",
-              "count": 5
+              "count": 6
             },
             {
               "name": "api",
@@ -2082,6 +2082,10 @@
             {
               "name": ".github",
               "count": 3
+            },
+            {
+              "name": ".taste-skill",
+              "count": 2
             },
             {
               "name": ".editorconfig",
@@ -2097,10 +2101,6 @@
             },
             {
               "name": ".gitignore",
-              "count": 1
-            },
-            {
-              "name": ".prettierignore",
               "count": 1
             }
           ]
@@ -2303,7 +2303,7 @@
         "dates": {
           "created_at": "2026-07-17T11:08:04Z",
           "pushed_at": "2026-07-27T20:12:53Z",
-          "last_activity_days": 79
+          "last_activity_days": 80
         },
         "size": {
           "repository_kb": 241,
@@ -2541,7 +2541,7 @@
             }
           ]
         },
-        "last_activity_days": 79
+        "last_activity_days": 80
       }
     },
     {
@@ -2728,13 +2728,13 @@
         "languages": [
           {
             "name": "Python",
-            "bytes": 260486,
-            "percentage": 59.63
+            "bytes": 260742,
+            "percentage": 59.65
           },
           {
             "name": "TypeScript",
             "bytes": 156025,
-            "percentage": 35.71
+            "percentage": 35.69
           },
           {
             "name": "CSS",
@@ -2759,11 +2759,11 @@
         ],
         "dates": {
           "created_at": "2026-04-26T22:33:25Z",
-          "pushed_at": "2026-07-04T17:59:50Z",
-          "last_activity_days": 102
+          "pushed_at": "2026-10-15T00:13:53Z",
+          "last_activity_days": 1
         },
         "size": {
-          "repository_kb": 963,
+          "repository_kb": 980,
           "total_items": 208
         },
         "repo_tree": {
@@ -2909,20 +2909,20 @@
         "forks": 0,
         "watchers": 0,
         "open_issues": 0,
-        "size_kb": 963,
+        "size_kb": 980,
         "created_at": "2026-04-26T22:33:25Z",
-        "pushed_at": "2026-07-04T17:59:50Z",
+        "pushed_at": "2026-10-15T00:13:53Z",
         "topics": [],
         "language_breakdown": [
           {
             "name": "Python",
-            "bytes": 260486,
-            "percentage": 59.63
+            "bytes": 260742,
+            "percentage": 59.65
           },
           {
             "name": "TypeScript",
             "bytes": 156025,
-            "percentage": 35.71
+            "percentage": 35.69
           },
           {
             "name": "CSS",
@@ -3031,7 +3031,7 @@
             }
           ]
         },
-        "last_activity_days": 102
+        "last_activity_days": 1
       }
     },
     {
@@ -3187,11 +3187,11 @@
         ],
         "dates": {
           "created_at": "2026-05-17T18:18:09Z",
-          "pushed_at": "2026-06-23T03:29:12Z",
-          "last_activity_days": 113
+          "pushed_at": "2026-10-14T23:21:02Z",
+          "last_activity_days": 1
         },
         "size": {
-          "repository_kb": 1594,
+          "repository_kb": 1643,
           "total_items": 22
         },
         "repo_tree": {
@@ -3328,9 +3328,9 @@
         "forks": 0,
         "watchers": 0,
         "open_issues": 0,
-        "size_kb": 1594,
+        "size_kb": 1643,
         "created_at": "2026-05-17T18:18:09Z",
-        "pushed_at": "2026-06-23T03:29:12Z",
+        "pushed_at": "2026-10-14T23:21:02Z",
         "topics": [],
         "language_breakdown": [
           {
@@ -3427,7 +3427,7 @@
             }
           ]
         },
-        "last_activity_days": 113
+        "last_activity_days": 1
       }
     },
     {
@@ -3582,7 +3582,7 @@
         "dates": {
           "created_at": "2026-05-17T03:25:00Z",
           "pushed_at": "2026-05-17T03:33:24Z",
-          "last_activity_days": 150
+          "last_activity_days": 152
         },
         "size": {
           "repository_kb": 110,
@@ -3661,7 +3661,9 @@
       "tradeoffs": [
         "Trained on SELECT queries only (no INSERT/UPDATE/DELETE/DDL)",
         "Best on low-to-medium complexity queries; weaker on multi-JOINs and nested subqueries",
-        "Not tested against dialect-specific SQL (PostgreSQL, MySQL)"
+        "Not tested against dialect-specific SQL (PostgreSQL, MySQL)",
+        "Still misses 53 of the 200 held-out questions (26.5%) on exact match",
+        "Observed failure on the hosted demo (14 Oct 2026): asked for Engineering employees earning over 90,000, it dropped both conditions (department and salary)"
       ],
       "reliability": {
         "pt": "Custo: US$ 0 de treino, Colab free tier com uma única GPU T4, dentro de limites diários apertados de uso; a quantização 4-bit NF4 foi o que tornou viável treinar um modelo de 3,8B nesse hardware. Latência de treino: ~21 minutos para 1.000 exemplos de treino + 200 de validação. Falhas/limites conhecidos e documentados: só SELECT (sem INSERT/UPDATE/DELETE/DDL), melhor em queries de complexidade baixa a média, não testado em dialetos específicos, limitações publicadas junto com o modelo em vez de escondidas.",
@@ -3769,7 +3771,7 @@
             }
           ]
         },
-        "last_activity_days": 150
+        "last_activity_days": 152
       }
     }
   ],
@@ -7504,7 +7506,7 @@
           "inventory"
         ],
         "stacks": [],
-        "content": "Primary focus: AI / ML Engineering (LLM agents, RAG, fine-tuning), on a full-stack foundation.\nAI/ML engineering skills: LangGraph, LLM Agents, Retrieval-Augmented Generation, Hybrid Retrieval, BM25, Reciprocal Rank Fusion, Cross-Encoder Reranking, RAGAS, LLM Evaluation, QLoRA, LoRA, PEFT, bitsandbytes, PyTorch, Transformers, Hugging Face, ChromaDB, pgvector\nDeclared languages: Python, TypeScript, JavaScript, Java, SQL\nDeclared frontend skills: React, HTML, CSS, Vite, PWA\nDeclared backend skills: FastAPI, Spring Boot, NestJS, Node.js, Express, REST APIs, Layered Architecture\nDeclared databases: PostgreSQL, pgvector, MySQL, SQLite, ChromaDB, Prisma\nDeclared tools: Git, GitHub, Docker, Vercel, Render, Supabase, Claude Code, Codex\nDeclared methodologies: OOP, SOLID, Automated testing\nAdditional declared skills and concepts: SQL, React, HTML, Prisma, Git, GitHub, Docker, Claude Code, Codex, OOP, SOLID, Automated testing, Authentication, Authorization, AI-assisted Development with Technical Ownership\nWorking bio EN: Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team.\nWorking bio PT: Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe."
+        "content": "Primary focus: AI / ML Engineering (LLM agents, RAG, fine-tuning), on a full-stack foundation.\nAI/ML engineering skills: LangGraph, LLM Agents, Retrieval-Augmented Generation, Hybrid Retrieval, BM25, Reciprocal Rank Fusion, Cross-Encoder Reranking, RAGAS, LLM Evaluation, QLoRA, LoRA, PEFT, bitsandbytes, PyTorch, Transformers, Hugging Face, ChromaDB, pgvector\nDeclared languages: Python, TypeScript, JavaScript, Java, SQL\nDeclared frontend skills: React, HTML, CSS, Vite, PWA\nDeclared backend skills: FastAPI, Spring Boot, NestJS, Node.js, Express, REST APIs, Layered Architecture\nDeclared databases: PostgreSQL, pgvector, MySQL, SQLite, ChromaDB, Prisma\nDeclared tools: Git, GitHub, Docker, Vercel, Render, Supabase, Claude Code, Codex\nDeclared methodologies: OOP, SOLID, Automated testing\nAdditional declared skills and concepts: SQL, React, HTML, Prisma, Git, GitHub, Docker, Claude Code, Codex, OOP, SOLID, Automated testing, Authentication, Authorization, AI-assisted Development with Technical Ownership\nWorking bio EN: Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team.\nWorking bio PT: Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe.\n\nProject kinds (use these for \"which projects are full-stack\" questions):\nFull-stack (frontend, backend and database): ReAct Agent (React + FastAPI + Supabase Postgres/pgvector, around an AI agent), CampusCycle (React PWA + Express + Prisma/PostgreSQL), Shizu0n CV (React + Vercel Functions + Supabase), Referral System (React + NestJS + SQLite), Delivery System (React + Express + MySQL).\nBackend with a desktop client: Gym Management System (Spring Boot REST API + Java Swing client).\nBackend only: Academic System (Java 21 console application with MySQL).\nAI, not full-stack: Advanced RAG (a Python/Streamlit retrieval and evaluation app) and Phi-3 Mini SQL Generator (a QLoRA fine-tune published on Hugging Face with a demo Space)."
       },
       {
         "id": "identity:about-narrative",
@@ -8962,7 +8964,7 @@
           "REST APIs",
           "Layered Architecture"
         ],
-        "content": "Project: Academic System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":3,\"service_types\":[\"Student data\",\"Subjects data\",\"Library catalog\"]},\"modules\":[\"controller\",\"service\",\"repository\",\"model\",\"exception\",\"view\",\"util\",\"sql\"],\"languages\":[{\"name\":\"Java\",\"bytes\":113459,\"percentage\":100}],\"dates\":{\"created_at\":\"2025-11-11T19:54:36Z\",\"pushed_at\":\"2026-04-19T03:40:10Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":2717,\"total_items\":56},\"repo_tree\":{\"total_items\":56,\"source_like_items\":49,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":49},{\"name\":\"lib\",\"count\":4},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Academic lookup\",\"Enrollment management\",\"Library reservation\"],\"primary_flows\":[\"Lookup student\",\"Lookup subjects by course\",\"Enroll in subject\",\"Cancel enrollment\",\"Reserve book\",\"Cancel reservation\"],\"user_roles_count\":2,\"key_features_count\":10,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Clear layered architecture, Strong business-rule enforcement, Good Java backend signaling, Explicit external integration model, Detailed README with technical structure\nTradeoffs: Console UI instead of graphical or web UI, No documented automated test suite, No explicit authentication layer\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 2/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 5/5, production_readiness: 2/5, ai_ml_depth: 1/5\nRecommendation summary EN: A strong project for discussing Java backend, business rules, and integration with external services.\nRecommendation summary PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos."
+        "content": "Project: Academic System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":3,\"service_types\":[\"Student data\",\"Subjects data\",\"Library catalog\"]},\"modules\":[\"controller\",\"service\",\"repository\",\"model\",\"exception\",\"view\",\"util\",\"sql\"],\"languages\":[{\"name\":\"Java\",\"bytes\":113459,\"percentage\":100}],\"dates\":{\"created_at\":\"2025-11-11T19:54:36Z\",\"pushed_at\":\"2026-04-19T03:40:10Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":2717,\"total_items\":56},\"repo_tree\":{\"total_items\":56,\"source_like_items\":49,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":49},{\"name\":\"lib\",\"count\":4},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Academic lookup\",\"Enrollment management\",\"Library reservation\"],\"primary_flows\":[\"Lookup student\",\"Lookup subjects by course\",\"Enroll in subject\",\"Cancel enrollment\",\"Reserve book\",\"Cancel reservation\"],\"user_roles_count\":2,\"key_features_count\":10,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Clear layered architecture, Strong business-rule enforcement, Good Java backend signaling, Explicit external integration model, Detailed README with technical structure\nTradeoffs: Console UI instead of graphical or web UI, No documented automated test suite, No explicit authentication layer\nRecommendation summary EN: A strong project for discussing Java backend, business rules, and integration with external services.\nRecommendation summary PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos."
       },
       {
         "id": "project:delivery-system:overview",
@@ -9132,7 +9134,7 @@
           "Context API",
           "REST API"
         ],
-        "content": "Project: Delivery System\nEngineering metrics: {\"api_surface\":{\"endpoint_groups\":[\"Authentication\",\"Addresses\",\"Restaurant categories\",\"Menu items\",\"Orders\",\"Couriers\",\"Reviews\"]},\"modules\":[\"backend\",\"frontend\",\"database\",\"diagrams\"],\"languages\":[{\"name\":\"JavaScript\",\"bytes\":432768,\"percentage\":81.87},{\"name\":\"CSS\",\"bytes\":95296,\"percentage\":18.03},{\"name\":\"HTML\",\"bytes\":548,\"percentage\":0.1}],\"dates\":{\"created_at\":\"2025-11-09T15:16:32Z\",\"pushed_at\":\"2026-04-19T03:41:57Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":1612,\"total_items\":941},\"repo_tree\":{\"total_items\":941,\"source_like_items\":935,\"test_like_items\":67,\"docs_like_items\":72,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"backend\",\"count\":850},{\"name\":\"frontend\",\"count\":82},{\"name\":\"database\",\"count\":3},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Ordering\",\"Catalog management\",\"Delivery execution\",\"Reviews\"],\"primary_flows\":[\"Register/login\",\"Manage addresses\",\"Manage categories and menu items\",\"Create order\",\"Courier flow\",\"Review restaurant\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":6}\nStrengths: Broadest business-domain coverage among the portfolio apps, Multiple user roles, Full-stack split with database and diagrams, Clear JWT and backend security basics, Good candidate for operational system discussions\nTradeoffs: No TypeScript on the main application stack, No explicit production deployment evidence, Automated test coverage is not clearly documented\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 3/5, ai_ml_depth: 1/5\nRecommendation summary EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system.\nRecommendation summary PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional."
+        "content": "Project: Delivery System\nEngineering metrics: {\"api_surface\":{\"endpoint_groups\":[\"Authentication\",\"Addresses\",\"Restaurant categories\",\"Menu items\",\"Orders\",\"Couriers\",\"Reviews\"]},\"modules\":[\"backend\",\"frontend\",\"database\",\"diagrams\"],\"languages\":[{\"name\":\"JavaScript\",\"bytes\":432768,\"percentage\":81.87},{\"name\":\"CSS\",\"bytes\":95296,\"percentage\":18.03},{\"name\":\"HTML\",\"bytes\":548,\"percentage\":0.1}],\"dates\":{\"created_at\":\"2025-11-09T15:16:32Z\",\"pushed_at\":\"2026-04-19T03:41:57Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":1612,\"total_items\":941},\"repo_tree\":{\"total_items\":941,\"source_like_items\":935,\"test_like_items\":67,\"docs_like_items\":72,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"backend\",\"count\":850},{\"name\":\"frontend\",\"count\":82},{\"name\":\"database\",\"count\":3},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Ordering\",\"Catalog management\",\"Delivery execution\",\"Reviews\"],\"primary_flows\":[\"Register/login\",\"Manage addresses\",\"Manage categories and menu items\",\"Create order\",\"Courier flow\",\"Review restaurant\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":6}\nStrengths: Broadest business-domain coverage among the portfolio apps, Multiple user roles, Full-stack split with database and diagrams, Clear JWT and backend security basics, Good candidate for operational system discussions\nTradeoffs: No TypeScript on the main application stack, No explicit production deployment evidence, Automated test coverage is not clearly documented\nRecommendation summary EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system.\nRecommendation summary PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional."
       },
       {
         "id": "project:gym-management:overview",
@@ -9257,7 +9259,7 @@
           "MySQL",
           "Gradle"
         ],
-        "content": "Project: Gym Management System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":0,\"notes\":\"No external API surface is explicitly documented.\"},\"modules\":[\"demo\",\"diagrams\"],\"languages\":[],\"dates\":{\"created_at\":\"2025-10-14T10:56:17Z\",\"pushed_at\":\"2026-04-19T03:42:02Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":954,\"total_items\":170},\"repo_tree\":{\"total_items\":170,\"source_like_items\":152,\"test_like_items\":32,\"docs_like_items\":4,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"demo\",\"count\":164},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".vscode\",\"count\":2},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Student administration\",\"Instructor administration\",\"Plans and enrollment\",\"Payments\",\"Workout management\",\"Attendance\"],\"primary_flows\":[\"Manage students and instructors\",\"Manage plans and enrollments\",\"Track payments\",\"Create workout plans\",\"Track physical assessments\",\"Register attendance\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":6,\"primary_flows_count\":6}\nStrengths: Rich administrative domain, Desktop plus backend composition, Spring Boot in the portfolio stack, Useful project for gym/business system conversations\nTradeoffs: Repository documentation is thinner than the strongest projects, No explicit auth or test evidence, GitHub language breakdown is unavailable through the API\nScore summary: completeness: 3/5, backend_depth: 3/5, frontend_polish: 2/5, architecture_maturity: 3/5, security_auth: 1/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 3/5, production_readiness: 2/5, ai_ml_depth: 1/5\nRecommendation summary EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio.\nRecommendation summary PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
+        "content": "Project: Gym Management System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":0,\"notes\":\"No external API surface is explicitly documented.\"},\"modules\":[\"demo\",\"diagrams\"],\"languages\":[],\"dates\":{\"created_at\":\"2025-10-14T10:56:17Z\",\"pushed_at\":\"2026-04-19T03:42:02Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":954,\"total_items\":170},\"repo_tree\":{\"total_items\":170,\"source_like_items\":152,\"test_like_items\":32,\"docs_like_items\":4,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"demo\",\"count\":164},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".vscode\",\"count\":2},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Student administration\",\"Instructor administration\",\"Plans and enrollment\",\"Payments\",\"Workout management\",\"Attendance\"],\"primary_flows\":[\"Manage students and instructors\",\"Manage plans and enrollments\",\"Track payments\",\"Create workout plans\",\"Track physical assessments\",\"Register attendance\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":6,\"primary_flows_count\":6}\nStrengths: Rich administrative domain, Desktop plus backend composition, Spring Boot in the portfolio stack, Useful project for gym/business system conversations\nTradeoffs: Repository documentation is thinner than the strongest projects, No explicit auth or test evidence, GitHub language breakdown is unavailable through the API\nRecommendation summary EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio.\nRecommendation summary PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
       },
       {
         "id": "project:referral-system:overview",
@@ -9422,7 +9424,7 @@
           "CSS",
           "class-validator"
         ],
-        "content": "Project: Referral System\nEngineering metrics: {\"api_surface\":{\"backend_modules\":[\"auth\",\"users\",\"common\",\"database\"]},\"modules\":[\"backend/src/auth\",\"backend/src/users\",\"backend/src/common\",\"frontend/src/components\",\"frontend/src/contexts\",\"frontend/src/pages\",\"frontend/src/services\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":108507,\"percentage\":66.13},{\"name\":\"CSS\",\"bytes\":50892,\"percentage\":31.01},{\"name\":\"HTML\",\"bytes\":2536,\"percentage\":1.55},{\"name\":\"JavaScript\",\"bytes\":2155,\"percentage\":1.31}],\"dates\":{\"created_at\":\"2025-10-05T22:21:26Z\",\"pushed_at\":\"2026-04-19T03:38:56Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":314,\"total_items\":113},\"repo_tree\":{\"total_items\":113,\"source_like_items\":112,\"test_like_items\":3,\"docs_like_items\":1,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"frontend\",\"count\":57},{\"name\":\"backend\",\"count\":55},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Authentication\",\"Referral flow\",\"Profile management\"],\"primary_flows\":[\"Register user\",\"Log in\",\"Persist session\",\"Generate referral link\",\"Copy referral link\",\"Access protected profile\"],\"user_roles_count\":2,\"key_features_count\":11,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Strongest NestJS example in the portfolio, Clear JWT and auth structure, Good TypeScript full-stack signal, Well-documented architecture and learning process\nTradeoffs: Smaller domain scope than Delivery System, No explicit production deployment evidence, Automated test evidence is limited\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 3/5, documentation_quality: 5/5, production_readiness: 3/5, ai_ml_depth: 1/5\nRecommendation summary EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.\nRecommendation summary PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
+        "content": "Project: Referral System\nEngineering metrics: {\"api_surface\":{\"backend_modules\":[\"auth\",\"users\",\"common\",\"database\"]},\"modules\":[\"backend/src/auth\",\"backend/src/users\",\"backend/src/common\",\"frontend/src/components\",\"frontend/src/contexts\",\"frontend/src/pages\",\"frontend/src/services\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":108507,\"percentage\":66.13},{\"name\":\"CSS\",\"bytes\":50892,\"percentage\":31.01},{\"name\":\"HTML\",\"bytes\":2536,\"percentage\":1.55},{\"name\":\"JavaScript\",\"bytes\":2155,\"percentage\":1.31}],\"dates\":{\"created_at\":\"2025-10-05T22:21:26Z\",\"pushed_at\":\"2026-04-19T03:38:56Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":314,\"total_items\":113},\"repo_tree\":{\"total_items\":113,\"source_like_items\":112,\"test_like_items\":3,\"docs_like_items\":1,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"frontend\",\"count\":57},{\"name\":\"backend\",\"count\":55},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Authentication\",\"Referral flow\",\"Profile management\"],\"primary_flows\":[\"Register user\",\"Log in\",\"Persist session\",\"Generate referral link\",\"Copy referral link\",\"Access protected profile\"],\"user_roles_count\":2,\"key_features_count\":11,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Strongest NestJS example in the portfolio, Clear JWT and auth structure, Good TypeScript full-stack signal, Well-documented architecture and learning process\nTradeoffs: Smaller domain scope than Delivery System, No explicit production deployment evidence, Automated test evidence is limited\nRecommendation summary EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.\nRecommendation summary PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
       },
       {
         "id": "project:shizu0n-cv:overview",
@@ -9607,7 +9609,7 @@
           "Prettier",
           "Playwright"
         ],
-        "content": "Project: Shizu0n CV\nEngineering metrics: {\"api_surface\":{\"serverless_routes\":[\"/api/chat\",\"/api/health\"],\"provider_chain\":[\"gemini\",\"groq\"]},\"modules\":[\"src/components\",\"src/contexts\",\"src/hooks\",\"src/sections\",\"api\",\"data\",\"scripts\",\"supabase/migrations\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":147923,\"percentage\":52.03},{\"name\":\"JavaScript\",\"bytes\":79861,\"percentage\":28.09},{\"name\":\"CSS\",\"bytes\":55494,\"percentage\":19.52},{\"name\":\"HTML\",\"bytes\":1007,\"percentage\":0.35}],\"dates\":{\"created_at\":\"2025-10-04T03:42:39Z\",\"pushed_at\":\"2026-10-14T18:09:09Z\",\"last_activity_days\":0},\"size\":{\"repository_kb\":2164,\"total_items\":92},\"repo_tree\":{\"total_items\":92,\"source_like_items\":44,\"test_like_items\":5,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":40},{\"name\":\"data\",\"count\":8},{\"name\":\"public\",\"count\":8},{\"name\":\"supabase\",\"count\":8},{\"name\":\"scripts\",\"count\":5},{\"name\":\"api\",\"count\":4},{\"name\":\".github\",\"count\":3},{\"name\":\".editorconfig\",\"count\":1},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitattributes\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".prettierignore\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Portfolio presentation\",\"Project showcase\",\"Contact flow\",\"AI Q&A\"],\"primary_flows\":[\"Read hero and sections\",\"Inspect GitHub-backed stats\",\"Browse selected projects\",\"Send contact message\",\"Ask questions in PT or EN\"],\"user_roles_count\":4,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Most polished frontend in the portfolio, Live deploy and current maintenance, Strongest AI and integration story, Bilingual UX plus chat, Good mix of product presentation and implementation depth\nTradeoffs: Public-content site rather than a business CRUD system, Chat accuracy depends on knowledge curation quality, Local dev chat behavior depends on backend availability\nCost, latency and failure handling EN: Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL), a per-session client response cache, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini → Groq) engages only on quota/overload errors; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice.\nCost, latency and failure handling PT: Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache de respostas no servidor (TTL de 10 min), cache de respostas no cliente por sessão e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini → Groq) acionada apenas em erros de quota/sobrecarga; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 5/5, architecture_maturity: 5/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 5/5, production_readiness: 4/5, ai_ml_depth: 4/5\nRecommendation summary EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG.\nRecommendation summary PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG."
+        "content": "Project: Shizu0n CV\nEngineering metrics: {\"api_surface\":{\"serverless_routes\":[\"/api/chat\",\"/api/health\"],\"provider_chain\":[\"gemini\",\"groq\"]},\"modules\":[\"src/components\",\"src/contexts\",\"src/hooks\",\"src/sections\",\"api\",\"data\",\"scripts\",\"supabase/migrations\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":179129,\"percentage\":58.47},{\"name\":\"JavaScript\",\"bytes\":85083,\"percentage\":27.77},{\"name\":\"CSS\",\"bytes\":40775,\"percentage\":13.31},{\"name\":\"HTML\",\"bytes\":1360,\"percentage\":0.44}],\"dates\":{\"created_at\":\"2025-10-04T03:42:39Z\",\"pushed_at\":\"2026-10-16T14:09:33Z\",\"last_activity_days\":0},\"size\":{\"repository_kb\":2989,\"total_items\":105},\"repo_tree\":{\"total_items\":105,\"source_like_items\":48,\"test_like_items\":6,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":44},{\"name\":\"public\",\"count\":14},{\"name\":\"data\",\"count\":8},{\"name\":\"supabase\",\"count\":8},{\"name\":\"scripts\",\"count\":6},{\"name\":\"api\",\"count\":4},{\"name\":\".github\",\"count\":3},{\"name\":\".taste-skill\",\"count\":2},{\"name\":\".editorconfig\",\"count\":1},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitattributes\",\"count\":1},{\"name\":\".gitignore\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Portfolio presentation\",\"Project showcase\",\"Contact flow\",\"AI Q&A\"],\"primary_flows\":[\"Read hero and sections\",\"Inspect GitHub-backed stats\",\"Browse selected projects\",\"Send contact message\",\"Ask questions in PT or EN\"],\"user_roles_count\":4,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Most polished frontend in the portfolio, Live deploy and current maintenance, Strongest AI and integration story, Bilingual UX plus chat, Good mix of product presentation and implementation depth\nTradeoffs: Public-content site rather than a business CRUD system, Chat accuracy depends on knowledge curation quality, Local dev chat behavior depends on backend availability\nCost, latency and failure handling EN: Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL), a per-session client response cache, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini → Groq) engages only on quota/overload errors; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice.\nCost, latency and failure handling PT: Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache de respostas no servidor (TTL de 10 min), cache de respostas no cliente por sessão e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini → Groq) acionada apenas em erros de quota/sobrecarga; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.\nRecommendation summary EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG.\nRecommendation summary PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG."
       },
       {
         "id": "project:campus-cycle:overview",
@@ -9832,7 +9834,7 @@
           "Vercel",
           "Render"
         ],
-        "content": "Project: CampusCycle\nEngineering metrics: {\"automated_tests\":{\"total_discovered\":64,\"server\":39,\"web\":25},\"deployment\":{\"frontend\":\"Vercel\",\"api\":\"Render\",\"database\":\"Neon PostgreSQL\"},\"modules\":[\"web/src\",\"web/src/lib/offlineQueue\",\"web/src/sw.ts\",\"server/src/routes\",\"server/src/middleware\",\"server/prisma\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":123444,\"percentage\":89.87},{\"name\":\"CSS\",\"bytes\":13421,\"percentage\":9.77},{\"name\":\"HTML\",\"bytes\":493,\"percentage\":0.36}],\"dates\":{\"created_at\":\"2026-07-17T11:08:04Z\",\"pushed_at\":\"2026-07-27T20:12:53Z\",\"last_activity_days\":79},\"size\":{\"repository_kb\":241,\"total_items\":111},\"repo_tree\":{\"total_items\":111,\"source_like_items\":80,\"test_like_items\":14,\"docs_like_items\":5,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"web\",\"count\":59},{\"name\":\"server\",\"count\":42},{\"name\":\"docs\",\"count\":4},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"CLAUDE.md\",\"count\":1},{\"name\":\"DESIGN.md\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"TODOS.md\",\"count\":1},{\"name\":\"docker-compose.yml\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Marketplace discovery\",\"Listing lifecycle\",\"Offline synchronization\",\"Authentication and ownership\",\"Circular-economy impact\"],\"primary_flows\":[\"Browse and filter listings\",\"Create a listing online\",\"Create a listing offline\",\"Synchronize after reconnection\",\"Register or log in\",\"Mark an item sold or donated\",\"Remove an owned listing\"],\"user_roles_count\":2,\"key_features_count\":12,\"domain_areas_count\":5,\"primary_flows_count\":7}\nStrengths: Distinct offline-first product story, Full-stack deployment across independent managed services, Idempotent offline synchronization, Security-aware exclusive identity model, Strong automated and physical-device testing evidence, Project-specific Xilo-Feira visual system, Detailed engineering and AI-governance documentation\nTradeoffs: JWT is stored in localStorage instead of httpOnly cookies, Images use URLs instead of uploads, Background Sync is deliberately out of scope, Server integration tests require a local PostgreSQL instance, Repository documentation has a few stale test-count and phase-status references\nCost, latency and failure handling EN: Reads use NetworkFirst with a four-second timeout; offline writes remain in IndexedDB and follow a state machine. Network failures keep items pending, 401 waits for renewed login, 429 backs off, 5xx has bounded retries, and other 4xx responses become visible failures. Client UUIDs and ownership rules make resubmission idempotent.\nCost, latency and failure handling PT: Leituras usam NetworkFirst com timeout de quatro segundos; escritas offline permanecem no IndexedDB e seguem uma máquina de estados. Falhas de rede mantêm o item pendente, 401 aguarda novo login, 429 aplica backoff, 5xx tem tentativas limitadas e outros 4xx viram falhas visíveis. UUID do cliente e regra de propriedade tornam reenvios idempotentes.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 5/5, architecture_maturity: 5/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 1/5\nRecommendation summary EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests.\nRecommendation summary PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos."
+        "content": "Project: CampusCycle\nEngineering metrics: {\"automated_tests\":{\"total_discovered\":64,\"server\":39,\"web\":25},\"deployment\":{\"frontend\":\"Vercel\",\"api\":\"Render\",\"database\":\"Neon PostgreSQL\"},\"modules\":[\"web/src\",\"web/src/lib/offlineQueue\",\"web/src/sw.ts\",\"server/src/routes\",\"server/src/middleware\",\"server/prisma\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":123444,\"percentage\":89.87},{\"name\":\"CSS\",\"bytes\":13421,\"percentage\":9.77},{\"name\":\"HTML\",\"bytes\":493,\"percentage\":0.36}],\"dates\":{\"created_at\":\"2026-07-17T11:08:04Z\",\"pushed_at\":\"2026-07-27T20:12:53Z\",\"last_activity_days\":80},\"size\":{\"repository_kb\":241,\"total_items\":111},\"repo_tree\":{\"total_items\":111,\"source_like_items\":80,\"test_like_items\":14,\"docs_like_items\":5,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"web\",\"count\":59},{\"name\":\"server\",\"count\":42},{\"name\":\"docs\",\"count\":4},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"CLAUDE.md\",\"count\":1},{\"name\":\"DESIGN.md\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"TODOS.md\",\"count\":1},{\"name\":\"docker-compose.yml\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Marketplace discovery\",\"Listing lifecycle\",\"Offline synchronization\",\"Authentication and ownership\",\"Circular-economy impact\"],\"primary_flows\":[\"Browse and filter listings\",\"Create a listing online\",\"Create a listing offline\",\"Synchronize after reconnection\",\"Register or log in\",\"Mark an item sold or donated\",\"Remove an owned listing\"],\"user_roles_count\":2,\"key_features_count\":12,\"domain_areas_count\":5,\"primary_flows_count\":7}\nStrengths: Distinct offline-first product story, Full-stack deployment across independent managed services, Idempotent offline synchronization, Security-aware exclusive identity model, Strong automated and physical-device testing evidence, Project-specific Xilo-Feira visual system, Detailed engineering and AI-governance documentation\nTradeoffs: JWT is stored in localStorage instead of httpOnly cookies, Images use URLs instead of uploads, Background Sync is deliberately out of scope, Server integration tests require a local PostgreSQL instance, Repository documentation has a few stale test-count and phase-status references\nCost, latency and failure handling EN: Reads use NetworkFirst with a four-second timeout; offline writes remain in IndexedDB and follow a state machine. Network failures keep items pending, 401 waits for renewed login, 429 backs off, 5xx has bounded retries, and other 4xx responses become visible failures. Client UUIDs and ownership rules make resubmission idempotent.\nCost, latency and failure handling PT: Leituras usam NetworkFirst com timeout de quatro segundos; escritas offline permanecem no IndexedDB e seguem uma máquina de estados. Falhas de rede mantêm o item pendente, 401 aguarda novo login, 429 aplica backoff, 5xx tem tentativas limitadas e outros 4xx viram falhas visíveis. UUID do cliente e regra de propriedade tornam reenvios idempotentes.\nRecommendation summary EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests.\nRecommendation summary PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos."
       },
       {
         "id": "project:react-agent:overview",
@@ -10077,7 +10079,7 @@
           "Retrieval-Augmented Generation",
           "Agent Memory"
         ],
-        "content": "Project: ReAct Agent\nEngineering metrics: {\"graph\":{\"nodes\":550,\"internal_edges\":913,\"communities\":39},\"testing\":{\"backend_unit_tests\":154,\"eval_cases\":22,\"eval_task_success_pct\":100,\"eval_tool_selection_pct\":100},\"modules\":[\"backend/agent\",\"backend/api\",\"backend/evals\",\"frontend/src/hooks\",\"frontend/src/components\"],\"languages\":[{\"name\":\"Python\",\"bytes\":260486,\"percentage\":59.63},{\"name\":\"TypeScript\",\"bytes\":156025,\"percentage\":35.71},{\"name\":\"CSS\",\"bytes\":10776,\"percentage\":2.47},{\"name\":\"JavaScript\",\"bytes\":7882,\"percentage\":1.8},{\"name\":\"Shell\",\"bytes\":863,\"percentage\":0.2},{\"name\":\"HTML\",\"bytes\":836,\"percentage\":0.19}],\"dates\":{\"created_at\":\"2026-04-26T22:33:25Z\",\"pushed_at\":\"2026-07-04T17:59:50Z\",\"last_activity_days\":102},\"size\":{\"repository_kb\":963,\"total_items\":208},\"repo_tree\":{\"total_items\":208,\"source_like_items\":100,\"test_like_items\":14,\"docs_like_items\":3,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\".planning\",\"count\":100},{\"name\":\"frontend\",\"count\":51},{\"name\":\"backend\",\"count\":46},{\"name\":\"api\",\"count\":3},{\"name\":\"scripts\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"package.json\",\"count\":1},{\"name\":\"pyrightconfig.json\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"vercel.json\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Agent orchestration\",\"Tool execution\",\"Cross-conversation memory\",\"Document RAG\",\"Trace observability\",\"MCP tool discovery\",\"Evaluation\"],\"primary_flows\":[\"Send a prompt\",\"Run the ReAct loop\",\"Call tools\",\"Read and write long-term memory\",\"Upload a document and ask cited questions about it\",\"Stream reasoning/action trace\",\"Replay a past run from history\",\"Discover MCP tools\",\"Run labeled evaluation cases\"],\"user_roles_count\":3,\"key_features_count\":13,\"domain_areas_count\":7,\"primary_flows_count\":9}\nStrengths: Reasoning/tool trace treated as a first-class product surface, Cross-conversation memory with memory operations visible in the trace, Document RAG with cited answers and a no-hallucination guard, Persisted replayable traces with provider-fallback capture, Dynamic MCP tool discovery rendered identically to native tools, 100% evaluation baseline on 22 labeled cases plus 154 backend tests, Entire system operated on $0 free-tier spend, Live public deployment\nTradeoffs: Python execution remains the most sensitive security surface despite subprocess isolation, Model-provider APIs and embedding quotas are unstable external dependencies, No end-user authentication layer (anonymous browser-scoped identity)\nCost, latency and failure handling EN: Cost: $0 total, the whole system runs on free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), with that constraint treated as part of the engineering. Latency: every trace step records elapsed_ms, tokens, and estimated cost via a UsageTracker. Failures: a free-provider fallback chain (Gemini → Groq → GitHub Models) with fallback events captured in the trace; 10 req/min/IP rate limiting (slowapi); the loop is hard-capped at 10 iterations; a Vercel keep-alive cron prevents the Supabase free-tier 7-day pause; embedding batching with 429 backoff; graceful degradation, without the DB pool/store the agent still answers, just without memory/RAG, instead of breaking.\nCost, latency and failure handling PT: Custo: US$ 0 total, operação inteira em free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), com a restrição tratada como parte da engenharia. Latência: cada passo do trace registra elapsed_ms, tokens e custo estimado via UsageTracker. Falhas: cadeia de fallback de provedores (Gemini → Groq → GitHub Models) com eventos de fallback capturados no trace; rate limiting de 10 req/min/IP (slowapi); loop limitado a 10 iterações; cron keep-alive na Vercel evita a pausa de 7 dias do Supabase free; batching de embeddings com backoff em 429; degradação graciosa, sem pool/store de banco, o agente continua respondendo sem memória/RAG em vez de quebrar.\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery, all on free tier, with evaluation over the real graph and public deployment.\nRecommendation summary PT: Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP, tudo em free-tier, com avaliação sobre o grafo real e deploy público."
+        "content": "Project: ReAct Agent\nEngineering metrics: {\"graph\":{\"nodes\":550,\"internal_edges\":913,\"communities\":39},\"testing\":{\"backend_unit_tests\":154,\"eval_cases\":22,\"eval_task_success_pct\":100,\"eval_tool_selection_pct\":100},\"modules\":[\"backend/agent\",\"backend/api\",\"backend/evals\",\"frontend/src/hooks\",\"frontend/src/components\"],\"languages\":[{\"name\":\"Python\",\"bytes\":260742,\"percentage\":59.65},{\"name\":\"TypeScript\",\"bytes\":156025,\"percentage\":35.69},{\"name\":\"CSS\",\"bytes\":10776,\"percentage\":2.47},{\"name\":\"JavaScript\",\"bytes\":7882,\"percentage\":1.8},{\"name\":\"Shell\",\"bytes\":863,\"percentage\":0.2},{\"name\":\"HTML\",\"bytes\":836,\"percentage\":0.19}],\"dates\":{\"created_at\":\"2026-04-26T22:33:25Z\",\"pushed_at\":\"2026-10-15T00:13:53Z\",\"last_activity_days\":1},\"size\":{\"repository_kb\":980,\"total_items\":208},\"repo_tree\":{\"total_items\":208,\"source_like_items\":100,\"test_like_items\":14,\"docs_like_items\":3,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\".planning\",\"count\":100},{\"name\":\"frontend\",\"count\":51},{\"name\":\"backend\",\"count\":46},{\"name\":\"api\",\"count\":3},{\"name\":\"scripts\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"package.json\",\"count\":1},{\"name\":\"pyrightconfig.json\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"vercel.json\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Agent orchestration\",\"Tool execution\",\"Cross-conversation memory\",\"Document RAG\",\"Trace observability\",\"MCP tool discovery\",\"Evaluation\"],\"primary_flows\":[\"Send a prompt\",\"Run the ReAct loop\",\"Call tools\",\"Read and write long-term memory\",\"Upload a document and ask cited questions about it\",\"Stream reasoning/action trace\",\"Replay a past run from history\",\"Discover MCP tools\",\"Run labeled evaluation cases\"],\"user_roles_count\":3,\"key_features_count\":13,\"domain_areas_count\":7,\"primary_flows_count\":9}\nStrengths: Reasoning/tool trace treated as a first-class product surface, Cross-conversation memory with memory operations visible in the trace, Document RAG with cited answers and a no-hallucination guard, Persisted replayable traces with provider-fallback capture, Dynamic MCP tool discovery rendered identically to native tools, 100% evaluation baseline on 22 labeled cases plus 154 backend tests, Entire system operated on $0 free-tier spend, Live public deployment\nTradeoffs: Python execution remains the most sensitive security surface despite subprocess isolation, Model-provider APIs and embedding quotas are unstable external dependencies, No end-user authentication layer (anonymous browser-scoped identity)\nCost, latency and failure handling EN: Cost: $0 total, the whole system runs on free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), with that constraint treated as part of the engineering. Latency: every trace step records elapsed_ms, tokens, and estimated cost via a UsageTracker. Failures: a free-provider fallback chain (Gemini → Groq → GitHub Models) with fallback events captured in the trace; 10 req/min/IP rate limiting (slowapi); the loop is hard-capped at 10 iterations; a Vercel keep-alive cron prevents the Supabase free-tier 7-day pause; embedding batching with 429 backoff; graceful degradation, without the DB pool/store the agent still answers, just without memory/RAG, instead of breaking.\nCost, latency and failure handling PT: Custo: US$ 0 total, operação inteira em free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), com a restrição tratada como parte da engenharia. Latência: cada passo do trace registra elapsed_ms, tokens e custo estimado via UsageTracker. Falhas: cadeia de fallback de provedores (Gemini → Groq → GitHub Models) com eventos de fallback capturados no trace; rate limiting de 10 req/min/IP (slowapi); loop limitado a 10 iterações; cron keep-alive na Vercel evita a pausa de 7 dias do Supabase free; batching de embeddings com backoff em 429; degradação graciosa, sem pool/store de banco, o agente continua respondendo sem memória/RAG em vez de quebrar.\nRecommendation summary EN: The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery, all on free tier, with evaluation over the real graph and public deployment.\nRecommendation summary PT: Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP, tudo em free-tier, com avaliação sobre o grafo real e deploy público."
       },
       {
         "id": "project:advanced-rag:overview",
@@ -10242,7 +10244,7 @@
           "Retrieval-Augmented Generation",
           "LLM Evaluation"
         ],
-        "content": "Project: Advanced RAG\nEngineering metrics: {\"graph\":{\"nodes\":1206,\"internal_edges\":2725,\"communities\":46},\"modules\":[\"source_loader\",\"ingestion\",\"retrieval\",\"pipeline\",\"synthesis\",\"evaluate\",\"cloud_ragas\",\"app\"],\"languages\":[{\"name\":\"Python\",\"bytes\":816262,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T18:18:09Z\",\"pushed_at\":\"2026-06-23T03:29:12Z\",\"last_activity_days\":113},\"size\":{\"repository_kb\":1594,\"total_items\":22},\"repo_tree\":{\"total_items\":22,\"source_like_items\":0,\"test_like_items\":9,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"tests\",\"count\":9},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".python-version\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"app.py\",\"count\":1},{\"name\":\"cloud_ragas.py\",\"count\":1},{\"name\":\"evaluate.py\",\"count\":1},{\"name\":\"ingestion.py\",\"count\":1},{\"name\":\"pipeline.py\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"retrieval.py\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Source ingestion\",\"Indexing\",\"Hybrid retrieval\",\"Answer synthesis\",\"Evaluation\"],\"primary_flows\":[\"Load and persist sources\",\"Chunk and index into ChromaDB\",\"Hybrid retrieve and rerank\",\"Synthesize an answer with fallback\",\"Score against golden datasets\",\"Review evaluation in Streamlit\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":5,\"primary_flows_count\":6}\nStrengths: Treats RAG as a full engineering system, not a single vector-search demo, Works offline with honest lexical metrics and extractive fallback, Hybrid retrieval ablatable into individual strategies, Extensive test suite with fake Streamlit/runtime/provider components, Live public Streamlit deployment\nTradeoffs: Streamlit UI is utilitarian rather than highly polished, Some evaluation/UI modules show low community cohesion and could be decomposed, Persistent Chroma data needs a deliberate hosting target\nCost, latency and failure handling EN: Cost: designed to run on $0, the whole system stays useful without paid providers, with offline lexical metrics and an extractive fallback when no LLM is available. Failures: cloud RAGAS is opt-in, with bounded execution and explicit degradation states (offline evaluation never silently reports cloud metrics); ChromaDB corruption or missing collections are handled through reset-and-retry paths; the reranker is surfaced honestly instead of implying a cross-encoder is always active.\nCost, latency and failure handling PT: Custo: projetado para operar com US$ 0, o sistema inteiro continua útil sem provedores pagos, com métricas léxicas offline e fallback extrativo quando nenhum LLM está disponível. Falhas: RAGAS na nuvem é opt-in, com execução limitada e estados de degradação explícitos (a avaliação offline nunca reporta silenciosamente métricas de nuvem); corrupção ou coleção ausente no ChromaDB é tratada com caminhos de reset e retry; o reranker é exposto honestamente em vez de fingir que um cross-encoder está sempre ativo.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 3/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 3/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: RAG treated as a full engineering system, with hybrid retrieval, honest offline/RAGAS evaluation, and public deployment.\nRecommendation summary PT: RAG tratado como sistema de engenharia completo, com retrieval híbrido, avaliação honesta offline/RAGAS e deploy público."
+        "content": "Project: Advanced RAG\nEngineering metrics: {\"graph\":{\"nodes\":1206,\"internal_edges\":2725,\"communities\":46},\"modules\":[\"source_loader\",\"ingestion\",\"retrieval\",\"pipeline\",\"synthesis\",\"evaluate\",\"cloud_ragas\",\"app\"],\"languages\":[{\"name\":\"Python\",\"bytes\":816262,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T18:18:09Z\",\"pushed_at\":\"2026-10-14T23:21:02Z\",\"last_activity_days\":1},\"size\":{\"repository_kb\":1643,\"total_items\":22},\"repo_tree\":{\"total_items\":22,\"source_like_items\":0,\"test_like_items\":9,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"tests\",\"count\":9},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".python-version\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"app.py\",\"count\":1},{\"name\":\"cloud_ragas.py\",\"count\":1},{\"name\":\"evaluate.py\",\"count\":1},{\"name\":\"ingestion.py\",\"count\":1},{\"name\":\"pipeline.py\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"retrieval.py\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Source ingestion\",\"Indexing\",\"Hybrid retrieval\",\"Answer synthesis\",\"Evaluation\"],\"primary_flows\":[\"Load and persist sources\",\"Chunk and index into ChromaDB\",\"Hybrid retrieve and rerank\",\"Synthesize an answer with fallback\",\"Score against golden datasets\",\"Review evaluation in Streamlit\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":5,\"primary_flows_count\":6}\nStrengths: Treats RAG as a full engineering system, not a single vector-search demo, Works offline with honest lexical metrics and extractive fallback, Hybrid retrieval ablatable into individual strategies, Extensive test suite with fake Streamlit/runtime/provider components, Live public Streamlit deployment\nTradeoffs: Streamlit UI is utilitarian rather than highly polished, Some evaluation/UI modules show low community cohesion and could be decomposed, Persistent Chroma data needs a deliberate hosting target\nCost, latency and failure handling EN: Cost: designed to run on $0, the whole system stays useful without paid providers, with offline lexical metrics and an extractive fallback when no LLM is available. Failures: cloud RAGAS is opt-in, with bounded execution and explicit degradation states (offline evaluation never silently reports cloud metrics); ChromaDB corruption or missing collections are handled through reset-and-retry paths; the reranker is surfaced honestly instead of implying a cross-encoder is always active.\nCost, latency and failure handling PT: Custo: projetado para operar com US$ 0, o sistema inteiro continua útil sem provedores pagos, com métricas léxicas offline e fallback extrativo quando nenhum LLM está disponível. Falhas: RAGAS na nuvem é opt-in, com execução limitada e estados de degradação explícitos (a avaliação offline nunca reporta silenciosamente métricas de nuvem); corrupção ou coleção ausente no ChromaDB é tratada com caminhos de reset e retry; o reranker é exposto honestamente em vez de fingir que um cross-encoder está sempre ativo.\nRecommendation summary EN: RAG treated as a full engineering system, with hybrid retrieval, honest offline/RAGAS evaluation, and public deployment.\nRecommendation summary PT: RAG tratado como sistema de engenharia completo, com retrieval híbrido, avaliação honesta offline/RAGAS e deploy público."
       },
       {
         "id": "project:phi3-mini-sql:overview",
@@ -10402,7 +10404,7 @@
           "Hugging Face",
           "Text-to-SQL"
         ],
-        "content": "Project: Phi-3 Mini SQL Generator\nEngineering metrics: {\"training\":{\"base_model\":\"Phi-3-mini-4k-instruct (3.8B)\",\"method\":\"QLoRA (4-bit NF4)\",\"lora_rank\":16,\"lora_alpha\":32,\"hardware\":\"NVIDIA T4 (Google Colab)\",\"training_minutes\":21},\"modules\":[\"01_dataset_prep\",\"02_qlora_training\",\"03_evaluation\"],\"languages\":[{\"name\":\"Jupyter Notebook\",\"bytes\":590242,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T03:25:00Z\",\"pushed_at\":\"2026-05-17T03:33:24Z\",\"last_activity_days\":150},\"size\":{\"repository_kb\":110,\"total_items\":16},\"repo_tree\":{\"total_items\":16,\"source_like_items\":0,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":0,\"top_level_areas\":[{\"name\":\"notebooks\",\"count\":7},{\"name\":\"results\",\"count\":3},{\"name\":\"configs\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Dataset preparation\",\"Fine-tuning\",\"Evaluation\",\"Model publication\"],\"primary_flows\":[\"Prepare instruction dataset\",\"Train QLoRA adapter\",\"Evaluate exact match\",\"Merge adapter into base\",\"Publish to Hugging Face Hub\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Large measurable gain: 2% to 73.5% exact match, Efficient 4-bit training on a single free-tier T4, Complete pipeline from dataset to published artifacts, Adapter and merged model both published on the Hub, Public Hugging Face Spaces demo and detailed documentation\nTradeoffs: Trained on SELECT queries only (no INSERT/UPDATE/DELETE/DDL), Best on low-to-medium complexity queries; weaker on multi-JOINs and nested subqueries, Not tested against dialect-specific SQL (PostgreSQL, MySQL)\nCost, latency and failure handling EN: Cost: $0 training, Colab free tier on a single T4 GPU, within tight daily usage caps; 4-bit NF4 quantization is what made training a 3.8B model feasible on that hardware. Training latency: ~21 minutes for 1,000 train + 200 validation examples. Known, documented failure limits: SELECT-only (no INSERT/UPDATE/DELETE/DDL), strongest on low-to-medium query complexity, untested on dialect-specific SQL, limitations published alongside the model rather than hidden.\nCost, latency and failure handling PT: Custo: US$ 0 de treino, Colab free tier com uma única GPU T4, dentro de limites diários apertados de uso; a quantização 4-bit NF4 foi o que tornou viável treinar um modelo de 3,8B nesse hardware. Latência de treino: ~21 minutos para 1.000 exemplos de treino + 200 de validação. Falhas/limites conhecidos e documentados: só SELECT (sem INSERT/UPDATE/DELETE/DDL), melhor em queries de complexidade baixa a média, não testado em dialetos específicos, limitações publicadas junto com o modelo em vez de escondidas.\nScore summary: completeness: 4/5, backend_depth: 3/5, frontend_polish: 3/5, architecture_maturity: 3/5, security_auth: 1/5, data_modeling: 3/5, functional_scope: 3/5, documentation_quality: 5/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: The best showcase of ML ops and efficient fine-tuning: a QLoRA of Phi-3 Mini for SQL with a measurable jump from 2% to 73.5%.\nRecommendation summary PT: Melhor vitrine de ML ops e fine-tuning eficiente: QLoRA do Phi-3 Mini para SQL com ganho mensurável de 2% para 73,5%."
+        "content": "Project: Phi-3 Mini SQL Generator\nEngineering metrics: {\"training\":{\"base_model\":\"Phi-3-mini-4k-instruct (3.8B)\",\"method\":\"QLoRA (4-bit NF4)\",\"lora_rank\":16,\"lora_alpha\":32,\"hardware\":\"NVIDIA T4 (Google Colab)\",\"training_minutes\":21},\"modules\":[\"01_dataset_prep\",\"02_qlora_training\",\"03_evaluation\"],\"languages\":[{\"name\":\"Jupyter Notebook\",\"bytes\":590242,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T03:25:00Z\",\"pushed_at\":\"2026-05-17T03:33:24Z\",\"last_activity_days\":152},\"size\":{\"repository_kb\":110,\"total_items\":16},\"repo_tree\":{\"total_items\":16,\"source_like_items\":0,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":0,\"top_level_areas\":[{\"name\":\"notebooks\",\"count\":7},{\"name\":\"results\",\"count\":3},{\"name\":\"configs\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Dataset preparation\",\"Fine-tuning\",\"Evaluation\",\"Model publication\"],\"primary_flows\":[\"Prepare instruction dataset\",\"Train QLoRA adapter\",\"Evaluate exact match\",\"Merge adapter into base\",\"Publish to Hugging Face Hub\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Large measurable gain: 2% to 73.5% exact match, Efficient 4-bit training on a single free-tier T4, Complete pipeline from dataset to published artifacts, Adapter and merged model both published on the Hub, Public Hugging Face Spaces demo and detailed documentation\nTradeoffs: Trained on SELECT queries only (no INSERT/UPDATE/DELETE/DDL), Best on low-to-medium complexity queries; weaker on multi-JOINs and nested subqueries, Not tested against dialect-specific SQL (PostgreSQL, MySQL), Still misses 53 of the 200 held-out questions (26.5%) on exact match, Observed failure on the hosted demo (14 Oct 2026): asked for Engineering employees earning over 90,000, it dropped both conditions (department and salary)\nCost, latency and failure handling EN: Cost: $0 training, Colab free tier on a single T4 GPU, within tight daily usage caps; 4-bit NF4 quantization is what made training a 3.8B model feasible on that hardware. Training latency: ~21 minutes for 1,000 train + 200 validation examples. Known, documented failure limits: SELECT-only (no INSERT/UPDATE/DELETE/DDL), strongest on low-to-medium query complexity, untested on dialect-specific SQL, limitations published alongside the model rather than hidden.\nCost, latency and failure handling PT: Custo: US$ 0 de treino, Colab free tier com uma única GPU T4, dentro de limites diários apertados de uso; a quantização 4-bit NF4 foi o que tornou viável treinar um modelo de 3,8B nesse hardware. Latência de treino: ~21 minutos para 1.000 exemplos de treino + 200 de validação. Falhas/limites conhecidos e documentados: só SELECT (sem INSERT/UPDATE/DELETE/DDL), melhor em queries de complexidade baixa a média, não testado em dialetos específicos, limitações publicadas junto com o modelo em vez de escondidas.\nRecommendation summary EN: The best showcase of ML ops and efficient fine-tuning: a QLoRA of Phi-3 Mini for SQL with a measurable jump from 2% to 73.5%.\nRecommendation summary PT: Melhor vitrine de ML ops e fine-tuning eficiente: QLoRA do Phi-3 Mini para SQL com ganho mensurável de 2% para 73,5%."
       },
       {
         "id": "ranking:measured_results",
@@ -10433,7 +10435,7 @@
           "overall"
         ],
         "stacks": [],
-        "content": "Paulo's own showcase order (use this for 'best project' or 'strongest project' questions):\n1. ReAct Agent: the live LangGraph agent with tool use, cross-conversation memory, RAG over uploaded documents with cited sources, tool discovery over the Model Context Protocol (MCP), and replayable traces.\n2. Phi-3 Mini SQL Generator: the fine-tune with the strongest measured result (2% to 73.5% exact match).\n3. CampusCycle: the offline-first PWA and the strongest full-stack delivery (64 tests).\n4. Advanced RAG: hybrid retrieval with offline and RAGAS evaluation.\nSupporting work: this portfolio (Shizu0n CV) and the earlier full-stack/backend systems.\n\nEditorial rubric ranking (weighted 1-5 qualitative scores per criterion; this is NOT a measured result or benchmark, see the measured-results chunk for real metrics):\n1. Shizu0n CV => 4.41\n2. ReAct Agent => 4.13\n3. Advanced RAG => 4.07\n4. CampusCycle => 3.9\n5. Delivery System => 3.63\n6. Phi-3 Mini SQL Generator => 3.52\n7. Referral System => 3.38\n8. Academic System => 3.08\n9. Gym Management System => 2.53"
+        "content": "Paulo's own showcase order (use this for 'best project' or 'strongest project' questions):\n1. ReAct Agent: the live LangGraph agent with tool use, cross-conversation memory, RAG over uploaded documents with cited sources, tool discovery over the Model Context Protocol (MCP), and replayable traces.\n2. Phi-3 Mini SQL Generator: the fine-tune with the strongest measured result (2% to 73.5% exact match).\n3. CampusCycle: the offline-first PWA and the strongest full-stack delivery (64 tests).\n4. Advanced RAG: hybrid retrieval with offline and RAGAS evaluation.\nSupporting work: this portfolio (Shizu0n CV) and the earlier full-stack/backend systems.\n\nEditorial rubric order (a qualitative ordering, NOT a measured result or benchmark; never quote it as a score):\n1. Shizu0n CV\n2. ReAct Agent\n3. Advanced RAG\n4. CampusCycle\n5. Delivery System\n6. Phi-3 Mini SQL Generator\n7. Referral System\n8. Academic System\n9. Gym Management System"
       },
       {
         "id": "ranking:ai_ml_depth",
@@ -10448,7 +10450,7 @@
           "ai_ml_depth"
         ],
         "stacks": [],
-        "content": "Criterion ranking: ai_ml_depth\n1. ReAct Agent => 5/5 | EN: Strong agent engineering: a LangGraph ReAct loop with tools, cross-conversation memory (checkpointer + long-term store), document RAG with a no-hallucination guard, an observable SSE trace, MCP tool discovery, and a 100% baseline on 22 labeled cases. | PT: Engenharia de agentes forte: laço ReAct em LangGraph com ferramentas, memória entre conversas (checkpointer + long-term store), RAG de documentos com guarda anti-alucinação, traço observável via SSE, descoberta de ferramentas MCP e baseline de 100% em 22 casos rotulados.\n2. Advanced RAG => 5/5 | EN: RAG built as a full engineering system: hybrid retrieval (BM25 + dense + reciprocal-rank fusion + reranking) with offline and RAGAS evaluation and explicit degradation states. | PT: RAG construído como sistema de engenharia completo: retrieval híbrido (BM25 + denso + fusão reciprocal-rank + reranking) com avaliação offline e RAGAS e estados de degradação explícitos.\n3. Phi-3 Mini SQL Generator => 5/5 | EN: Deepest model-training work: a QLoRA (4-bit NF4) fine-tune of Phi-3 Mini for text-to-SQL with a measured exact-match jump from 2% to 73.5%, published to the Hugging Face Hub. | PT: Trabalho de treino de modelo mais profundo: fine-tuning QLoRA (4-bit NF4) do Phi-3 Mini para text-to-SQL com ganho de exact-match mensurável de 2% para 73,5%, publicado no Hugging Face Hub.\n4. Shizu0n CV => 4/5 | EN: Applied AI in production: RAG over a personal knowledge base, query embeddings, intent classification, multi-provider LLM fallback, and a prompt-injection canary guard. | PT: IA aplicada em produção: RAG sobre base de conhecimento pessoal, embeddings de query, classificação de intenção, fallback multi-provedor de LLM e canário anti-injeção de prompt.\n5. Academic System => 1/5 | EN: Not an AI/ML project; it is a Java domain system with no machine learning or LLM component. | PT: Não é um projeto de IA/ML; é um sistema de domínio em Java, sem componente de machine learning ou LLM.\n6. Delivery System => 1/5 | EN: Not an AI/ML project; the value is in the full-stack operational domain, not machine learning. | PT: Não é um projeto de IA/ML; o valor está no domínio operacional full-stack, não em machine learning.\n7. Gym Management System => 1/5 | EN: No AI/ML involved; it is an administrative desktop and backend system. | PT: Sem IA/ML envolvido; é um sistema administrativo desktop e backend.\n8. Referral System => 1/5 | EN: No AI/ML in the product; the focus is NestJS, authentication, and recursive relational modeling. | PT: Sem IA/ML no produto; o foco é NestJS, autenticação e modelagem relacional recursiva.\n9. CampusCycle => 1/5 | EN: AI was used and documented as a development tool, but it is not a product feature or technical component. | PT: IA foi usada e documentada como ferramenta de desenvolvimento, mas não é uma funcionalidade ou componente técnico do produto."
+        "content": "Criterion ranking: ai_ml_depth\n1. ReAct Agent | EN: Strong agent engineering: a LangGraph ReAct loop with tools, cross-conversation memory (checkpointer + long-term store), document RAG with a no-hallucination guard, an observable SSE trace, MCP tool discovery, and a 100% baseline on 22 labeled cases. | PT: Engenharia de agentes forte: laço ReAct em LangGraph com ferramentas, memória entre conversas (checkpointer + long-term store), RAG de documentos com guarda anti-alucinação, traço observável via SSE, descoberta de ferramentas MCP e baseline de 100% em 22 casos rotulados.\n2. Advanced RAG | EN: RAG built as a full engineering system: hybrid retrieval (BM25 + dense + reciprocal-rank fusion + reranking) with offline and RAGAS evaluation and explicit degradation states. | PT: RAG construído como sistema de engenharia completo: retrieval híbrido (BM25 + denso + fusão reciprocal-rank + reranking) com avaliação offline e RAGAS e estados de degradação explícitos.\n3. Phi-3 Mini SQL Generator | EN: Deepest model-training work: a QLoRA (4-bit NF4) fine-tune of Phi-3 Mini for text-to-SQL with a measured exact-match jump from 2% to 73.5%, published to the Hugging Face Hub. | PT: Trabalho de treino de modelo mais profundo: fine-tuning QLoRA (4-bit NF4) do Phi-3 Mini para text-to-SQL com ganho de exact-match mensurável de 2% para 73,5%, publicado no Hugging Face Hub.\n4. Shizu0n CV | EN: Applied AI in production: RAG over a personal knowledge base, query embeddings, intent classification, multi-provider LLM fallback, and a prompt-injection canary guard. | PT: IA aplicada em produção: RAG sobre base de conhecimento pessoal, embeddings de query, classificação de intenção, fallback multi-provedor de LLM e canário anti-injeção de prompt.\n5. Academic System | EN: Not an AI/ML project; it is a Java domain system with no machine learning or LLM component. | PT: Não é um projeto de IA/ML; é um sistema de domínio em Java, sem componente de machine learning ou LLM.\n6. Delivery System | EN: Not an AI/ML project; the value is in the full-stack operational domain, not machine learning. | PT: Não é um projeto de IA/ML; o valor está no domínio operacional full-stack, não em machine learning.\n7. Gym Management System | EN: No AI/ML involved; it is an administrative desktop and backend system. | PT: Sem IA/ML envolvido; é um sistema administrativo desktop e backend.\n8. Referral System | EN: No AI/ML in the product; the focus is NestJS, authentication, and recursive relational modeling. | PT: Sem IA/ML no produto; o foco é NestJS, autenticação e modelagem relacional recursiva.\n9. CampusCycle | EN: AI was used and documented as a development tool, but it is not a product feature or technical component. | PT: IA foi usada e documentada como ferramenta de desenvolvimento, mas não é uma funcionalidade ou componente técnico do produto."
       },
       {
         "id": "ranking:completeness",
@@ -10463,7 +10465,7 @@
           "completeness"
         ],
         "stacks": [],
-        "content": "Criterion ranking: completeness\n1. Delivery System => 5/5 | EN: It combines multiple roles, authentication, an API, a database, and a broad delivery domain. | PT: Combina múltiplos papéis, autenticação, API, banco e domínio amplo de delivery.\n2. Shizu0n CV => 5/5 | EN: It brings together presentation, integrations, deployment, AI chat, and active maintenance in a single product. | PT: Reúne apresentação, integrações, deploy, chat com IA e manutenção ativa em um único produto.\n3. CampusCycle => 5/5 | EN: It delivers discovery, authentication, CRUD, the listing lifecycle, an installable PWA, offline operation, tests, documentation, and a split deployment on real services. | PT: Entrega descoberta, autenticação, CRUD, ciclo de anúncio, PWA instalável, operação offline, testes, documentação e deploy dividido em serviços reais.\n4. Advanced RAG => 5/5 | EN: It covers the full cycle: ingestion, indexing, hybrid retrieval, synthesis, evaluation, and Streamlit review. | PT: Cobre todo o ciclo: ingestão, indexação, retrieval híbrido, síntese, avaliação e revisão em Streamlit.\n5. Academic System => 4/5 | EN: It covers a clear domain with rules, persistence, and external integration, but without public deployment or authentication. | PT: Cobre domínio claro com regras, persistência e integração externa, mas sem deploy público ou autenticação.\n6. Referral System => 4/5 | EN: It delivers a complete full-stack flow for a smaller, well-bounded domain. | PT: Entrega um fluxo full stack completo para um domínio menor e bem delimitado.\n7. ReAct Agent => 4/5 | EN: It covers the agent, tools, a streaming API, an inspection frontend, and evaluation, with public deployment. | PT: Cobre agente, ferramentas, API de streaming, frontend de inspeção e avaliação, com deploy público.\n8. Phi-3 Mini SQL Generator => 4/5 | EN: A complete pipeline from dataset to published model, with adapter, merged model, and public demo. | PT: Pipeline completo do dataset ao modelo publicado, com adapter, modelo mesclado e demo pública.\n9. Gym Management System => 3/5 | EN: It has a broad domain, but the technical documentation and finish signals are more limited. | PT: Tem domínio amplo, mas a documentação técnica e os sinais de acabamento são mais limitados."
+        "content": "Criterion ranking: completeness\n1. Delivery System | EN: It combines multiple roles, authentication, an API, a database, and a broad delivery domain. | PT: Combina múltiplos papéis, autenticação, API, banco e domínio amplo de delivery.\n2. Shizu0n CV | EN: It brings together presentation, integrations, deployment, AI chat, and active maintenance in a single product. | PT: Reúne apresentação, integrações, deploy, chat com IA e manutenção ativa em um único produto.\n3. CampusCycle | EN: It delivers discovery, authentication, CRUD, the listing lifecycle, an installable PWA, offline operation, tests, documentation, and a split deployment on real services. | PT: Entrega descoberta, autenticação, CRUD, ciclo de anúncio, PWA instalável, operação offline, testes, documentação e deploy dividido em serviços reais.\n4. Advanced RAG | EN: It covers the full cycle: ingestion, indexing, hybrid retrieval, synthesis, evaluation, and Streamlit review. | PT: Cobre todo o ciclo: ingestão, indexação, retrieval híbrido, síntese, avaliação e revisão em Streamlit.\n5. Academic System | EN: It covers a clear domain with rules, persistence, and external integration, but without public deployment or authentication. | PT: Cobre domínio claro com regras, persistência e integração externa, mas sem deploy público ou autenticação.\n6. Referral System | EN: It delivers a complete full-stack flow for a smaller, well-bounded domain. | PT: Entrega um fluxo full stack completo para um domínio menor e bem delimitado.\n7. ReAct Agent | EN: It covers the agent, tools, a streaming API, an inspection frontend, and evaluation, with public deployment. | PT: Cobre agente, ferramentas, API de streaming, frontend de inspeção e avaliação, com deploy público.\n8. Phi-3 Mini SQL Generator | EN: A complete pipeline from dataset to published model, with adapter, merged model, and public demo. | PT: Pipeline completo do dataset ao modelo publicado, com adapter, modelo mesclado e demo pública.\n9. Gym Management System | EN: It has a broad domain, but the technical documentation and finish signals are more limited. | PT: Tem domínio amplo, mas a documentação técnica e os sinais de acabamento são mais limitados."
       },
       {
         "id": "ranking:backend_depth",
@@ -10478,7 +10480,7 @@
           "backend_depth"
         ],
         "stacks": [],
-        "content": "Criterion ranking: backend_depth\n1. Academic System => 4/5 | EN: It has service, repository, domain exceptions, and integration with three APIs. | PT: Tem serviço, repositório, exceções de domínio e integração com três APIs.\n2. Delivery System => 4/5 | EN: It has a REST API, JWT, baseline security, and a relevant operational domain. | PT: Tem API REST, JWT, segurança básica e um domínio operacional relevante.\n3. Referral System => 4/5 | EN: The NestJS backend has modules, guards, decorators, and TypeORM with a recursive relation. | PT: O backend NestJS tem módulos, guards, decorators e TypeORM com relação recursiva.\n4. Shizu0n CV => 4/5 | EN: The backend is not a traditional CRUD, but it has SSE, provider fallback, baseline security, and vector retrieval. | PT: O backend não é um CRUD tradicional, mas tem SSE, provider fallback, segurança básica e retrieval vetorial.\n5. CampusCycle => 4/5 | EN: An Express/Prisma API with zod contracts, pagination, ownership, rate limiting, exclusive identity, and client-UUID idempotency. | PT: API Express/Prisma com contratos zod, paginação, propriedade, rate limiting, identidade exclusiva e idempotência por UUID do cliente.\n6. ReAct Agent => 4/5 | EN: A LangGraph StateGraph, usage-tracking LLM wrappers, isolated tools, and a FastAPI layer with SSE. | PT: StateGraph LangGraph, wrappers de LLM com rastreio de uso, ferramentas isoladas e camada FastAPI com SSE.\n7. Advanced RAG => 4/5 | EN: Hybrid retrieval with BM25, dense, reciprocal-rank fusion, and reranking, with provider policies and fallbacks. | PT: Retrieval híbrido com BM25, denso, fusão por reciprocal-rank e reranking, com políticas de provedor e fallbacks.\n8. Gym Management System => 3/5 | EN: The backend stack is interesting, but the available technical evidence is shorter than in Academic and Referral. | PT: A stack backend é interessante, mas a evidência técnica disponível é mais curta que em Academic e Referral.\n9. Phi-3 Mini SQL Generator => 3/5 | EN: Depth is in the ML pipeline (QLoRA, 4-bit quantization, PEFT) rather than an application backend. | PT: Profundidade está no pipeline de ML (QLoRA, quantização 4-bit, PEFT), não em um backend de aplicação."
+        "content": "Criterion ranking: backend_depth\n1. Academic System | EN: It has service, repository, domain exceptions, and integration with three APIs. | PT: Tem serviço, repositório, exceções de domínio e integração com três APIs.\n2. Delivery System | EN: It has a REST API, JWT, baseline security, and a relevant operational domain. | PT: Tem API REST, JWT, segurança básica e um domínio operacional relevante.\n3. Referral System | EN: The NestJS backend has modules, guards, decorators, and TypeORM with a recursive relation. | PT: O backend NestJS tem módulos, guards, decorators e TypeORM com relação recursiva.\n4. Shizu0n CV | EN: The backend is not a traditional CRUD, but it has SSE, provider fallback, baseline security, and vector retrieval. | PT: O backend não é um CRUD tradicional, mas tem SSE, provider fallback, segurança básica e retrieval vetorial.\n5. CampusCycle | EN: An Express/Prisma API with zod contracts, pagination, ownership, rate limiting, exclusive identity, and client-UUID idempotency. | PT: API Express/Prisma com contratos zod, paginação, propriedade, rate limiting, identidade exclusiva e idempotência por UUID do cliente.\n6. ReAct Agent | EN: A LangGraph StateGraph, usage-tracking LLM wrappers, isolated tools, and a FastAPI layer with SSE. | PT: StateGraph LangGraph, wrappers de LLM com rastreio de uso, ferramentas isoladas e camada FastAPI com SSE.\n7. Advanced RAG | EN: Hybrid retrieval with BM25, dense, reciprocal-rank fusion, and reranking, with provider policies and fallbacks. | PT: Retrieval híbrido com BM25, denso, fusão por reciprocal-rank e reranking, com políticas de provedor e fallbacks.\n8. Gym Management System | EN: The backend stack is interesting, but the available technical evidence is shorter than in Academic and Referral. | PT: A stack backend é interessante, mas a evidência técnica disponível é mais curta que em Academic e Referral.\n9. Phi-3 Mini SQL Generator | EN: Depth is in the ML pipeline (QLoRA, 4-bit quantization, PEFT) rather than an application backend. | PT: Profundidade está no pipeline de ML (QLoRA, quantização 4-bit, PEFT), não em um backend de aplicação."
       },
       {
         "id": "ranking:frontend_polish",
@@ -10493,7 +10495,7 @@
           "frontend_polish"
         ],
         "stacks": [],
-        "content": "Criterion ranking: frontend_polish\n1. Shizu0n CV => 5/5 | EN: An authorial, accessible one-column interface with real captures, architecture diagrams, and an interactive evaluation grid. | PT: Interface autoral e acessível em uma coluna, com capturas reais, diagramas de arquitetura e uma grade de avaliação interativa.\n2. CampusCycle => 5/5 | EN: The Xilo-Feira direction is product-specific, responsive, accessible, and preserved offline through local assets and fonts. | PT: A direção Xilo-Feira é específica do produto, responsiva, acessível e preservada offline por assets e fontes locais.\n3. Delivery System => 4/5 | EN: There is a real product flow on the frontend, though the visual focus is more operational than editorial. | PT: Há fluxo de produto real no frontend, embora o foco visual seja mais operacional que editorial.\n4. Referral System => 4/5 | EN: The frontend covers a real product flow with good UX and clear global state. | PT: O frontend cobre fluxo real de produto com boa UX e estado global claro.\n5. ReAct Agent => 4/5 | EN: A React/Vite frontend with Framer Motion and Radix that separates conversation and reasoning into dedicated panels. | PT: Frontend React/Vite com Framer Motion e Radix que separa conversa e raciocínio em painéis dedicados.\n6. Advanced RAG => 3/5 | EN: The Streamlit interface is functional and review-oriented rather than editorially polished. | PT: A interface Streamlit é funcional e voltada à revisão, não a um acabamento visual editorial.\n7. Phi-3 Mini SQL Generator => 3/5 | EN: The interface is a Hugging Face Spaces demo, sufficient for trying the model. | PT: A interface é uma demo no Hugging Face Spaces, suficiente para testar o modelo.\n8. Academic System => 2/5 | EN: The interface is console/CLI, so the visual layer is not the project's focus. | PT: A interface é console/CLI, então a camada visual não é o foco do projeto.\n9. Gym Management System => 2/5 | EN: It is a utilitarian desktop system, not a project with strong visual refinement focus. | PT: É um sistema desktop utilitário, não um projeto com forte foco de refinamento visual."
+        "content": "Criterion ranking: frontend_polish\n1. Shizu0n CV | EN: An authorial, accessible one-column interface with real captures, architecture diagrams, and an interactive evaluation grid. | PT: Interface autoral e acessível em uma coluna, com capturas reais, diagramas de arquitetura e uma grade de avaliação interativa.\n2. CampusCycle | EN: The Xilo-Feira direction is product-specific, responsive, accessible, and preserved offline through local assets and fonts. | PT: A direção Xilo-Feira é específica do produto, responsiva, acessível e preservada offline por assets e fontes locais.\n3. Delivery System | EN: There is a real product flow on the frontend, though the visual focus is more operational than editorial. | PT: Há fluxo de produto real no frontend, embora o foco visual seja mais operacional que editorial.\n4. Referral System | EN: The frontend covers a real product flow with good UX and clear global state. | PT: O frontend cobre fluxo real de produto com boa UX e estado global claro.\n5. ReAct Agent | EN: A React/Vite frontend with Framer Motion and Radix that separates conversation and reasoning into dedicated panels. | PT: Frontend React/Vite com Framer Motion e Radix que separa conversa e raciocínio em painéis dedicados.\n6. Advanced RAG | EN: The Streamlit interface is functional and review-oriented rather than editorially polished. | PT: A interface Streamlit é funcional e voltada à revisão, não a um acabamento visual editorial.\n7. Phi-3 Mini SQL Generator | EN: The interface is a Hugging Face Spaces demo, sufficient for trying the model. | PT: A interface é uma demo no Hugging Face Spaces, suficiente para testar o modelo.\n8. Academic System | EN: The interface is console/CLI, so the visual layer is not the project's focus. | PT: A interface é console/CLI, então a camada visual não é o foco do projeto.\n9. Gym Management System | EN: It is a utilitarian desktop system, not a project with strong visual refinement focus. | PT: É um sistema desktop utilitário, não um projeto com forte foco de refinamento visual."
       },
       {
         "id": "ranking:architecture_maturity",
@@ -10508,7 +10510,7 @@
           "architecture_maturity"
         ],
         "stacks": [],
-        "content": "Criterion ranking: architecture_maturity\n1. Shizu0n CV => 5/5 | EN: The separation between frontend, hooks, contexts, API, data, and migrations is mature and current. | PT: A separação entre frontend, hooks, contexts, API, dados e migrações está madura e atual.\n2. CampusCycle => 5/5 | EN: It separates read caching, the write queue, identity, transport, validation, and persistence through explicit contracts and testable modules. | PT: Separa cache de leitura, fila de escrita, identidade, transporte, validação e persistência com contratos explícitos e módulos testáveis.\n3. Academic System => 4/5 | EN: The layered architecture is explicit and well documented. | PT: A arquitetura em camadas está explícita e bem documentada.\n4. Delivery System => 4/5 | EN: The frontend/backend/database separation is clear and well supported by the documentation. | PT: A separação frontend/backend/database está clara e bem sustentada pela documentação.\n5. Referral System => 4/5 | EN: The modular and layered separation is well established and explained. | PT: A separação por módulos e camadas está bem estabelecida e explicada.\n6. ReAct Agent => 4/5 | EN: A compiled graph, a normalized provider layer, and clear separation between orchestration, API, and UI. | PT: Grafo compilado, camada de provedores normalizada e separação clara entre orquestração, API e UI.\n7. Advanced RAG => 4/5 | EN: Well-separated ingestion, retrieval, synthesis, orchestration, and evaluation layers that swap independently. | PT: Camadas bem separadas de ingestão, retrieval, síntese, orquestração e avaliação, trocáveis de forma independente.\n8. Gym Management System => 3/5 | EN: There is modeling and a defined stack, but fewer details about the internal architecture. | PT: Há modelagem e stack definida, mas menos detalhes sobre a arquitetura interna.\n9. Phi-3 Mini SQL Generator => 3/5 | EN: A well-defined notebook pipeline (dataset, training, evaluation), scoped to training rather than an application. | PT: Pipeline em notebooks bem definido (dataset, treino, avaliação), com escopo de treino mais que de aplicação."
+        "content": "Criterion ranking: architecture_maturity\n1. Shizu0n CV | EN: The separation between frontend, hooks, contexts, API, data, and migrations is mature and current. | PT: A separação entre frontend, hooks, contexts, API, dados e migrações está madura e atual.\n2. CampusCycle | EN: It separates read caching, the write queue, identity, transport, validation, and persistence through explicit contracts and testable modules. | PT: Separa cache de leitura, fila de escrita, identidade, transporte, validação e persistência com contratos explícitos e módulos testáveis.\n3. Academic System | EN: The layered architecture is explicit and well documented. | PT: A arquitetura em camadas está explícita e bem documentada.\n4. Delivery System | EN: The frontend/backend/database separation is clear and well supported by the documentation. | PT: A separação frontend/backend/database está clara e bem sustentada pela documentação.\n5. Referral System | EN: The modular and layered separation is well established and explained. | PT: A separação por módulos e camadas está bem estabelecida e explicada.\n6. ReAct Agent | EN: A compiled graph, a normalized provider layer, and clear separation between orchestration, API, and UI. | PT: Grafo compilado, camada de provedores normalizada e separação clara entre orquestração, API e UI.\n7. Advanced RAG | EN: Well-separated ingestion, retrieval, synthesis, orchestration, and evaluation layers that swap independently. | PT: Camadas bem separadas de ingestão, retrieval, síntese, orquestração e avaliação, trocáveis de forma independente.\n8. Gym Management System | EN: There is modeling and a defined stack, but fewer details about the internal architecture. | PT: Há modelagem e stack definida, mas menos detalhes sobre a arquitetura interna.\n9. Phi-3 Mini SQL Generator | EN: A well-defined notebook pipeline (dataset, training, evaluation), scoped to training rather than an application. | PT: Pipeline em notebooks bem definido (dataset, treino, avaliação), com escopo de treino mais que de aplicação."
       },
       {
         "id": "ranking:security_auth",
@@ -10523,7 +10525,7 @@
           "security_auth"
         ],
         "stacks": [],
-        "content": "Criterion ranking: security_auth\n1. Delivery System => 4/5 | EN: JWT, bcrypt, and Helmet create a reasonable baseline for authentication and protection. | PT: JWT, bcrypt e Helmet criam uma base razoável de autenticação e proteção.\n2. Referral System => 4/5 | EN: JWT, bcrypt, guards, and protected routes provide solid support for the domain. | PT: JWT, bcrypt, guards e rotas protegidas dão boa sustentação para o domínio.\n3. Shizu0n CV => 4/5 | EN: It has validation, rate limiting, log sanitization, anti-jailbreak protection, and fallback chains. | PT: Há validação, rate limiting, sanitização de logs, proteção anti-jailbreak e cadeias de fallback.\n4. CampusCycle => 4/5 | EN: JWT and bcrypt, exclusive anonymous/JWT identity, owner authorization, limits, and remote-database protection; it loses one point for storing JWT in localStorage. | PT: JWT e bcrypt, identidade anônima/JWT exclusiva, autorização por proprietário, limites e proteção contra banco remoto; perde um ponto por manter JWT em localStorage.\n5. Academic System => 2/5 | EN: There is no documented authentication; the main security layer comes from JDBC usage and validations. | PT: Não há autenticação documentada; a principal camada de segurança vem do uso de JDBC e validações.\n6. ReAct Agent => 2/5 | EN: No authentication; Python and math execution is the most sensitive surface and still requires isolation. | PT: Sem autenticação; a execução de Python e math é a superfície mais sensível e ainda exige isolamento.\n7. Advanced RAG => 2/5 | EN: No user authentication; the focus is reproducible evaluation and explicit provider policies. | PT: Sem autenticação de usuários; o foco é avaliação reprodutível e políticas explícitas de provedor.\n8. Gym Management System => 1/5 | EN: Authentication and authorization are not documented. | PT: Autenticação e autorização não aparecem documentadas.\n9. Phi-3 Mini SQL Generator => 1/5 | EN: Not applicable: it is model training and publishing, without user authentication. | PT: Não se aplica: é treino e publicação de modelo, sem autenticação de usuários."
+        "content": "Criterion ranking: security_auth\n1. Delivery System | EN: JWT, bcrypt, and Helmet create a reasonable baseline for authentication and protection. | PT: JWT, bcrypt e Helmet criam uma base razoável de autenticação e proteção.\n2. Referral System | EN: JWT, bcrypt, guards, and protected routes provide solid support for the domain. | PT: JWT, bcrypt, guards e rotas protegidas dão boa sustentação para o domínio.\n3. Shizu0n CV | EN: It has validation, rate limiting, log sanitization, anti-jailbreak protection, and fallback chains. | PT: Há validação, rate limiting, sanitização de logs, proteção anti-jailbreak e cadeias de fallback.\n4. CampusCycle | EN: JWT and bcrypt, exclusive anonymous/JWT identity, owner authorization, limits, and remote-database protection; it loses one point for storing JWT in localStorage. | PT: JWT e bcrypt, identidade anônima/JWT exclusiva, autorização por proprietário, limites e proteção contra banco remoto; perde um ponto por manter JWT em localStorage.\n5. Academic System | EN: There is no documented authentication; the main security layer comes from JDBC usage and validations. | PT: Não há autenticação documentada; a principal camada de segurança vem do uso de JDBC e validações.\n6. ReAct Agent | EN: No authentication; Python and math execution is the most sensitive surface and still requires isolation. | PT: Sem autenticação; a execução de Python e math é a superfície mais sensível e ainda exige isolamento.\n7. Advanced RAG | EN: No user authentication; the focus is reproducible evaluation and explicit provider policies. | PT: Sem autenticação de usuários; o foco é avaliação reprodutível e políticas explícitas de provedor.\n8. Gym Management System | EN: Authentication and authorization are not documented. | PT: Autenticação e autorização não aparecem documentadas.\n9. Phi-3 Mini SQL Generator | EN: Not applicable: it is model training and publishing, without user authentication. | PT: Não se aplica: é treino e publicação de modelo, sem autenticação de usuários."
       },
       {
         "id": "ranking:data_modeling",
@@ -10538,7 +10540,7 @@
           "data_modeling"
         ],
         "stacks": [],
-        "content": "Criterion ranking: data_modeling\n1. Academic System => 4/5 | EN: The domain is relational and has well-defined entities for enrollment and reservation. | PT: O domínio é relacional e com entidades bem definidas para matrícula e reserva.\n2. Delivery System => 4/5 | EN: The domain has multiple connected entities across catalog, ordering, delivery, and review. | PT: O domínio tem várias entidades conectadas entre catálogo, pedido, entrega e avaliação.\n3. Gym Management System => 4/5 | EN: The gym administration domain covers relevant and varied entities. | PT: O domínio administrativo de academia cobre entidades relevantes e variadas.\n4. Referral System => 4/5 | EN: The user-referrer relationship is a good example of simple and useful recursive modeling. | PT: A relação usuário-indicador é um bom exemplo de modelagem recursiva simples e útil.\n5. Shizu0n CV => 4/5 | EN: The project models the knowledge base, vector chunks, and caches well, even though it is not the broadest relational domain. | PT: O projeto modela bem base de conhecimento, chunks vetoriais e caches, embora não seja o domínio relacional mais amplo.\n6. CampusCycle => 4/5 | EN: Prisma/PostgreSQL models users and listings, while the IndexedDB queue maintains local states and idempotency UUIDs without duplicating synchronized items. | PT: Prisma/PostgreSQL modela usuários e anúncios, enquanto a fila IndexedDB mantém estados locais e UUIDs de idempotência sem duplicar itens sincronizados.\n7. ReAct Agent => 4/5 | EN: Unified Supabase Postgres/pgvector persistence: per-thread checkpoints, per-user long-term memory, embedded document chunks, and replayable traces, with a user_id/thread_id split. | PT: Persistência unificada em Supabase Postgres/pgvector: checkpoints por thread, memória de longo prazo por usuário, chunks de documentos com embeddings e traces reexecutáveis, com separação user_id/thread_id.\n8. Advanced RAG => 3/5 | EN: It models versioned sources, vector chunks, golden datasets, and reports, more documental than relational. | PT: Modela fontes versionadas, chunks vetoriais, golden datasets e relatórios, mais documental que relacional.\n9. Phi-3 Mini SQL Generator => 3/5 | EN: Instruction data derived from SQL Create Context with schema context, rather than its own relational modeling. | PT: Dados de instrução derivados do SQL Create Context, com contexto de schema, mais que modelagem relacional própria."
+        "content": "Criterion ranking: data_modeling\n1. Academic System | EN: The domain is relational and has well-defined entities for enrollment and reservation. | PT: O domínio é relacional e com entidades bem definidas para matrícula e reserva.\n2. Delivery System | EN: The domain has multiple connected entities across catalog, ordering, delivery, and review. | PT: O domínio tem várias entidades conectadas entre catálogo, pedido, entrega e avaliação.\n3. Gym Management System | EN: The gym administration domain covers relevant and varied entities. | PT: O domínio administrativo de academia cobre entidades relevantes e variadas.\n4. Referral System | EN: The user-referrer relationship is a good example of simple and useful recursive modeling. | PT: A relação usuário-indicador é um bom exemplo de modelagem recursiva simples e útil.\n5. Shizu0n CV | EN: The project models the knowledge base, vector chunks, and caches well, even though it is not the broadest relational domain. | PT: O projeto modela bem base de conhecimento, chunks vetoriais e caches, embora não seja o domínio relacional mais amplo.\n6. CampusCycle | EN: Prisma/PostgreSQL models users and listings, while the IndexedDB queue maintains local states and idempotency UUIDs without duplicating synchronized items. | PT: Prisma/PostgreSQL modela usuários e anúncios, enquanto a fila IndexedDB mantém estados locais e UUIDs de idempotência sem duplicar itens sincronizados.\n7. ReAct Agent | EN: Unified Supabase Postgres/pgvector persistence: per-thread checkpoints, per-user long-term memory, embedded document chunks, and replayable traces, with a user_id/thread_id split. | PT: Persistência unificada em Supabase Postgres/pgvector: checkpoints por thread, memória de longo prazo por usuário, chunks de documentos com embeddings e traces reexecutáveis, com separação user_id/thread_id.\n8. Advanced RAG | EN: It models versioned sources, vector chunks, golden datasets, and reports, more documental than relational. | PT: Modela fontes versionadas, chunks vetoriais, golden datasets e relatórios, mais documental que relacional.\n9. Phi-3 Mini SQL Generator | EN: Instruction data derived from SQL Create Context with schema context, rather than its own relational modeling. | PT: Dados de instrução derivados do SQL Create Context, com contexto de schema, mais que modelagem relacional própria."
       },
       {
         "id": "ranking:functional_scope",
@@ -10553,7 +10555,7 @@
           "functional_scope"
         ],
         "stacks": [],
-        "content": "Criterion ranking: functional_scope\n1. Delivery System => 5/5 | EN: It has the broadest business-flow coverage among the CRUD/operational systems. | PT: É o projeto com maior cobertura de fluxo de negócio entre os sistemas CRUD/operacionais.\n2. CampusCycle => 5/5 | EN: It covers search and filters, sales and donations, online/offline creation, synchronization, authentication, ownership, status, deletion, and circular impact. | PT: Cobre busca e filtros, venda e doação, criação online/offline, sincronização, autenticação, propriedade, status, remoção e impacto circular.\n3. ReAct Agent => 5/5 | EN: It covers the agent cycle with tools, cross-conversation memory, cited document RAG, replayable history, MCP discovery, and an evaluation harness. | PT: Cobre o ciclo de agente com ferramentas, memória entre conversas, RAG de documentos com citações, histórico com replay, descoberta MCP e harness de avaliação.\n4. Advanced RAG => 5/5 | EN: Broad RAG scope: from source acquisition to evaluation, with ablatable retrieval strategies. | PT: Escopo amplo de RAG: da aquisição de fontes à avaliação, com estratégias de retrieval ablatáveis.\n5. Academic System => 4/5 | EN: The system covers lookup, enrollment, and library flows with multiple operational rules. | PT: O sistema cobre consulta, matrícula e biblioteca com várias regras operacionais.\n6. Gym Management System => 4/5 | EN: The functional coverage is broad: students, plans, payments, workouts, and attendance. | PT: A cobertura funcional é ampla: alunos, planos, pagamentos, treinos e frequência.\n7. Shizu0n CV => 4/5 | EN: The scope is smaller in business operations than Delivery, but strong in presentation, contact, and AI Q&A. | PT: O escopo é menor em operação de negócio do que Delivery, mas forte em apresentação, contato e AI Q&A.\n8. Referral System => 3/5 | EN: The scope is smaller and leaner than Delivery System or the portfolio itself. | PT: O escopo é menor e mais enxuto do que Delivery System ou o próprio portfólio.\n9. Phi-3 Mini SQL Generator => 3/5 | EN: Focused on SELECT-only text-to-SQL, strong at its goal but narrow by design. | PT: Foco em text-to-SQL apenas com SELECT, forte no objetivo mas estreito por design."
+        "content": "Criterion ranking: functional_scope\n1. Delivery System | EN: It has the broadest business-flow coverage among the CRUD/operational systems. | PT: É o projeto com maior cobertura de fluxo de negócio entre os sistemas CRUD/operacionais.\n2. CampusCycle | EN: It covers search and filters, sales and donations, online/offline creation, synchronization, authentication, ownership, status, deletion, and circular impact. | PT: Cobre busca e filtros, venda e doação, criação online/offline, sincronização, autenticação, propriedade, status, remoção e impacto circular.\n3. ReAct Agent | EN: It covers the agent cycle with tools, cross-conversation memory, cited document RAG, replayable history, MCP discovery, and an evaluation harness. | PT: Cobre o ciclo de agente com ferramentas, memória entre conversas, RAG de documentos com citações, histórico com replay, descoberta MCP e harness de avaliação.\n4. Advanced RAG | EN: Broad RAG scope: from source acquisition to evaluation, with ablatable retrieval strategies. | PT: Escopo amplo de RAG: da aquisição de fontes à avaliação, com estratégias de retrieval ablatáveis.\n5. Academic System | EN: The system covers lookup, enrollment, and library flows with multiple operational rules. | PT: O sistema cobre consulta, matrícula e biblioteca com várias regras operacionais.\n6. Gym Management System | EN: The functional coverage is broad: students, plans, payments, workouts, and attendance. | PT: A cobertura funcional é ampla: alunos, planos, pagamentos, treinos e frequência.\n7. Shizu0n CV | EN: The scope is smaller in business operations than Delivery, but strong in presentation, contact, and AI Q&A. | PT: O escopo é menor em operação de negócio do que Delivery, mas forte em apresentação, contato e AI Q&A.\n8. Referral System | EN: The scope is smaller and leaner than Delivery System or the portfolio itself. | PT: O escopo é menor e mais enxuto do que Delivery System ou o próprio portfólio.\n9. Phi-3 Mini SQL Generator | EN: Focused on SELECT-only text-to-SQL, strong at its goal but narrow by design. | PT: Foco em text-to-SQL apenas com SELECT, forte no objetivo mas estreito por design."
       },
       {
         "id": "ranking:documentation_quality",
@@ -10568,7 +10570,7 @@
           "documentation_quality"
         ],
         "stacks": [],
-        "content": "Criterion ranking: documentation_quality\n1. Academic System => 5/5 | EN: The README details architecture, flows, installation, entities, and exceptions. | PT: O README detalha arquitetura, fluxos, instalação, entidades e exceções.\n2. Referral System => 5/5 | EN: The README explains architecture, AI usage, decisions, and learnings well. | PT: O README explica bem arquitetura, IA usada, decisões e aprendizados.\n3. Shizu0n CV => 5/5 | EN: README, AGENTS, and the repository structure itself document the system well. | PT: README, AGENTS e a própria estrutura do repositório documentam bem o sistema.\n4. Phi-3 Mini SQL Generator => 5/5 | EN: Detailed documentation of dataset, hyperparameters, metrics, capabilities, and model limitations. | PT: Documentação detalhada de dataset, hiperparâmetros, métricas, capacidades e limitações do modelo.\n5. Delivery System => 4/5 | EN: The README documents features, API, security, and diagrams well. | PT: O README documenta bem features, API, segurança e diagramas.\n6. CampusCycle => 4/5 | EN: The README, design, test plan, and AI diary preserve decisions and trade-offs; some test totals and phase statuses are stale. | PT: README, design, plano de testes e diário de IA preservam decisões e trade-offs; alguns totais de testes e estados de fase estão desatualizados.\n7. ReAct Agent => 4/5 | EN: The README and structure clearly identify the FastAPI backend, React/Vite frontend, and the LangGraph StateGraph. | PT: README e estrutura identificam claramente backend FastAPI, frontend React/Vite e o StateGraph LangGraph.\n8. Advanced RAG => 4/5 | EN: Engineering decisions and degradation states are documented honestly and auditably. | PT: Decisões de engenharia e estados de degradação são documentados de forma honesta e auditável.\n9. Gym Management System => 3/5 | EN: The README covers the essentials, but not at the detail level of the strongest projects. | PT: O README cobre o essencial, mas não chega no nível de detalhamento dos projetos mais fortes."
+        "content": "Criterion ranking: documentation_quality\n1. Academic System | EN: The README details architecture, flows, installation, entities, and exceptions. | PT: O README detalha arquitetura, fluxos, instalação, entidades e exceções.\n2. Referral System | EN: The README explains architecture, AI usage, decisions, and learnings well. | PT: O README explica bem arquitetura, IA usada, decisões e aprendizados.\n3. Shizu0n CV | EN: README, AGENTS, and the repository structure itself document the system well. | PT: README, AGENTS e a própria estrutura do repositório documentam bem o sistema.\n4. Phi-3 Mini SQL Generator | EN: Detailed documentation of dataset, hyperparameters, metrics, capabilities, and model limitations. | PT: Documentação detalhada de dataset, hiperparâmetros, métricas, capacidades e limitações do modelo.\n5. Delivery System | EN: The README documents features, API, security, and diagrams well. | PT: O README documenta bem features, API, segurança e diagramas.\n6. CampusCycle | EN: The README, design, test plan, and AI diary preserve decisions and trade-offs; some test totals and phase statuses are stale. | PT: README, design, plano de testes e diário de IA preservam decisões e trade-offs; alguns totais de testes e estados de fase estão desatualizados.\n7. ReAct Agent | EN: The README and structure clearly identify the FastAPI backend, React/Vite frontend, and the LangGraph StateGraph. | PT: README e estrutura identificam claramente backend FastAPI, frontend React/Vite e o StateGraph LangGraph.\n8. Advanced RAG | EN: Engineering decisions and degradation states are documented honestly and auditably. | PT: Decisões de engenharia e estados de degradação são documentados de forma honesta e auditável.\n9. Gym Management System | EN: The README covers the essentials, but not at the detail level of the strongest projects. | PT: O README cobre o essencial, mas não chega no nível de detalhamento dos projetos mais fortes."
       },
       {
         "id": "ranking:production_readiness",
@@ -10583,7 +10585,7 @@
           "production_readiness"
         ],
         "stacks": [],
-        "content": "Criterion ranking: production_readiness\n1. Shizu0n CV => 4/5 | EN: Public Vercel deployment with provider fallback; vector retrieval depends on a free Supabase project that pauses when idle. | PT: Deploy público na Vercel com fallback de provedores; a busca vetorial depende de um projeto Supabase gratuito que pausa por inatividade.\n2. CampusCycle => 4/5 | EN: The frontend, API, and database are deployed on Vercel, Render, and Neon with monitoring; secure-cookie auth and CI with an isolated database would still be needed for real production. | PT: Frontend, API e banco estão implantados em Vercel, Render e Neon, com monitoramento; cookie seguro e CI com banco isolado ainda seriam necessários para produção real.\n3. ReAct Agent => 4/5 | EN: Public Vercel deployment and a published evaluation baseline, though the execution sandbox still needs hardening. | PT: Deploy público na Vercel e avaliação publicada como baseline, ainda que o sandbox de execução precise de reforço.\n4. Advanced RAG => 4/5 | EN: Public Streamlit deployment and an extensive test suite, though persistent Chroma data needs a deliberate host. | PT: Deploy público em Streamlit e suíte de testes extensa, embora a persistência do Chroma precise de hosting deliberado.\n5. Phi-3 Mini SQL Generator => 4/5 | EN: Artifacts published on the Hugging Face Hub and a public Spaces demo, with a clear evaluation metric. | PT: Artefatos publicados no Hugging Face Hub e demo pública em Spaces, com métrica de avaliação clara.\n6. Delivery System => 3/5 | EN: The system shows a solid structure, but without public deployment or clearly presented tests. | PT: O sistema mostra estrutura sólida, mas sem deploy público ou testes claramente apresentados.\n7. Referral System => 3/5 | EN: The architecture is good, but there is no strong evidence of public deployment and operation. | PT: A arquitetura é boa, mas não há forte evidência de deploy e operação pública.\n8. Academic System => 2/5 | EN: There is no clear evidence of deployment, automated tests, or production operation. | PT: Não há evidência clara de deploy, testes automatizados ou operação em produção.\n9. Gym Management System => 2/5 | EN: There is no clear evidence of deployment, tests, or more mature operation. | PT: Não há evidência clara de deploy, testes ou operação mais madura."
+        "content": "Criterion ranking: production_readiness\n1. Shizu0n CV | EN: Public Vercel deployment with provider fallback; vector retrieval depends on a free Supabase project that pauses when idle. | PT: Deploy público na Vercel com fallback de provedores; a busca vetorial depende de um projeto Supabase gratuito que pausa por inatividade.\n2. CampusCycle | EN: The frontend, API, and database are deployed on Vercel, Render, and Neon with monitoring; secure-cookie auth and CI with an isolated database would still be needed for real production. | PT: Frontend, API e banco estão implantados em Vercel, Render e Neon, com monitoramento; cookie seguro e CI com banco isolado ainda seriam necessários para produção real.\n3. ReAct Agent | EN: Public Vercel deployment and a published evaluation baseline, though the execution sandbox still needs hardening. | PT: Deploy público na Vercel e avaliação publicada como baseline, ainda que o sandbox de execução precise de reforço.\n4. Advanced RAG | EN: Public Streamlit deployment and an extensive test suite, though persistent Chroma data needs a deliberate host. | PT: Deploy público em Streamlit e suíte de testes extensa, embora a persistência do Chroma precise de hosting deliberado.\n5. Phi-3 Mini SQL Generator | EN: Artifacts published on the Hugging Face Hub and a public Spaces demo, with a clear evaluation metric. | PT: Artefatos publicados no Hugging Face Hub e demo pública em Spaces, com métrica de avaliação clara.\n6. Delivery System | EN: The system shows a solid structure, but without public deployment or clearly presented tests. | PT: O sistema mostra estrutura sólida, mas sem deploy público ou testes claramente apresentados.\n7. Referral System | EN: The architecture is good, but there is no strong evidence of public deployment and operation. | PT: A arquitetura é boa, mas não há forte evidência de deploy e operação pública.\n8. Academic System | EN: There is no clear evidence of deployment, automated tests, or production operation. | PT: Não há evidência clara de deploy, testes automatizados ou operação em produção.\n9. Gym Management System | EN: There is no clear evidence of deployment, tests, or more mature operation. | PT: Não há evidência clara de deploy, testes ou operação mais madura."
       },
       {
         "id": "ranking:stack:java",
@@ -10600,7 +10602,7 @@
         "stacks": [
           "java"
         ],
-        "content": "Stack recommendation ranking for java:\n1. Academic System => 4 | EN: A strong project for discussing Java backend, business rules, and integration with external services. | PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos.\n2. Gym Management System => 3.2 | EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio. | PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
+        "content": "Stack recommendation ranking for java:\n1. Academic System | EN: A strong project for discussing Java backend, business rules, and integration with external services. | PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos.\n2. Gym Management System | EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio. | PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
       },
       {
         "id": "ranking:stack:react",
@@ -10617,7 +10619,7 @@
         "stacks": [
           "react"
         ],
-        "content": "Stack recommendation ranking for react:\n1. Shizu0n CV => 4.8 | EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG. | PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.\n2. CampusCycle => 4.8 | EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests. | PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos.\n3. Delivery System => 4.15 | EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system. | PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional.\n4. Referral System => 3.8 | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
+        "content": "Stack recommendation ranking for react:\n1. Shizu0n CV | EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG. | PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.\n2. CampusCycle | EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests. | PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos.\n3. Delivery System | EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system. | PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional.\n4. Referral System | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
       },
       {
         "id": "ranking:stack:nestjs",
@@ -10634,7 +10636,7 @@
         "stacks": [
           "nestjs"
         ],
-        "content": "Stack recommendation ranking for nestjs:\n1. Referral System => 4 | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
+        "content": "Stack recommendation ranking for nestjs:\n1. Referral System | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
       },
       {
         "id": "ranking:stack:spring-boot",
@@ -10651,7 +10653,7 @@
         "stacks": [
           "spring-boot"
         ],
-        "content": "Stack recommendation ranking for spring-boot:\n1. Gym Management System => 3.55 | EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio. | PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
+        "content": "Stack recommendation ranking for spring-boot:\n1. Gym Management System | EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio. | PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
       },
       {
         "id": "ranking:stack:typescript",
@@ -10668,7 +10670,7 @@
         "stacks": [
           "typescript"
         ],
-        "content": "Stack recommendation ranking for typescript:\n1. Shizu0n CV => 4.7 | EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG. | PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.\n2. CampusCycle => 4.7 | EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests. | PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos.\n3. Referral System => 4 | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
+        "content": "Stack recommendation ranking for typescript:\n1. Shizu0n CV | EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG. | PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.\n2. CampusCycle | EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests. | PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos.\n3. Referral System | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
       },
       {
         "id": "ranking:stack:mysql",
@@ -10685,7 +10687,7 @@
         "stacks": [
           "mysql"
         ],
-        "content": "Stack recommendation ranking for mysql:\n1. Delivery System => 4.3 | EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system. | PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional.\n2. Gym Management System => 3.75 | EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio. | PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
+        "content": "Stack recommendation ranking for mysql:\n1. Delivery System | EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system. | PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional.\n2. Gym Management System | EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio. | PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
       }
     ]
   }

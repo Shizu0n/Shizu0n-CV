@@ -476,10 +476,6 @@ function buildNarrativeChunks(profile) {
 }
 
 function buildProjectChunks(project, scoreCard) {
-  const scoreSummary = Object.entries(scoreCard.scores)
-    .map(([criterion, details]) => `${criterion}: ${details.score}/5`)
-    .join(', ');
-
   return [
     {
       id: `project:${project.id}:overview`,
@@ -580,7 +576,6 @@ function buildProjectChunks(project, scoreCard) {
               `Cost, latency and failure handling PT: ${project.reliability.pt}`
             ]
           : []),
-        `Score summary: ${scoreSummary}`,
         `Recommendation summary EN: ${scoreCard.summary_en}`,
         `Recommendation summary PT: ${scoreCard.summary_pt}`
       ].join('\n')
@@ -635,8 +630,8 @@ function buildRankingChunks(rankings, nameById, measuredResults = [], showcaseOr
         "Paulo's own showcase order (use this for 'best project' or 'strongest project' questions):",
         ...showcaseOrder,
         '',
-        'Editorial rubric ranking (weighted 1-5 qualitative scores per criterion; this is NOT a measured result or benchmark, see the measured-results chunk for real metrics):',
-        ...rankings.overall.map((entry, index) => `${index + 1}. ${nameOf(entry.project_id)} => ${entry.overall_score}`)
+        'Editorial rubric order (a qualitative ordering, NOT a measured result or benchmark; never quote it as a score):',
+        ...rankings.overall.map((entry, index) => `${index + 1}. ${nameOf(entry.project_id)}`)
       ].join('\n')
     }
   ];
@@ -653,7 +648,7 @@ function buildRankingChunks(rankings, nameById, measuredResults = [], showcaseOr
       stacks: [],
       content: [
         `Criterion ranking: ${criterion}`,
-        ...ranking.map((entry, index) => `${index + 1}. ${nameOf(entry.project_id)} => ${entry.score}/5 | EN: ${entry.reason_en} | PT: ${entry.reason_pt}`)
+        ...ranking.map((entry, index) => `${index + 1}. ${nameOf(entry.project_id)} | EN: ${entry.reason_en} | PT: ${entry.reason_pt}`)
       ].join('\n')
     });
   }
@@ -673,7 +668,7 @@ function buildSpotlightStackChunks(stackRankings) {
     stacks: [stackKey],
     content: [
       `Stack recommendation ranking for ${stackKey}:`,
-      ...stackRankings[stackKey].map((entry, index) => `${index + 1}. ${entry.project_name} => ${entry.score} | EN: ${entry.summary_en} | PT: ${entry.summary_pt}`)
+      ...stackRankings[stackKey].map((entry, index) => `${index + 1}. ${entry.project_name} | EN: ${entry.summary_en} | PT: ${entry.summary_pt}`)
     ].join('\n')
   }));
 }
@@ -762,7 +757,7 @@ async function main() {
       stack: null,
       tags: ['skills', 'inventory'],
       stacks: [],
-      content: globalSkillsSummary
+      content: [globalSkillsSummary, '', 'Project kinds (use these for "which projects are full-stack" questions):', ...(recommendations.project_kinds || [])].join('\n')
     },
     ...buildNarrativeChunks(profile),
     ...buildStackChunks(stackInventory),
