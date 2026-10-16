@@ -608,9 +608,20 @@ function buildStackChunks(stackInventory) {
   }));
 }
 
-function buildRankingChunks(rankings, nameById) {
+function buildRankingChunks(rankings, nameById, measuredResults = [], showcaseOrder = []) {
   const nameOf = (projectId) => nameById.get(projectId) || projectId;
   const chunks = [
+    {
+      id: 'ranking:measured_results',
+      type: 'recommendation',
+      project_id: null,
+      facet: 'measured-results',
+      language: 'en',
+      stack: null,
+      tags: ['comparison', 'recommendation', 'measured_results', 'metrics'],
+      stacks: [],
+      content: ['Measured results (exact numbers with their sample size):', ...measuredResults].join('\n')
+    },
     {
       id: 'ranking:overall',
       type: 'recommendation',
@@ -621,7 +632,10 @@ function buildRankingChunks(rankings, nameById) {
       tags: ['comparison', 'recommendation', 'overall'],
       stacks: [],
       content: [
-        'Overall ranking of projects by deterministic weighted score:',
+        "Paulo's own showcase order (use this for 'best project' or 'strongest project' questions):",
+        ...showcaseOrder,
+        '',
+        'Editorial rubric ranking (weighted 1-5 qualitative scores per criterion; this is NOT a measured result or benchmark, see the measured-results chunk for real metrics):',
         ...rankings.overall.map((entry, index) => `${index + 1}. ${nameOf(entry.project_id)} => ${entry.overall_score}`)
       ].join('\n')
     }
@@ -753,7 +767,7 @@ async function main() {
     ...buildNarrativeChunks(profile),
     ...buildStackChunks(stackInventory),
     ...projects.flatMap((project) => buildProjectChunks(project, scoreCardsById.get(project.id))),
-    ...buildRankingChunks(rankings, nameById),
+    ...buildRankingChunks(rankings, nameById, recommendations.measured_results, recommendations.showcase_order),
     ...buildSpotlightStackChunks(stackRankings)
   ];
 

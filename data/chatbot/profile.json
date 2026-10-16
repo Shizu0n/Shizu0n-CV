@@ -1,10 +1,10 @@
 {
   "personal": {
     "name": "Paulo Shizuo Vasconcelos Tatibana",
-    "title": "Computer Science Student, learning and practicing AI/ML and full-stack development",
+    "title": "Computer Science Student building AI systems and full-stack applications",
     "headline": {
-      "pt": "Estudante de Ciência da Computação aprendendo e praticando IA/ML e desenvolvimento full-stack",
-      "en": "Computer Science Student learning and practicing AI/ML and full-stack development"
+      "pt": "Estudante de Ciência da Computação que constrói sistemas de IA e aplicações full-stack",
+      "en": "Computer Science student who builds AI systems and full-stack applications"
     },
     "location": "Fortaleza, CE, Brazil",
     "email": "paulosvtatibana@gmail.com",
@@ -13,8 +13,8 @@
     "portfolio": "https://shizu0n.vercel.app"
   },
   "bios": {
-    "pt": "Estudante de Ciência da Computação que aprende construindo, praticando duas áreas em paralelo. Em IA/ML: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Em full-stack: arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Em ambas, busca observabilidade, avaliação por métricas e fallbacks honestos. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.",
-    "en": "Computer Science student who learns by building, practicing two areas in parallel. In AI/ML: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. In full-stack: layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Across both, he aims for observability, evaluation by metrics, and honest fallbacks. He also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code."
+    "pt": "Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe.",
+    "en": "Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team."
   },
   "education": [
     {
@@ -94,47 +94,43 @@
       "HTML",
       "CSS",
       "Vite",
-      "Framer Motion",
-      "Tailwind CSS"
+      "PWA"
     ],
     "backend": [
       "FastAPI",
       "Spring Boot",
       "NestJS",
       "Node.js",
+      "Express",
       "REST APIs",
       "Layered Architecture"
     ],
     "databases": [
-      "MySQL",
       "PostgreSQL",
+      "pgvector",
+      "MySQL",
       "SQLite",
-      "pgvector"
+      "ChromaDB",
+      "Prisma"
     ],
     "tools": [
       "Git",
       "GitHub",
       "Docker",
-      "WSL",
-      "Ubuntu",
       "Vercel",
+      "Render",
       "Supabase",
-      "EmailJS"
+      "Claude Code",
+      "Codex"
     ],
     "methodologies": [
       "OOP",
       "SOLID",
-      "Clean Code",
-      "TDD",
-      "Scrum",
-      "Kanban"
+      "Automated testing"
     ],
     "concepts": [
       "Authentication",
       "Authorization",
-      "Responsive UI",
-      "Product Thinking",
-      "Measured Motion",
       "AI-assisted Development with Technical Ownership"
     ]
   },

@@ -6,19 +6,19 @@ describe('chatProjectCatalog.extractProjectActions', () => {
     const result = extractProjectActions('any content', true);
 
     expect(result).toHaveLength(5);
-    // Catalog is AI-first, followed by the portfolio itself and CampusCycle.
+    // Catalog follows the showcase reading order, then the portfolio itself.
     expect(result.map((project) => project.id)).toEqual([
       'react-agent',
-      'advanced-rag',
       'phi3-mini-sql',
-      'shizu0n-cv',
       'campus-cycle',
+      'advanced-rag',
+      'shizu0n-cv',
     ]);
   });
 
-  it('places CampusCycle after the portfolio with both public links', () => {
+  it('places CampusCycle third with both public links', () => {
     const projects = getShowcaseProjects();
-    const campusCycle = projects[4];
+    const campusCycle = projects[2];
 
     expect(projects).toHaveLength(9);
     expect(campusCycle).toMatchObject({

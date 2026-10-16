@@ -12,11 +12,10 @@ export interface ChatProjectAction {
 
 const MAX_PROJECT_CARDS = 5
 
-// Catalog order is AI-first by design: the three applied-AI builds lead, then the
-// portfolio itself, then the full-stack application systems. getAllProjectActions and
-// getShowcaseProjects both read this order, so the chat "list" cards and the visible grid
-// stay AI-first. projectsPresentation is keyed by id and its variants are assigned to keep
-// each consecutive grid pair filling a 12-column row.
+// Catalog order is the recruiter reading order: the live agent, the fine-tune with the
+// strongest measured result, the offline-first PWA, then the RAG build. The portfolio and
+// the smaller application systems follow. getAllProjectActions and getShowcaseProjects both
+// read this order, so the chat "list" cards and the visible grid stay in sync.
 const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
   {
     id: 'react-agent',
@@ -28,19 +27,7 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
     },
     github: 'https://github.com/Shizu0n/ReAct-Agent',
     live: 'https://react-agent-ml.vercel.app',
-    stacks: ['Python', 'LangGraph', 'FastAPI', 'Server-Sent Events', 'Supabase', 'pgvector', 'Model Context Protocol', 'React', 'Vite', 'TypeScript', 'Tavily', 'LLM Agents'],
-  },
-  {
-    id: 'advanced-rag',
-    name: 'Advanced RAG',
-    aliases: ['advanced rag', 'advancedrag', 'advanced-rag', 'rag system', 'ragas', 'hybrid retrieval'],
-    summary: {
-      en: 'End-to-end, offline-capable RAG: ChromaDB indexing, hybrid retrieval (BM25 + dense + reciprocal-rank fusion + reranking), LLM synthesis with extractive fallback, and offline + RAGAS evaluation in a Streamlit app.',
-      pt: 'RAG completo e capaz de operar offline: indexação ChromaDB, retrieval híbrido (BM25 + denso + fusão por reciprocal-rank + reranking), síntese por LLM com fallback extrativo e avaliação offline + RAGAS em app Streamlit.',
-    },
-    github: 'https://github.com/Shizu0n/Advanced-RAG',
-    live: 'https://advanced-ragas.streamlit.app',
-    stacks: ['Python', 'Streamlit', 'ChromaDB', 'BM25', 'Hybrid Retrieval', 'Reciprocal Rank Fusion', 'Cross-Encoder Reranking', 'RAGAS', 'Retrieval-Augmented Generation', 'LLM Evaluation'],
+    stacks: ['Python', 'LangGraph', 'FastAPI', 'Server-Sent Events', 'Supabase', 'pgvector', 'Model Context Protocol', 'React', 'Vite', 'TypeScript', 'Tavily', 'LLM Agents']
   },
   {
     id: 'phi3-mini-sql',
@@ -52,19 +39,7 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
     },
     github: 'https://github.com/Shizu0n/phi3-mini-sql-generator',
     live: 'https://huggingface.co/spaces/Shizu0n/phi3-mini-sql-generator-demo',
-    stacks: ['Python', 'PyTorch', 'Transformers', 'PEFT', 'QLoRA', 'LoRA', 'bitsandbytes', 'Phi-3 Mini', 'Hugging Face', 'Text-to-SQL'],
-  },
-  {
-    id: 'shizu0n-cv',
-    name: 'Shizu0n CV',
-    aliases: ['shizu0n cv', 'portfolio site', 'shizu0n-cv', 'this portfolio'],
-    summary: {
-      en: 'Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo\'s own technical history.',
-      pt: 'Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.',
-    },
-    github: 'https://github.com/Shizu0n/Shizu0n-CV',
-    live: 'https://shizu0n.vercel.app',
-    stacks: ['React 19', 'TypeScript', 'Vite 7', 'Framer Motion 12', 'Lenis', 'Tailwind CSS 4', 'JavaScript', 'Vercel Functions', 'Server-Sent Events', 'Gemini API', 'Groq', 'Supabase', 'PostgreSQL', 'pgvector', 'GitHub API', 'EmailJS', 'ESLint', 'Prettier', 'Playwright'],
+    stacks: ['Python', 'PyTorch', 'Transformers', 'PEFT', 'QLoRA', 'LoRA', 'bitsandbytes', 'Phi-3 Mini', 'Hugging Face', 'Text-to-SQL']
   },
   {
     id: 'campus-cycle',
@@ -76,7 +51,31 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
     },
     github: 'https://github.com/Shizu0n/CampusCycle',
     live: 'https://campus-cycles.vercel.app',
-    stacks: ['React 19', 'TypeScript', 'Vite 6', 'PWA', 'Workbox', 'IndexedDB', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Neon', 'JWT', 'Vitest', 'Vercel', 'Render'],
+    stacks: ['React 19', 'TypeScript', 'Vite 6', 'PWA', 'Workbox', 'IndexedDB', 'Node.js', 'Express', 'Prisma', 'PostgreSQL', 'Neon', 'JWT', 'Vitest', 'Vercel', 'Render']
+  },
+  {
+    id: 'advanced-rag',
+    name: 'Advanced RAG',
+    aliases: ['advanced rag', 'advancedrag', 'advanced-rag', 'rag system', 'ragas', 'hybrid retrieval'],
+    summary: {
+      en: 'End-to-end, offline-capable RAG: ChromaDB indexing, hybrid retrieval (BM25 + dense + reciprocal-rank fusion + reranking), LLM synthesis with extractive fallback, and offline + RAGAS evaluation in a Streamlit app.',
+      pt: 'RAG completo e capaz de operar offline: indexação ChromaDB, retrieval híbrido (BM25 + denso + fusão por reciprocal-rank + reranking), síntese por LLM com fallback extrativo e avaliação offline + RAGAS em app Streamlit.',
+    },
+    github: 'https://github.com/Shizu0n/Advanced-RAG',
+    live: 'https://advanced-ragas.streamlit.app',
+    stacks: ['Python', 'Streamlit', 'ChromaDB', 'BM25', 'Hybrid Retrieval', 'Reciprocal Rank Fusion', 'Cross-Encoder Reranking', 'RAGAS', 'Retrieval-Augmented Generation', 'LLM Evaluation']
+  },
+  {
+    id: 'shizu0n-cv',
+    name: 'Shizu0n CV',
+    aliases: ['shizu0n cv', 'portfolio site', 'shizu0n-cv', 'this portfolio'],
+    summary: {
+      en: 'Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo\'s own technical history.',
+      pt: 'Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.',
+    },
+    github: 'https://github.com/Shizu0n/Shizu0n-CV',
+    live: 'https://shizu0n.vercel.app',
+    stacks: ['React 19', 'TypeScript', 'Vite 7', 'Framer Motion 12', 'JavaScript', 'Vercel Functions', 'Server-Sent Events', 'Gemini API', 'Groq', 'Supabase', 'PostgreSQL', 'pgvector', 'ESLint', 'Prettier', 'Playwright']
   },
   {
     id: 'referral-system',
@@ -87,7 +86,7 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
       pt: 'Sistema full stack de indicação com React, TypeScript, NestJS, SQLite e autenticação JWT, construído para demonstrar fluxo de usuários, autenticação e modelagem relacional recursiva.',
     },
     github: 'https://github.com/Shizu0n/ReferralSystem',
-    stacks: ['NestJS', 'TypeScript', 'React 18', 'Vite', 'React Router DOM', 'SQLite', 'TypeORM', 'JWT', 'bcrypt', 'Context API', 'CSS', 'class-validator'],
+    stacks: ['NestJS', 'TypeScript', 'React 18', 'Vite', 'React Router DOM', 'SQLite', 'TypeORM', 'JWT', 'bcrypt', 'Context API', 'CSS', 'class-validator']
   },
   {
     id: 'delivery-system',
@@ -98,7 +97,7 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
       pt: 'Sistema full stack de delivery com múltiplos papéis, autenticação JWT, CRUD operacional e domínio amplo de pedidos, cardápio, entregas e avaliações.',
     },
     github: 'https://github.com/Shizu0n/DeliverySystem',
-    stacks: ['React', 'JavaScript', 'Node.js', 'MySQL', 'JWT', 'bcrypt.js', 'Helmet', 'CORS', 'Context API', 'REST API'],
+    stacks: ['React', 'JavaScript', 'Node.js', 'MySQL', 'JWT', 'bcrypt.js', 'Helmet', 'CORS', 'Context API', 'REST API']
   },
   {
     id: 'academic-system',
@@ -109,7 +108,7 @@ const CHAT_PROJECT_ACTIONS: ChatProjectAction[] = [
       pt: 'Sistema acadêmico em Java para matrícula e biblioteca, com regras de negócio explícitas, persistência em MySQL e integração com microsserviços externos.',
     },
     github: 'https://github.com/Shizu0n/AcademicSystem',
-    stacks: ['Java', 'Java 21', 'MySQL 8.0', 'JDBC', 'Gson', 'dotenv-java', 'REST APIs', 'Layered Architecture'],
+    stacks: ['Java', 'Java 21', 'MySQL 8.0', 'JDBC', 'Gson', 'dotenv-java', 'REST APIs', 'Layered Architecture']
   },
   {
     id: 'gym-management',

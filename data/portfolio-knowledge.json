@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-13T01:44:53.658Z",
+  "generated_at": "2026-10-14T22:27:48.576Z",
   "sources": {
     "cv": "cv.md",
     "profile": "data/chatbot/profile.json",
@@ -21,10 +21,10 @@
   "profile": {
     "personal": {
       "name": "Paulo Shizuo Vasconcelos Tatibana",
-      "title": "Computer Science Student, learning and practicing AI/ML and full-stack development",
+      "title": "Computer Science Student building AI systems and full-stack applications",
       "headline": {
-        "pt": "Estudante de Ciência da Computação aprendendo e praticando IA/ML e desenvolvimento full-stack",
-        "en": "Computer Science Student learning and practicing AI/ML and full-stack development"
+        "pt": "Estudante de Ciência da Computação que constrói sistemas de IA e aplicações full-stack",
+        "en": "Computer Science student who builds AI systems and full-stack applications"
       },
       "location": "Fortaleza, CE, Brazil",
       "email": "paulosvtatibana@gmail.com",
@@ -33,8 +33,8 @@
       "portfolio": "https://shizu0n.vercel.app"
     },
     "bios": {
-      "pt": "Estudante de Ciência da Computação que aprende construindo, praticando duas áreas em paralelo. Em IA/ML: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Em full-stack: arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Em ambas, busca observabilidade, avaliação por métricas e fallbacks honestos. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.",
-      "en": "Computer Science student who learns by building, practicing two areas in parallel. In AI/ML: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. In full-stack: layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Across both, he aims for observability, evaluation by metrics, and honest fallbacks. He also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code."
+      "pt": "Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe.",
+      "en": "Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team."
     },
     "education": [
       {
@@ -114,47 +114,43 @@
         "HTML",
         "CSS",
         "Vite",
-        "Framer Motion",
-        "Tailwind CSS"
+        "PWA"
       ],
       "backend": [
         "FastAPI",
         "Spring Boot",
         "NestJS",
         "Node.js",
+        "Express",
         "REST APIs",
         "Layered Architecture"
       ],
       "databases": [
-        "MySQL",
         "PostgreSQL",
+        "pgvector",
+        "MySQL",
         "SQLite",
-        "pgvector"
+        "ChromaDB",
+        "Prisma"
       ],
       "tools": [
         "Git",
         "GitHub",
         "Docker",
-        "WSL",
-        "Ubuntu",
         "Vercel",
+        "Render",
         "Supabase",
-        "EmailJS"
+        "Claude Code",
+        "Codex"
       ],
       "methodologies": [
         "OOP",
         "SOLID",
-        "Clean Code",
-        "TDD",
-        "Scrum",
-        "Kanban"
+        "Automated testing"
       ],
       "concepts": [
         "Authentication",
         "Authorization",
-        "Responsive UI",
-        "Product Thinking",
-        "Measured Motion",
         "AI-assisted Development with Technical Ownership"
       ]
     },
@@ -275,74 +271,64 @@
       "HTML",
       "CSS",
       "Vite",
-      "Framer Motion",
-      "Tailwind CSS"
+      "PWA"
     ],
     "backend": [
       "FastAPI",
       "Spring Boot",
       "NestJS",
       "Node.js",
+      "Express",
       "REST APIs",
       "Layered Architecture"
     ],
     "databases": [
-      "MySQL",
       "PostgreSQL",
+      "pgvector",
+      "MySQL",
       "SQLite",
-      "pgvector"
+      "ChromaDB",
+      "Prisma"
     ],
     "tools": [
       "Git",
       "GitHub",
       "Docker",
-      "WSL",
-      "Ubuntu",
       "Vercel",
+      "Render",
       "Supabase",
-      "EmailJS"
+      "Claude Code",
+      "Codex"
     ],
     "methodologies": [
       "OOP",
       "SOLID",
-      "Clean Code",
-      "TDD",
-      "Scrum",
-      "Kanban"
+      "Automated testing"
     ],
     "concepts": [
       "Authentication",
       "Authorization",
-      "Responsive UI",
-      "Product Thinking",
-      "Measured Motion",
       "AI-assisted Development with Technical Ownership"
     ],
     "additional_declared_skills": [
       "SQL",
       "React",
       "HTML",
-      "Tailwind CSS",
+      "Prisma",
       "Git",
       "GitHub",
       "Docker",
-      "WSL",
-      "Ubuntu",
+      "Claude Code",
+      "Codex",
       "OOP",
       "SOLID",
-      "Clean Code",
-      "TDD",
-      "Scrum",
-      "Kanban",
+      "Automated testing",
       "Authentication",
       "Authorization",
-      "Responsive UI",
-      "Product Thinking",
-      "Measured Motion",
       "AI-assisted Development with Technical Ownership"
     ]
   },
-  "cv_excerpt": "# Paulo Shizuo Vasconcelos Tatibana\n**Estudante de Ciência da Computação | Aprendendo e praticando IA/ML e desenvolvimento full-stack**\n\n📧 paulosvtatibana@gmail.com | 📱 [phone redacted] | 📍 Fortaleza, CE – Brasil  \n🔗 [GitHub](https://github.com/Shizu0n) | 🌐 [Portfólio](https://shizu0n.vercel.app) | 💼 [LinkedIn](https://linkedin.com/in/paulo-shizuo)\n\n---\n\n## Perfil\nEstudante de Ciência da Computação que aprende construindo. Pratico duas áreas em paralelo, sem priorizar uma sobre a outra: **desenvolvimento full-stack** (sistemas com arquitetura em camadas, APIs seguras e modelagem relacional) e **IA/ML aplicada** (agentes observáveis com LangGraph, pipelines de RAG com retrieval híbrido e avaliação com RAGAS, e fine-tuning de LLMs com QLoRA). Em ambas busco observabilidade, avaliação por métricas e fallbacks honestos. Uso ferramentas de IA generativa como apoio de produtividade, mantendo propriedade técnica e rigor sobre o código. Minha experiência vem de projetos pessoais e acadêmicos, não de funções profissionais.\n\n## Formação Acadêmica\n**Bacharelado em Ciências da Computação** | Jan 2024 – Dez 2027 (previsão)  \n*Universidade de Fortaleza (UNIFOR) – Fortaleza, CE*  \n**Disciplinas relevantes:** Algoritmos, Estruturas de Dados, Engenharia de Software, POO, Banco de Dados.\n\n## Projetos de IA / Machine Learning\n\n### ReAct Agent, agente observável com ferramentas\n*Python, LangGraph, FastAPI, SSE, React, TypeScript* | [Repositório](https://github.com/Shizu0n/ReAct-Agent) · [Demo ao vivo](https://react-agent-ml.vercel.app)\n- Modelou o laço ReAct como um `StateGraph` do LangGraph, com ferramentas (busca web, execução Python restrita, cálculo) e streaming SSE do traço completo de raciocínio/ação para uma interface React de inspeção.\n- Instrumentou uso, custo e latência por execução e construiu um harness de avaliação que roda sobre o grafo real, tratando o traço como superfície de produto de primeira classe.\n\n### Advanced RAG, RAG ponta a ponta com avaliação\n*Python, Streamlit, ChromaDB, BM25, RAGAS* | [Repositório](https://github.com/Shizu0n/Advanced-RAG) · [Demo ao vivo](https://advanced-ragas.streamlit.app)\n- Construiu um sistema de RAG capaz de operar offline: ingestão, indexação em ChromaDB e retrieval híbrido (BM25 + denso + reciprocal-rank fusion + reranking), com síntese por LLM e fallback extrativo.\n- Implementou avaliação com golden datasets, métricas léxicas offline e RAGAS opcional na nuvem, com estados de degradação explícitos e suíte de testes extensa.\n\n### Phi-3 Mini SQL Generator, fine-tuning de LLM (QLoRA)\n*Python, QLoRA, PEFT, Transformers, bitsandbytes, Hugging Face* | [Repositório](https://github.com/Shizu0n/phi3-mini-sql-generator) · [Demo ao vivo](https://huggingface.co/spaces/Shizu0n/phi3-mini-sql-generator-demo)\n- Fez fine-tuning QLoRA (4-bit NF4) do Phi-3 Mini (3.8B) para geração de SQL a partir de linguagem natural, treinando em ~21 minutos em uma única GPU T4 (Google Colab).\n- Elevou a acurácia **exact-match de 2% (modelo base) para 73,5%**; publicou o adapter LoRA e o modelo mesclado no Hugging Face Hub, com demo público no Spaces.\n\n## Projetos de Sistemas (Software)\n\n### Shizu0n CV, portfólio com chat de IA (RAG)\n*React 19, TypeScript, Vite, Vercel Functions, Supabase pgvector* | [Repositório](https://github.com/Shizu0n/Shizu0n-CV) · [Ao vivo](https://shizu0n.vercel.app)\n- Single-page app com motion editorial e um chatbot de IA usando RAG sobre a própria trajetória técnica, com backend serverless (SSE), cadeia de fallback entre Gemini e Groq e recuperação vetorial em Supabase pgvector.\n- Camada de segurança própria: rate limiting, sanitização de logs, proteção anti-jailbreak e CORS configurável.\n\n### Referral System, full-stack TypeScript com autenticação\n*TypeScript, React, NestJS, SQLite, JWT, TypeORM* | [Repositório](https://github.com/Shizu0n/ReferralSystem)\n- Arquitetura modular em NestJS com princípios SOLID, guards customizados e autenticação JWT stateless; modelagem relacional recursiva (usuário→indicador) com TypeORM.\n- Frontend React com Context API, rotas protegidas e tratamento estruturado de edge cases.\n\n### Delivery System, sistema operacional multi-papel\n*JavaScript, React, Node.js, MySQL, JWT* | [Repositório](https://github.com/Shizu0n/DeliverySystem)\n- Domínio amplo de delivery (clientes, restaurantes, entregadores) com API REST autenticada por JWT, bcrypt e Helmet, cobrindo pedidos, cardápio, entregas e avaliações.\n\n### Gym Management System, administração desktop + backend\n*Java, Spring Boot, Java Swing, MySQL* | [Repositório](https://github.com/Shizu0n/GymManagement)\n- Sistema de gestão de academia (alunos, planos, pagamentos, treinos, avaliações físicas e frequência) com backend Spring Boot, interface Java Swing e persistência MySQL.\n\n### Academic System, regras de negócio e integrações\n*Java 21, JDBC, MySQL, REST* | [Repositório](https://github.com/Shizu0n/AcademicSystem)\n- Sistema acadêmico em arquitetura em camadas, com regras explícitas de matrícula e biblioteca e integração com três microsserviços REST externos, persistindo operações localmente em MySQL.\n\n## Habilidades Técnicas\n- **Linguagens:** Python, TypeScript, JavaScript, Java, SQL\n- **IA / ML:** LangGraph (agentes), RAG e retrieval híbrido (BM25, denso, reciprocal-rank fusion, reranking), avaliação de LLM (RAGAS, exact-match), fine-tuning com QLoRA/LoRA (PEFT, bitsandbytes, Transformers, PyTorch), ChromaDB, Supabase pgvector, Hugging Face Hub, prompt engineering, integração multi-provedor (Gemini, Groq)\n- **Frontend:** React, Vite, TypeScript, Framer Motion, Tailwind CSS, Radix UI, HTML/CSS\n- **Backend / APIs:** Spring Boot, NestJS, Node.js, FastAPI, REST, Server-Sent Events (SSE), JWT\n- **Banco de Dados:** PostgreSQL, MySQL, SQLite, ChromaDB, pgvector\n- **DevOps / Ferramentas:** Git, GitHub, Docker, Vercel, Streamlit, Google Colab, WSL/Ubuntu, ESLint, Prettier, Playwright\n- **Metodologias:** Arquitetura em camadas, SOLID, Clean Code, design de API REST, TDD, desenvolvimento guiado por avaliação, Scrum, Kanban\n\n## Idiomas\n- **Português:** Nativo\n- **Inglês:** Intermediário – leitura técnica e documentação avançada\n",
+  "cv_excerpt": "# Paulo Shizuo Vasconcelos Tatibana\n**Estudante de Ciência da Computação | Engenharia de IA e Full-Stack**\n\nEmail: paulosvtatibana@gmail.com | Tel: [phone redacted] | Fortaleza, CE – Brasil  \n[GitHub](https://github.com/Shizu0n) | [Portfólio](https://shizu0n.vercel.app) | [LinkedIn](https://linkedin.com/in/paulo-shizuo)\n\n---\n\n## Perfil\nEstudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA em fluxos estruturados de desenvolvimento, com especificações, revisão e validação do código. Busca oportunidades de estágio para contribuir com projetos reais, aprofundar conhecimentos técnicos e evoluir em equipe.\n\n## Formação Acadêmica\n**Bacharelado em Ciência da Computação** – Universidade de Fortaleza (UNIFOR), Fortaleza, CE  \nJan 2024 – Dez 2027 (previsão). *Disciplinas relevantes: Algoritmos, Estruturas de Dados, Engenharia de Software, POO, Banco de Dados e Inteligência Artificial.*\n\n## Projetos\n_Projetos pessoais e acadêmicos._\n\n### ReAct Agent com LangGraph\n[react-agent-ml.vercel.app](https://react-agent-ml.vercel.app) | **Python, LangGraph, FastAPI, React, Supabase/pgvector, MCP, SSE**\n- Memória entre conversas e RAG sobre documentos enviados (pgvector), com citação de fonte e recusa explícita quando não há evidência; ferramentas descobertas via MCP.\n- Observabilidade: traces persistidos e reproduzíveis, com tempo por etapa, tokens e fallback entre provedores.\n- 154 testes de backend e harness de 22 casos rotulados como regressão; execução de código isolada em subprocesso com validação de AST; tudo em camadas gratuitas.\n\n### RAG Avançado com Avaliação RAGAS\n[advanced-ragas.streamlit.app](https://advanced-ragas.streamlit.app) | **Python, ChromaDB, BM25, RAGAS, Streamlit**\n- Ingestão, chunking, recuperação híbrida (BM25 + densa com reciprocal-rank fusion) e reranking, com ablação entre estratégias.\n- Avaliação offline e RAGAS em nuvem opt-in, sem misturar métricas; fallback extrativo quando provedores falham.\n\n### Fine-Tuning QLoRA: Phi-3 Mini para SQL\n[huggingface.co/spaces/Shizu0n/phi3-mini-sql-generator-demo](https://huggingface.co/spaces/Shizu0n/phi3-mini-sql-generator-demo) | **Python, PEFT, QLoRA, Transformers, Hugging Face Hub**\n- Phi-3 Mini (3,8B) com QLoRA para texto para SQL: exact match de 2% para 73,5%, com 1.000 exemplos de treino em cerca de 21 min numa GPU T4 gratuita; adapter e modelo mesclado publicados no Hugging Face com demo e limitações documentadas.\n\n### CampusCycle: marketplace PWA offline-first\n[campus-cycles.vercel.app](https://campus-cycles.vercel.app) | **TypeScript, React, Express, Prisma, PostgreSQL, Workbox, IndexedDB**\n- Leitura offline via service worker e fila de escrita em IndexedDB com UUID gerado no cliente e sincronização idempotente ao reconectar; fluxo validado em Android físico.\n- API com contratos zod, JWT, checagem de dono, rate limit e trava contra testes destrutivos em banco remoto; 64 testes; deploy em Vercel, Render e Neon.\n- Diário crítico do uso de IA: conselhos aceitos e rejeitados, e incidentes convertidos em testes.\n\n## Habilidades Técnicas\n- **Sistemas de IA:** Agentes (LangGraph), RAG/recuperação híbrida, avaliação (RAGAS), observabilidade, MCP, fine-tuning (PEFT/QLoRA)\n- **Linguagens:** Python, TypeScript, Java, SQL\n- **Backend e APIs:** FastAPI, NestJS, Spring Boot, Node.js/Express, REST, JWT\n- **Frontend e dados:** React, Vite, PWA; PostgreSQL (pgvector), MySQL, SQLite, ChromaDB, Prisma\n- **Engenharia:** Git, Docker, arquitetura em camadas, SOLID, testes automatizados, agentes de código (Claude Code, Codex)\n\n## Idiomas\n**Português:** Nativo | **Inglês:** Intermediário, leitura técnica e documentação avançada\n",
   "projects": [
     {
       "id": "academic-system",
@@ -488,7 +474,7 @@
         "dates": {
           "created_at": "2025-11-11T19:54:36Z",
           "pushed_at": "2026-04-19T03:40:10Z",
-          "last_activity_days": 146
+          "last_activity_days": 178
         },
         "size": {
           "repository_kb": 2717,
@@ -659,7 +645,7 @@
             }
           ]
         },
-        "last_activity_days": 146
+        "last_activity_days": 178
       }
     },
     {
@@ -828,7 +814,7 @@
         "dates": {
           "created_at": "2025-11-09T15:16:32Z",
           "pushed_at": "2026-04-19T03:41:57Z",
-          "last_activity_days": 146
+          "last_activity_days": 178
         },
         "size": {
           "repository_kb": 1612,
@@ -1043,7 +1029,7 @@
             }
           ]
         },
-        "last_activity_days": 146
+        "last_activity_days": 178
       }
     },
     {
@@ -1170,7 +1156,7 @@
         "dates": {
           "created_at": "2025-10-14T10:56:17Z",
           "pushed_at": "2026-04-19T03:42:02Z",
-          "last_activity_days": 146
+          "last_activity_days": 178
         },
         "size": {
           "repository_kb": 954,
@@ -1332,7 +1318,7 @@
             }
           ]
         },
-        "last_activity_days": 146
+        "last_activity_days": 178
       }
     },
     {
@@ -1502,7 +1488,7 @@
         "dates": {
           "created_at": "2025-10-05T22:21:26Z",
           "pushed_at": "2026-04-19T03:38:56Z",
-          "last_activity_days": 146
+          "last_activity_days": 178
         },
         "size": {
           "repository_kb": 314,
@@ -1677,7 +1663,7 @@
             }
           ]
         },
-        "last_activity_days": 146
+        "last_activity_days": 178
       }
     },
     {
@@ -1693,8 +1679,8 @@
         "this portfolio",
         "site"
       ],
-      "summary_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.",
-      "summary_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
+      "summary_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.",
+      "summary_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
       "problem": {
         "pt": "Um portfólio padrão comunica pouco sobre profundidade técnica e raramente permite exploração dinâmica sobre projetos, stacks e perfil profissional.",
         "en": "A standard portfolio communicates little about technical depth and rarely allows dynamic exploration of projects, stacks, and professional profile."
@@ -1722,11 +1708,10 @@
         "en": "People evaluating Paulo's technical profile and wanting to navigate quickly through projects, stack, and professional context."
       },
       "key_features": [
-        "Scroll-driven hero storytelling",
-        "Responsive fixed navigation",
-        "GitHub stats with caching",
-        "Curated project showcase",
-        "Contact form with EmailJS fallback",
+        "Measured results table in the hero",
+        "Interactive eval grid for the Phi-3 fine-tune",
+        "Architecture diagrams for projects without a hosted demo",
+        "Real product captures and recordings",
         "PT/EN support",
         "Floating AI chat widget",
         "Streaming SSE chat backend",
@@ -1748,8 +1733,7 @@
         "entities": [
           "Portfolio knowledge base",
           "Chat chunks",
-          "Embedding cache",
-          "GitHub stats cache"
+          "Embedding cache"
         ],
         "pt": "Modelo híbrido entre conteúdo de portfólio, chunks vetoriais, cache de embeddings e dados do GitHub para resposta contextual.",
         "en": "A hybrid model combining portfolio content, vector chunks, embedding cache, and GitHub data for contextual answers."
@@ -1761,8 +1745,6 @@
       },
       "integrations": {
         "components": [
-          "GitHub API",
-          "EmailJS",
           "Gemini API",
           "Groq",
           "Supabase pgvector",
@@ -1776,8 +1758,6 @@
         "TypeScript",
         "Vite 7",
         "Framer Motion 12",
-        "Lenis",
-        "Tailwind CSS 4",
         "CSS"
       ],
       "backend_stack": [
@@ -1804,8 +1784,6 @@
         "TypeScript",
         "Vite 7",
         "Framer Motion 12",
-        "Lenis",
-        "Tailwind CSS 4",
         "JavaScript",
         "Vercel Functions",
         "Server-Sent Events",
@@ -1814,8 +1792,6 @@
         "Supabase",
         "PostgreSQL",
         "pgvector",
-        "GitHub API",
-        "EmailJS",
         "ESLint",
         "Prettier",
         "Playwright"
@@ -1844,41 +1820,36 @@
         "languages": [
           {
             "name": "TypeScript",
-            "bytes": 149424,
-            "percentage": 51.98
+            "bytes": 147923,
+            "percentage": 52.03
           },
           {
             "name": "JavaScript",
-            "bytes": 79359,
-            "percentage": 27.61
+            "bytes": 79861,
+            "percentage": 28.09
           },
           {
             "name": "CSS",
-            "bytes": 53262,
-            "percentage": 18.53
-          },
-          {
-            "name": "PLpgSQL",
-            "bytes": 4409,
-            "percentage": 1.53
+            "bytes": 55494,
+            "percentage": 19.52
           },
           {
             "name": "HTML",
-            "bytes": 1013,
+            "bytes": 1007,
             "percentage": 0.35
           }
         ],
         "dates": {
           "created_at": "2025-10-04T03:42:39Z",
-          "pushed_at": "2026-08-15T17:26:47Z",
-          "last_activity_days": 28
+          "pushed_at": "2026-10-14T18:09:09Z",
+          "last_activity_days": 0
         },
         "size": {
-          "repository_kb": 1844,
-          "total_items": 93
+          "repository_kb": 2164,
+          "total_items": 92
         },
         "repo_tree": {
-          "total_items": 93,
+          "total_items": 92,
           "source_like_items": 44,
           "test_like_items": 5,
           "docs_like_items": 1,
@@ -1889,11 +1860,11 @@
               "count": 40
             },
             {
-              "name": "public",
-              "count": 9
+              "name": "data",
+              "count": 8
             },
             {
-              "name": "data",
+              "name": "public",
               "count": 8
             },
             {
@@ -1950,7 +1921,7 @@
           "Ask questions in PT or EN"
         ],
         "user_roles_count": 4,
-        "key_features_count": 10,
+        "key_features_count": 9,
         "domain_areas_count": 4,
         "primary_flows_count": 5
       },
@@ -2014,34 +1985,29 @@
         "forks": 0,
         "watchers": 0,
         "open_issues": 0,
-        "size_kb": 1844,
+        "size_kb": 2164,
         "created_at": "2025-10-04T03:42:39Z",
-        "pushed_at": "2026-08-15T17:26:47Z",
+        "pushed_at": "2026-10-14T18:09:09Z",
         "topics": [],
         "language_breakdown": [
           {
             "name": "TypeScript",
-            "bytes": 149424,
-            "percentage": 51.98
+            "bytes": 147923,
+            "percentage": 52.03
           },
           {
             "name": "JavaScript",
-            "bytes": 79359,
-            "percentage": 27.61
+            "bytes": 79861,
+            "percentage": 28.09
           },
           {
             "name": "CSS",
-            "bytes": 53262,
-            "percentage": 18.53
-          },
-          {
-            "name": "PLpgSQL",
-            "bytes": 4409,
-            "percentage": 1.53
+            "bytes": 55494,
+            "percentage": 19.52
           },
           {
             "name": "HTML",
-            "bytes": 1013,
+            "bytes": 1007,
             "percentage": 0.35
           }
         ],
@@ -2083,7 +2049,7 @@
           "License"
         ],
         "tree_metrics": {
-          "total_items": 93,
+          "total_items": 92,
           "source_like_items": 44,
           "test_like_items": 5,
           "docs_like_items": 1,
@@ -2094,11 +2060,11 @@
               "count": 40
             },
             {
-              "name": "public",
-              "count": 9
+              "name": "data",
+              "count": 8
             },
             {
-              "name": "data",
+              "name": "public",
               "count": 8
             },
             {
@@ -2139,7 +2105,7 @@
             }
           ]
         },
-        "last_activity_days": 28
+        "last_activity_days": 0
       }
     },
     {
@@ -2337,7 +2303,7 @@
         "dates": {
           "created_at": "2026-07-17T11:08:04Z",
           "pushed_at": "2026-07-27T20:12:53Z",
-          "last_activity_days": 47
+          "last_activity_days": 79
         },
         "size": {
           "repository_kb": 241,
@@ -2575,7 +2541,7 @@
             }
           ]
         },
-        "last_activity_days": 47
+        "last_activity_days": 79
       }
     },
     {
@@ -2794,7 +2760,7 @@
         "dates": {
           "created_at": "2026-04-26T22:33:25Z",
           "pushed_at": "2026-07-04T17:59:50Z",
-          "last_activity_days": 70
+          "last_activity_days": 102
         },
         "size": {
           "repository_kb": 963,
@@ -3065,7 +3031,7 @@
             }
           ]
         },
-        "last_activity_days": 70
+        "last_activity_days": 102
       }
     },
     {
@@ -3222,7 +3188,7 @@
         "dates": {
           "created_at": "2026-05-17T18:18:09Z",
           "pushed_at": "2026-06-23T03:29:12Z",
-          "last_activity_days": 81
+          "last_activity_days": 113
         },
         "size": {
           "repository_kb": 1594,
@@ -3461,7 +3427,7 @@
             }
           ]
         },
-        "last_activity_days": 81
+        "last_activity_days": 113
       }
     },
     {
@@ -3616,7 +3582,7 @@
         "dates": {
           "created_at": "2026-05-17T03:25:00Z",
           "pushed_at": "2026-05-17T03:33:24Z",
-          "last_activity_days": 118
+          "last_activity_days": 150
         },
         "size": {
           "repository_kb": 110,
@@ -3803,7 +3769,7 @@
             }
           ]
         },
-        "last_activity_days": 118
+        "last_activity_days": 150
       }
     }
   ],
@@ -4099,25 +4065,6 @@
       ]
     },
     {
-      "name": "EmailJS",
-      "categories": [],
-      "projects": [
-        {
-          "project_id": "shizu0n-cv",
-          "project_name": "Shizu0n CV",
-          "roles": [],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
-        }
-      ],
-      "evidence_sources": [
-        "local_repo:AGENTS.md",
-        "github_description:Shizu0n/Shizu0n-CV",
-        "github_readme:Shizu0n/Shizu0n-CV/README.md",
-        "local_repo:api/chat.js"
-      ]
-    },
-    {
       "name": "ESLint",
       "categories": [
         "tooling"
@@ -4129,8 +4076,8 @@
           "roles": [
             "tooling"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         }
       ],
       "evidence_sources": [
@@ -4242,8 +4189,8 @@
           "roles": [
             "frontend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         }
       ],
       "evidence_sources": [
@@ -4265,8 +4212,8 @@
           "roles": [
             "backend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "react-agent",
@@ -4284,25 +4231,6 @@
         "github_description:Shizu0n/ReAct-Agent",
         "deployment:https://react-agent-ml.vercel.app",
         "knowledge_vault:topics/project-react-agent"
-      ]
-    },
-    {
-      "name": "GitHub API",
-      "categories": [],
-      "projects": [
-        {
-          "project_id": "shizu0n-cv",
-          "project_name": "Shizu0n CV",
-          "roles": [],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
-        }
-      ],
-      "evidence_sources": [
-        "local_repo:AGENTS.md",
-        "github_description:Shizu0n/Shizu0n-CV",
-        "github_readme:Shizu0n/Shizu0n-CV/README.md",
-        "local_repo:api/chat.js"
       ]
     },
     {
@@ -4357,8 +4285,8 @@
           "roles": [
             "backend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "react-agent",
@@ -4586,8 +4514,8 @@
           "roles": [
             "backend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         }
       ],
       "evidence_sources": [
@@ -4731,29 +4659,6 @@
         "cv:cv.md",
         "github_description:Shizu0n/AcademicSystem",
         "github_readme:Shizu0n/AcademicSystem/README.md"
-      ]
-    },
-    {
-      "name": "Lenis",
-      "categories": [
-        "frontend"
-      ],
-      "projects": [
-        {
-          "project_id": "shizu0n-cv",
-          "project_name": "Shizu0n CV",
-          "roles": [
-            "frontend"
-          ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
-        }
-      ],
-      "evidence_sources": [
-        "local_repo:AGENTS.md",
-        "github_description:Shizu0n/Shizu0n-CV",
-        "github_readme:Shizu0n/Shizu0n-CV/README.md",
-        "local_repo:api/chat.js"
       ]
     },
     {
@@ -5024,8 +4929,8 @@
           "roles": [
             "database"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "react-agent",
@@ -5078,8 +4983,8 @@
           "roles": [
             "tooling"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         }
       ],
       "evidence_sources": [
@@ -5101,8 +5006,8 @@
           "roles": [
             "database"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "campus-cycle",
@@ -5149,8 +5054,8 @@
           "roles": [
             "tooling"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         }
       ],
       "evidence_sources": [
@@ -5367,8 +5272,8 @@
           "roles": [
             "frontend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "campus-cycle",
@@ -5586,8 +5491,8 @@
           "roles": [
             "backend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "react-agent",
@@ -5688,8 +5593,8 @@
           "roles": [
             "database"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "react-agent",
@@ -5732,29 +5637,6 @@
         "github_readme:Shizu0n/CampusCycle/README.md",
         "github_documentation:Shizu0n/CampusCycle/docs/design-doc.md",
         "github_tree:Shizu0n/CampusCycle"
-      ]
-    },
-    {
-      "name": "Tailwind CSS 4",
-      "categories": [
-        "frontend"
-      ],
-      "projects": [
-        {
-          "project_id": "shizu0n-cv",
-          "project_name": "Shizu0n CV",
-          "roles": [
-            "frontend"
-          ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
-        }
-      ],
-      "evidence_sources": [
-        "local_repo:AGENTS.md",
-        "github_description:Shizu0n/Shizu0n-CV",
-        "github_readme:Shizu0n/Shizu0n-CV/README.md",
-        "local_repo:api/chat.js"
       ]
     },
     {
@@ -5889,8 +5771,8 @@
           "roles": [
             "frontend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         },
         {
           "project_id": "campus-cycle",
@@ -5987,8 +5869,8 @@
           "roles": [
             "backend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         }
       ],
       "evidence_sources": [
@@ -6080,8 +5962,8 @@
           "roles": [
             "frontend"
           ],
-          "why_it_matters_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
-          "why_it_matters_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+          "why_it_matters_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
+          "why_it_matters_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
         }
       ],
       "evidence_sources": [
@@ -6407,8 +6289,8 @@
         },
         "frontend_polish": {
           "score": 5,
-          "reason_pt": "É o projeto com melhor refinamento visual, motion e acabamento de interface.",
-          "reason_en": "It is the project with the strongest visual refinement, motion, and interface finish."
+          "reason_pt": "Interface autoral e acessível em uma coluna, com capturas reais, diagramas de arquitetura e uma grade de avaliação interativa.",
+          "reason_en": "An authorial, accessible one-column interface with real captures, architecture diagrams, and an interactive evaluation grid."
         },
         "architecture_maturity": {
           "score": 5,
@@ -6436,9 +6318,9 @@
           "reason_en": "README, AGENTS, and the repository structure itself document the system well."
         },
         "production_readiness": {
-          "score": 5,
-          "reason_pt": "É o projeto com deploy público e o melhor sinal de uso real contínuo.",
-          "reason_en": "It is the project with public deployment and the strongest signal of ongoing real use."
+          "score": 4,
+          "reason_pt": "Deploy público na Vercel com fallback de provedores; a busca vetorial depende de um projeto Supabase gratuito que pausa por inatividade.",
+          "reason_en": "Public Vercel deployment with provider fallback; vector retrieval depends on a free Supabase project that pauses when idle."
         },
         "ai_ml_depth": {
           "score": 4,
@@ -6680,7 +6562,7 @@
     "overall": [
       {
         "project_id": "shizu0n-cv",
-        "overall_score": 4.46,
+        "overall_score": 4.41,
         "summary_pt": "Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.",
         "summary_en": "The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG."
       },
@@ -6906,8 +6788,8 @@
         {
           "project_id": "shizu0n-cv",
           "score": 5,
-          "reason_pt": "É o projeto com melhor refinamento visual, motion e acabamento de interface.",
-          "reason_en": "It is the project with the strongest visual refinement, motion, and interface finish."
+          "reason_pt": "Interface autoral e acessível em uma coluna, com capturas reais, diagramas de arquitetura e uma grade de avaliação interativa.",
+          "reason_en": "An authorial, accessible one-column interface with real captures, architecture diagrams, and an interactive evaluation grid."
         },
         {
           "project_id": "campus-cycle",
@@ -7241,9 +7123,9 @@
       "production_readiness": [
         {
           "project_id": "shizu0n-cv",
-          "score": 5,
-          "reason_pt": "É o projeto com deploy público e o melhor sinal de uso real contínuo.",
-          "reason_en": "It is the project with public deployment and the strongest signal of ongoing real use."
+          "score": 4,
+          "reason_pt": "Deploy público na Vercel com fallback de provedores; a busca vetorial depende de um projeto Supabase gratuito que pausa por inatividade.",
+          "reason_en": "Public Vercel deployment with provider fallback; vector retrieval depends on a free Supabase project that pauses when idle."
         },
         {
           "project_id": "campus-cycle",
@@ -7316,7 +7198,7 @@
         {
           "project_id": "shizu0n-cv",
           "project_name": "Shizu0n CV",
-          "score": 5,
+          "score": 4.8,
           "summary_pt": "Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.",
           "summary_en": "The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG."
         },
@@ -7402,8 +7284,8 @@
     }
   },
   "chat_runtime": {
-    "canonical_profile": "Name: Paulo Shizuo Vasconcelos Tatibana\nTitle: Computer Science Student, learning and practicing AI/ML and full-stack development\nPrimary focus: AI / ML engineering (LLM agents, hybrid RAG, fine-tuning), built on a full-stack foundation.\nHeadline EN: Computer Science Student learning and practicing AI/ML and full-stack development\nHeadline PT: Estudante de Ciência da Computação aprendendo e praticando IA/ML e desenvolvimento full-stack\nLocation: Fortaleza, CE, Brazil\nEmail: paulosvtatibana@gmail.com\nGitHub: https://github.com/Shizu0n\nLinkedIn: https://linkedin.com/in/paulo-shizuo\nPortfolio: https://shizu0n.vercel.app\nBio EN: Computer Science student who learns by building, practicing two areas in parallel. In AI/ML: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. In full-stack: layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Across both, he aims for observability, evaluation by metrics, and honest fallbacks. He also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code.\nBio PT: Estudante de Ciência da Computação que aprende construindo, praticando duas áreas em paralelo. Em IA/ML: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Em full-stack: arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Em ambas, busca observabilidade, avaliação por métricas e fallbacks honestos. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.\nEducation: Bachelor's Degree in Computer Science at Universidade de Fortaleza (UNIFOR) (Jan 2024 - Dec 2027 (expected))\nSpoken languages: Portuguese (Native), English (Intermediate - technical reading and advanced documentation)",
-    "global_skills_summary": "Primary focus: AI / ML Engineering (LLM agents, RAG, fine-tuning), on a full-stack foundation.\nAI/ML engineering skills: LangGraph, LLM Agents, Retrieval-Augmented Generation, Hybrid Retrieval, BM25, Reciprocal Rank Fusion, Cross-Encoder Reranking, RAGAS, LLM Evaluation, QLoRA, LoRA, PEFT, bitsandbytes, PyTorch, Transformers, Hugging Face, ChromaDB, pgvector\nDeclared languages: Python, TypeScript, JavaScript, Java, SQL\nDeclared frontend skills: React, HTML, CSS, Vite, Framer Motion, Tailwind CSS\nDeclared backend skills: FastAPI, Spring Boot, NestJS, Node.js, REST APIs, Layered Architecture\nDeclared databases: MySQL, PostgreSQL, SQLite, pgvector\nDeclared tools: Git, GitHub, Docker, WSL, Ubuntu, Vercel, Supabase, EmailJS\nDeclared methodologies: OOP, SOLID, Clean Code, TDD, Scrum, Kanban\nAdditional declared skills and concepts: SQL, React, HTML, Tailwind CSS, Git, GitHub, Docker, WSL, Ubuntu, OOP, SOLID, Clean Code, TDD, Scrum, Kanban, Authentication, Authorization, Responsive UI, Product Thinking, Measured Motion, AI-assisted Development with Technical Ownership\nWorking bio EN: Computer Science student who learns by building, practicing two areas in parallel. In AI/ML: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. In full-stack: layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Across both, he aims for observability, evaluation by metrics, and honest fallbacks. He also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code.\nWorking bio PT: Estudante de Ciência da Computação que aprende construindo, praticando duas áreas em paralelo. Em IA/ML: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Em full-stack: arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Em ambas, busca observabilidade, avaliação por métricas e fallbacks honestos. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.",
+    "canonical_profile": "Name: Paulo Shizuo Vasconcelos Tatibana\nTitle: Computer Science Student building AI systems and full-stack applications\nPrimary focus: AI / ML engineering (LLM agents, hybrid RAG, fine-tuning), built on a full-stack foundation.\nHeadline EN: Computer Science student who builds AI systems and full-stack applications\nHeadline PT: Estudante de Ciência da Computação que constrói sistemas de IA e aplicações full-stack\nLocation: Fortaleza, CE, Brazil\nEmail: paulosvtatibana@gmail.com\nGitHub: https://github.com/Shizu0n\nLinkedIn: https://linkedin.com/in/paulo-shizuo\nPortfolio: https://shizu0n.vercel.app\nBio EN: Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team.\nBio PT: Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe.\nEducation: Bachelor's Degree in Computer Science at Universidade de Fortaleza (UNIFOR) (Jan 2024 - Dec 2027 (expected))\nSpoken languages: Portuguese (Native), English (Intermediate - technical reading and advanced documentation)",
+    "global_skills_summary": "Primary focus: AI / ML Engineering (LLM agents, RAG, fine-tuning), on a full-stack foundation.\nAI/ML engineering skills: LangGraph, LLM Agents, Retrieval-Augmented Generation, Hybrid Retrieval, BM25, Reciprocal Rank Fusion, Cross-Encoder Reranking, RAGAS, LLM Evaluation, QLoRA, LoRA, PEFT, bitsandbytes, PyTorch, Transformers, Hugging Face, ChromaDB, pgvector\nDeclared languages: Python, TypeScript, JavaScript, Java, SQL\nDeclared frontend skills: React, HTML, CSS, Vite, PWA\nDeclared backend skills: FastAPI, Spring Boot, NestJS, Node.js, Express, REST APIs, Layered Architecture\nDeclared databases: PostgreSQL, pgvector, MySQL, SQLite, ChromaDB, Prisma\nDeclared tools: Git, GitHub, Docker, Vercel, Render, Supabase, Claude Code, Codex\nDeclared methodologies: OOP, SOLID, Automated testing\nAdditional declared skills and concepts: SQL, React, HTML, Prisma, Git, GitHub, Docker, Claude Code, Codex, OOP, SOLID, Automated testing, Authentication, Authorization, AI-assisted Development with Technical Ownership\nWorking bio EN: Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team.\nWorking bio PT: Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe.",
     "project_aliases": {
       "academic system": "academic-system",
       "academicsystem": "academic-system",
@@ -7496,36 +7378,31 @@
       "html": "HTML",
       "css": "CSS",
       "vite": "Vite",
-      "framer motion": "Framer Motion 12",
-      "tailwind css": "Tailwind CSS",
+      "pwa": "PWA",
       "fastapi": "FastAPI",
       "spring boot": "Spring Boot",
       "nestjs": "NestJS",
       "node.js": "Node.js",
+      "express": "Express",
       "rest apis": "REST APIs",
       "layered architecture": "Layered Architecture",
-      "mysql": "MySQL",
       "postgresql": "PostgreSQL",
+      "mysql": "MySQL",
       "sqlite": "SQLite",
+      "prisma": "Prisma",
       "git": "Git",
       "github": "GitHub",
       "docker": "Docker",
-      "wsl": "WSL",
-      "ubuntu": "Ubuntu",
       "vercel": "Vercel Functions",
+      "render": "Render",
       "supabase": "Supabase",
-      "emailjs": "EmailJS",
+      "claude code": "Claude Code",
+      "codex": "Codex",
       "oop": "OOP",
       "solid": "SOLID",
-      "clean code": "Clean Code",
-      "tdd": "TDD",
-      "scrum": "Scrum",
-      "kanban": "Kanban",
+      "automated testing": "Automated testing",
       "authentication": "Authentication",
       "authorization": "Authorization",
-      "responsive ui": "Responsive UI",
-      "product thinking": "Product Thinking",
-      "measured motion": "Measured Motion",
       "ai-assisted development with technical ownership": "AI-assisted Development with Technical Ownership",
       "agent memory": "Agent Memory",
       "bcrypt": "bcrypt",
@@ -7535,11 +7412,10 @@
       "cors": "CORS",
       "dotenv-java": "dotenv-java",
       "eslint": "ESLint",
-      "express": "Express",
       "express 4": "Express 4",
+      "framer motion": "Framer Motion 12",
       "framer motion 12": "Framer Motion 12",
       "gemini api": "Gemini API",
-      "github api": "GitHub API",
       "github models": "GitHub Models",
       "gradle": "Gradle",
       "groq": "Groq",
@@ -7551,7 +7427,6 @@
       "jdbc": "JDBC",
       "jpa": "JPA",
       "jwt": "JWT",
-      "lenis": "Lenis",
       "llamaindex": "LlamaIndex",
       "model context protocol": "Model Context Protocol",
       "mysql 8.0": "MySQL 8.0",
@@ -7560,17 +7435,14 @@
       "playwright": "Playwright",
       "prettier": "Prettier",
       "prisma 6": "Prisma 6",
-      "pwa": "PWA",
       "radix ui": "Radix UI",
       "react 19": "React 19",
       "react router 7": "React Router 7",
       "react router dom": "React Router DOM",
-      "render": "Render",
       "rest api": "REST API",
       "server-sent events": "Server-Sent Events",
       "streamlit": "Streamlit",
       "supertest": "Supertest",
-      "tailwind css 4": "Tailwind CSS 4",
       "tailwindcss": "TailwindCSS",
       "tavily": "Tavily",
       "text-to-sql": "Text-to-SQL",
@@ -7618,7 +7490,7 @@
           "profile"
         ],
         "stacks": [],
-        "content": "Name: Paulo Shizuo Vasconcelos Tatibana\nTitle: Computer Science Student, learning and practicing AI/ML and full-stack development\nPrimary focus: AI / ML engineering (LLM agents, hybrid RAG, fine-tuning), built on a full-stack foundation.\nHeadline EN: Computer Science Student learning and practicing AI/ML and full-stack development\nHeadline PT: Estudante de Ciência da Computação aprendendo e praticando IA/ML e desenvolvimento full-stack\nLocation: Fortaleza, CE, Brazil\nEmail: paulosvtatibana@gmail.com\nGitHub: https://github.com/Shizu0n\nLinkedIn: https://linkedin.com/in/paulo-shizuo\nPortfolio: https://shizu0n.vercel.app\nBio EN: Computer Science student who learns by building, practicing two areas in parallel. In AI/ML: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. In full-stack: layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Across both, he aims for observability, evaluation by metrics, and honest fallbacks. He also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code.\nBio PT: Estudante de Ciência da Computação que aprende construindo, praticando duas áreas em paralelo. Em IA/ML: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Em full-stack: arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Em ambas, busca observabilidade, avaliação por métricas e fallbacks honestos. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código.\nEducation: Bachelor's Degree in Computer Science at Universidade de Fortaleza (UNIFOR) (Jan 2024 - Dec 2027 (expected))\nSpoken languages: Portuguese (Native), English (Intermediate - technical reading and advanced documentation)"
+        "content": "Name: Paulo Shizuo Vasconcelos Tatibana\nTitle: Computer Science Student building AI systems and full-stack applications\nPrimary focus: AI / ML engineering (LLM agents, hybrid RAG, fine-tuning), built on a full-stack foundation.\nHeadline EN: Computer Science student who builds AI systems and full-stack applications\nHeadline PT: Estudante de Ciência da Computação que constrói sistemas de IA e aplicações full-stack\nLocation: Fortaleza, CE, Brazil\nEmail: paulosvtatibana@gmail.com\nGitHub: https://github.com/Shizu0n\nLinkedIn: https://linkedin.com/in/paulo-shizuo\nPortfolio: https://shizu0n.vercel.app\nBio EN: Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team.\nBio PT: Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe.\nEducation: Bachelor's Degree in Computer Science at Universidade de Fortaleza (UNIFOR) (Jan 2024 - Dec 2027 (expected))\nSpoken languages: Portuguese (Native), English (Intermediate - technical reading and advanced documentation)"
       },
       {
         "id": "skills:global-summary",
@@ -7632,7 +7504,7 @@
           "inventory"
         ],
         "stacks": [],
-        "content": "Primary focus: AI / ML Engineering (LLM agents, RAG, fine-tuning), on a full-stack foundation.\nAI/ML engineering skills: LangGraph, LLM Agents, Retrieval-Augmented Generation, Hybrid Retrieval, BM25, Reciprocal Rank Fusion, Cross-Encoder Reranking, RAGAS, LLM Evaluation, QLoRA, LoRA, PEFT, bitsandbytes, PyTorch, Transformers, Hugging Face, ChromaDB, pgvector\nDeclared languages: Python, TypeScript, JavaScript, Java, SQL\nDeclared frontend skills: React, HTML, CSS, Vite, Framer Motion, Tailwind CSS\nDeclared backend skills: FastAPI, Spring Boot, NestJS, Node.js, REST APIs, Layered Architecture\nDeclared databases: MySQL, PostgreSQL, SQLite, pgvector\nDeclared tools: Git, GitHub, Docker, WSL, Ubuntu, Vercel, Supabase, EmailJS\nDeclared methodologies: OOP, SOLID, Clean Code, TDD, Scrum, Kanban\nAdditional declared skills and concepts: SQL, React, HTML, Tailwind CSS, Git, GitHub, Docker, WSL, Ubuntu, OOP, SOLID, Clean Code, TDD, Scrum, Kanban, Authentication, Authorization, Responsive UI, Product Thinking, Measured Motion, AI-assisted Development with Technical Ownership\nWorking bio EN: Computer Science student who learns by building, practicing two areas in parallel. In AI/ML: observable LangGraph agents, hybrid-retrieval RAG with offline and RAGAS evaluation, and QLoRA fine-tuning of open models with measured accuracy gains. In full-stack: layered architecture, secure REST APIs, and relational data modeling in Java, Spring Boot, NestJS, TypeScript, and React. Across both, he aims for observability, evaluation by metrics, and honest fallbacks. He also uses generative AI as a productivity tool while keeping technical ownership and critical review of the code.\nWorking bio PT: Estudante de Ciência da Computação que aprende construindo, praticando duas áreas em paralelo. Em IA/ML: agentes observáveis em LangGraph, RAG com retrieval híbrido e avaliação offline e RAGAS, e fine-tuning QLoRA de modelos abertos com ganho de acurácia mensurável. Em full-stack: arquitetura em camadas, APIs REST seguras e modelagem relacional em Java, Spring Boot, NestJS, TypeScript e React. Em ambas, busca observabilidade, avaliação por métricas e fallbacks honestos. Também usa IA generativa como ferramenta de produtividade, mantendo propriedade técnica e revisão crítica do código."
+        "content": "Primary focus: AI / ML Engineering (LLM agents, RAG, fine-tuning), on a full-stack foundation.\nAI/ML engineering skills: LangGraph, LLM Agents, Retrieval-Augmented Generation, Hybrid Retrieval, BM25, Reciprocal Rank Fusion, Cross-Encoder Reranking, RAGAS, LLM Evaluation, QLoRA, LoRA, PEFT, bitsandbytes, PyTorch, Transformers, Hugging Face, ChromaDB, pgvector\nDeclared languages: Python, TypeScript, JavaScript, Java, SQL\nDeclared frontend skills: React, HTML, CSS, Vite, PWA\nDeclared backend skills: FastAPI, Spring Boot, NestJS, Node.js, Express, REST APIs, Layered Architecture\nDeclared databases: PostgreSQL, pgvector, MySQL, SQLite, ChromaDB, Prisma\nDeclared tools: Git, GitHub, Docker, Vercel, Render, Supabase, Claude Code, Codex\nDeclared methodologies: OOP, SOLID, Automated testing\nAdditional declared skills and concepts: SQL, React, HTML, Prisma, Git, GitHub, Docker, Claude Code, Codex, OOP, SOLID, Automated testing, Authentication, Authorization, AI-assisted Development with Technical Ownership\nWorking bio EN: Computer Science student at UNIFOR, graduating in December 2027, focused on building AI systems and full-stack applications. He builds personal and academic projects with AI agents, tool use, RAG, fine-tuning and system evaluation, with attention to answer quality, reliability and tests. He uses AI-assisted engineering tools (Claude Code, Codex) inside a structured workflow of specs, review and validation of the code. He is looking for an internship to contribute to real projects and grow with a team.\nWorking bio PT: Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027, focado no desenvolvimento de sistemas de IA e aplicações full-stack. Desenvolve projetos pessoais e acadêmicos envolvendo agentes de IA, uso de ferramentas, RAG, fine-tuning e avaliação de sistemas, com atenção à qualidade das respostas, confiabilidade e testes. Utiliza ferramentas de engenharia assistida por IA (Claude Code, Codex) em fluxos estruturados, com especificações, revisão e validação do código. Busca estágio para contribuir com projetos reais e evoluir em equipe."
       },
       {
         "id": "identity:about-narrative",
@@ -7844,19 +7716,6 @@
         "content": "Stack: dotenv-java\nCategories: backend\nProject: Academic System | roles: backend | reason EN: Java academic management system for enrollment and library operations, with explicit business rules, MySQL persistence, and integration with external microservices. | reason PT: Sistema acadêmico em Java para matrícula e biblioteca, com regras de negócio explícitas, persistência em MySQL e integração com microsserviços externos."
       },
       {
-        "id": "stack:emailjs",
-        "type": "stack",
-        "project_id": null,
-        "facet": "inventory",
-        "language": "bilingual",
-        "stack": "EmailJS",
-        "tags": [],
-        "stacks": [
-          "EmailJS"
-        ],
-        "content": "Stack: EmailJS\nCategories: uncategorized\nProject: Shizu0n CV | roles: general | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
-      },
-      {
         "id": "stack:eslint",
         "type": "stack",
         "project_id": null,
@@ -7869,7 +7728,7 @@
         "stacks": [
           "ESLint"
         ],
-        "content": "Stack: ESLint\nCategories: tooling\nProject: Shizu0n CV | roles: tooling | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: ESLint\nCategories: tooling\nProject: Shizu0n CV | roles: tooling | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:express",
@@ -7944,7 +7803,7 @@
         "stacks": [
           "Framer Motion 12"
         ],
-        "content": "Stack: Framer Motion 12\nCategories: frontend\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: Framer Motion 12\nCategories: frontend\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:gemini-api",
@@ -7959,20 +7818,7 @@
         "stacks": [
           "Gemini API"
         ],
-        "content": "Stack: Gemini API\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: general | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
-      },
-      {
-        "id": "stack:github-api",
-        "type": "stack",
-        "project_id": null,
-        "facet": "inventory",
-        "language": "bilingual",
-        "stack": "GitHub API",
-        "tags": [],
-        "stacks": [
-          "GitHub API"
-        ],
-        "content": "Stack: GitHub API\nCategories: uncategorized\nProject: Shizu0n CV | roles: general | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: Gemini API\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: general | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:github-models",
@@ -8015,7 +7861,7 @@
         "stacks": [
           "Groq"
         ],
-        "content": "Stack: Groq\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: general | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
+        "content": "Stack: Groq\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: general | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:gson",
@@ -8149,7 +7995,7 @@
         "stacks": [
           "JavaScript"
         ],
-        "content": "Stack: JavaScript\nCategories: frontend, backend\nProject: Delivery System | roles: frontend, backend | reason EN: Full-stack delivery system with multiple user roles, JWT authentication, operational CRUD flows, and a broader domain covering orders, menus, deliveries, and reviews. | reason PT: Sistema full stack de delivery com múltiplos papéis, autenticação JWT, CRUD operacional e domínio amplo de pedidos, cardápio, entregas e avaliações.\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: JavaScript\nCategories: frontend, backend\nProject: Delivery System | roles: frontend, backend | reason EN: Full-stack delivery system with multiple user roles, JWT authentication, operational CRUD flows, and a broader domain covering orders, menus, deliveries, and reviews. | reason PT: Sistema full stack de delivery com múltiplos papéis, autenticação JWT, CRUD operacional e domínio amplo de pedidos, cardápio, entregas e avaliações.\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:jdbc",
@@ -8223,21 +8069,6 @@
           "Layered Architecture"
         ],
         "content": "Stack: Layered Architecture\nCategories: uncategorized\nProject: Academic System | roles: general | reason EN: Java academic management system for enrollment and library operations, with explicit business rules, MySQL persistence, and integration with external microservices. | reason PT: Sistema acadêmico em Java para matrícula e biblioteca, com regras de negócio explícitas, persistência em MySQL e integração com microsserviços externos."
-      },
-      {
-        "id": "stack:lenis",
-        "type": "stack",
-        "project_id": null,
-        "facet": "inventory",
-        "language": "bilingual",
-        "stack": "Lenis",
-        "tags": [
-          "frontend"
-        ],
-        "stacks": [
-          "Lenis"
-        ],
-        "content": "Stack: Lenis\nCategories: frontend\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:llamaindex",
@@ -8409,7 +8240,7 @@
         "stacks": [
           "pgvector"
         ],
-        "content": "Stack: pgvector\nCategories: database\nProject: Shizu0n CV | roles: database | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: database | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
+        "content": "Stack: pgvector\nCategories: database\nProject: Shizu0n CV | roles: database | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: database | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:phi-3-mini",
@@ -8437,7 +8268,7 @@
         "stacks": [
           "Playwright"
         ],
-        "content": "Stack: Playwright\nCategories: tooling\nProject: Shizu0n CV | roles: tooling | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: Playwright\nCategories: tooling\nProject: Shizu0n CV | roles: tooling | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:postgresql",
@@ -8452,7 +8283,7 @@
         "stacks": [
           "PostgreSQL"
         ],
-        "content": "Stack: PostgreSQL\nCategories: database\nProject: Shizu0n CV | roles: database | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: CampusCycle | roles: database | reason EN: Installable university circular-economy marketplace with a React PWA, Express and Prisma API, JWT authentication, and an IndexedDB offline write queue that safely publishes listings after reconnection. | reason PT: Marketplace universitário instalável de economia circular, com PWA em React, API Express e Prisma, autenticação JWT e fila offline no IndexedDB que publica anúncios com segurança após a reconexão.\nProject: ReAct Agent | roles: database | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
+        "content": "Stack: PostgreSQL\nCategories: database\nProject: Shizu0n CV | roles: database | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: CampusCycle | roles: database | reason EN: Installable university circular-economy marketplace with a React PWA, Express and Prisma API, JWT authentication, and an IndexedDB offline write queue that safely publishes listings after reconnection. | reason PT: Marketplace universitário instalável de economia circular, com PWA em React, API Express e Prisma, autenticação JWT e fila offline no IndexedDB que publica anúncios com segurança após a reconexão.\nProject: ReAct Agent | roles: database | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:prettier",
@@ -8467,7 +8298,7 @@
         "stacks": [
           "Prettier"
         ],
-        "content": "Stack: Prettier\nCategories: tooling\nProject: Shizu0n CV | roles: tooling | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: Prettier\nCategories: tooling\nProject: Shizu0n CV | roles: tooling | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:prisma-6",
@@ -8585,7 +8416,7 @@
         "stacks": [
           "React 19"
         ],
-        "content": "Stack: React 19\nCategories: frontend\nProject: Delivery System | roles: frontend | reason EN: Full-stack delivery system with multiple user roles, JWT authentication, operational CRUD flows, and a broader domain covering orders, menus, deliveries, and reviews. | reason PT: Sistema full stack de delivery com múltiplos papéis, autenticação JWT, CRUD operacional e domínio amplo de pedidos, cardápio, entregas e avaliações.\nProject: Referral System | roles: frontend | reason EN: Full-stack referral system with React, TypeScript, NestJS, SQLite, and JWT authentication, built to demonstrate user flows, authentication, and recursive relational modeling. | reason PT: Sistema full stack de indicação com React, TypeScript, NestJS, SQLite e autenticação JWT, construído para demonstrar fluxo de usuários, autenticação e modelagem relacional recursiva.\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: CampusCycle | roles: frontend | reason EN: Installable university circular-economy marketplace with a React PWA, Express and Prisma API, JWT authentication, and an IndexedDB offline write queue that safely publishes listings after reconnection. | reason PT: Marketplace universitário instalável de economia circular, com PWA em React, API Express e Prisma, autenticação JWT e fila offline no IndexedDB que publica anúncios com segurança após a reconexão.\nProject: ReAct Agent | roles: frontend | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
+        "content": "Stack: React 19\nCategories: frontend\nProject: Delivery System | roles: frontend | reason EN: Full-stack delivery system with multiple user roles, JWT authentication, operational CRUD flows, and a broader domain covering orders, menus, deliveries, and reviews. | reason PT: Sistema full stack de delivery com múltiplos papéis, autenticação JWT, CRUD operacional e domínio amplo de pedidos, cardápio, entregas e avaliações.\nProject: Referral System | roles: frontend | reason EN: Full-stack referral system with React, TypeScript, NestJS, SQLite, and JWT authentication, built to demonstrate user flows, authentication, and recursive relational modeling. | reason PT: Sistema full stack de indicação com React, TypeScript, NestJS, SQLite e autenticação JWT, construído para demonstrar fluxo de usuários, autenticação e modelagem relacional recursiva.\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: CampusCycle | roles: frontend | reason EN: Installable university circular-economy marketplace with a React PWA, Express and Prisma API, JWT authentication, and an IndexedDB offline write queue that safely publishes listings after reconnection. | reason PT: Marketplace universitário instalável de economia circular, com PWA em React, API Express e Prisma, autenticação JWT e fila offline no IndexedDB que publica anúncios com segurança após a reconexão.\nProject: ReAct Agent | roles: frontend | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:react-router-7",
@@ -8697,7 +8528,7 @@
         "stacks": [
           "Server-Sent Events"
         ],
-        "content": "Stack: Server-Sent Events\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: backend | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
+        "content": "Stack: Server-Sent Events\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: backend | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:spring-boot",
@@ -8757,7 +8588,7 @@
         "stacks": [
           "Supabase"
         ],
-        "content": "Stack: Supabase\nCategories: database\nProject: Shizu0n CV | roles: database | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: database | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
+        "content": "Stack: Supabase\nCategories: database\nProject: Shizu0n CV | roles: database | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: ReAct Agent | roles: database | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:supertest",
@@ -8773,21 +8604,6 @@
           "Supertest"
         ],
         "content": "Stack: Supertest\nCategories: tooling\nProject: CampusCycle | roles: tooling | reason EN: Installable university circular-economy marketplace with a React PWA, Express and Prisma API, JWT authentication, and an IndexedDB offline write queue that safely publishes listings after reconnection. | reason PT: Marketplace universitário instalável de economia circular, com PWA em React, API Express e Prisma, autenticação JWT e fila offline no IndexedDB que publica anúncios com segurança após a reconexão."
-      },
-      {
-        "id": "stack:tailwind-css-4",
-        "type": "stack",
-        "project_id": null,
-        "facet": "inventory",
-        "language": "bilingual",
-        "stack": "Tailwind CSS 4",
-        "tags": [
-          "frontend"
-        ],
-        "stacks": [
-          "Tailwind CSS 4"
-        ],
-        "content": "Stack: Tailwind CSS 4\nCategories: frontend\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:tailwindcss",
@@ -8876,7 +8692,7 @@
         "stacks": [
           "TypeScript"
         ],
-        "content": "Stack: TypeScript\nCategories: frontend, backend\nProject: Referral System | roles: frontend, backend | reason EN: Full-stack referral system with React, TypeScript, NestJS, SQLite, and JWT authentication, built to demonstrate user flows, authentication, and recursive relational modeling. | reason PT: Sistema full stack de indicação com React, TypeScript, NestJS, SQLite e autenticação JWT, construído para demonstrar fluxo de usuários, autenticação e modelagem relacional recursiva.\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: CampusCycle | roles: frontend, backend | reason EN: Installable university circular-economy marketplace with a React PWA, Express and Prisma API, JWT authentication, and an IndexedDB offline write queue that safely publishes listings after reconnection. | reason PT: Marketplace universitário instalável de economia circular, com PWA em React, API Express e Prisma, autenticação JWT e fila offline no IndexedDB que publica anúncios com segurança após a reconexão.\nProject: ReAct Agent | roles: frontend | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
+        "content": "Stack: TypeScript\nCategories: frontend, backend\nProject: Referral System | roles: frontend, backend | reason EN: Full-stack referral system with React, TypeScript, NestJS, SQLite, and JWT authentication, built to demonstrate user flows, authentication, and recursive relational modeling. | reason PT: Sistema full stack de indicação com React, TypeScript, NestJS, SQLite e autenticação JWT, construído para demonstrar fluxo de usuários, autenticação e modelagem relacional recursiva.\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nProject: CampusCycle | roles: frontend, backend | reason EN: Installable university circular-economy marketplace with a React PWA, Express and Prisma API, JWT authentication, and an IndexedDB offline write queue that safely publishes listings after reconnection. | reason PT: Marketplace universitário instalável de economia circular, com PWA em React, API Express e Prisma, autenticação JWT e fila offline no IndexedDB que publica anúncios com segurança após a reconexão.\nProject: ReAct Agent | roles: frontend | reason EN: A full-stack ReAct agent built on $0 of model/infra spend: LangGraph with the reasoning/action trace streamed over SSE, cross-conversation memory (Postgres checkpointer + long-term store), RAG over user-uploaded documents with cited answers, persisted replayable traces with a history dashboard, and dynamic tool discovery over MCP, with a 100% evaluation baseline on 22 labeled cases and 154 backend tests. | reason PT: Agente ReAct full-stack construído com US$ 0 de gasto em modelos/infra: LangGraph com traço de raciocínio/ação transmitido via SSE, memória entre conversas (checkpointer + long-term store em Postgres), RAG sobre documentos enviados pelo usuário com respostas citadas, traces persistidos e reexecutáveis com dashboard de histórico, e descoberta dinâmica de ferramentas via MCP, com baseline de avaliação de 100% em 22 casos rotulados e 154 testes de backend."
       },
       {
         "id": "stack:uvicorn",
@@ -8921,7 +8737,7 @@
         "stacks": [
           "Vercel Functions"
         ],
-        "content": "Stack: Vercel Functions\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: Vercel Functions\nCategories: backend\nProject: Shizu0n CV | roles: backend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:vite",
@@ -8966,7 +8782,7 @@
         "stacks": [
           "Vite 7"
         ],
-        "content": "Stack: Vite 7\nCategories: frontend\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica."
+        "content": "Stack: Vite 7\nCategories: frontend\nProject: Shizu0n CV | roles: frontend | reason EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history. | reason PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica."
       },
       {
         "id": "stack:vitest",
@@ -9146,7 +8962,7 @@
           "REST APIs",
           "Layered Architecture"
         ],
-        "content": "Project: Academic System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":3,\"service_types\":[\"Student data\",\"Subjects data\",\"Library catalog\"]},\"modules\":[\"controller\",\"service\",\"repository\",\"model\",\"exception\",\"view\",\"util\",\"sql\"],\"languages\":[{\"name\":\"Java\",\"bytes\":113459,\"percentage\":100}],\"dates\":{\"created_at\":\"2025-11-11T19:54:36Z\",\"pushed_at\":\"2026-04-19T03:40:10Z\",\"last_activity_days\":146},\"size\":{\"repository_kb\":2717,\"total_items\":56},\"repo_tree\":{\"total_items\":56,\"source_like_items\":49,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":49},{\"name\":\"lib\",\"count\":4},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Academic lookup\",\"Enrollment management\",\"Library reservation\"],\"primary_flows\":[\"Lookup student\",\"Lookup subjects by course\",\"Enroll in subject\",\"Cancel enrollment\",\"Reserve book\",\"Cancel reservation\"],\"user_roles_count\":2,\"key_features_count\":10,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Clear layered architecture, Strong business-rule enforcement, Good Java backend signaling, Explicit external integration model, Detailed README with technical structure\nTradeoffs: Console UI instead of graphical or web UI, No documented automated test suite, No explicit authentication layer\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 2/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 5/5, production_readiness: 2/5, ai_ml_depth: 1/5\nRecommendation summary EN: A strong project for discussing Java backend, business rules, and integration with external services.\nRecommendation summary PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos."
+        "content": "Project: Academic System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":3,\"service_types\":[\"Student data\",\"Subjects data\",\"Library catalog\"]},\"modules\":[\"controller\",\"service\",\"repository\",\"model\",\"exception\",\"view\",\"util\",\"sql\"],\"languages\":[{\"name\":\"Java\",\"bytes\":113459,\"percentage\":100}],\"dates\":{\"created_at\":\"2025-11-11T19:54:36Z\",\"pushed_at\":\"2026-04-19T03:40:10Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":2717,\"total_items\":56},\"repo_tree\":{\"total_items\":56,\"source_like_items\":49,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":49},{\"name\":\"lib\",\"count\":4},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Academic lookup\",\"Enrollment management\",\"Library reservation\"],\"primary_flows\":[\"Lookup student\",\"Lookup subjects by course\",\"Enroll in subject\",\"Cancel enrollment\",\"Reserve book\",\"Cancel reservation\"],\"user_roles_count\":2,\"key_features_count\":10,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Clear layered architecture, Strong business-rule enforcement, Good Java backend signaling, Explicit external integration model, Detailed README with technical structure\nTradeoffs: Console UI instead of graphical or web UI, No documented automated test suite, No explicit authentication layer\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 2/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 5/5, production_readiness: 2/5, ai_ml_depth: 1/5\nRecommendation summary EN: A strong project for discussing Java backend, business rules, and integration with external services.\nRecommendation summary PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos."
       },
       {
         "id": "project:delivery-system:overview",
@@ -9316,7 +9132,7 @@
           "Context API",
           "REST API"
         ],
-        "content": "Project: Delivery System\nEngineering metrics: {\"api_surface\":{\"endpoint_groups\":[\"Authentication\",\"Addresses\",\"Restaurant categories\",\"Menu items\",\"Orders\",\"Couriers\",\"Reviews\"]},\"modules\":[\"backend\",\"frontend\",\"database\",\"diagrams\"],\"languages\":[{\"name\":\"JavaScript\",\"bytes\":432768,\"percentage\":81.87},{\"name\":\"CSS\",\"bytes\":95296,\"percentage\":18.03},{\"name\":\"HTML\",\"bytes\":548,\"percentage\":0.1}],\"dates\":{\"created_at\":\"2025-11-09T15:16:32Z\",\"pushed_at\":\"2026-04-19T03:41:57Z\",\"last_activity_days\":146},\"size\":{\"repository_kb\":1612,\"total_items\":941},\"repo_tree\":{\"total_items\":941,\"source_like_items\":935,\"test_like_items\":67,\"docs_like_items\":72,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"backend\",\"count\":850},{\"name\":\"frontend\",\"count\":82},{\"name\":\"database\",\"count\":3},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Ordering\",\"Catalog management\",\"Delivery execution\",\"Reviews\"],\"primary_flows\":[\"Register/login\",\"Manage addresses\",\"Manage categories and menu items\",\"Create order\",\"Courier flow\",\"Review restaurant\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":6}\nStrengths: Broadest business-domain coverage among the portfolio apps, Multiple user roles, Full-stack split with database and diagrams, Clear JWT and backend security basics, Good candidate for operational system discussions\nTradeoffs: No TypeScript on the main application stack, No explicit production deployment evidence, Automated test coverage is not clearly documented\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 3/5, ai_ml_depth: 1/5\nRecommendation summary EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system.\nRecommendation summary PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional."
+        "content": "Project: Delivery System\nEngineering metrics: {\"api_surface\":{\"endpoint_groups\":[\"Authentication\",\"Addresses\",\"Restaurant categories\",\"Menu items\",\"Orders\",\"Couriers\",\"Reviews\"]},\"modules\":[\"backend\",\"frontend\",\"database\",\"diagrams\"],\"languages\":[{\"name\":\"JavaScript\",\"bytes\":432768,\"percentage\":81.87},{\"name\":\"CSS\",\"bytes\":95296,\"percentage\":18.03},{\"name\":\"HTML\",\"bytes\":548,\"percentage\":0.1}],\"dates\":{\"created_at\":\"2025-11-09T15:16:32Z\",\"pushed_at\":\"2026-04-19T03:41:57Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":1612,\"total_items\":941},\"repo_tree\":{\"total_items\":941,\"source_like_items\":935,\"test_like_items\":67,\"docs_like_items\":72,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"backend\",\"count\":850},{\"name\":\"frontend\",\"count\":82},{\"name\":\"database\",\"count\":3},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Ordering\",\"Catalog management\",\"Delivery execution\",\"Reviews\"],\"primary_flows\":[\"Register/login\",\"Manage addresses\",\"Manage categories and menu items\",\"Create order\",\"Courier flow\",\"Review restaurant\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":6}\nStrengths: Broadest business-domain coverage among the portfolio apps, Multiple user roles, Full-stack split with database and diagrams, Clear JWT and backend security basics, Good candidate for operational system discussions\nTradeoffs: No TypeScript on the main application stack, No explicit production deployment evidence, Automated test coverage is not clearly documented\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 3/5, ai_ml_depth: 1/5\nRecommendation summary EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system.\nRecommendation summary PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional."
       },
       {
         "id": "project:gym-management:overview",
@@ -9441,7 +9257,7 @@
           "MySQL",
           "Gradle"
         ],
-        "content": "Project: Gym Management System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":0,\"notes\":\"No external API surface is explicitly documented.\"},\"modules\":[\"demo\",\"diagrams\"],\"languages\":[],\"dates\":{\"created_at\":\"2025-10-14T10:56:17Z\",\"pushed_at\":\"2026-04-19T03:42:02Z\",\"last_activity_days\":146},\"size\":{\"repository_kb\":954,\"total_items\":170},\"repo_tree\":{\"total_items\":170,\"source_like_items\":152,\"test_like_items\":32,\"docs_like_items\":4,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"demo\",\"count\":164},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".vscode\",\"count\":2},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Student administration\",\"Instructor administration\",\"Plans and enrollment\",\"Payments\",\"Workout management\",\"Attendance\"],\"primary_flows\":[\"Manage students and instructors\",\"Manage plans and enrollments\",\"Track payments\",\"Create workout plans\",\"Track physical assessments\",\"Register attendance\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":6,\"primary_flows_count\":6}\nStrengths: Rich administrative domain, Desktop plus backend composition, Spring Boot in the portfolio stack, Useful project for gym/business system conversations\nTradeoffs: Repository documentation is thinner than the strongest projects, No explicit auth or test evidence, GitHub language breakdown is unavailable through the API\nScore summary: completeness: 3/5, backend_depth: 3/5, frontend_polish: 2/5, architecture_maturity: 3/5, security_auth: 1/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 3/5, production_readiness: 2/5, ai_ml_depth: 1/5\nRecommendation summary EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio.\nRecommendation summary PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
+        "content": "Project: Gym Management System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":0,\"notes\":\"No external API surface is explicitly documented.\"},\"modules\":[\"demo\",\"diagrams\"],\"languages\":[],\"dates\":{\"created_at\":\"2025-10-14T10:56:17Z\",\"pushed_at\":\"2026-04-19T03:42:02Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":954,\"total_items\":170},\"repo_tree\":{\"total_items\":170,\"source_like_items\":152,\"test_like_items\":32,\"docs_like_items\":4,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"demo\",\"count\":164},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".vscode\",\"count\":2},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Student administration\",\"Instructor administration\",\"Plans and enrollment\",\"Payments\",\"Workout management\",\"Attendance\"],\"primary_flows\":[\"Manage students and instructors\",\"Manage plans and enrollments\",\"Track payments\",\"Create workout plans\",\"Track physical assessments\",\"Register attendance\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":6,\"primary_flows_count\":6}\nStrengths: Rich administrative domain, Desktop plus backend composition, Spring Boot in the portfolio stack, Useful project for gym/business system conversations\nTradeoffs: Repository documentation is thinner than the strongest projects, No explicit auth or test evidence, GitHub language breakdown is unavailable through the API\nScore summary: completeness: 3/5, backend_depth: 3/5, frontend_polish: 2/5, architecture_maturity: 3/5, security_auth: 1/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 3/5, production_readiness: 2/5, ai_ml_depth: 1/5\nRecommendation summary EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio.\nRecommendation summary PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
       },
       {
         "id": "project:referral-system:overview",
@@ -9606,7 +9422,7 @@
           "CSS",
           "class-validator"
         ],
-        "content": "Project: Referral System\nEngineering metrics: {\"api_surface\":{\"backend_modules\":[\"auth\",\"users\",\"common\",\"database\"]},\"modules\":[\"backend/src/auth\",\"backend/src/users\",\"backend/src/common\",\"frontend/src/components\",\"frontend/src/contexts\",\"frontend/src/pages\",\"frontend/src/services\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":108507,\"percentage\":66.13},{\"name\":\"CSS\",\"bytes\":50892,\"percentage\":31.01},{\"name\":\"HTML\",\"bytes\":2536,\"percentage\":1.55},{\"name\":\"JavaScript\",\"bytes\":2155,\"percentage\":1.31}],\"dates\":{\"created_at\":\"2025-10-05T22:21:26Z\",\"pushed_at\":\"2026-04-19T03:38:56Z\",\"last_activity_days\":146},\"size\":{\"repository_kb\":314,\"total_items\":113},\"repo_tree\":{\"total_items\":113,\"source_like_items\":112,\"test_like_items\":3,\"docs_like_items\":1,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"frontend\",\"count\":57},{\"name\":\"backend\",\"count\":55},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Authentication\",\"Referral flow\",\"Profile management\"],\"primary_flows\":[\"Register user\",\"Log in\",\"Persist session\",\"Generate referral link\",\"Copy referral link\",\"Access protected profile\"],\"user_roles_count\":2,\"key_features_count\":11,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Strongest NestJS example in the portfolio, Clear JWT and auth structure, Good TypeScript full-stack signal, Well-documented architecture and learning process\nTradeoffs: Smaller domain scope than Delivery System, No explicit production deployment evidence, Automated test evidence is limited\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 3/5, documentation_quality: 5/5, production_readiness: 3/5, ai_ml_depth: 1/5\nRecommendation summary EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.\nRecommendation summary PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
+        "content": "Project: Referral System\nEngineering metrics: {\"api_surface\":{\"backend_modules\":[\"auth\",\"users\",\"common\",\"database\"]},\"modules\":[\"backend/src/auth\",\"backend/src/users\",\"backend/src/common\",\"frontend/src/components\",\"frontend/src/contexts\",\"frontend/src/pages\",\"frontend/src/services\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":108507,\"percentage\":66.13},{\"name\":\"CSS\",\"bytes\":50892,\"percentage\":31.01},{\"name\":\"HTML\",\"bytes\":2536,\"percentage\":1.55},{\"name\":\"JavaScript\",\"bytes\":2155,\"percentage\":1.31}],\"dates\":{\"created_at\":\"2025-10-05T22:21:26Z\",\"pushed_at\":\"2026-04-19T03:38:56Z\",\"last_activity_days\":178},\"size\":{\"repository_kb\":314,\"total_items\":113},\"repo_tree\":{\"total_items\":113,\"source_like_items\":112,\"test_like_items\":3,\"docs_like_items\":1,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"frontend\",\"count\":57},{\"name\":\"backend\",\"count\":55},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Authentication\",\"Referral flow\",\"Profile management\"],\"primary_flows\":[\"Register user\",\"Log in\",\"Persist session\",\"Generate referral link\",\"Copy referral link\",\"Access protected profile\"],\"user_roles_count\":2,\"key_features_count\":11,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Strongest NestJS example in the portfolio, Clear JWT and auth structure, Good TypeScript full-stack signal, Well-documented architecture and learning process\nTradeoffs: Smaller domain scope than Delivery System, No explicit production deployment evidence, Automated test evidence is limited\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 3/5, documentation_quality: 5/5, production_readiness: 3/5, ai_ml_depth: 1/5\nRecommendation summary EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.\nRecommendation summary PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
       },
       {
         "id": "project:shizu0n-cv:overview",
@@ -9631,8 +9447,6 @@
           "TypeScript",
           "Vite 7",
           "Framer Motion 12",
-          "Lenis",
-          "Tailwind CSS 4",
           "JavaScript",
           "Vercel Functions",
           "Server-Sent Events",
@@ -9641,13 +9455,11 @@
           "Supabase",
           "PostgreSQL",
           "pgvector",
-          "GitHub API",
-          "EmailJS",
           "ESLint",
           "Prettier",
           "Playwright"
         ],
-        "content": "Project: Shizu0n CV\nStatus: active\nSummary EN: Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.\nSummary PT: Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.\nWhat it solves EN: It turns the portfolio into a more explorable technical experience, combining visual presentation, contact, and knowledge retrieval about Paulo and his projects.\nWhat it solves PT: Transforma o portfólio em uma experiência técnica mais explorável, unindo apresentação visual, contato e recuperação de conhecimento sobre Paulo e seus projetos.\nTarget users: Recruiters, Hiring managers, Potential clients, Peers\nGitHub: https://github.com/Shizu0n/Shizu0n-CV"
+        "content": "Project: Shizu0n CV\nStatus: active\nSummary EN: Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.\nSummary PT: Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.\nWhat it solves EN: It turns the portfolio into a more explorable technical experience, combining visual presentation, contact, and knowledge retrieval about Paulo and his projects.\nWhat it solves PT: Transforma o portfólio em uma experiência técnica mais explorável, unindo apresentação visual, contato e recuperação de conhecimento sobre Paulo e seus projetos.\nTarget users: Recruiters, Hiring managers, Potential clients, Peers\nGitHub: https://github.com/Shizu0n/Shizu0n-CV"
       },
       {
         "id": "project:shizu0n-cv:problem-solution",
@@ -9672,8 +9484,6 @@
           "TypeScript",
           "Vite 7",
           "Framer Motion 12",
-          "Lenis",
-          "Tailwind CSS 4",
           "JavaScript",
           "Vercel Functions",
           "Server-Sent Events",
@@ -9682,8 +9492,6 @@
           "Supabase",
           "PostgreSQL",
           "pgvector",
-          "GitHub API",
-          "EmailJS",
           "ESLint",
           "Prettier",
           "Playwright"
@@ -9713,8 +9521,6 @@
           "TypeScript",
           "Vite 7",
           "Framer Motion 12",
-          "Lenis",
-          "Tailwind CSS 4",
           "JavaScript",
           "Vercel Functions",
           "Server-Sent Events",
@@ -9723,13 +9529,11 @@
           "Supabase",
           "PostgreSQL",
           "pgvector",
-          "GitHub API",
-          "EmailJS",
           "ESLint",
           "Prettier",
           "Playwright"
         ],
-        "content": "Project: Shizu0n CV\nArchitecture style: Frontend plus serverless AI backend\nArchitecture EN: React frontend organized into sections, contexts, and hooks; Vercel backend in api with SSE, security, provider fallback, and Supabase RAG; visual style centralized in src/index.css.\nArchitecture PT: Frontend React organizado em sections, contexts e hooks; backend Vercel em api com SSE, segurança, provider fallback e RAG em Supabase; estilo visual centralizado em src/index.css.\nPatterns: Single-page scrollytelling, Serverless API, Provider fallback, Retrieval-Augmented Generation\nKey features: Scroll-driven hero storytelling, Responsive fixed navigation, GitHub stats with caching, Curated project showcase, Contact form with EmailJS fallback, PT/EN support, Floating AI chat widget, Streaming SSE chat backend, Provider fallback chain, Supabase vector retrieval\nData entities: Portfolio knowledge base, Chat chunks, Embedding cache, GitHub stats cache\nIntegrations: GitHub API, EmailJS, Gemini API, Groq, Supabase pgvector, Vercel"
+        "content": "Project: Shizu0n CV\nArchitecture style: Frontend plus serverless AI backend\nArchitecture EN: React frontend organized into sections, contexts, and hooks; Vercel backend in api with SSE, security, provider fallback, and Supabase RAG; visual style centralized in src/index.css.\nArchitecture PT: Frontend React organizado em sections, contexts e hooks; backend Vercel em api com SSE, segurança, provider fallback e RAG em Supabase; estilo visual centralizado em src/index.css.\nPatterns: Single-page scrollytelling, Serverless API, Provider fallback, Retrieval-Augmented Generation\nKey features: Measured results table in the hero, Interactive eval grid for the Phi-3 fine-tune, Architecture diagrams for projects without a hosted demo, Real product captures and recordings, PT/EN support, Floating AI chat widget, Streaming SSE chat backend, Provider fallback chain, Supabase vector retrieval\nData entities: Portfolio knowledge base, Chat chunks, Embedding cache\nIntegrations: Gemini API, Groq, Supabase pgvector, Vercel"
       },
       {
         "id": "project:shizu0n-cv:stack-usage",
@@ -9754,8 +9558,6 @@
           "TypeScript",
           "Vite 7",
           "Framer Motion 12",
-          "Lenis",
-          "Tailwind CSS 4",
           "JavaScript",
           "Vercel Functions",
           "Server-Sent Events",
@@ -9764,13 +9566,11 @@
           "Supabase",
           "PostgreSQL",
           "pgvector",
-          "GitHub API",
-          "EmailJS",
           "ESLint",
           "Prettier",
           "Playwright"
         ],
-        "content": "Project: Shizu0n CV\nFrontend stack: React 19, TypeScript, Vite 7, Framer Motion 12, Lenis, Tailwind CSS 4, CSS\nBackend stack: Vercel Functions, JavaScript, Server-Sent Events, Gemini API, Groq\nDatabase stack: Supabase, PostgreSQL, pgvector\nTooling stack: ESLint, Prettier, TypeScript type-check, Playwright, Vercel\nAll stacks: React 19, TypeScript, Vite 7, Framer Motion 12, Lenis, Tailwind CSS 4, JavaScript, Vercel Functions, Server-Sent Events, Gemini API, Groq, Supabase, PostgreSQL, pgvector, GitHub API, EmailJS, ESLint, Prettier, Playwright"
+        "content": "Project: Shizu0n CV\nFrontend stack: React 19, TypeScript, Vite 7, Framer Motion 12, CSS\nBackend stack: Vercel Functions, JavaScript, Server-Sent Events, Gemini API, Groq\nDatabase stack: Supabase, PostgreSQL, pgvector\nTooling stack: ESLint, Prettier, TypeScript type-check, Playwright, Vercel\nAll stacks: React 19, TypeScript, Vite 7, Framer Motion 12, JavaScript, Vercel Functions, Server-Sent Events, Gemini API, Groq, Supabase, PostgreSQL, pgvector, ESLint, Prettier, Playwright"
       },
       {
         "id": "project:shizu0n-cv:metrics-recommendation",
@@ -9795,8 +9595,6 @@
           "TypeScript",
           "Vite 7",
           "Framer Motion 12",
-          "Lenis",
-          "Tailwind CSS 4",
           "JavaScript",
           "Vercel Functions",
           "Server-Sent Events",
@@ -9805,13 +9603,11 @@
           "Supabase",
           "PostgreSQL",
           "pgvector",
-          "GitHub API",
-          "EmailJS",
           "ESLint",
           "Prettier",
           "Playwright"
         ],
-        "content": "Project: Shizu0n CV\nEngineering metrics: {\"api_surface\":{\"serverless_routes\":[\"/api/chat\",\"/api/health\"],\"provider_chain\":[\"gemini\",\"groq\"]},\"modules\":[\"src/components\",\"src/contexts\",\"src/hooks\",\"src/sections\",\"api\",\"data\",\"scripts\",\"supabase/migrations\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":149424,\"percentage\":51.98},{\"name\":\"JavaScript\",\"bytes\":79359,\"percentage\":27.61},{\"name\":\"CSS\",\"bytes\":53262,\"percentage\":18.53},{\"name\":\"PLpgSQL\",\"bytes\":4409,\"percentage\":1.53},{\"name\":\"HTML\",\"bytes\":1013,\"percentage\":0.35}],\"dates\":{\"created_at\":\"2025-10-04T03:42:39Z\",\"pushed_at\":\"2026-08-15T17:26:47Z\",\"last_activity_days\":28},\"size\":{\"repository_kb\":1844,\"total_items\":93},\"repo_tree\":{\"total_items\":93,\"source_like_items\":44,\"test_like_items\":5,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":40},{\"name\":\"public\",\"count\":9},{\"name\":\"data\",\"count\":8},{\"name\":\"supabase\",\"count\":8},{\"name\":\"scripts\",\"count\":5},{\"name\":\"api\",\"count\":4},{\"name\":\".github\",\"count\":3},{\"name\":\".editorconfig\",\"count\":1},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitattributes\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".prettierignore\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Portfolio presentation\",\"Project showcase\",\"Contact flow\",\"AI Q&A\"],\"primary_flows\":[\"Read hero and sections\",\"Inspect GitHub-backed stats\",\"Browse selected projects\",\"Send contact message\",\"Ask questions in PT or EN\"],\"user_roles_count\":4,\"key_features_count\":10,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Most polished frontend in the portfolio, Live deploy and current maintenance, Strongest AI and integration story, Bilingual UX plus chat, Good mix of product presentation and implementation depth\nTradeoffs: Public-content site rather than a business CRUD system, Chat accuracy depends on knowledge curation quality, Local dev chat behavior depends on backend availability\nCost, latency and failure handling EN: Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL), a per-session client response cache, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini → Groq) engages only on quota/overload errors; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice.\nCost, latency and failure handling PT: Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache de respostas no servidor (TTL de 10 min), cache de respostas no cliente por sessão e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini → Groq) acionada apenas em erros de quota/sobrecarga; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 5/5, architecture_maturity: 5/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 5/5, production_readiness: 5/5, ai_ml_depth: 4/5\nRecommendation summary EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG.\nRecommendation summary PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG."
+        "content": "Project: Shizu0n CV\nEngineering metrics: {\"api_surface\":{\"serverless_routes\":[\"/api/chat\",\"/api/health\"],\"provider_chain\":[\"gemini\",\"groq\"]},\"modules\":[\"src/components\",\"src/contexts\",\"src/hooks\",\"src/sections\",\"api\",\"data\",\"scripts\",\"supabase/migrations\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":147923,\"percentage\":52.03},{\"name\":\"JavaScript\",\"bytes\":79861,\"percentage\":28.09},{\"name\":\"CSS\",\"bytes\":55494,\"percentage\":19.52},{\"name\":\"HTML\",\"bytes\":1007,\"percentage\":0.35}],\"dates\":{\"created_at\":\"2025-10-04T03:42:39Z\",\"pushed_at\":\"2026-10-14T18:09:09Z\",\"last_activity_days\":0},\"size\":{\"repository_kb\":2164,\"total_items\":92},\"repo_tree\":{\"total_items\":92,\"source_like_items\":44,\"test_like_items\":5,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":40},{\"name\":\"data\",\"count\":8},{\"name\":\"public\",\"count\":8},{\"name\":\"supabase\",\"count\":8},{\"name\":\"scripts\",\"count\":5},{\"name\":\"api\",\"count\":4},{\"name\":\".github\",\"count\":3},{\"name\":\".editorconfig\",\"count\":1},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitattributes\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".prettierignore\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Portfolio presentation\",\"Project showcase\",\"Contact flow\",\"AI Q&A\"],\"primary_flows\":[\"Read hero and sections\",\"Inspect GitHub-backed stats\",\"Browse selected projects\",\"Send contact message\",\"Ask questions in PT or EN\"],\"user_roles_count\":4,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Most polished frontend in the portfolio, Live deploy and current maintenance, Strongest AI and integration story, Bilingual UX plus chat, Good mix of product presentation and implementation depth\nTradeoffs: Public-content site rather than a business CRUD system, Chat accuracy depends on knowledge curation quality, Local dev chat behavior depends on backend availability\nCost, latency and failure handling EN: Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL), a per-session client response cache, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini → Groq) engages only on quota/overload errors; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice.\nCost, latency and failure handling PT: Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache de respostas no servidor (TTL de 10 min), cache de respostas no cliente por sessão e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini → Groq) acionada apenas em erros de quota/sobrecarga; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 5/5, architecture_maturity: 5/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 4/5, documentation_quality: 5/5, production_readiness: 4/5, ai_ml_depth: 4/5\nRecommendation summary EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG.\nRecommendation summary PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG."
       },
       {
         "id": "project:campus-cycle:overview",
@@ -10036,7 +9832,7 @@
           "Vercel",
           "Render"
         ],
-        "content": "Project: CampusCycle\nEngineering metrics: {\"automated_tests\":{\"total_discovered\":64,\"server\":39,\"web\":25},\"deployment\":{\"frontend\":\"Vercel\",\"api\":\"Render\",\"database\":\"Neon PostgreSQL\"},\"modules\":[\"web/src\",\"web/src/lib/offlineQueue\",\"web/src/sw.ts\",\"server/src/routes\",\"server/src/middleware\",\"server/prisma\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":123444,\"percentage\":89.87},{\"name\":\"CSS\",\"bytes\":13421,\"percentage\":9.77},{\"name\":\"HTML\",\"bytes\":493,\"percentage\":0.36}],\"dates\":{\"created_at\":\"2026-07-17T11:08:04Z\",\"pushed_at\":\"2026-07-27T20:12:53Z\",\"last_activity_days\":47},\"size\":{\"repository_kb\":241,\"total_items\":111},\"repo_tree\":{\"total_items\":111,\"source_like_items\":80,\"test_like_items\":14,\"docs_like_items\":5,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"web\",\"count\":59},{\"name\":\"server\",\"count\":42},{\"name\":\"docs\",\"count\":4},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"CLAUDE.md\",\"count\":1},{\"name\":\"DESIGN.md\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"TODOS.md\",\"count\":1},{\"name\":\"docker-compose.yml\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Marketplace discovery\",\"Listing lifecycle\",\"Offline synchronization\",\"Authentication and ownership\",\"Circular-economy impact\"],\"primary_flows\":[\"Browse and filter listings\",\"Create a listing online\",\"Create a listing offline\",\"Synchronize after reconnection\",\"Register or log in\",\"Mark an item sold or donated\",\"Remove an owned listing\"],\"user_roles_count\":2,\"key_features_count\":12,\"domain_areas_count\":5,\"primary_flows_count\":7}\nStrengths: Distinct offline-first product story, Full-stack deployment across independent managed services, Idempotent offline synchronization, Security-aware exclusive identity model, Strong automated and physical-device testing evidence, Project-specific Xilo-Feira visual system, Detailed engineering and AI-governance documentation\nTradeoffs: JWT is stored in localStorage instead of httpOnly cookies, Images use URLs instead of uploads, Background Sync is deliberately out of scope, Server integration tests require a local PostgreSQL instance, Repository documentation has a few stale test-count and phase-status references\nCost, latency and failure handling EN: Reads use NetworkFirst with a four-second timeout; offline writes remain in IndexedDB and follow a state machine. Network failures keep items pending, 401 waits for renewed login, 429 backs off, 5xx has bounded retries, and other 4xx responses become visible failures. Client UUIDs and ownership rules make resubmission idempotent.\nCost, latency and failure handling PT: Leituras usam NetworkFirst com timeout de quatro segundos; escritas offline permanecem no IndexedDB e seguem uma máquina de estados. Falhas de rede mantêm o item pendente, 401 aguarda novo login, 429 aplica backoff, 5xx tem tentativas limitadas e outros 4xx viram falhas visíveis. UUID do cliente e regra de propriedade tornam reenvios idempotentes.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 5/5, architecture_maturity: 5/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 1/5\nRecommendation summary EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests.\nRecommendation summary PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos."
+        "content": "Project: CampusCycle\nEngineering metrics: {\"automated_tests\":{\"total_discovered\":64,\"server\":39,\"web\":25},\"deployment\":{\"frontend\":\"Vercel\",\"api\":\"Render\",\"database\":\"Neon PostgreSQL\"},\"modules\":[\"web/src\",\"web/src/lib/offlineQueue\",\"web/src/sw.ts\",\"server/src/routes\",\"server/src/middleware\",\"server/prisma\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":123444,\"percentage\":89.87},{\"name\":\"CSS\",\"bytes\":13421,\"percentage\":9.77},{\"name\":\"HTML\",\"bytes\":493,\"percentage\":0.36}],\"dates\":{\"created_at\":\"2026-07-17T11:08:04Z\",\"pushed_at\":\"2026-07-27T20:12:53Z\",\"last_activity_days\":79},\"size\":{\"repository_kb\":241,\"total_items\":111},\"repo_tree\":{\"total_items\":111,\"source_like_items\":80,\"test_like_items\":14,\"docs_like_items\":5,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"web\",\"count\":59},{\"name\":\"server\",\"count\":42},{\"name\":\"docs\",\"count\":4},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"CLAUDE.md\",\"count\":1},{\"name\":\"DESIGN.md\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"TODOS.md\",\"count\":1},{\"name\":\"docker-compose.yml\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Marketplace discovery\",\"Listing lifecycle\",\"Offline synchronization\",\"Authentication and ownership\",\"Circular-economy impact\"],\"primary_flows\":[\"Browse and filter listings\",\"Create a listing online\",\"Create a listing offline\",\"Synchronize after reconnection\",\"Register or log in\",\"Mark an item sold or donated\",\"Remove an owned listing\"],\"user_roles_count\":2,\"key_features_count\":12,\"domain_areas_count\":5,\"primary_flows_count\":7}\nStrengths: Distinct offline-first product story, Full-stack deployment across independent managed services, Idempotent offline synchronization, Security-aware exclusive identity model, Strong automated and physical-device testing evidence, Project-specific Xilo-Feira visual system, Detailed engineering and AI-governance documentation\nTradeoffs: JWT is stored in localStorage instead of httpOnly cookies, Images use URLs instead of uploads, Background Sync is deliberately out of scope, Server integration tests require a local PostgreSQL instance, Repository documentation has a few stale test-count and phase-status references\nCost, latency and failure handling EN: Reads use NetworkFirst with a four-second timeout; offline writes remain in IndexedDB and follow a state machine. Network failures keep items pending, 401 waits for renewed login, 429 backs off, 5xx has bounded retries, and other 4xx responses become visible failures. Client UUIDs and ownership rules make resubmission idempotent.\nCost, latency and failure handling PT: Leituras usam NetworkFirst com timeout de quatro segundos; escritas offline permanecem no IndexedDB e seguem uma máquina de estados. Falhas de rede mantêm o item pendente, 401 aguarda novo login, 429 aplica backoff, 5xx tem tentativas limitadas e outros 4xx viram falhas visíveis. UUID do cliente e regra de propriedade tornam reenvios idempotentes.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 5/5, architecture_maturity: 5/5, security_auth: 4/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 1/5\nRecommendation summary EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests.\nRecommendation summary PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos."
       },
       {
         "id": "project:react-agent:overview",
@@ -10281,7 +10077,7 @@
           "Retrieval-Augmented Generation",
           "Agent Memory"
         ],
-        "content": "Project: ReAct Agent\nEngineering metrics: {\"graph\":{\"nodes\":550,\"internal_edges\":913,\"communities\":39},\"testing\":{\"backend_unit_tests\":154,\"eval_cases\":22,\"eval_task_success_pct\":100,\"eval_tool_selection_pct\":100},\"modules\":[\"backend/agent\",\"backend/api\",\"backend/evals\",\"frontend/src/hooks\",\"frontend/src/components\"],\"languages\":[{\"name\":\"Python\",\"bytes\":260486,\"percentage\":59.63},{\"name\":\"TypeScript\",\"bytes\":156025,\"percentage\":35.71},{\"name\":\"CSS\",\"bytes\":10776,\"percentage\":2.47},{\"name\":\"JavaScript\",\"bytes\":7882,\"percentage\":1.8},{\"name\":\"Shell\",\"bytes\":863,\"percentage\":0.2},{\"name\":\"HTML\",\"bytes\":836,\"percentage\":0.19}],\"dates\":{\"created_at\":\"2026-04-26T22:33:25Z\",\"pushed_at\":\"2026-07-04T17:59:50Z\",\"last_activity_days\":70},\"size\":{\"repository_kb\":963,\"total_items\":208},\"repo_tree\":{\"total_items\":208,\"source_like_items\":100,\"test_like_items\":14,\"docs_like_items\":3,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\".planning\",\"count\":100},{\"name\":\"frontend\",\"count\":51},{\"name\":\"backend\",\"count\":46},{\"name\":\"api\",\"count\":3},{\"name\":\"scripts\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"package.json\",\"count\":1},{\"name\":\"pyrightconfig.json\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"vercel.json\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Agent orchestration\",\"Tool execution\",\"Cross-conversation memory\",\"Document RAG\",\"Trace observability\",\"MCP tool discovery\",\"Evaluation\"],\"primary_flows\":[\"Send a prompt\",\"Run the ReAct loop\",\"Call tools\",\"Read and write long-term memory\",\"Upload a document and ask cited questions about it\",\"Stream reasoning/action trace\",\"Replay a past run from history\",\"Discover MCP tools\",\"Run labeled evaluation cases\"],\"user_roles_count\":3,\"key_features_count\":13,\"domain_areas_count\":7,\"primary_flows_count\":9}\nStrengths: Reasoning/tool trace treated as a first-class product surface, Cross-conversation memory with memory operations visible in the trace, Document RAG with cited answers and a no-hallucination guard, Persisted replayable traces with provider-fallback capture, Dynamic MCP tool discovery rendered identically to native tools, 100% evaluation baseline on 22 labeled cases plus 154 backend tests, Entire system operated on $0 free-tier spend, Live public deployment\nTradeoffs: Python execution remains the most sensitive security surface despite subprocess isolation, Model-provider APIs and embedding quotas are unstable external dependencies, No end-user authentication layer (anonymous browser-scoped identity)\nCost, latency and failure handling EN: Cost: $0 total, the whole system runs on free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), with that constraint treated as part of the engineering. Latency: every trace step records elapsed_ms, tokens, and estimated cost via a UsageTracker. Failures: a free-provider fallback chain (Gemini → Groq → GitHub Models) with fallback events captured in the trace; 10 req/min/IP rate limiting (slowapi); the loop is hard-capped at 10 iterations; a Vercel keep-alive cron prevents the Supabase free-tier 7-day pause; embedding batching with 429 backoff; graceful degradation, without the DB pool/store the agent still answers, just without memory/RAG, instead of breaking.\nCost, latency and failure handling PT: Custo: US$ 0 total, operação inteira em free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), com a restrição tratada como parte da engenharia. Latência: cada passo do trace registra elapsed_ms, tokens e custo estimado via UsageTracker. Falhas: cadeia de fallback de provedores (Gemini → Groq → GitHub Models) com eventos de fallback capturados no trace; rate limiting de 10 req/min/IP (slowapi); loop limitado a 10 iterações; cron keep-alive na Vercel evita a pausa de 7 dias do Supabase free; batching de embeddings com backoff em 429; degradação graciosa, sem pool/store de banco, o agente continua respondendo sem memória/RAG em vez de quebrar.\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery, all on free tier, with evaluation over the real graph and public deployment.\nRecommendation summary PT: Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP, tudo em free-tier, com avaliação sobre o grafo real e deploy público."
+        "content": "Project: ReAct Agent\nEngineering metrics: {\"graph\":{\"nodes\":550,\"internal_edges\":913,\"communities\":39},\"testing\":{\"backend_unit_tests\":154,\"eval_cases\":22,\"eval_task_success_pct\":100,\"eval_tool_selection_pct\":100},\"modules\":[\"backend/agent\",\"backend/api\",\"backend/evals\",\"frontend/src/hooks\",\"frontend/src/components\"],\"languages\":[{\"name\":\"Python\",\"bytes\":260486,\"percentage\":59.63},{\"name\":\"TypeScript\",\"bytes\":156025,\"percentage\":35.71},{\"name\":\"CSS\",\"bytes\":10776,\"percentage\":2.47},{\"name\":\"JavaScript\",\"bytes\":7882,\"percentage\":1.8},{\"name\":\"Shell\",\"bytes\":863,\"percentage\":0.2},{\"name\":\"HTML\",\"bytes\":836,\"percentage\":0.19}],\"dates\":{\"created_at\":\"2026-04-26T22:33:25Z\",\"pushed_at\":\"2026-07-04T17:59:50Z\",\"last_activity_days\":102},\"size\":{\"repository_kb\":963,\"total_items\":208},\"repo_tree\":{\"total_items\":208,\"source_like_items\":100,\"test_like_items\":14,\"docs_like_items\":3,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\".planning\",\"count\":100},{\"name\":\"frontend\",\"count\":51},{\"name\":\"backend\",\"count\":46},{\"name\":\"api\",\"count\":3},{\"name\":\"scripts\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"package.json\",\"count\":1},{\"name\":\"pyrightconfig.json\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"vercel.json\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Agent orchestration\",\"Tool execution\",\"Cross-conversation memory\",\"Document RAG\",\"Trace observability\",\"MCP tool discovery\",\"Evaluation\"],\"primary_flows\":[\"Send a prompt\",\"Run the ReAct loop\",\"Call tools\",\"Read and write long-term memory\",\"Upload a document and ask cited questions about it\",\"Stream reasoning/action trace\",\"Replay a past run from history\",\"Discover MCP tools\",\"Run labeled evaluation cases\"],\"user_roles_count\":3,\"key_features_count\":13,\"domain_areas_count\":7,\"primary_flows_count\":9}\nStrengths: Reasoning/tool trace treated as a first-class product surface, Cross-conversation memory with memory operations visible in the trace, Document RAG with cited answers and a no-hallucination guard, Persisted replayable traces with provider-fallback capture, Dynamic MCP tool discovery rendered identically to native tools, 100% evaluation baseline on 22 labeled cases plus 154 backend tests, Entire system operated on $0 free-tier spend, Live public deployment\nTradeoffs: Python execution remains the most sensitive security surface despite subprocess isolation, Model-provider APIs and embedding quotas are unstable external dependencies, No end-user authentication layer (anonymous browser-scoped identity)\nCost, latency and failure handling EN: Cost: $0 total, the whole system runs on free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), with that constraint treated as part of the engineering. Latency: every trace step records elapsed_ms, tokens, and estimated cost via a UsageTracker. Failures: a free-provider fallback chain (Gemini → Groq → GitHub Models) with fallback events captured in the trace; 10 req/min/IP rate limiting (slowapi); the loop is hard-capped at 10 iterations; a Vercel keep-alive cron prevents the Supabase free-tier 7-day pause; embedding batching with 429 backoff; graceful degradation, without the DB pool/store the agent still answers, just without memory/RAG, instead of breaking.\nCost, latency and failure handling PT: Custo: US$ 0 total, operação inteira em free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), com a restrição tratada como parte da engenharia. Latência: cada passo do trace registra elapsed_ms, tokens e custo estimado via UsageTracker. Falhas: cadeia de fallback de provedores (Gemini → Groq → GitHub Models) com eventos de fallback capturados no trace; rate limiting de 10 req/min/IP (slowapi); loop limitado a 10 iterações; cron keep-alive na Vercel evita a pausa de 7 dias do Supabase free; batching de embeddings com backoff em 429; degradação graciosa, sem pool/store de banco, o agente continua respondendo sem memória/RAG em vez de quebrar.\nScore summary: completeness: 4/5, backend_depth: 4/5, frontend_polish: 4/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 4/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery, all on free tier, with evaluation over the real graph and public deployment.\nRecommendation summary PT: Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP, tudo em free-tier, com avaliação sobre o grafo real e deploy público."
       },
       {
         "id": "project:advanced-rag:overview",
@@ -10446,7 +10242,7 @@
           "Retrieval-Augmented Generation",
           "LLM Evaluation"
         ],
-        "content": "Project: Advanced RAG\nEngineering metrics: {\"graph\":{\"nodes\":1206,\"internal_edges\":2725,\"communities\":46},\"modules\":[\"source_loader\",\"ingestion\",\"retrieval\",\"pipeline\",\"synthesis\",\"evaluate\",\"cloud_ragas\",\"app\"],\"languages\":[{\"name\":\"Python\",\"bytes\":816262,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T18:18:09Z\",\"pushed_at\":\"2026-06-23T03:29:12Z\",\"last_activity_days\":81},\"size\":{\"repository_kb\":1594,\"total_items\":22},\"repo_tree\":{\"total_items\":22,\"source_like_items\":0,\"test_like_items\":9,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"tests\",\"count\":9},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".python-version\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"app.py\",\"count\":1},{\"name\":\"cloud_ragas.py\",\"count\":1},{\"name\":\"evaluate.py\",\"count\":1},{\"name\":\"ingestion.py\",\"count\":1},{\"name\":\"pipeline.py\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"retrieval.py\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Source ingestion\",\"Indexing\",\"Hybrid retrieval\",\"Answer synthesis\",\"Evaluation\"],\"primary_flows\":[\"Load and persist sources\",\"Chunk and index into ChromaDB\",\"Hybrid retrieve and rerank\",\"Synthesize an answer with fallback\",\"Score against golden datasets\",\"Review evaluation in Streamlit\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":5,\"primary_flows_count\":6}\nStrengths: Treats RAG as a full engineering system, not a single vector-search demo, Works offline with honest lexical metrics and extractive fallback, Hybrid retrieval ablatable into individual strategies, Extensive test suite with fake Streamlit/runtime/provider components, Live public Streamlit deployment\nTradeoffs: Streamlit UI is utilitarian rather than highly polished, Some evaluation/UI modules show low community cohesion and could be decomposed, Persistent Chroma data needs a deliberate hosting target\nCost, latency and failure handling EN: Cost: designed to run on $0, the whole system stays useful without paid providers, with offline lexical metrics and an extractive fallback when no LLM is available. Failures: cloud RAGAS is opt-in, with bounded execution and explicit degradation states (offline evaluation never silently reports cloud metrics); ChromaDB corruption or missing collections are handled through reset-and-retry paths; the reranker is surfaced honestly instead of implying a cross-encoder is always active.\nCost, latency and failure handling PT: Custo: projetado para operar com US$ 0, o sistema inteiro continua útil sem provedores pagos, com métricas léxicas offline e fallback extrativo quando nenhum LLM está disponível. Falhas: RAGAS na nuvem é opt-in, com execução limitada e estados de degradação explícitos (a avaliação offline nunca reporta silenciosamente métricas de nuvem); corrupção ou coleção ausente no ChromaDB é tratada com caminhos de reset e retry; o reranker é exposto honestamente em vez de fingir que um cross-encoder está sempre ativo.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 3/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 3/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: RAG treated as a full engineering system, with hybrid retrieval, honest offline/RAGAS evaluation, and public deployment.\nRecommendation summary PT: RAG tratado como sistema de engenharia completo, com retrieval híbrido, avaliação honesta offline/RAGAS e deploy público."
+        "content": "Project: Advanced RAG\nEngineering metrics: {\"graph\":{\"nodes\":1206,\"internal_edges\":2725,\"communities\":46},\"modules\":[\"source_loader\",\"ingestion\",\"retrieval\",\"pipeline\",\"synthesis\",\"evaluate\",\"cloud_ragas\",\"app\"],\"languages\":[{\"name\":\"Python\",\"bytes\":816262,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T18:18:09Z\",\"pushed_at\":\"2026-06-23T03:29:12Z\",\"last_activity_days\":113},\"size\":{\"repository_kb\":1594,\"total_items\":22},\"repo_tree\":{\"total_items\":22,\"source_like_items\":0,\"test_like_items\":9,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"tests\",\"count\":9},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".python-version\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"app.py\",\"count\":1},{\"name\":\"cloud_ragas.py\",\"count\":1},{\"name\":\"evaluate.py\",\"count\":1},{\"name\":\"ingestion.py\",\"count\":1},{\"name\":\"pipeline.py\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"retrieval.py\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Source ingestion\",\"Indexing\",\"Hybrid retrieval\",\"Answer synthesis\",\"Evaluation\"],\"primary_flows\":[\"Load and persist sources\",\"Chunk and index into ChromaDB\",\"Hybrid retrieve and rerank\",\"Synthesize an answer with fallback\",\"Score against golden datasets\",\"Review evaluation in Streamlit\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":5,\"primary_flows_count\":6}\nStrengths: Treats RAG as a full engineering system, not a single vector-search demo, Works offline with honest lexical metrics and extractive fallback, Hybrid retrieval ablatable into individual strategies, Extensive test suite with fake Streamlit/runtime/provider components, Live public Streamlit deployment\nTradeoffs: Streamlit UI is utilitarian rather than highly polished, Some evaluation/UI modules show low community cohesion and could be decomposed, Persistent Chroma data needs a deliberate hosting target\nCost, latency and failure handling EN: Cost: designed to run on $0, the whole system stays useful without paid providers, with offline lexical metrics and an extractive fallback when no LLM is available. Failures: cloud RAGAS is opt-in, with bounded execution and explicit degradation states (offline evaluation never silently reports cloud metrics); ChromaDB corruption or missing collections are handled through reset-and-retry paths; the reranker is surfaced honestly instead of implying a cross-encoder is always active.\nCost, latency and failure handling PT: Custo: projetado para operar com US$ 0, o sistema inteiro continua útil sem provedores pagos, com métricas léxicas offline e fallback extrativo quando nenhum LLM está disponível. Falhas: RAGAS na nuvem é opt-in, com execução limitada e estados de degradação explícitos (a avaliação offline nunca reporta silenciosamente métricas de nuvem); corrupção ou coleção ausente no ChromaDB é tratada com caminhos de reset e retry; o reranker é exposto honestamente em vez de fingir que um cross-encoder está sempre ativo.\nScore summary: completeness: 5/5, backend_depth: 4/5, frontend_polish: 3/5, architecture_maturity: 4/5, security_auth: 2/5, data_modeling: 3/5, functional_scope: 5/5, documentation_quality: 4/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: RAG treated as a full engineering system, with hybrid retrieval, honest offline/RAGAS evaluation, and public deployment.\nRecommendation summary PT: RAG tratado como sistema de engenharia completo, com retrieval híbrido, avaliação honesta offline/RAGAS e deploy público."
       },
       {
         "id": "project:phi3-mini-sql:overview",
@@ -10606,7 +10402,23 @@
           "Hugging Face",
           "Text-to-SQL"
         ],
-        "content": "Project: Phi-3 Mini SQL Generator\nEngineering metrics: {\"training\":{\"base_model\":\"Phi-3-mini-4k-instruct (3.8B)\",\"method\":\"QLoRA (4-bit NF4)\",\"lora_rank\":16,\"lora_alpha\":32,\"hardware\":\"NVIDIA T4 (Google Colab)\",\"training_minutes\":21},\"modules\":[\"01_dataset_prep\",\"02_qlora_training\",\"03_evaluation\"],\"languages\":[{\"name\":\"Jupyter Notebook\",\"bytes\":590242,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T03:25:00Z\",\"pushed_at\":\"2026-05-17T03:33:24Z\",\"last_activity_days\":118},\"size\":{\"repository_kb\":110,\"total_items\":16},\"repo_tree\":{\"total_items\":16,\"source_like_items\":0,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":0,\"top_level_areas\":[{\"name\":\"notebooks\",\"count\":7},{\"name\":\"results\",\"count\":3},{\"name\":\"configs\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Dataset preparation\",\"Fine-tuning\",\"Evaluation\",\"Model publication\"],\"primary_flows\":[\"Prepare instruction dataset\",\"Train QLoRA adapter\",\"Evaluate exact match\",\"Merge adapter into base\",\"Publish to Hugging Face Hub\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Large measurable gain: 2% to 73.5% exact match, Efficient 4-bit training on a single free-tier T4, Complete pipeline from dataset to published artifacts, Adapter and merged model both published on the Hub, Public Hugging Face Spaces demo and detailed documentation\nTradeoffs: Trained on SELECT queries only (no INSERT/UPDATE/DELETE/DDL), Best on low-to-medium complexity queries; weaker on multi-JOINs and nested subqueries, Not tested against dialect-specific SQL (PostgreSQL, MySQL)\nCost, latency and failure handling EN: Cost: $0 training, Colab free tier on a single T4 GPU, within tight daily usage caps; 4-bit NF4 quantization is what made training a 3.8B model feasible on that hardware. Training latency: ~21 minutes for 1,000 train + 200 validation examples. Known, documented failure limits: SELECT-only (no INSERT/UPDATE/DELETE/DDL), strongest on low-to-medium query complexity, untested on dialect-specific SQL, limitations published alongside the model rather than hidden.\nCost, latency and failure handling PT: Custo: US$ 0 de treino, Colab free tier com uma única GPU T4, dentro de limites diários apertados de uso; a quantização 4-bit NF4 foi o que tornou viável treinar um modelo de 3,8B nesse hardware. Latência de treino: ~21 minutos para 1.000 exemplos de treino + 200 de validação. Falhas/limites conhecidos e documentados: só SELECT (sem INSERT/UPDATE/DELETE/DDL), melhor em queries de complexidade baixa a média, não testado em dialetos específicos, limitações publicadas junto com o modelo em vez de escondidas.\nScore summary: completeness: 4/5, backend_depth: 3/5, frontend_polish: 3/5, architecture_maturity: 3/5, security_auth: 1/5, data_modeling: 3/5, functional_scope: 3/5, documentation_quality: 5/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: The best showcase of ML ops and efficient fine-tuning: a QLoRA of Phi-3 Mini for SQL with a measurable jump from 2% to 73.5%.\nRecommendation summary PT: Melhor vitrine de ML ops e fine-tuning eficiente: QLoRA do Phi-3 Mini para SQL com ganho mensurável de 2% para 73,5%."
+        "content": "Project: Phi-3 Mini SQL Generator\nEngineering metrics: {\"training\":{\"base_model\":\"Phi-3-mini-4k-instruct (3.8B)\",\"method\":\"QLoRA (4-bit NF4)\",\"lora_rank\":16,\"lora_alpha\":32,\"hardware\":\"NVIDIA T4 (Google Colab)\",\"training_minutes\":21},\"modules\":[\"01_dataset_prep\",\"02_qlora_training\",\"03_evaluation\"],\"languages\":[{\"name\":\"Jupyter Notebook\",\"bytes\":590242,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T03:25:00Z\",\"pushed_at\":\"2026-05-17T03:33:24Z\",\"last_activity_days\":150},\"size\":{\"repository_kb\":110,\"total_items\":16},\"repo_tree\":{\"total_items\":16,\"source_like_items\":0,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":0,\"top_level_areas\":[{\"name\":\"notebooks\",\"count\":7},{\"name\":\"results\",\"count\":3},{\"name\":\"configs\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Dataset preparation\",\"Fine-tuning\",\"Evaluation\",\"Model publication\"],\"primary_flows\":[\"Prepare instruction dataset\",\"Train QLoRA adapter\",\"Evaluate exact match\",\"Merge adapter into base\",\"Publish to Hugging Face Hub\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Large measurable gain: 2% to 73.5% exact match, Efficient 4-bit training on a single free-tier T4, Complete pipeline from dataset to published artifacts, Adapter and merged model both published on the Hub, Public Hugging Face Spaces demo and detailed documentation\nTradeoffs: Trained on SELECT queries only (no INSERT/UPDATE/DELETE/DDL), Best on low-to-medium complexity queries; weaker on multi-JOINs and nested subqueries, Not tested against dialect-specific SQL (PostgreSQL, MySQL)\nCost, latency and failure handling EN: Cost: $0 training, Colab free tier on a single T4 GPU, within tight daily usage caps; 4-bit NF4 quantization is what made training a 3.8B model feasible on that hardware. Training latency: ~21 minutes for 1,000 train + 200 validation examples. Known, documented failure limits: SELECT-only (no INSERT/UPDATE/DELETE/DDL), strongest on low-to-medium query complexity, untested on dialect-specific SQL, limitations published alongside the model rather than hidden.\nCost, latency and failure handling PT: Custo: US$ 0 de treino, Colab free tier com uma única GPU T4, dentro de limites diários apertados de uso; a quantização 4-bit NF4 foi o que tornou viável treinar um modelo de 3,8B nesse hardware. Latência de treino: ~21 minutos para 1.000 exemplos de treino + 200 de validação. Falhas/limites conhecidos e documentados: só SELECT (sem INSERT/UPDATE/DELETE/DDL), melhor em queries de complexidade baixa a média, não testado em dialetos específicos, limitações publicadas junto com o modelo em vez de escondidas.\nScore summary: completeness: 4/5, backend_depth: 3/5, frontend_polish: 3/5, architecture_maturity: 3/5, security_auth: 1/5, data_modeling: 3/5, functional_scope: 3/5, documentation_quality: 5/5, production_readiness: 4/5, ai_ml_depth: 5/5\nRecommendation summary EN: The best showcase of ML ops and efficient fine-tuning: a QLoRA of Phi-3 Mini for SQL with a measurable jump from 2% to 73.5%.\nRecommendation summary PT: Melhor vitrine de ML ops e fine-tuning eficiente: QLoRA do Phi-3 Mini para SQL com ganho mensurável de 2% para 73,5%."
+      },
+      {
+        "id": "ranking:measured_results",
+        "type": "recommendation",
+        "project_id": null,
+        "facet": "measured-results",
+        "language": "en",
+        "stack": null,
+        "tags": [
+          "comparison",
+          "recommendation",
+          "measured_results",
+          "metrics"
+        ],
+        "stacks": [],
+        "content": "Measured results (exact numbers with their sample size):\nPhi-3 Mini SQL Generator: text-to-SQL exact match rose from 2% (4 of 200) to 73.5% (147 of 200) on the held-out split of b-mc2/sql-create-context after QLoRA fine-tuning. This is the strongest measured model result in the portfolio.\nReAct Agent: 154 backend tests and 22 labeled cases run as a regression harness against the real graph (100% task success and tool selection on those 22 cases).\nCampusCycle: 64 automated tests; the offline write queue and idempotent sync were validated on a physical Android phone.\nAdvanced RAG: evaluated with offline heuristics and opt-in cloud RAGAS across retrieval strategies; it has no single headline accuracy number.\nShizu0n CV (this portfolio) and the smaller application systems have no published accuracy or benchmark metric."
       },
       {
         "id": "ranking:overall",
@@ -10621,7 +10433,7 @@
           "overall"
         ],
         "stacks": [],
-        "content": "Overall ranking of projects by deterministic weighted score:\n1. Shizu0n CV => 4.46\n2. ReAct Agent => 4.13\n3. Advanced RAG => 4.07\n4. CampusCycle => 3.9\n5. Delivery System => 3.63\n6. Phi-3 Mini SQL Generator => 3.52\n7. Referral System => 3.38\n8. Academic System => 3.08\n9. Gym Management System => 2.53"
+        "content": "Paulo's own showcase order (use this for 'best project' or 'strongest project' questions):\n1. ReAct Agent: the live LangGraph agent with tool use, cross-conversation memory, RAG over uploaded documents with cited sources, tool discovery over the Model Context Protocol (MCP), and replayable traces.\n2. Phi-3 Mini SQL Generator: the fine-tune with the strongest measured result (2% to 73.5% exact match).\n3. CampusCycle: the offline-first PWA and the strongest full-stack delivery (64 tests).\n4. Advanced RAG: hybrid retrieval with offline and RAGAS evaluation.\nSupporting work: this portfolio (Shizu0n CV) and the earlier full-stack/backend systems.\n\nEditorial rubric ranking (weighted 1-5 qualitative scores per criterion; this is NOT a measured result or benchmark, see the measured-results chunk for real metrics):\n1. Shizu0n CV => 4.41\n2. ReAct Agent => 4.13\n3. Advanced RAG => 4.07\n4. CampusCycle => 3.9\n5. Delivery System => 3.63\n6. Phi-3 Mini SQL Generator => 3.52\n7. Referral System => 3.38\n8. Academic System => 3.08\n9. Gym Management System => 2.53"
       },
       {
         "id": "ranking:ai_ml_depth",
@@ -10681,7 +10493,7 @@
           "frontend_polish"
         ],
         "stacks": [],
-        "content": "Criterion ranking: frontend_polish\n1. Shizu0n CV => 5/5 | EN: It is the project with the strongest visual refinement, motion, and interface finish. | PT: É o projeto com melhor refinamento visual, motion e acabamento de interface.\n2. CampusCycle => 5/5 | EN: The Xilo-Feira direction is product-specific, responsive, accessible, and preserved offline through local assets and fonts. | PT: A direção Xilo-Feira é específica do produto, responsiva, acessível e preservada offline por assets e fontes locais.\n3. Delivery System => 4/5 | EN: There is a real product flow on the frontend, though the visual focus is more operational than editorial. | PT: Há fluxo de produto real no frontend, embora o foco visual seja mais operacional que editorial.\n4. Referral System => 4/5 | EN: The frontend covers a real product flow with good UX and clear global state. | PT: O frontend cobre fluxo real de produto com boa UX e estado global claro.\n5. ReAct Agent => 4/5 | EN: A React/Vite frontend with Framer Motion and Radix that separates conversation and reasoning into dedicated panels. | PT: Frontend React/Vite com Framer Motion e Radix que separa conversa e raciocínio em painéis dedicados.\n6. Advanced RAG => 3/5 | EN: The Streamlit interface is functional and review-oriented rather than editorially polished. | PT: A interface Streamlit é funcional e voltada à revisão, não a um acabamento visual editorial.\n7. Phi-3 Mini SQL Generator => 3/5 | EN: The interface is a Hugging Face Spaces demo, sufficient for trying the model. | PT: A interface é uma demo no Hugging Face Spaces, suficiente para testar o modelo.\n8. Academic System => 2/5 | EN: The interface is console/CLI, so the visual layer is not the project's focus. | PT: A interface é console/CLI, então a camada visual não é o foco do projeto.\n9. Gym Management System => 2/5 | EN: It is a utilitarian desktop system, not a project with strong visual refinement focus. | PT: É um sistema desktop utilitário, não um projeto com forte foco de refinamento visual."
+        "content": "Criterion ranking: frontend_polish\n1. Shizu0n CV => 5/5 | EN: An authorial, accessible one-column interface with real captures, architecture diagrams, and an interactive evaluation grid. | PT: Interface autoral e acessível em uma coluna, com capturas reais, diagramas de arquitetura e uma grade de avaliação interativa.\n2. CampusCycle => 5/5 | EN: The Xilo-Feira direction is product-specific, responsive, accessible, and preserved offline through local assets and fonts. | PT: A direção Xilo-Feira é específica do produto, responsiva, acessível e preservada offline por assets e fontes locais.\n3. Delivery System => 4/5 | EN: There is a real product flow on the frontend, though the visual focus is more operational than editorial. | PT: Há fluxo de produto real no frontend, embora o foco visual seja mais operacional que editorial.\n4. Referral System => 4/5 | EN: The frontend covers a real product flow with good UX and clear global state. | PT: O frontend cobre fluxo real de produto com boa UX e estado global claro.\n5. ReAct Agent => 4/5 | EN: A React/Vite frontend with Framer Motion and Radix that separates conversation and reasoning into dedicated panels. | PT: Frontend React/Vite com Framer Motion e Radix que separa conversa e raciocínio em painéis dedicados.\n6. Advanced RAG => 3/5 | EN: The Streamlit interface is functional and review-oriented rather than editorially polished. | PT: A interface Streamlit é funcional e voltada à revisão, não a um acabamento visual editorial.\n7. Phi-3 Mini SQL Generator => 3/5 | EN: The interface is a Hugging Face Spaces demo, sufficient for trying the model. | PT: A interface é uma demo no Hugging Face Spaces, suficiente para testar o modelo.\n8. Academic System => 2/5 | EN: The interface is console/CLI, so the visual layer is not the project's focus. | PT: A interface é console/CLI, então a camada visual não é o foco do projeto.\n9. Gym Management System => 2/5 | EN: It is a utilitarian desktop system, not a project with strong visual refinement focus. | PT: É um sistema desktop utilitário, não um projeto com forte foco de refinamento visual."
       },
       {
         "id": "ranking:architecture_maturity",
@@ -10771,7 +10583,7 @@
           "production_readiness"
         ],
         "stacks": [],
-        "content": "Criterion ranking: production_readiness\n1. Shizu0n CV => 5/5 | EN: It is the project with public deployment and the strongest signal of ongoing real use. | PT: É o projeto com deploy público e o melhor sinal de uso real contínuo.\n2. CampusCycle => 4/5 | EN: The frontend, API, and database are deployed on Vercel, Render, and Neon with monitoring; secure-cookie auth and CI with an isolated database would still be needed for real production. | PT: Frontend, API e banco estão implantados em Vercel, Render e Neon, com monitoramento; cookie seguro e CI com banco isolado ainda seriam necessários para produção real.\n3. ReAct Agent => 4/5 | EN: Public Vercel deployment and a published evaluation baseline, though the execution sandbox still needs hardening. | PT: Deploy público na Vercel e avaliação publicada como baseline, ainda que o sandbox de execução precise de reforço.\n4. Advanced RAG => 4/5 | EN: Public Streamlit deployment and an extensive test suite, though persistent Chroma data needs a deliberate host. | PT: Deploy público em Streamlit e suíte de testes extensa, embora a persistência do Chroma precise de hosting deliberado.\n5. Phi-3 Mini SQL Generator => 4/5 | EN: Artifacts published on the Hugging Face Hub and a public Spaces demo, with a clear evaluation metric. | PT: Artefatos publicados no Hugging Face Hub e demo pública em Spaces, com métrica de avaliação clara.\n6. Delivery System => 3/5 | EN: The system shows a solid structure, but without public deployment or clearly presented tests. | PT: O sistema mostra estrutura sólida, mas sem deploy público ou testes claramente apresentados.\n7. Referral System => 3/5 | EN: The architecture is good, but there is no strong evidence of public deployment and operation. | PT: A arquitetura é boa, mas não há forte evidência de deploy e operação pública.\n8. Academic System => 2/5 | EN: There is no clear evidence of deployment, automated tests, or production operation. | PT: Não há evidência clara de deploy, testes automatizados ou operação em produção.\n9. Gym Management System => 2/5 | EN: There is no clear evidence of deployment, tests, or more mature operation. | PT: Não há evidência clara de deploy, testes ou operação mais madura."
+        "content": "Criterion ranking: production_readiness\n1. Shizu0n CV => 4/5 | EN: Public Vercel deployment with provider fallback; vector retrieval depends on a free Supabase project that pauses when idle. | PT: Deploy público na Vercel com fallback de provedores; a busca vetorial depende de um projeto Supabase gratuito que pausa por inatividade.\n2. CampusCycle => 4/5 | EN: The frontend, API, and database are deployed on Vercel, Render, and Neon with monitoring; secure-cookie auth and CI with an isolated database would still be needed for real production. | PT: Frontend, API e banco estão implantados em Vercel, Render e Neon, com monitoramento; cookie seguro e CI com banco isolado ainda seriam necessários para produção real.\n3. ReAct Agent => 4/5 | EN: Public Vercel deployment and a published evaluation baseline, though the execution sandbox still needs hardening. | PT: Deploy público na Vercel e avaliação publicada como baseline, ainda que o sandbox de execução precise de reforço.\n4. Advanced RAG => 4/5 | EN: Public Streamlit deployment and an extensive test suite, though persistent Chroma data needs a deliberate host. | PT: Deploy público em Streamlit e suíte de testes extensa, embora a persistência do Chroma precise de hosting deliberado.\n5. Phi-3 Mini SQL Generator => 4/5 | EN: Artifacts published on the Hugging Face Hub and a public Spaces demo, with a clear evaluation metric. | PT: Artefatos publicados no Hugging Face Hub e demo pública em Spaces, com métrica de avaliação clara.\n6. Delivery System => 3/5 | EN: The system shows a solid structure, but without public deployment or clearly presented tests. | PT: O sistema mostra estrutura sólida, mas sem deploy público ou testes claramente apresentados.\n7. Referral System => 3/5 | EN: The architecture is good, but there is no strong evidence of public deployment and operation. | PT: A arquitetura é boa, mas não há forte evidência de deploy e operação pública.\n8. Academic System => 2/5 | EN: There is no clear evidence of deployment, automated tests, or production operation. | PT: Não há evidência clara de deploy, testes automatizados ou operação em produção.\n9. Gym Management System => 2/5 | EN: There is no clear evidence of deployment, tests, or more mature operation. | PT: Não há evidência clara de deploy, testes ou operação mais madura."
       },
       {
         "id": "ranking:stack:java",
@@ -10805,7 +10617,7 @@
         "stacks": [
           "react"
         ],
-        "content": "Stack recommendation ranking for react:\n1. Shizu0n CV => 5 | EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG. | PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.\n2. CampusCycle => 4.8 | EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests. | PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos.\n3. Delivery System => 4.15 | EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system. | PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional.\n4. Referral System => 3.8 | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
+        "content": "Stack recommendation ranking for react:\n1. Shizu0n CV => 4.8 | EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG. | PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG.\n2. CampusCycle => 4.8 | EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests. | PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos.\n3. Delivery System => 4.15 | EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system. | PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional.\n4. Referral System => 3.8 | EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System. | PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
       },
       {
         "id": "ranking:stack:nestjs",

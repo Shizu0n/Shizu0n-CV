@@ -6,7 +6,6 @@ Live: https://shizu0n.vercel.app
 ![React](https://img.shields.io/badge/React-19-20232A?logo=react&logoColor=61DAFB)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
 ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12-black)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-pgvector-3ECF8E?logo=supabase&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-Functions-black?logo=vercel&logoColor=white)
 ![Vitest](https://img.shields.io/badge/Vitest-4-6E9F18?logo=vitest&logoColor=white)
@@ -49,9 +48,8 @@ This repository goes beyond a traditional portfolio page: it includes a serverle
 - React 19
 - TypeScript (strict)
 - Vite 7
-- Framer Motion 12
-- Lenis
-- Tailwind CSS 4
+- Framer Motion 12 (chat widget only)
+- Plain CSS with design tokens (`src/index.css`, `src/styles/chat.css`)
 
 ### Backend and API
 
@@ -97,7 +95,6 @@ src/
   main.tsx
   components/
     Nav.tsx
-    ScrollProgress.tsx
     FloatingChat.tsx
     ChatMessageContent.tsx
     chatProjectCatalog.ts
@@ -105,15 +102,16 @@ src/
     Footer.tsx
   contexts/
     TranslationContext.tsx
-    GitHubContext.tsx
   hooks/
     useChat.ts
-    useContactForm.ts
+    useReveal.ts
   sections/
     HeroSection.tsx
-    AboutSection.tsx
-    SkillsSection.tsx
     ProjectsSection.tsx
+    projectsPresentation.ts
+    ArchitectureDiagram.tsx
+    EvalGrid.tsx
+    AboutSection.tsx
     ContactSection.tsx
 
 api/
@@ -171,12 +169,11 @@ flowchart LR
 
 ## Core Features
 
-- Editorial interface with motion designed for reading rhythm and storytelling.
-- Fixed navigation with active section highlighting.
+- One-column layout built around measured results: a results table in the hero, real product captures, an interactive eval grid for the Phi-3 fine-tune, and architecture diagrams for projects without a hosted demo.
+- Honest demo notes: each hosted demo states how long it takes to wake on its free tier.
 - Accessibility skip link.
 - Technical SEO with JSON-LD in `App.tsx`.
-- About section powered by GitHub stats with 5-minute local cache.
-- Contact form with EmailJS + automatic `mailto:` fallback.
+- Contact by a copyable email field plus LinkedIn, GitHub and Hugging Face links.
 - PT/EN chat with contextual suggestions and real-time streaming.
 - Context-aware project card policy based on user intent and explicit mentions.
 - Baseline protections: rate limiting, response cache, embedding cache, and anti-jailbreak checks.
@@ -257,9 +254,6 @@ Critical rule: any variable prefixed with `VITE_` is public in the frontend bund
 
 ```env
 # Frontend
-VITE_EMAILJS_SERVICE_ID=your_service_id
-VITE_EMAILJS_TEMPLATE_ID=your_template_id
-VITE_EMAILJS_PUBLIC_KEY=your_public_key
 VITE_CHAT_API_URL=http://localhost:3000
 
 # Backend CORS

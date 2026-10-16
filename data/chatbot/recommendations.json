@@ -1,4 +1,18 @@
 {
+  "showcase_order": [
+    "1. ReAct Agent: the live LangGraph agent with tool use, cross-conversation memory, RAG over uploaded documents with cited sources, tool discovery over the Model Context Protocol (MCP), and replayable traces.",
+    "2. Phi-3 Mini SQL Generator: the fine-tune with the strongest measured result (2% to 73.5% exact match).",
+    "3. CampusCycle: the offline-first PWA and the strongest full-stack delivery (64 tests).",
+    "4. Advanced RAG: hybrid retrieval with offline and RAGAS evaluation.",
+    "Supporting work: this portfolio (Shizu0n CV) and the earlier full-stack/backend systems."
+  ],
+  "measured_results": [
+    "Phi-3 Mini SQL Generator: text-to-SQL exact match rose from 2% (4 of 200) to 73.5% (147 of 200) on the held-out split of b-mc2/sql-create-context after QLoRA fine-tuning. This is the strongest measured model result in the portfolio.",
+    "ReAct Agent: 154 backend tests and 22 labeled cases run as a regression harness against the real graph (100% task success and tool selection on those 22 cases).",
+    "CampusCycle: 64 automated tests; the offline write queue and idempotent sync were validated on a physical Android phone.",
+    "Advanced RAG: evaluated with offline heuristics and opt-in cloud RAGAS across retrieval strategies; it has no single headline accuracy number.",
+    "Shizu0n CV (this portfolio) and the smaller application systems have no published accuracy or benchmark metric."
+  ],
   "criteria_weights": {
     "ai_ml_depth": 0.18,
     "completeness": 0.13,
@@ -257,8 +271,8 @@
         },
         "frontend_polish": {
           "score": 5,
-          "reason_pt": "É o projeto com melhor refinamento visual, motion e acabamento de interface.",
-          "reason_en": "It is the project with the strongest visual refinement, motion, and interface finish."
+          "reason_pt": "Interface autoral e acessível em uma coluna, com capturas reais, diagramas de arquitetura e uma grade de avaliação interativa.",
+          "reason_en": "An authorial, accessible one-column interface with real captures, architecture diagrams, and an interactive evaluation grid."
         },
         "architecture_maturity": {
           "score": 5,
@@ -286,9 +300,9 @@
           "reason_en": "README, AGENTS, and the repository structure itself document the system well."
         },
         "production_readiness": {
-          "score": 5,
-          "reason_pt": "É o projeto com deploy público e o melhor sinal de uso real contínuo.",
-          "reason_en": "It is the project with public deployment and the strongest signal of ongoing real use."
+          "score": 4,
+          "reason_pt": "Deploy público na Vercel com fallback de provedores; a busca vetorial depende de um projeto Supabase gratuito que pausa por inatividade.",
+          "reason_en": "Public Vercel deployment with provider fallback; vector retrieval depends on a free Supabase project that pauses when idle."
         },
         "ai_ml_depth": {
           "score": 4,

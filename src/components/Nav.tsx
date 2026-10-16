@@ -1,172 +1,42 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from '../contexts/TranslationContext'
 
-const SECTIONS = ['hero', 'about', 'skills', 'projects', 'contact']
-const NAV_KEYS = ['#about', '#skills', '#projects', '#contact'] as const
+const LINKS = [
+  { href: '#projects', key: 'nav.projects' },
+  { href: '#about', key: 'nav.about' },
+  { href: '#contact', key: 'nav.contact' },
+] as const
 
-type NavKey = (typeof NAV_KEYS)[number]
+type Theme = 'dark' | 'light'
+// Dark is the primary face; index.html applies a stored choice before the first paint.
+const THEME_COLOR: Record<Theme, string> = { dark: '#0e0d0c', light: '#e6e1d8' }
 
 export default function Nav() {
   const { t, language, toggleLanguage } = useTranslation()
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('hero')
+  const [theme, setTheme] = useState<Theme>(() => (document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'))
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 32)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
-      },
-      { threshold: 0.4 },
-    )
-
-    SECTIONS.forEach(id => {
-      const element = document.getElementById(id)
-      if (element) {
-        observer.observe(element)
-      }
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : ''
-    return () => {
-      document.body.style.overflow = ''
-    }
-  }, [mobileOpen])
-
-  useEffect(() => {
-    if (!mobileOpen) {
-      return undefined
-    }
-
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setMobileOpen(false)
-      }
-    }
-
-    window.addEventListener('keydown', onKeyDown)
-    return () => window.removeEventListener('keydown', onKeyDown)
-  }, [mobileOpen])
-
-  const navLabels: Record<NavKey, string> = {
-    '#about': t('nav.about'),
-    '#skills': t('nav.skills'),
-    '#projects': t('nav.projects'),
-    '#contact': t('nav.contact'),
-  }
-
-  const navIds: Record<NavKey, string> = {
-    '#about': 'about',
-    '#skills': 'skills',
-    '#projects': 'projects',
-    '#contact': 'contact',
-  }
-
-  const handleNavClick = (href: NavKey | '#hero') => {
-    setMobileOpen(false)
-    const element = document.querySelector(href)
-    element?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const toggleTheme = () => {
+    const next: Theme = theme === 'dark' ? 'light' : 'dark'
+    document.documentElement.dataset.theme = next
+    document.querySelector('meta[name="theme-color"]')?.setAttribute('content', THEME_COLOR[next])
+    try { localStorage.setItem('theme', next) } catch { /* private mode: the choice lasts this visit */ }
+    setTheme(next)
   }
 
   return (
-    <>
-      <nav className={`nav ${scrolled ? 'scrolled' : ''}`} aria-label="Primary">
-        <div className="nav-inner">
-          <button
-            type="button"
-            className="nav-logo"
-            onClick={() => handleNavClick('#hero')}
-            aria-label="Back to top"
-          >
-            PS
-          </button>
-
-          <div className="nav-desktop">
-            <button 
-              className="nav-lang-toggle" 
-              onClick={toggleLanguage}
-              aria-label="Toggle language"
-            >
-              <span className={language === 'pt' ? 'active' : ''}>PT</span>
-              <span>/</span>
-              <span className={language === 'en' ? 'active' : ''}>EN</span>
-            </button>
-            {NAV_KEYS.map(key => (
-              <a
-                key={key}
-                href={key}
-                className={`nav-link ${activeSection === navIds[key] ? 'active' : ''}`}
-                aria-current={activeSection === navIds[key] ? 'page' : undefined}
-                onClick={event => {
-                  event.preventDefault()
-                  handleNavClick(key)
-                }}
-              >
-                {navLabels[key]}
-              </a>
-            ))}
-          </div>
-
-          <button
-            type="button"
-            className="nav-hamburger"
-            onClick={() => setMobileOpen(value => !value)}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-nav"
-          >
-            <span className={mobileOpen ? 'open' : ''} />
-            <span className={mobileOpen ? 'open' : ''} />
-            <span className={mobileOpen ? 'open' : ''} />
-          </button>
-        </div>
+    <header className="nav">
+      <a className="nav-wordmark" href="#top">Paulo Shizuo</a>
+      <nav className="nav-links" aria-label="Primary">
+        {LINKS.map(link => <a key={link.href} href={link.href}>{t(link.key)}</a>)}
+        <button type="button" className="nav-toggle" onClick={toggleTheme}>
+          {t(theme === 'dark' ? 'nav.theme.light' : 'nav.theme.dark')}
+        </button>
+        <button type="button" className="nav-toggle" onClick={toggleLanguage}
+          lang={language === 'en' ? 'pt' : 'en'}
+          aria-label={language === 'en' ? 'Ler em português' : 'Read in English'}>
+          {language === 'en' ? 'PT' : 'EN'}
+        </button>
       </nav>
-
-      <div
-        id="mobile-nav"
-        className={`mobile-overlay ${mobileOpen ? 'open' : ''}`}
-        aria-hidden={!mobileOpen}
-      >
-        <div className="mobile-inner">
-          <button 
-            className="mobile-lang-toggle" 
-            onClick={toggleLanguage}
-            aria-label="Toggle language"
-          >
-            <span className={language === 'pt' ? 'active' : ''}>PT</span>
-            <span>/</span>
-            <span className={language === 'en' ? 'active' : ''}>EN</span>
-          </button>
-          {NAV_KEYS.map(key => (
-            <a
-              key={key}
-              href={key}
-              className={`mobile-link ${activeSection === navIds[key] ? 'active' : ''}`}
-              aria-current={activeSection === navIds[key] ? 'page' : undefined}
-              onClick={event => {
-                event.preventDefault()
-                handleNavClick(key)
-              }}
-            >
-              {navLabels[key]}
-            </a>
-          ))}
-        </div>
-      </div>
-    </>
+    </header>
   )
 }

@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect, useMemo } from 'react';
-import { motion, AnimatePresence, useDragControls } from 'framer-motion';
 import { useChat, type ChatMessage } from '../hooks/useChat';
 import { useTranslation } from '../contexts/TranslationContext';
 import ChatMessageContent from './ChatMessageContent';
 import { buildProjectCardVisibilityMap } from './chatProjectCardPolicy';
+import ChatBot, { CHAPTERS, useBotChapter } from './ChatBot';
+import { finePointer } from '../scrolly/motion';
 
 type Language = 'en' | 'pt';
 type ChatSuggestionTopic = 'projects' | 'stacks' | 'experience' | 'hiring' | 'contact';
@@ -212,468 +213,231 @@ const getContextualSuggestions = (messages: ChatMessage[], language: Language) =
   return rotated.slice(0, 4);
 };
 
+/**
+ * The chat: the eyes bot in the corner opens a panel that grows out of it. The panel knows
+ * what is being read (a section or an open project case) and offers questions about it;
+ * answers stream from /api/chat through useChat, with project cards where they apply.
+ */
 export default function FloatingChat() {
-  const { t, language } = useTranslation()
+  const { t, language } = useTranslation();
+  const lang = language as Language;
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isSuggestOpen, setIsSuggestOpen] = useState(false);
   const [loadingStep, setLoadingStep] = useState(0);
   const [inputValue, setInputValue] = useState('');
   const [countdown, setCountdown] = useState(0);
-  const [isContextPopoverOpen, setIsContextPopoverOpen] = useState(false);
-  
+
   const { messages, isLoading, error, errorCode, canRetry, retry, quotaInfo, sendMessage } = useChat();
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const contextFlyoutRef = useRef<HTMLDivElement>(null);
-  const dragControls = useDragControls();
-  const userLabel = language === 'pt' ? 'Você' : 'You';
+  const panelRef = useRef<HTMLElement>(null);
+  const logRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const flyoutRef = useRef<HTMLDivElement>(null);
+  const chapterId = useBotChapter();
+  const chapter = CHAPTERS[chapterId] ?? CHAPTERS.top;
   const hasStartedConversation = messages.length > 0;
-  const quickActions = [
-    {
-      id: 'experience',
-      label: t('chat.quick.experience.label'),
-      prompt: t('chat.quick.experience.prompt'),
-    },
-    {
-      id: 'topProjects',
-      label: t('chat.quick.topProjects.label'),
-      prompt: t('chat.quick.topProjects.prompt'),
-    },
-    {
-      id: 'whyHire',
-      label: t('chat.quick.whyHire.label'),
-      prompt: t('chat.quick.whyHire.prompt'),
-    },
-    {
-      id: 'contact',
-      label: t('chat.quick.contact.label'),
-      prompt: t('chat.quick.contact.prompt'),
-    },
-  ] as const;
-  const contextualSuggestions = useMemo(() => {
-    if (!hasStartedConversation) {
-      return [];
+  const projectCardVisibilityByMessageId = useMemo(() => buildProjectCardVisibilityMap(messages), [messages]);
+
+  // Suggestions follow the conversation: the model's follow-ups from the latest answer (the
+  // static topic pool when it sent none: cache hits, errors, offline). Before the first
+  // question there is nothing to follow, so they are the questions about what is being read.
+  const suggestions = useMemo(() => {
+    const asked = new Set(messages.filter((message) => message.role === 'user').map((message) => message.content));
+    let pool: string[];
+    if (hasStartedConversation) {
+      const lastAssistant = [...messages]
+        .reverse()
+        .find((message) => message.role === 'assistant' && message.content.trim());
+      pool = lastAssistant?.suggestions?.length ? lastAssistant.suggestions : getContextualSuggestions(messages, lang);
+    } else {
+      pool = chapter.prompts.map((prompt) => prompt[lang]);
     }
-
-    // Prefer model-generated follow-ups from the latest assistant turn; fall back
-    // to the static topic pool when none are available (cache hits, errors, offline).
-    const lastAssistant = [...messages]
-      .reverse()
-      .find((message) => message.role === 'assistant' && message.content.trim());
-    if (lastAssistant?.suggestions && lastAssistant.suggestions.length > 0) {
-      return lastAssistant.suggestions.slice(0, 4);
-    }
-
-    return getContextualSuggestions(messages, language as Language);
-  }, [hasStartedConversation, language, messages]);
-  const projectCardVisibilityByMessageId = useMemo(
-    () => buildProjectCardVisibilityMap(messages),
-    [messages],
-  );
-
-  const renderQuickActionIcon = (actionId: string) => {
-    if (actionId === 'experience') {
-      return (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <rect x="3" y="7" width="18" height="13" rx="2" />
-          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
-          <path d="M3 13h18" />
-        </svg>
-      );
-    }
-
-    if (actionId === 'topProjects') {
-      return (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 17l5-5 4 4 7-7" />
-          <path d="M14 5h7v7" />
-        </svg>
-      );
-    }
-
-    if (actionId === 'whyHire') {
-      return (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 3l7 3v6c0 5-3.5 8-7 9-3.5-1-7-4-7-9V6l7-3z" />
-          <path d="M9 12l2 2 4-4" />
-        </svg>
-      );
-    }
-
-    return (
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="5" width="18" height="14" rx="2" />
-        <path d="M3 8l9 6 9-6" />
-      </svg>
-    );
-  };
-
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+    return [...new Set(pool)].filter((q) => !asked.has(q)).slice(0, 4);
+  }, [chapter, hasStartedConversation, lang, messages]);
 
   useEffect(() => {
     if (isLoading) {
       setLoadingStep(0);
       const timer1 = setTimeout(() => setLoadingStep(1), 1000);
       const timer2 = setTimeout(() => setLoadingStep(2), 2500);
-      return () => { clearTimeout(timer1); clearTimeout(timer2); }
+      return () => { clearTimeout(timer1); clearTimeout(timer2); };
     }
   }, [isLoading]);
 
   const getLoadingText = () => {
-     if (language === 'pt') {
-        if (loadingStep === 0) return 'O assistente está processando sua pergunta...';
-        if (loadingStep === 1) return 'O assistente está preparando a resposta...';
-        return 'O assistente está finalizando a resposta...';
-     } else {
-        if (loadingStep === 0) return 'The assistant is processing your question...';
-        if (loadingStep === 1) return 'The assistant is preparing a response...';
-        return 'The assistant is finishing the response...';
-     }
-  }
+    if (language === 'pt') {
+      if (loadingStep === 0) return 'O assistente está processando sua pergunta...';
+      if (loadingStep === 1) return 'O assistente está preparando a resposta...';
+      return 'O assistente está finalizando a resposta...';
+    }
+    if (loadingStep === 0) return 'The assistant is processing your question...';
+    if (loadingStep === 1) return 'The assistant is preparing a response...';
+    return 'The assistant is finishing the response...';
+  };
 
   useEffect(() => {
     if (quotaInfo?.isQuotaExceeded && quotaInfo.resetTimestamp) {
       const updateTimer = () => {
-         const remaining = Math.max(0, Math.ceil((quotaInfo.resetTimestamp! - Date.now()) / 1000));
-         setCountdown(remaining);
+        const remaining = Math.max(0, Math.ceil((quotaInfo.resetTimestamp! - Date.now()) / 1000));
+        setCountdown(remaining);
       };
       updateTimer();
       const interval = setInterval(updateTimer, 1000);
       return () => clearInterval(interval);
-    } else {
-      setCountdown(0);
     }
+    setCountdown(0);
   }, [quotaInfo]);
 
+  // Keep the newest message in view.
   useEffect(() => {
-    if (isOpen) {
-      scrollToBottom();
-      // Auto-focus input when opened
-      textareaRef.current?.focus();
-    }
-  }, [messages, isOpen, isLoading]);
+    const log = logRef.current;
+    if (log) log.scrollTop = log.scrollHeight;
+  }, [messages, isLoading, error, isOpen]);
 
+  const open = () => {
+    setIsOpen(true);
+    // On touch screens focusing the input would pull up the keyboard over the panel.
+    window.setTimeout(() => (finePointer() ? inputRef.current : titleRef.current)?.focus({ preventScroll: true }), 200);
+  };
+  const close = () => {
+    setIsOpen(false);
+    document.querySelector<HTMLButtonElement>('.bot')?.focus({ preventScroll: true });
+  };
+
+  // Escape closes the top layer only: the suggestions, then the chat, never a case behind it
+  // (that listener is on window). A press outside closes the suggestions, then the chat.
   useEffect(() => {
     if (!isOpen) {
-      setIsContextPopoverOpen(false);
+      setIsSuggestOpen(false);
+      return;
     }
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      event.stopPropagation();
+      if (flyoutRef.current?.classList.contains('is-open')) setIsSuggestOpen(false);
+      else close();
+    };
+    const onPointer = (event: PointerEvent) => {
+      const target = event.target as Element;
+      if (!flyoutRef.current?.contains(target)) setIsSuggestOpen(false);
+      if (!panelRef.current?.contains(target) && !target.closest?.('.bot')) close();
+    };
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('pointerdown', onPointer);
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.removeEventListener('pointerdown', onPointer);
+    };
   }, [isOpen]);
 
-  useEffect(() => {
-    if (!isContextPopoverOpen) {
-      return;
-    }
-
-    const handleOutsidePointer = (event: MouseEvent | TouchEvent) => {
-      if (!contextFlyoutRef.current?.contains(event.target as Node)) {
-        setIsContextPopoverOpen(false);
-      }
-    };
-
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setIsContextPopoverOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleOutsidePointer);
-    document.addEventListener('touchstart', handleOutsidePointer);
-    document.addEventListener('keydown', handleEscape);
-
-    return () => {
-      document.removeEventListener('mousedown', handleOutsidePointer);
-      document.removeEventListener('touchstart', handleOutsidePointer);
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, [isContextPopoverOpen]);
-
-  useEffect(() => {
-    if (!hasStartedConversation || contextualSuggestions.length === 0) {
-      setIsContextPopoverOpen(false);
-    }
-  }, [hasStartedConversation, contextualSuggestions.length]);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (inputValue.trim() && !isLoading) {
-      sendMessage(inputValue);
-      setInputValue('');
-    }
-  };
-
-  const handleQuickAction = (prompt: string) => {
-    if (isLoading || countdown > 0) {
-      return;
-    }
-
-    sendMessage(prompt);
-    setIsContextPopoverOpen(false);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSubmit(e as any);
-    }
+  const ask = (question: string) => {
+    if (!question.trim() || isLoading || countdown > 0) return;
+    sendMessage(question);
+    setInputValue('');
+    setIsSuggestOpen(false);
+    // The clicked suggestion is gone: keep focus inside the panel.
+    (finePointer() ? inputRef.current : titleRef.current)?.focus({ preventScroll: true });
   };
 
   return (
     <>
-      <AnimatePresence>
-        {!isOpen && (
-          <motion.button
-            className="chat-toggle-btn"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            onClick={() => setIsOpen(true)}
-            aria-label={t('chat.askMe')}
-          >
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              {/* Chat Bubble with tail pointing to robot */}
-              <path d="M29 4 H 21 c -1.1 0 -2 .9 -2 2 v 5 l -3 3 l 3 -1 v 1 c 0 1.1 .9 2 2 2 h 8 c 1.1 0 2 -.9 2 -2 V 6 c 0 -1.1 -.9 -2 -2 -2 Z" />
-              <path d="M 22 9 h 5" />
-              <path d="M 22 12 h 3" />
-              
-              {/* Antenna */}
-              <circle cx="10" cy="7" r="1.5" />
-              <path d="M10 8.5v3.5" />
-              
-              {/* Robot Head */}
-              <rect x="4" y="12" width="12" height="11" rx="2" />
-              
-              {/* Ears */}
-              <path d="M4 14 H2v7h2 M16 14 h2v7h-2" />
-              
-              {/* Face */}
-              <circle cx="7.5" cy="16.5" r="1.2" fill="currentColor" stroke="none" />
-              <circle cx="12.5" cy="16.5" r="1.2" fill="currentColor" stroke="none" />
-              <path d="M7.5 19.5 c 1.2 1.2 3.8 1.2 5 0" />
-              
-              {/* Neck / Base */}
-              <path d="M10 23v3 M6 26h8" />
-            </svg>
-          </motion.button>
-        )}
-      </AnimatePresence>
+      <ChatBot chapter={chapterId} isOpen={isOpen} thinking={isLoading} onToggle={() => (isOpen ? close() : open())} />
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className={`chat-panel ${isExpanded ? 'chat-panel--expanded' : ''}`}
-            initial={{ opacity: 0, y: 40, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 40, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            drag
-            dragControls={dragControls}
-            dragListener={false}
-            dragMomentum={false}
-            dragElastic={0}
-          >
-            <div 
-              className="chat-header"
-              onPointerDown={(e) => {
-                if (e.target !== e.currentTarget && (e.target as HTMLElement).closest('button')) {
-                  return;
-                }
+      <section ref={panelRef} id="chat-panel" className={`bot-panel${isOpen ? ' is-open' : ''}${isExpanded ? ' is-expanded' : ''}`} role="dialog" aria-labelledby="chat-title">
+        <header>
+          <div>
+            <h2 id="chat-title" ref={titleRef} tabIndex={-1}>{t('chat.title')}</h2>
+            <p>{t('chat.bot.reading', { name: chapter.name[lang] })}</p>
+          </div>
+          <div className="bot-head-actions">
+            <button type="button" className="bot-close" onClick={() => setIsExpanded((value) => !value)}
+              aria-label={t(isExpanded ? 'chat.collapse' : 'chat.expand')} aria-pressed={isExpanded}>
+              <span aria-hidden="true">{isExpanded ? '↙' : '↗'}</span>
+            </button>
+            <button type="button" className="bot-close" onClick={close} aria-label={t('chat.bot.close')}>×</button>
+          </div>
+        </header>
 
-                dragControls.start(e);
-              }}
-              style={{ cursor: 'grab', touchAction: 'none' }}
-            >
-              <div className="chat-header-info">
-                <span className="chat-title">{t('chat.title')}</span>
-                <span className="chat-subtitle">{t('chat.subtitle')}</span>
+        <div className="bot-log" ref={logRef} aria-live="polite">
+          <p className="bot-msg">{t('chat.prelude.intro')}</p>
+
+          {messages.map((msg, index) => {
+            const isPendingAssistantMessage =
+              isLoading && msg.role === 'assistant' && !msg.content.trim() && index === messages.length - 1;
+            const cardState = projectCardVisibilityByMessageId.get(msg.id);
+
+            if (msg.role === 'assistant' && !msg.content.trim() && !isPendingAssistantMessage) return null;
+            if (msg.role === 'user') {
+              return (
+                <p key={msg.id} className="bot-msg is-user">
+                  <span className="visually-hidden">{lang === 'pt' ? 'Você' : 'You'}: </span>{msg.content}
+                </p>
+              );
+            }
+            return (
+              <div key={msg.id} className="bot-msg">
+                <span className="visually-hidden">{t('chat.assistant')}: </span>
+                {isPendingAssistantMessage ? (
+                  <span className="bot-thinking">{getLoadingText()}</span>
+                ) : (
+                  <ChatMessageContent
+                    content={msg.content}
+                    role={msg.role}
+                    language={language}
+                    projectActions={cardState?.show ? cardState.projectActions : []}
+                  />
+                )}
               </div>
-              <div className="chat-header-actions">
-                <button 
-                  className="chat-expand-btn" 
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  aria-label="Expand chat"
-                >
-                  {isExpanded ? '↙' : '↗'}
-                </button>
-                <button 
-                  className="chat-close-btn" 
-                  onClick={() => setIsOpen(false)}
-                  aria-label="Close chat"
-                >
-                  &times;
-                </button>
-              </div>
-            </div>
+            );
+          })}
 
-            {!hasStartedConversation && (
-              <div className="chat-prelude">
-                <div className="chat-prelude-card">
-                  <p>{t('chat.prelude.intro')}</p>
-                </div>
-                <div className="chat-quick-actions">
-                  {quickActions.map((action) => (
-                    <button
-                      key={action.id}
-                      className="chat-quick-action"
-                      onClick={() => handleQuickAction(action.prompt)}
-                      disabled={isLoading || countdown > 0}
-                      type="button"
-                    >
-                      <span className="chat-quick-action-icon" aria-hidden="true">
-                        {renderQuickActionIcon(action.id)}
-                      </span>
-                      <span>{action.label}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <div className="chat-messages" data-lenis-prevent="true">
-
-              {messages.map((msg, index) => {
-                const isPendingAssistantMessage =
-                  isLoading &&
-                  msg.role === 'assistant' &&
-                  !msg.content.trim() &&
-                  index === messages.length - 1;
-                const cardState = projectCardVisibilityByMessageId.get(msg.id);
-
-                if (msg.role === 'assistant' && !msg.content.trim() && !isPendingAssistantMessage) {
-                  return null;
-                }
-
-                return (
-                  <div key={msg.id} className={`chat-message chat-message--${msg.role}`}>
-                    <span className="chat-message-role">
-                      {msg.role === 'user' ? userLabel : t('chat.assistant')}
-                    </span>
-                    <div className="chat-message-content">
-                      {isPendingAssistantMessage ? (
-                        <div className="chat-loading-state" aria-live="polite">
-                          <motion.div
-                            animate={{ rotate: 360 }}
-                            transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
-                            className="chat-loading-spinner"
-                          >
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                              <path d="M21 12a9 9 0 1 1-6.219-8.56" />
-                            </svg>
-                          </motion.div>
-                          <span>{getLoadingText()}</span>
-                        </div>
-                      ) : (
-                        <ChatMessageContent
-                          content={msg.content}
-                          role={msg.role}
-                          language={language}
-                          projectActions={cardState?.show ? cardState.projectActions : []}
-                        />
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-              
-              {error && (
-                <div className="chat-error">
-                  {countdown > 0 ? (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                      <p>{t('chat.quotaExceeded', { seconds: countdown })}</p>
-                    </div>
-                  ) : (
-                    <>
-                      <p>
-                        {errorCode === 'network' && t('chat.error.network')}
-                        {errorCode === 'overloaded' && t('chat.error.overloaded')}
-                        {errorCode === 'rate_limited' && t('chat.error.rateLimited')}
-                        {(errorCode === 'generic' || !errorCode) && t('chat.error')}
-                      </p>
-                      {canRetry && !isLoading && (
-                        <button
-                          type="button"
-                          className="chat-error-retry"
-                          onClick={retry}
-                        >
-                          {t('chat.retry')} &rarr;
-                        </button>
-                      )}
-                    </>
+          {error && (
+            <div className="bot-msg is-note">
+              {countdown > 0 ? (
+                <p>{t('chat.quotaExceeded', { seconds: countdown })}</p>
+              ) : (
+                <>
+                  <p>
+                    {errorCode === 'network' && t('chat.error.network')}
+                    {errorCode === 'overloaded' && t('chat.error.overloaded')}
+                    {errorCode === 'rate_limited' && t('chat.error.rateLimited')}
+                    {(errorCode === 'generic' || !errorCode) && t('chat.error')}
+                  </p>
+                  {canRetry && !isLoading && (
+                    <button type="button" className="bot-retry" onClick={retry}>{t('chat.retry')} →</button>
                   )}
-                </div>
+                </>
               )}
-              <div ref={messagesEndRef} />
             </div>
+          )}
+        </div>
 
-            <div className="chat-input-shell">
-              {hasStartedConversation && contextualSuggestions.length > 0 && (
-                <div
-                  className={`chat-context-flyout ${isContextPopoverOpen ? 'chat-context-flyout--open' : ''}`}
-                  ref={contextFlyoutRef}
-                >
-                  <button
-                    className="chat-context-trigger"
-                    type="button"
-                    onClick={() => setIsContextPopoverOpen((current) => !current)}
-                    aria-expanded={isContextPopoverOpen}
-                    aria-controls="chat-context-popover"
-                    aria-label={language === 'pt' ? 'Mostrar sugestões rápidas' : 'Show quick suggestions'}
-                  >
-                    <span className="chat-context-trigger-dot" aria-hidden="true" />
-                    <span>{language === 'pt' ? 'Sugestões' : 'Quick prompts'}</span>
-                  </button>
-                  <div
-                    id="chat-context-popover"
-                    className="chat-context-popover"
-                    role="dialog"
-                    aria-label={language === 'pt' ? 'Sugestões rápidas' : 'Quick suggestions'}
-                  >
-                    <div className="chat-context-popover-header">
-                      <span>{language === 'pt' ? 'Passe o mouse ou clique e escolha' : 'Hover or click and pick one'}</span>
-                    </div>
-                    <div className="chat-context-popover-body">
-                      {contextualSuggestions.map((suggestion) => (
-                        <button
-                          key={suggestion}
-                          className="chat-context-chip"
-                          onClick={() => handleQuickAction(suggestion)}
-                          disabled={isLoading || countdown > 0}
-                          type="button"
-                        >
-                          {suggestion}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              <form className="chat-input-area" onSubmit={handleSubmit}>
-                <textarea
-                  ref={textareaRef}
-                  className="chat-textarea"
-                  placeholder={t('chat.placeholder')}
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
-                  onKeyDown={handleKeyDown}
-                  rows={1}
-                  disabled={countdown > 0}
-                />
-                <button 
-                  type="submit" 
-                  className="chat-send-btn"
-                  disabled={!inputValue.trim() || isLoading || countdown > 0}
-                  aria-label="Send message"
-                >
-                  &rarr;
-                </button>
-              </form>
+        <form className="bot-form" onSubmit={(event) => { event.preventDefault(); ask(inputValue); }}>
+          {suggestions.length > 0 && (
+            // Opens on hover, focus or click, beside the panel; the ring spins while an answer loads.
+            <div ref={flyoutRef} className={`bot-flyout${isSuggestOpen ? ' is-open' : ''}${isLoading ? ' is-loading' : ''}`}>
+              <button type="button" className="bot-flyout-trigger" onClick={() => setIsSuggestOpen((value) => !value)}
+                aria-expanded={isSuggestOpen} aria-controls="chat-suggestions" aria-label={t('chat.suggestions')}>
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <circle className="bot-flyout-ring" cx="10" cy="10" r="7" />
+                  <circle className="bot-flyout-dot" cx="10" cy="10" r="2.2" />
+                </svg>
+              </button>
+              <div id="chat-suggestions" className="bot-flyout-pop" role="group" aria-label={t('chat.suggestions')}>
+                <p>{t('chat.suggestions.hint')}</p>
+                {suggestions.map((suggestion) => (
+                  <button key={suggestion} type="button" onClick={() => ask(suggestion)} disabled={isLoading || countdown > 0}>{suggestion}</button>
+                ))}
+              </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+          <label className="visually-hidden" htmlFor="chat-input">{t('chat.inputLabel')}</label>
+          <input id="chat-input" ref={inputRef} autoComplete="off" placeholder={t('chat.placeholder')}
+            value={inputValue} onChange={(event) => setInputValue(event.target.value)} disabled={countdown > 0} />
+          <button type="submit" className="bot-send" disabled={!inputValue.trim() || isLoading || countdown > 0}>{t('chat.send')}</button>
+        </form>
+      </section>
     </>
   );
 }

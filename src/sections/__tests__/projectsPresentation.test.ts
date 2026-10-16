@@ -1,11 +1,13 @@
+import { existsSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { getShowcaseProjects } from '../../components/chatProjectCatalog';
 import { PROJECT_PRESENTATION } from '../projectsPresentation';
 
-const SPAN: Record<string, number> = { feature: 7, tall: 5, standard: 5, wide: 7, full: 12 };
+const PUBLIC_DIR = resolve(__dirname, '../../../public');
 
-describe('project grid ↔ catalog reconciliation', () => {
-  it('has presentation chrome for exactly the canonical showcase projects', () => {
+describe('project section ↔ catalog reconciliation', () => {
+  it('has presentation for exactly the canonical showcase projects', () => {
     const catalogIds = getShowcaseProjects()
       .map((project) => project.id)
       .sort();
@@ -14,27 +16,45 @@ describe('project grid ↔ catalog reconciliation', () => {
     expect(presentationIds).toEqual(catalogIds);
   });
 
-  it('includes the application systems and the AI / ML group', () => {
-    const ids = getShowcaseProjects().map((p) => p.id);
-    expect(ids).toContain('gym-management'); // app project that was previously missing from the grid
-    expect(ids[4]).toBe('campus-cycle');
-    expect(ids).toEqual(expect.arrayContaining(['react-agent', 'advanced-rag', 'phi3-mini-sql']));
+  it('features the agent, the fine-tune, CampusCycle and the RAG, in that order', () => {
+    const featured = getShowcaseProjects()
+      .filter((project) => PROJECT_PRESENTATION[project.id].tier === 'featured')
+      .map((project) => project.id);
+
+    expect(featured).toEqual(['react-agent', 'phi3-mini-sql', 'campus-cycle', 'advanced-rag']);
   });
 
-  it('lays the unified grid out so every 12-column row is filled', () => {
-    const variants = getShowcaseProjects().map((project) => SPAN[PROJECT_PRESENTATION[project.id].variant]);
-    const total = variants.reduce((sum, span) => sum + span, 0);
-
-    expect(total).toBe(60); // 9 tiles across five 12-column rows
-
-    let rowSpan = 0;
-    for (const span of variants) {
-      rowSpan += span;
-      expect(rowSpan).toBeLessThanOrEqual(12);
-      if (rowSpan === 12) {
-        rowSpan = 0;
+  it('gives every featured project a demonstration and every smaller one a diagram', () => {
+    for (const [id, presentation] of Object.entries(PROJECT_PRESENTATION)) {
+      const hasDemonstration = Boolean(presentation.media || presentation.diagram);
+      expect(hasDemonstration, id).toBe(true);
+      if (presentation.tier === 'more') {
+        expect(presentation.diagram, id).toBeDefined();
+        expect(presentation.media, id).toBeUndefined();
       }
     }
-    expect(rowSpan).toBe(0);
+  });
+
+  it('gives every featured card a headline and its case a scroll stage', () => {
+    for (const [id, presentation] of Object.entries(PROJECT_PRESENTATION)) {
+      if (presentation.tier !== 'featured') continue;
+      expect(presentation.headline, id).toBeDefined();
+      expect(presentation.stage, id).toBeDefined();
+      expect(presentation.glyph, id).toBeDefined();
+    }
+  });
+
+  it('only references media files that exist in public/', () => {
+    for (const { media } of Object.values(PROJECT_PRESENTATION)) {
+      if (!media) continue;
+      expect(existsSync(resolve(PUBLIC_DIR, `.${media.poster}`))).toBe(true);
+      if (media.recording) {
+        expect(existsSync(resolve(PUBLIC_DIR, `.${media.recording.mp4}`))).toBe(true);
+        expect(existsSync(resolve(PUBLIC_DIR, `.${media.recording.webm}`))).toBe(true);
+      }
+      if (media.secondary) {
+        expect(existsSync(resolve(PUBLIC_DIR, `.${media.secondary.src}`))).toBe(true);
+      }
+    }
   });
 });

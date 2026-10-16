@@ -24,6 +24,8 @@ const resolveChatApiUrls = (): string[] => {
       // In localhost environments, prefer local API (vercel dev) and fallback to configured remote.
       pushUnique(urls, '/api/chat');
       pushUnique(urls, configuredChatUrl);
+      // A local base (the .env default) is plain Vite here too: end on the deployed API.
+      if (LOCALHOST_API_REGEX.test(normalizedBase)) pushUnique(urls, REMOTE_CHAT_API_URL);
       return urls;
     }
 

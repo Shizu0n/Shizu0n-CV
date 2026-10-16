@@ -1,12 +1,19 @@
-﻿export default function Footer() {
-  const year = new Date().getFullYear()
+﻿import { useTranslation } from '../contexts/TranslationContext'
+
+const SOURCE_URL = 'https://github.com/Shizu0n/Shizu0n-CV'
+
+export default function Footer() {
+  const { t } = useTranslation()
 
   return (
     <footer className="footer">
-      <div className="footer-inner">
-        <span className="footer-copy">&copy; {year} Paulo Shizuo</span>
-        <span className="footer-tag">Minimal direction. Sharp contrast. Built to feel deliberate.</span>
-      </div>
+      <span>{t('footer.what')}</span>
+      <span className="footer-links">
+        <a href={SOURCE_URL} target="_blank" rel="noopener noreferrer">{t('footer.source')}</a>
+        <a href="https://github.com/Shizu0n" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/paulo-shizuo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </span>
+      <span className="footer-year">{new Date().getFullYear()}</span>
     </footer>
   )
 }

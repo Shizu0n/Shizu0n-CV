@@ -330,6 +330,8 @@ function extractMentions(normalizedText, aliasMap) {
 }
 
 function detectComparisonCriterion(normalizedText) {
+  // Questions about results/metrics get the real measured numbers, not the editorial rubric.
+  if (/\b(measured|metrics?|results?|accuracy|benchmarks?|exact match|resultados?|medidos?|metricas?|acuracia)\b/.test(normalizedText)) return 'measured_results';
   if (/\b(ai|ml|llm|llms|rag|agent|agents|agente|agentes|fine[ -]?tun\w*|machine learning|artificial intelligence|inteligencia artificial|aprendizado de maquina)\b/.test(normalizedText)) return 'ai_ml_depth';
   if (normalizedText.includes('backend')) return 'backend_depth';
   if (normalizedText.includes('frontend') || normalizedText.includes('ui') || normalizedText.includes('polish')) return 'frontend_polish';

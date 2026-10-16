@@ -59,3 +59,8 @@ graphify-out/
 skills-lock.json
 .playwright-mcp/
 .gstack/
+
+# Browser automation and design-inspector output
+.playwright-cli/
+.taste-skill/*
+!.taste-skill/direction.json

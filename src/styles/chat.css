@@ -1,0 +1,197 @@
+/* Chat: the eyes bot and the panel that opens out of it. The panel is a real floating
+   dialog, so it keeps a border and a shadow, which the page itself never uses
+   (marked taste-skill-ignore). Colours come from the page tokens in both themes. */
+
+/* The launcher is a small character: a disc in the text colour with two ground-coloured
+   eyes that follow the reading (ChatBot.tsx). It keeps its own corner of the screen. */
+.bot {
+  position: fixed;
+  right: clamp(1.25rem, 4vw, 2rem);
+  bottom: clamp(1.25rem, 4vw, 2rem);
+  z-index: 499;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 999px;
+  transition: transform 260ms var(--ease);
+}
+.bot svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.bot-body { fill: var(--text); transition: fill 300ms var(--ease); }
+.bot-eye { fill: var(--ground); transition: fill 300ms var(--ease); }
+.bot-eyes, .bot-lid { transform-box: fill-box; transform-origin: center; }
+.bot-lid { transition: transform 90ms ease-in; }
+.bot.is-blinking .bot-lid { transform: scaleY(0.12); }
+/* A ring that only shows when the bot can be acted on (hover, focus, nudge, open). */
+.bot-ring { fill: none; stroke: var(--signal); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; transform: scale(0.86); transition: opacity 220ms var(--ease), transform 320ms var(--ease); }
+.bot:hover, .bot:focus-visible { transform: translateY(-4px); }
+.bot:hover .bot-ring, .bot:focus-visible .bot-ring, .bot.is-nudging .bot-ring, .bot[aria-expanded='true'] .bot-ring { opacity: 1; transform: scale(1); }
+.bot:focus-visible { outline: none; }
+.bot:active { transform: translateY(-1px) scale(0.96); }
+.bot.is-hopping { animation: bot-hop 520ms var(--ease); }
+@keyframes bot-hop {
+  0% { transform: translateY(0) scale(1, 1); }
+  30% { transform: translateY(-10px) scale(0.94, 1.06); }
+  60% { transform: translateY(0) scale(1.07, 0.93); }
+  100% { transform: translateY(0) scale(1, 1); }
+}
+
+/* Label beside the bot: what clicking does here. */
+.bot-tip {
+  position: fixed;
+  right: calc(clamp(1.25rem, 4vw, 2rem) + 68px);
+  bottom: calc(clamp(1.25rem, 4vw, 2rem) + 12px);
+  z-index: 499;
+  max-width: min(320px, calc(100vw - 2 * var(--margin) - 76px));
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  background: var(--text);
+  color: var(--ground);
+  font-size: 14px;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateX(8px);
+  pointer-events: none;
+  transition: opacity 200ms var(--ease), transform 300ms var(--ease);
+}
+.bot-tip:empty { display: none; }
+.bot-tip strong { font-weight: 600; }
+.bot-tip.is-shown { opacity: 1; transform: none; }
+/* The occasional call after a stretch of scrolling: quieter than the hover label, a raised
+   chip with a small signal dot, and the bot's ring breathes while it shows. */
+.bot-tip.is-call { padding: 0; background: var(--ground-raised); color: var(--text); box-shadow: 0 0 0 1px var(--line), 0 10px 28px rgba(0, 0, 0, 0.22); /* taste-skill-ignore */ pointer-events: auto; transition: opacity 420ms var(--ease), transform 520ms var(--ease); }
+.bot-call { display: flex; align-items: center; gap: 9px; padding: 8px 14px 8px 12px; font-size: 13.5px; line-height: 1.35; text-align: left; }
+.bot-call::before { content: ''; flex: none; width: 6px; height: 6px; border-radius: 999px; background: var(--signal); animation: call-dot 1.6s var(--ease) infinite; }
+.bot-call:hover { color: var(--signal); }
+@keyframes call-dot { 50% { opacity: 0.35; } }
+.bot.is-calling .bot-ring { opacity: 0.7; transform: scale(1); animation: ring-breathe 1.8s var(--ease) infinite; }
+@keyframes ring-breathe { 50% { opacity: 0.2; } }
+
+/* ---------- The panel: scales out of the bot's corner ---------- */
+.bot-panel {
+  position: fixed;
+  right: clamp(1.25rem, 4vw, 2rem);
+  bottom: calc(clamp(1.25rem, 4vw, 2rem) + 68px);
+  z-index: 500;
+  width: min(380px, calc(100vw - 2 * var(--margin)));
+  height: min(520px, calc(100svh - clamp(1.25rem, 4vw, 2rem) - 68px - 16px));
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr); /* content never widens the panel */
+  overflow: visible; /* the suggestions open beside the panel */
+  background: var(--ground-raised);
+  border: 1px solid var(--line); /* taste-skill-ignore */
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35); /* taste-skill-ignore */
+  transform-origin: calc(100% - 28px) calc(100% + 60px);
+  opacity: 0;
+  transform: scale(0.2);
+  visibility: hidden;
+  transition: opacity 220ms var(--ease), transform 380ms var(--ease), width 320ms var(--ease), height 320ms var(--ease), visibility 0s linear 380ms;
+}
+/* Expanded for longer answers and project cards. */
+.bot-panel.is-expanded { width: min(80vw, 800px); height: min(85vh, 900px, calc(100svh - clamp(1.25rem, 4vw, 2rem) - 68px - 16px)); }
+.bot-panel.is-open { opacity: 1; transform: none; visibility: visible; transition: opacity 220ms var(--ease), transform 380ms var(--ease), width 320ms var(--ease), height 320ms var(--ease), visibility 0s; }
+.bot-head-actions { display: flex; flex: none; }
+.bot-head-actions .bot-close { width: 38px; }
+.bot-panel header { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 8px 12px 18px; border-bottom: 1px solid var(--line); /* taste-skill-ignore */ }
+.bot-panel h2 { font: 400 18px/1.2 var(--font-display); }
+.bot-panel h2:focus { outline: none; } /* focused by script on touch screens, instead of the input */
+.bot-panel header p { font-size: 13px; color: var(--text-muted); }
+.bot-close { width: 44px; height: 44px; font-size: 18px; color: var(--text-muted); border-radius: var(--radius); }
+.bot-close:hover { color: var(--text); background: var(--field); }
+
+/* The line under the log keeps suggestions and input together as one footer. */
+.bot-log { border-bottom: 1px solid var(--line); /* taste-skill-ignore */ overflow-y: auto; overscroll-behavior: contain; padding: 16px 18px; display: grid; align-content: start; gap: 12px; font-size: 15px; line-height: 1.5; }
+.bot-msg { max-width: 88%; padding: 10px 12px; border-radius: 8px; background: var(--field); overflow-wrap: anywhere; }
+.bot-msg.is-user { justify-self: end; background: var(--text); color: var(--ground); }
+.bot-msg.is-note { max-width: none; background: none; padding: 0; color: var(--text-muted); font-size: 13px; }
+.bot-thinking { color: var(--text-muted); font-size: 14px; }
+.bot-retry { margin-top: 6px; color: var(--text); text-decoration: underline; text-underline-offset: 0.2em; }
+.bot-retry:hover { color: var(--signal); }
+/* Suggestions: a small trigger at the left of the input; hover, focus or a click opens them
+   beside the panel. Its ring spins on hover and while an answer (and new suggestions) loads. */
+.bot-flyout { position: relative; flex: none; display: flex; }
+.bot-flyout-trigger { display: grid; place-items: center; width: 44px; min-height: 44px; border-radius: var(--radius); color: var(--text-muted); background: var(--field); transition: color 160ms var(--ease); }
+.bot-flyout-trigger svg { width: 20px; height: 20px; overflow: visible; }
+.bot-flyout-ring { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-dasharray: 30 14; stroke-linecap: round; transform-origin: 10px 10px; }
+.bot-flyout-dot { fill: var(--signal); }
+.bot-flyout:hover .bot-flyout-trigger, .bot-flyout:focus-within .bot-flyout-trigger, .bot-flyout.is-open .bot-flyout-trigger { color: var(--signal); }
+.bot-flyout:hover .bot-flyout-ring, .bot-flyout.is-open .bot-flyout-ring, .bot-flyout.is-loading .bot-flyout-ring { animation: flyout-spin 1.4s linear infinite; }
+@keyframes flyout-spin { to { transform: rotate(360deg); } }
+
+.bot-flyout-pop {
+  position: absolute;
+  right: calc(100% + 22px);
+  bottom: 0;
+  z-index: 2;
+  display: grid;
+  gap: 6px;
+  width: min(300px, calc(100vw - 48px));
+  padding: 10px;
+  border-radius: 8px;
+  background: var(--ground-raised);
+  border: 1px solid var(--line); /* taste-skill-ignore */
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3); /* taste-skill-ignore */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(6px);
+  transform-origin: bottom right;
+  transition: opacity 160ms var(--ease), transform 220ms var(--ease);
+}
+/* An invisible bridge, so the pointer can travel from the trigger to the list. */
+.bot-flyout-pop::after { content: ''; position: absolute; top: 0; bottom: 0; left: 100%; width: 24px; }
+.bot-flyout:hover .bot-flyout-pop, .bot-flyout:focus-within .bot-flyout-pop, .bot-flyout.is-open .bot-flyout-pop { opacity: 1; pointer-events: auto; transform: none; }
+.bot-flyout-pop p { padding: 0 2px 2px; font-size: 12px; color: var(--text-muted); }
+.bot-flyout-pop button { min-height: 36px; padding: 7px 10px; border-radius: var(--radius); background: var(--field); font-size: 13.5px; line-height: 1.35; text-align: left; transition: color 160ms var(--ease), background-color 160ms var(--ease); }
+.bot-flyout-pop button:hover:not(:disabled), .bot-flyout-pop button:focus-visible { color: var(--text); background: color-mix(in srgb, var(--signal) 20%, var(--field)); }
+.bot-flyout-pop button:disabled { opacity: 0.5; cursor: not-allowed; }
+/* Expanded, there may be no room beside the panel: open upward over the log instead. */
+.bot-panel.is-expanded .bot-flyout-pop { right: auto; left: 0; bottom: calc(100% + 10px); transform-origin: bottom left; transform: translateY(6px); }
+.bot-panel.is-expanded .bot-flyout-pop::after { left: 0; right: 0; top: 100%; bottom: auto; width: auto; height: 12px; }
+.bot-panel.is-expanded .bot-flyout:hover .bot-flyout-pop, .bot-panel.is-expanded .bot-flyout:focus-within .bot-flyout-pop, .bot-panel.is-expanded .bot-flyout.is-open .bot-flyout-pop { transform: none; }
+
+.bot-form { display: flex; gap: 8px; padding: 10px 12px 12px; }
+.bot-form input { flex: 1; min-width: 0; min-height: 44px; padding: 0 12px; border-radius: var(--radius); background: var(--field); font-size: 15px; color: var(--text); border: 1px solid transparent; }
+.bot-form input::placeholder { color: var(--text-muted); }
+.bot-form input:focus-visible { outline: none; border-color: var(--signal); }
+.bot-send { min-height: 44px; padding: 0 16px; border-radius: var(--radius); background: var(--text); color: var(--ground); font-size: 14px; font-weight: 600; }
+.bot-send:hover:not(:disabled) { background: var(--signal); color: var(--on-signal); }
+.bot-send:disabled { opacity: 0.45; cursor: not-allowed; }
+
+/* ---------- Answer content: markdown and project cards (ChatMessageContent) ---------- */
+.chat-message-body, .chat-rich-text { display: flex; flex-direction: column; gap: 0.8rem; }
+.chat-rich-paragraph { margin: 0; }
+.chat-rich-subhead { margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--text); }
+.chat-rich-list { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.45rem; list-style: disc; }
+.chat-inline-strong { color: var(--text); font-weight: 600; }
+.chat-inline-link { color: var(--text); text-decoration: underline; text-underline-offset: 0.18rem; transition: color 160ms var(--ease); }
+.chat-inline-link:hover { color: var(--signal); }
+
+.chat-project-actions { display: grid; gap: 0.7rem; }
+.chat-project-card { display: grid; gap: 0.75rem; padding: 0.85rem 0.9rem; border-radius: 8px; background: var(--ground-raised); }
+.chat-project-copy { display: grid; gap: 0.45rem; }
+.chat-project-title { font-family: var(--font-display); font-size: 0.95rem; color: var(--text); }
+.chat-project-summary { margin: 0; color: var(--text-muted); font-size: 0.8125rem; line-height: 1.55; }
+.chat-project-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.chat-project-stack span { padding: 0.2rem 0.5rem; border-radius: 999px; background: var(--field); font-size: 0.75rem; color: var(--text-muted); }
+.chat-project-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.chat-project-link { display: inline-flex; align-items: center; justify-content: center; min-height: 34px; padding: 0.4rem 0.8rem; border-radius: 999px; background: var(--text); color: var(--ground); text-decoration: none; font-size: 0.8125rem; transition: background-color 160ms var(--ease), color 160ms var(--ease); }
+.chat-project-link:hover { background: var(--signal); color: var(--on-signal); }
+.chat-project-link--ghost { background: none; color: var(--text); box-shadow: inset 0 0 0 1px var(--stroke); }
+.chat-project-link--ghost:hover { background: none; color: var(--signal); box-shadow: inset 0 0 0 1px var(--signal); }
+
+@media (max-width: 720px) {
+  .bot { right: 0.75rem; bottom: 0.75rem; width: 48px; height: 48px; }
+  .bot-tip { right: calc(0.75rem + 58px); bottom: calc(0.75rem + 8px); }
+  /* A bottom sheet above the bot. */
+  .bot-panel { left: 12px; right: 12px; width: auto; bottom: calc(0.75rem + 60px); height: min(72svh, calc(100svh - 0.75rem - 60px - 12px)); }
+  .bot-panel.is-expanded { width: auto; height: calc(100svh - 0.75rem - 60px - 12px); }
+  /* No room beside a full-width sheet: the suggestions open upward. */
+  .bot-flyout-pop { right: auto; left: 0; bottom: calc(100% + 10px); transform: translateY(6px); }
+  .bot-flyout-pop::after { left: 0; right: 0; top: 100%; bottom: auto; width: auto; height: 12px; }
+  .bot-flyout:hover .bot-flyout-pop, .bot-flyout:focus-within .bot-flyout-pop, .bot-flyout.is-open .bot-flyout-pop { transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bot-panel, .bot-panel.is-open { transform: none; }
+}

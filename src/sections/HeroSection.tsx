@@ -1,164 +1,40 @@
-import { motion, useReducedMotion, useScroll, useSpring, useTransform } from 'framer-motion'
-import { useRef, type MouseEvent } from 'react'
 import { useTranslation } from '../contexts/TranslationContext'
+import { caseHash } from './caseRoute'
 
-const range = (
-  progress: ReturnType<typeof useSpring>,
-  inputRange: number[],
-  outputRange: [number, ...number[]],
-) => useTransform(progress, inputRange, outputRange)
+export const CONTACT_EMAIL = 'paulosvtatibana@gmail.com'
+
+// Each measured result opens the case of the project that produced it.
+const RESULTS = [
+  { key: 'hero.results.1', target: caseHash('phi3-mini-sql') },
+  { key: 'hero.results.2', target: caseHash('react-agent') },
+  { key: 'hero.results.3', target: caseHash('campus-cycle') },
+] as const
 
 export default function HeroSection() {
   const { t } = useTranslation()
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const prefersReducedMotion = useReducedMotion()
-
-  const handleJump = (href: string) => (event: MouseEvent) => {
-    event.preventDefault()
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ['start start', 'end end'],
-  })
-
-  const progress = useSpring(scrollYProgress, {
-    stiffness: prefersReducedMotion ? 220 : 120,
-    damping: prefersReducedMotion ? 36 : 24,
-    restDelta: 0.001,
-  })
-
-  const introOpacity = range(progress, [0, 0.035, 0.1], [1, 1, 0])
-  const introY = range(progress, [0, 0.1], [0, prefersReducedMotion ? 0 : -18])
-
-  const titleOpacity = range(progress, [0.14, 0.19, 0.4, 0.44], [0, 1, 1, 0])
-  const titleY = range(progress, [0.14, 0.2, 0.44], [26, 0, prefersReducedMotion ? 0 : -34])
-  const wordOneOpacity = range(progress, [0.14, 0.18, 0.32], [0, 1, 1])
-  const wordTwoOpacity = range(progress, [0.18, 0.22, 0.36], [0, 1, 1])
-  const wordThreeOpacity = range(progress, [0.22, 0.27, 0.4], [0, 1, 1])
-  const wordOneY = range(progress, [0.14, 0.18], [20, 0])
-  const wordTwoY = range(progress, [0.18, 0.22], [24, 0])
-  const wordThreeY = range(progress, [0.22, 0.27], [28, 0])
-
-  const visualScale = range(progress, [0, 0.26, 0.64, 1], [0.9, 0.98, 1.06, prefersReducedMotion ? 1 : 1.16])
-  const visualRotate = range(progress, [0, 0.62, 1], [prefersReducedMotion ? 0 : -4, prefersReducedMotion ? 0 : 1.5, prefersReducedMotion ? 0 : 6])
-  const visualOpacity = range(progress, [0.02, 0.12, 0.94], [0.28, 1, 0.7])
-  const visualY = range(progress, [0, 0.62, 1], [prefersReducedMotion ? 0 : 16, 0, prefersReducedMotion ? 0 : -28])
-  const lineScale = range(progress, [0.06, 0.18, 0.88], [0.45, 1, 1])
-  const lineOpacity = range(progress, [0.02, 0.12, 0.88], [0, 1, 0.2])
-
-  // The two overlays reveal in sequence (Why, then Lesson) rather than together.
-  const overlayLeftOpacity = range(progress, [0.44, 0.49, 0.58, 0.62], [0, 0.82, 0.82, 0])
-  const overlayRightOpacity = range(progress, [0.6, 0.65, 0.72, 0.76], [0, 0.82, 0.82, 0])
-  const overlayLeftY = range(progress, [0.44, 0.62], [prefersReducedMotion ? 0 : 14, prefersReducedMotion ? 0 : -12])
-  const overlayRightY = range(progress, [0.6, 0.76], [prefersReducedMotion ? 0 : 14, prefersReducedMotion ? 0 : -12])
-
-  const outroOpacity = range(progress, [0.78, 0.84, 0.96], [0, 1, 1])
-  const outroY = range(progress, [0.78, 0.84], [18, 0])
-  const hintOpacity = range(progress, [0, 0.06, 0.14], [1, 1, 0])
-
-  // Stagger the title word by word (last word emphasized). A fixed pool of three
-  // transforms keeps the hook count stable across language switches (EN has 3
-  // words, PT has 2); extra words fall back to the last transform.
-  const titleWords = t('hero.title').split(' ').filter(Boolean)
-  const wordOpacities = [wordOneOpacity, wordTwoOpacity, wordThreeOpacity]
-  const wordYs = [wordOneY, wordTwoY, wordThreeY]
 
   return (
-    <section ref={sectionRef} id="hero" className="hero-scroll-container">
-      <div className="hero-sticky">
-        <div className="hero-noise" />
-        <div className="hero-gradient" />
-
-        <motion.div
-          className="hero-axis"
-          style={{ opacity: lineOpacity, scaleY: lineScale }}
-        />
-
-        <div className="hero-visual-anchor">
-          <motion.div
-            className="hero-visual-shell"
-            style={{
-              opacity: visualOpacity,
-              scale: visualScale,
-              rotate: visualRotate,
-              y: visualY,
-            }}
-          >
-            <div className="hero-visual-ring hero-visual-ring--outer" />
-            <div className="hero-visual-ring hero-visual-ring--middle" />
-            <div className="hero-visual-ring hero-visual-ring--inner" />
-            <div className="hero-visual-beam hero-visual-beam--horizontal" />
-            <div className="hero-visual-beam hero-visual-beam--vertical" />
-            <div className="hero-visual-core">
-              <span className="hero-visual-index">01 / sequence</span>
-              <span className="hero-visual-word">Build</span>
-            </div>
-          </motion.div>
+    <section id="top" className="hero">
+      <div className="column">
+        <h1 className="hero-name" data-reveal>Paulo Shizuo</h1>
+        <p className="hero-lede" data-reveal>{t('hero.lede')}</p>
+        <div className="hero-actions" data-reveal>
+          <a className="button" href={`mailto:${CONTACT_EMAIL}`}>{t('hero.cta.email')} <span className="button-mark" aria-hidden="true">↗</span></a>
+          <a className="text-link" href="#projects">{t('hero.cta.work')}</a>
         </div>
+        <p className="hero-status" data-reveal>{t('hero.status')}</p>
 
-        <motion.div className="hero-intro" style={{ opacity: introOpacity, y: introY }}>
-          <span className="hero-kicker">{t('hero.kicker')}</span>
-          <span className="hero-meta">{t('hero.meta')}</span>
-          <div className="hero-cta">
-            <a
-              className="hero-cta-link hero-cta-link--primary"
-              href="#projects"
-              onClick={handleJump('#projects')}
-            >
-              {t('hero.cta.work')}
-            </a>
-            <a className="hero-cta-link" href="#contact" onClick={handleJump('#contact')}>
-              {t('hero.cta.contact')}
-            </a>
-          </div>
-        </motion.div>
-
-        <motion.div className="hero-copy" style={{ opacity: titleOpacity, y: titleY }}>
-          <p className="hero-caption">{t('hero.caption')}</p>
-          <h1 className="hero-title">
-            {titleWords.map((word, index) => {
-              const isLast = index === titleWords.length - 1
-              return (
-                <motion.span
-                  key={`${word}-${index}`}
-                  className={isLast ? 'hero-title-emphasis' : undefined}
-                  style={{
-                    opacity: wordOpacities[index] ?? wordOpacities[wordOpacities.length - 1],
-                    y: wordYs[index] ?? wordYs[wordYs.length - 1],
-                  }}
-                >
-                  {word}
-                </motion.span>
-              )
-            })}
-          </h1>
-        </motion.div>
-
-        <motion.aside
-          className="hero-overlay hero-overlay--left"
-          style={{ opacity: overlayLeftOpacity, y: overlayLeftY }}
-        >
-          <span className="hero-overlay-label">{t('hero.overlay.left')}</span>
-          <p>{t('hero.overlay.left.desc')}</p>
-        </motion.aside>
-
-        <motion.aside
-          className="hero-overlay hero-overlay--right"
-          style={{ opacity: overlayRightOpacity, y: overlayRightY }}
-        >
-          <span className="hero-overlay-label">{t('hero.overlay.right')}</span>
-          <p>{t('hero.overlay.right.desc')}</p>
-        </motion.aside>
-
-        <motion.div className="hero-outro" style={{ opacity: outroOpacity, y: outroY }}>
-          <span className="hero-outro-label">{t('hero.outro')}</span>
-          <p>{t('hero.outro.desc')}</p>
-        </motion.div>
-
-        <motion.div className="hero-scroll-hint" style={{ opacity: hintOpacity }}>
-          <span>{t('hero.hint')}</span>
-        </motion.div>
+        <table className="results" data-reveal>
+          <caption className="visually-hidden">{t('hero.results.caption')}</caption>
+          <tbody>
+            {RESULTS.map(({ key, target }) => (
+              <tr key={key}>
+                <td><a href={target}>{t(`${key}.what`)}</a></td>
+                <td>{t(`${key}.value`)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   )

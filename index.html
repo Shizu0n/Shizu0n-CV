@@ -1,21 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg?v=BigP" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Paulo Shizuo, Computer Science student building AI systems, agents, and production software. Focused on AI Engineering, Machine Learning, and Full-Stack Development."
+      content="Paulo Shizuo, Computer Science student at UNIFOR building AI systems (agents, RAG, fine-tuning, evaluation) and full-stack applications. Looking for an internship."
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#0e0d0c" />
+    <script>
+      // Dark unless the visitor chose light; applied before the first paint.
+      try { if (localStorage.getItem('theme') === 'light') { document.documentElement.dataset.theme = 'light'; document.querySelector('meta[name="theme-color"]').content = '#e6e1d8' } } catch {}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital@0;1&family=DM+Sans:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Young+Serif:wght@400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <title>Paulo Shizuo, CS Student · AI, ML & Full-Stack</title>
+    <title>Paulo Shizuo, Computer Science student</title>
   </head>
   <body>
     <div id="root"></div>

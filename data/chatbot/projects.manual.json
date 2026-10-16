@@ -309,8 +309,8 @@
     "display_name": "Shizu0n CV",
     "status": "active",
     "aliases": ["shizu0n cv", "portfolio", "portfolio site", "shizu0n-cv", "this portfolio", "site"],
-    "summary_pt": "Portfólio autoral em React e TypeScript com motion editorial, GitHub stats, contato e chatbot com IA usando RAG sobre a própria trajetória técnica.",
-    "summary_en": "Authorial portfolio in React and TypeScript focused on editorial motion, GitHub stats, contact flows, and an AI chatbot using RAG over Paulo's own technical history.",
+    "summary_pt": "Portfólio autoral em React e TypeScript, desenhado como uma coluna de resultados medidos, com diagramas de arquitetura dos projetos e um chatbot com IA usando RAG sobre a própria trajetória técnica.",
+    "summary_en": "Authorial portfolio in React and TypeScript, laid out as one column of measured results with architecture diagrams of each project, plus an AI chatbot using RAG over Paulo's own technical history.",
     "problem": {
       "pt": "Um portfólio padrão comunica pouco sobre profundidade técnica e raramente permite exploração dinâmica sobre projetos, stacks e perfil profissional.",
       "en": "A standard portfolio communicates little about technical depth and rarely allows dynamic exploration of projects, stacks, and professional profile."
@@ -332,7 +332,7 @@
       "pt": "Pessoas avaliando o perfil técnico de Paulo e querendo navegar rapidamente por projetos, stack e contexto profissional.",
       "en": "People evaluating Paulo's technical profile and wanting to navigate quickly through projects, stack, and professional context."
     },
-    "key_features": ["Scroll-driven hero storytelling", "Responsive fixed navigation", "GitHub stats with caching", "Curated project showcase", "Contact form with EmailJS fallback", "PT/EN support", "Floating AI chat widget", "Streaming SSE chat backend", "Provider fallback chain", "Supabase vector retrieval"],
+    "key_features": ["Measured results table in the hero", "Interactive eval grid for the Phi-3 fine-tune", "Architecture diagrams for projects without a hosted demo", "Real product captures and recordings", "PT/EN support", "Floating AI chat widget", "Streaming SSE chat backend", "Provider fallback chain", "Supabase vector retrieval"],
     "architecture": {
       "style": "Frontend plus serverless AI backend",
       "pt": "Frontend React organizado em sections, contexts e hooks; backend Vercel em api com SSE, segurança, provider fallback e RAG em Supabase; estilo visual centralizado em src/index.css.",
@@ -340,7 +340,7 @@
       "patterns": ["Single-page scrollytelling", "Serverless API", "Provider fallback", "Retrieval-Augmented Generation"]
     },
     "data_model": {
-      "entities": ["Portfolio knowledge base", "Chat chunks", "Embedding cache", "GitHub stats cache"],
+      "entities": ["Portfolio knowledge base", "Chat chunks", "Embedding cache"],
       "pt": "Modelo híbrido entre conteúdo de portfólio, chunks vetoriais, cache de embeddings e dados do GitHub para resposta contextual.",
       "en": "A hybrid model combining portfolio content, vector chunks, embedding cache, and GitHub data for contextual answers."
     },
@@ -350,15 +350,15 @@
       "en": "There is no end-user authentication; the focus is on public content, basic API protection, and rate limiting."
     },
     "integrations": {
-      "components": ["GitHub API", "EmailJS", "Gemini API", "Groq", "Supabase pgvector", "Vercel"],
+      "components": ["Gemini API", "Groq", "Supabase pgvector", "Vercel"],
       "pt": "Integra dados do GitHub, envio de contato, múltiplos provedores de LLM e Supabase para RAG.",
       "en": "It integrates GitHub data, contact delivery, multiple LLM providers, and Supabase for RAG."
     },
-    "frontend_stack": ["React 19", "TypeScript", "Vite 7", "Framer Motion 12", "Lenis", "Tailwind CSS 4", "CSS"],
+    "frontend_stack": ["React 19", "TypeScript", "Vite 7", "Framer Motion 12", "CSS"],
     "backend_stack": ["Vercel Functions", "JavaScript", "Server-Sent Events", "Gemini API", "Groq"],
     "database_stack": ["Supabase", "PostgreSQL", "pgvector"],
     "tooling_stack": ["ESLint", "Prettier", "TypeScript type-check", "Playwright", "Vercel"],
-    "all_stacks": ["React 19", "TypeScript", "Vite 7", "Framer Motion 12", "Lenis", "Tailwind CSS 4", "JavaScript", "Vercel Functions", "Server-Sent Events", "Gemini API", "Groq", "Supabase", "PostgreSQL", "pgvector", "GitHub API", "EmailJS", "ESLint", "Prettier", "Playwright"],
+    "all_stacks": ["React 19", "TypeScript", "Vite 7", "Framer Motion 12", "JavaScript", "Vercel Functions", "Server-Sent Events", "Gemini API", "Groq", "Supabase", "PostgreSQL", "pgvector", "ESLint", "Prettier", "Playwright"],
     "metrics_engineering": {
       "api_surface": {
         "serverless_routes": ["/api/chat", "/api/health"],
