@@ -68,21 +68,8 @@ export default function ProjectCase({ project, presentation: p, index, prev, nex
           {p.demoNote && <p className="case-note">{p.demoNote[language]}</p>}
         </header>
 
-        {p.stage === 'eval' ? <EvalStage scroller={scroller} /> : p.stage && <ScrollStage kind={p.stage} scroller={scroller} />}
-
-        <div className="case-body">
-          {p.sample && (
-            <div className="column">
-              <p className="muted case-small">{t('eval.sample')}</p>
-              <dl className="sample">
-                <dt>{t('eval.sample.q')}</dt>
-                <dd><pre><code>{p.sample.question}</code></pre></dd>
-                <dt>{t('eval.sample.a')}</dt>
-                <dd><pre><code>{p.sample.sql}</code></pre></dd>
-              </dl>
-              <p className="case-limit">{t('eval.limit')}</p>
-            </div>
-          )}
+        {/* What it is and what it looks like come before the stage: a reader in a hurry stops here. */}
+        <div className="case-body case-summary">
           <div className="column">
             <p>{p.description[language]}</p>
             {p.result && <p className="muted case-result-text">{p.result[language]}</p>}
@@ -98,11 +85,28 @@ export default function ProjectCase({ project, presentation: p, index, prev, nex
                   </video>
                 ) : (
                   <img src={media.poster} alt={t('projects.screenshot.alt', { name: project.name })}
-                    width={media.width} height={media.height} loading="lazy" decoding="async" />
+                    width={media.width} height={media.height} decoding="async" />
                 )}
               </div>
               <figcaption>{media.caption[language]}</figcaption>
             </figure>
+          )}
+        </div>
+
+        {p.stage === 'eval' ? <EvalStage scroller={scroller} /> : p.stage && <ScrollStage kind={p.stage} scroller={scroller} />}
+
+        <div className="case-body">
+          {p.sample && (
+            <div className="column">
+              <p className="muted case-small">{t('eval.sample')}</p>
+              <dl className="sample">
+                <dt>{t('eval.sample.q')}</dt>
+                <dd><pre><code>{p.sample.question}</code></pre></dd>
+                <dt>{t('eval.sample.a')}</dt>
+                <dd><pre><code>{p.sample.sql}</code></pre></dd>
+              </dl>
+              <p className="case-limit">{t('eval.limit')}</p>
+            </div>
           )}
           {media?.secondary && (
             <figure className="case-figure">

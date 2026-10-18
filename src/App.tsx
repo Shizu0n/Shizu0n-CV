@@ -8,11 +8,9 @@ import Nav from './components/Nav'
 import Footer from './components/Footer'
 import FloatingChat from './components/FloatingChat'
 import { useReveal } from './hooks/useReveal'
-import { useWheelGlide } from './hooks/useWheelGlide'
 
 export default function App() {
   useReveal()
-  useWheelGlide()
 
   // Inject JSON-LD structured data for SEO
   useEffect(() => {

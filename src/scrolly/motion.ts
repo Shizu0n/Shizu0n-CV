@@ -1,4 +1,4 @@
-// Shared motion rules for the scroll stages, the card entrances and the wheel glide.
+// Shared motion rules for the scroll stages and the card entrances.
 // Read once per page load and cached: stages ask every frame.
 const cached = (query: string) => {
   let value: boolean | undefined
@@ -17,9 +17,6 @@ export const easeBack = (t: number) => 1 + 2.4 * Math.pow(t - 1, 3) + 1.4 * Math
 export const SCREENS_PER_STOP = 0.9
 export const EVAL_SCREENS = 3.2
 export const LERP = 0.075
-// Mouse wheel (page and cases): share of each wheel step that is scrolled, and how fast it glides there.
-export const WHEEL_SPEED = 0.7
-export const WHEEL_LERP = 0.09
 
 /** What the chat bot's eyes follow while a stage runs: the token in flight, the count… */
 let lookEl: Element | null = null

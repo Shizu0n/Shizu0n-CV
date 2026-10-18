@@ -209,15 +209,15 @@ export const PROJECT_PRESENTATION: Record<string, ProjectPresentation> = {
     year: '2025',
     kind: { en: 'This site', pt: 'Este site' },
     description: {
-      en: 'This portfolio. Its chat answers from my own project history: an intent classifier picks bundled context, Supabase pgvector adds retrieved chunks when available, and Gemini streams the answer over SSE, falling back to Groq on quota errors.',
-      pt: 'Este portfólio. O chat responde a partir do meu próprio histórico de projetos: um classificador de intenção escolhe o contexto embutido, o Supabase pgvector acrescenta trechos recuperados quando disponível, e o Gemini transmite a resposta via SSE, com fallback para o Groq em erros de cota.',
+      en: 'This portfolio. Its chat answers from my own project history: an intent classifier picks bundled context, Supabase pgvector adds retrieved chunks when available, and Gemini streams the answer over SSE, moving to the next free model (Flash-Lite, then Groq) when one fails.',
+      pt: 'Este portfólio. O chat responde a partir do meu próprio histórico de projetos: um classificador de intenção escolhe o contexto embutido, o Supabase pgvector acrescenta trechos recuperados quando disponível, e o Gemini transmite a resposta via SSE, passando para o próximo modelo gratuito (Flash-Lite, depois Groq) quando um falha.',
     },
     diagram: {
       tiers: [
         { name: 'Browser', nodes: ['React 19 + Vite', 'Chat widget (SSE)'] },
         { name: 'Vercel Function', nodes: ['Rate limit and payload guards', 'Intent classifier', 'Prompt-injection canary'] },
         { name: 'Context', nodes: ['Bundled knowledge JSON', 'Supabase pgvector (optional)'] },
-        { name: 'Providers', nodes: ['Gemini', 'Groq on quota errors'] },
+        { name: 'Providers', nodes: ['Gemini Flash', 'Flash-Lite, then Groq on failure'] },
       ],
     },
   },

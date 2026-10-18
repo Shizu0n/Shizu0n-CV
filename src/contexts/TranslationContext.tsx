@@ -51,7 +51,7 @@ const translations = {
     // Hero
     'hero.lede': 'Computer Science student at UNIFOR, graduating in December 2027. I build AI systems and the full-stack applications around them: agents with tool use, RAG, fine-tuning and evaluation, with attention to answer quality, reliability and tests.',
     'hero.cta.email': 'Email me',
-    'hero.cta.work': 'See the projects',
+    'hero.cta.cv': 'Résumé (PDF)',
     'hero.status': 'Open to internships, part-time, remote or on-site. Based in Fortaleza, Brazil.',
     'hero.results.caption': 'Measured results',
     'hero.results.1.what': 'Phi-3 Mini text-to-SQL, exact match on 200 held-out questions',
@@ -87,6 +87,7 @@ const translations = {
     'projects.recording.alt': 'Recorded walkthrough of {name}',
     'projects.screenshot.alt': 'Screenshot of {name}',
     'projects.diagram': 'Architecture of {name}',
+    'projects.architecture': 'How it is built',
     'projects.more.title': 'Smaller projects',
     'projects.more.body': 'Earlier full-stack and backend work, without a hosted demo: how each one is built.',
     'projects.archive.link': 'All repositories on GitHub',
@@ -161,7 +162,7 @@ const translations = {
     // Hero
     'hero.lede': 'Estudante de Ciência da Computação na UNIFOR, com conclusão prevista para dezembro de 2027. Construo sistemas de IA e as aplicações full-stack em volta deles: agentes com uso de ferramentas, RAG, fine-tuning e avaliação, com atenção à qualidade das respostas, confiabilidade e testes.',
     'hero.cta.email': 'Mandar email',
-    'hero.cta.work': 'Ver os projetos',
+    'hero.cta.cv': 'Currículo (PDF)',
     'hero.status': 'Aberto a estágio, meio período, remoto ou presencial. Moro em Fortaleza.',
     'hero.results.caption': 'Resultados medidos',
     'hero.results.1.what': 'Phi-3 Mini texto para SQL, exact match em 200 perguntas de validação',
@@ -197,6 +198,7 @@ const translations = {
     'projects.recording.alt': 'Demonstração gravada de {name}',
     'projects.screenshot.alt': 'Captura de tela de {name}',
     'projects.diagram': 'Arquitetura de {name}',
+    'projects.architecture': 'Como é construído',
     'projects.more.title': 'Projetos menores',
     'projects.more.body': 'Trabalhos anteriores de full-stack e backend, sem demo hospedada: como cada um é construído.',
     'projects.archive.link': 'Todos os repositórios no GitHub',

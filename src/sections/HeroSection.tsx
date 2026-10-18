@@ -10,8 +10,11 @@ const RESULTS = [
   { key: 'hero.results.3', target: caseHash('campus-cycle') },
 ] as const
 
+// Built from My-CV/cv-*.tex without the phone line (see CLAUDE.md).
+const CV_PDF = { en: '/Paulo_Shizuo_Resume.pdf', pt: '/Paulo_Shizuo_CV.pdf' } as const
+
 export default function HeroSection() {
-  const { t } = useTranslation()
+  const { t, language } = useTranslation()
 
   return (
     <section id="top" className="hero">
@@ -20,7 +23,9 @@ export default function HeroSection() {
         <p className="hero-lede" data-reveal>{t('hero.lede')}</p>
         <div className="hero-actions" data-reveal>
           <a className="button" href={`mailto:${CONTACT_EMAIL}`}>{t('hero.cta.email')} <span className="button-mark" aria-hidden="true">↗</span></a>
-          <a className="text-link" href="#projects">{t('hero.cta.work')}</a>
+          <a className="text-link" href={CV_PDF[language]} target="_blank" rel="noopener noreferrer">{t('hero.cta.cv')}</a>
+          <a className="text-link" href="https://www.linkedin.com/in/paulo-shizuo/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a className="text-link" href="https://github.com/Shizu0n" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
         <p className="hero-status" data-reveal>{t('hero.status')}</p>
 

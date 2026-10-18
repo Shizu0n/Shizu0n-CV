@@ -235,8 +235,13 @@ export default function ProjectsSection() {
             <article key={project.id} className="mini">
               <div className="mini-head"><h4 className="mini-name">{project.name}</h4><span className="mini-year">{p.year}</span></div>
               <p className="mini-kind">{p.kind[language]}</p>
-              {p.diagram && <ArchitectureDiagram diagram={p.diagram} label={t('projects.diagram', { name: project.name })} />}
               <p className="mini-desc">{p.description[language]}</p>
+              {p.diagram && (
+                <details className="mini-arch">
+                  <summary>{t('projects.architecture')}</summary>
+                  <ArchitectureDiagram diagram={p.diagram} label={t('projects.diagram', { name: project.name })} />
+                </details>
+              )}
               <p className="mini-links"><a className="text-link" href={project.github} target="_blank" rel="noopener noreferrer">{t('projects.code')}</a></p>
             </article>
           )

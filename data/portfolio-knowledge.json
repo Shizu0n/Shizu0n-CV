@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T14:39:49.745Z",
+  "generated_at": "2026-10-18T15:19:19.168Z",
   "sources": {
     "cv": "cv.md",
     "profile": "data/chatbot/profile.json",
@@ -474,7 +474,7 @@
         "dates": {
           "created_at": "2025-11-11T19:54:36Z",
           "pushed_at": "2026-04-19T03:40:10Z",
-          "last_activity_days": 180
+          "last_activity_days": 182
         },
         "size": {
           "repository_kb": 2717,
@@ -645,7 +645,7 @@
             }
           ]
         },
-        "last_activity_days": 180
+        "last_activity_days": 182
       }
     },
     {
@@ -814,7 +814,7 @@
         "dates": {
           "created_at": "2025-11-09T15:16:32Z",
           "pushed_at": "2026-04-19T03:41:57Z",
-          "last_activity_days": 180
+          "last_activity_days": 182
         },
         "size": {
           "repository_kb": 1612,
@@ -1029,7 +1029,7 @@
             }
           ]
         },
-        "last_activity_days": 180
+        "last_activity_days": 182
       }
     },
     {
@@ -1156,7 +1156,7 @@
         "dates": {
           "created_at": "2025-10-14T10:56:17Z",
           "pushed_at": "2026-04-19T03:42:02Z",
-          "last_activity_days": 180
+          "last_activity_days": 182
         },
         "size": {
           "repository_kb": 954,
@@ -1318,7 +1318,7 @@
             }
           ]
         },
-        "last_activity_days": 180
+        "last_activity_days": 182
       }
     },
     {
@@ -1488,7 +1488,7 @@
         "dates": {
           "created_at": "2025-10-05T22:21:26Z",
           "pushed_at": "2026-04-19T03:38:56Z",
-          "last_activity_days": 180
+          "last_activity_days": 182
         },
         "size": {
           "repository_kb": 314,
@@ -1663,7 +1663,7 @@
             }
           ]
         },
-        "last_activity_days": 180
+        "last_activity_days": 182
       }
     },
     {
@@ -1820,18 +1820,18 @@
         "languages": [
           {
             "name": "TypeScript",
-            "bytes": 179129,
-            "percentage": 58.47
+            "bytes": 179158,
+            "percentage": 58.08
           },
           {
             "name": "JavaScript",
-            "bytes": 85083,
-            "percentage": 27.77
+            "bytes": 87150,
+            "percentage": 28.25
           },
           {
             "name": "CSS",
             "bytes": 40775,
-            "percentage": 13.31
+            "percentage": 13.22
           },
           {
             "name": "HTML",
@@ -1841,11 +1841,11 @@
         ],
         "dates": {
           "created_at": "2025-10-04T03:42:39Z",
-          "pushed_at": "2026-10-16T14:09:33Z",
-          "last_activity_days": 0
+          "pushed_at": "2026-10-16T15:02:16Z",
+          "last_activity_days": 2
         },
         "size": {
-          "repository_kb": 2989,
+          "repository_kb": 2997,
           "total_items": 105
         },
         "repo_tree": {
@@ -1938,8 +1938,8 @@
         "Local dev chat behavior depends on backend availability"
       ],
       "reliability": {
-        "pt": "Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache de respostas no servidor (TTL de 10 min), cache de respostas no cliente por sessão e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini → Groq) acionada apenas em erros de quota/sobrecarga; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.",
-        "en": "Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL), a per-session client response cache, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini → Groq) engages only on quota/overload errors; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice."
+        "pt": "Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache no servidor (TTL de 10 min) e no cliente por sessão, ambos só para a pergunta que abre a conversa, e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini Flash → Flash-Lite → Groq) que passa ao próximo após qualquer erro; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.",
+        "en": "Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL) and a per-session client cache, both only for the question that opens a conversation, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini Flash → Flash-Lite → Groq) moves on after any provider error; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice."
       },
       "recommendation_tags": [
         "react",
@@ -1985,25 +1985,25 @@
         "forks": 0,
         "watchers": 0,
         "open_issues": 0,
-        "size_kb": 2989,
+        "size_kb": 2997,
         "created_at": "2025-10-04T03:42:39Z",
-        "pushed_at": "2026-10-16T14:09:33Z",
+        "pushed_at": "2026-10-16T15:02:16Z",
         "topics": [],
         "language_breakdown": [
           {
             "name": "TypeScript",
-            "bytes": 179129,
-            "percentage": 58.47
+            "bytes": 179158,
+            "percentage": 58.08
           },
           {
             "name": "JavaScript",
-            "bytes": 85083,
-            "percentage": 27.77
+            "bytes": 87150,
+            "percentage": 28.25
           },
           {
             "name": "CSS",
             "bytes": 40775,
-            "percentage": 13.31
+            "percentage": 13.22
           },
           {
             "name": "HTML",
@@ -2105,7 +2105,7 @@
             }
           ]
         },
-        "last_activity_days": 0
+        "last_activity_days": 2
       }
     },
     {
@@ -2303,7 +2303,7 @@
         "dates": {
           "created_at": "2026-07-17T11:08:04Z",
           "pushed_at": "2026-07-27T20:12:53Z",
-          "last_activity_days": 80
+          "last_activity_days": 82
         },
         "size": {
           "repository_kb": 241,
@@ -2541,7 +2541,7 @@
             }
           ]
         },
-        "last_activity_days": 80
+        "last_activity_days": 82
       }
     },
     {
@@ -2760,7 +2760,7 @@
         "dates": {
           "created_at": "2026-04-26T22:33:25Z",
           "pushed_at": "2026-10-15T00:13:53Z",
-          "last_activity_days": 1
+          "last_activity_days": 3
         },
         "size": {
           "repository_kb": 980,
@@ -3031,7 +3031,7 @@
             }
           ]
         },
-        "last_activity_days": 1
+        "last_activity_days": 3
       }
     },
     {
@@ -3188,7 +3188,7 @@
         "dates": {
           "created_at": "2026-05-17T18:18:09Z",
           "pushed_at": "2026-10-14T23:21:02Z",
-          "last_activity_days": 1
+          "last_activity_days": 3
         },
         "size": {
           "repository_kb": 1643,
@@ -3427,7 +3427,7 @@
             }
           ]
         },
-        "last_activity_days": 1
+        "last_activity_days": 3
       }
     },
     {
@@ -3582,7 +3582,7 @@
         "dates": {
           "created_at": "2026-05-17T03:25:00Z",
           "pushed_at": "2026-05-17T03:33:24Z",
-          "last_activity_days": 152
+          "last_activity_days": 154
         },
         "size": {
           "repository_kb": 110,
@@ -3771,7 +3771,7 @@
             }
           ]
         },
-        "last_activity_days": 152
+        "last_activity_days": 154
       }
     }
   ],
@@ -8964,7 +8964,7 @@
           "REST APIs",
           "Layered Architecture"
         ],
-        "content": "Project: Academic System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":3,\"service_types\":[\"Student data\",\"Subjects data\",\"Library catalog\"]},\"modules\":[\"controller\",\"service\",\"repository\",\"model\",\"exception\",\"view\",\"util\",\"sql\"],\"languages\":[{\"name\":\"Java\",\"bytes\":113459,\"percentage\":100}],\"dates\":{\"created_at\":\"2025-11-11T19:54:36Z\",\"pushed_at\":\"2026-04-19T03:40:10Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":2717,\"total_items\":56},\"repo_tree\":{\"total_items\":56,\"source_like_items\":49,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":49},{\"name\":\"lib\",\"count\":4},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Academic lookup\",\"Enrollment management\",\"Library reservation\"],\"primary_flows\":[\"Lookup student\",\"Lookup subjects by course\",\"Enroll in subject\",\"Cancel enrollment\",\"Reserve book\",\"Cancel reservation\"],\"user_roles_count\":2,\"key_features_count\":10,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Clear layered architecture, Strong business-rule enforcement, Good Java backend signaling, Explicit external integration model, Detailed README with technical structure\nTradeoffs: Console UI instead of graphical or web UI, No documented automated test suite, No explicit authentication layer\nRecommendation summary EN: A strong project for discussing Java backend, business rules, and integration with external services.\nRecommendation summary PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos."
+        "content": "Project: Academic System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":3,\"service_types\":[\"Student data\",\"Subjects data\",\"Library catalog\"]},\"modules\":[\"controller\",\"service\",\"repository\",\"model\",\"exception\",\"view\",\"util\",\"sql\"],\"languages\":[{\"name\":\"Java\",\"bytes\":113459,\"percentage\":100}],\"dates\":{\"created_at\":\"2025-11-11T19:54:36Z\",\"pushed_at\":\"2026-04-19T03:40:10Z\",\"last_activity_days\":182},\"size\":{\"repository_kb\":2717,\"total_items\":56},\"repo_tree\":{\"total_items\":56,\"source_like_items\":49,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":49},{\"name\":\"lib\",\"count\":4},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Academic lookup\",\"Enrollment management\",\"Library reservation\"],\"primary_flows\":[\"Lookup student\",\"Lookup subjects by course\",\"Enroll in subject\",\"Cancel enrollment\",\"Reserve book\",\"Cancel reservation\"],\"user_roles_count\":2,\"key_features_count\":10,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Clear layered architecture, Strong business-rule enforcement, Good Java backend signaling, Explicit external integration model, Detailed README with technical structure\nTradeoffs: Console UI instead of graphical or web UI, No documented automated test suite, No explicit authentication layer\nRecommendation summary EN: A strong project for discussing Java backend, business rules, and integration with external services.\nRecommendation summary PT: Projeto forte para discutir Java backend, regras de negócio e integração com serviços externos."
       },
       {
         "id": "project:delivery-system:overview",
@@ -9134,7 +9134,7 @@
           "Context API",
           "REST API"
         ],
-        "content": "Project: Delivery System\nEngineering metrics: {\"api_surface\":{\"endpoint_groups\":[\"Authentication\",\"Addresses\",\"Restaurant categories\",\"Menu items\",\"Orders\",\"Couriers\",\"Reviews\"]},\"modules\":[\"backend\",\"frontend\",\"database\",\"diagrams\"],\"languages\":[{\"name\":\"JavaScript\",\"bytes\":432768,\"percentage\":81.87},{\"name\":\"CSS\",\"bytes\":95296,\"percentage\":18.03},{\"name\":\"HTML\",\"bytes\":548,\"percentage\":0.1}],\"dates\":{\"created_at\":\"2025-11-09T15:16:32Z\",\"pushed_at\":\"2026-04-19T03:41:57Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":1612,\"total_items\":941},\"repo_tree\":{\"total_items\":941,\"source_like_items\":935,\"test_like_items\":67,\"docs_like_items\":72,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"backend\",\"count\":850},{\"name\":\"frontend\",\"count\":82},{\"name\":\"database\",\"count\":3},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Ordering\",\"Catalog management\",\"Delivery execution\",\"Reviews\"],\"primary_flows\":[\"Register/login\",\"Manage addresses\",\"Manage categories and menu items\",\"Create order\",\"Courier flow\",\"Review restaurant\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":6}\nStrengths: Broadest business-domain coverage among the portfolio apps, Multiple user roles, Full-stack split with database and diagrams, Clear JWT and backend security basics, Good candidate for operational system discussions\nTradeoffs: No TypeScript on the main application stack, No explicit production deployment evidence, Automated test coverage is not clearly documented\nRecommendation summary EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system.\nRecommendation summary PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional."
+        "content": "Project: Delivery System\nEngineering metrics: {\"api_surface\":{\"endpoint_groups\":[\"Authentication\",\"Addresses\",\"Restaurant categories\",\"Menu items\",\"Orders\",\"Couriers\",\"Reviews\"]},\"modules\":[\"backend\",\"frontend\",\"database\",\"diagrams\"],\"languages\":[{\"name\":\"JavaScript\",\"bytes\":432768,\"percentage\":81.87},{\"name\":\"CSS\",\"bytes\":95296,\"percentage\":18.03},{\"name\":\"HTML\",\"bytes\":548,\"percentage\":0.1}],\"dates\":{\"created_at\":\"2025-11-09T15:16:32Z\",\"pushed_at\":\"2026-04-19T03:41:57Z\",\"last_activity_days\":182},\"size\":{\"repository_kb\":1612,\"total_items\":941},\"repo_tree\":{\"total_items\":941,\"source_like_items\":935,\"test_like_items\":67,\"docs_like_items\":72,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"backend\",\"count\":850},{\"name\":\"frontend\",\"count\":82},{\"name\":\"database\",\"count\":3},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Ordering\",\"Catalog management\",\"Delivery execution\",\"Reviews\"],\"primary_flows\":[\"Register/login\",\"Manage addresses\",\"Manage categories and menu items\",\"Create order\",\"Courier flow\",\"Review restaurant\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":6}\nStrengths: Broadest business-domain coverage among the portfolio apps, Multiple user roles, Full-stack split with database and diagrams, Clear JWT and backend security basics, Good candidate for operational system discussions\nTradeoffs: No TypeScript on the main application stack, No explicit production deployment evidence, Automated test coverage is not clearly documented\nRecommendation summary EN: The project with the broadest business functional scope and one of the best examples of an operational full-stack system.\nRecommendation summary PT: Projeto com maior amplitude funcional de negócio e um dos melhores exemplos de sistema full stack operacional."
       },
       {
         "id": "project:gym-management:overview",
@@ -9259,7 +9259,7 @@
           "MySQL",
           "Gradle"
         ],
-        "content": "Project: Gym Management System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":0,\"notes\":\"No external API surface is explicitly documented.\"},\"modules\":[\"demo\",\"diagrams\"],\"languages\":[],\"dates\":{\"created_at\":\"2025-10-14T10:56:17Z\",\"pushed_at\":\"2026-04-19T03:42:02Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":954,\"total_items\":170},\"repo_tree\":{\"total_items\":170,\"source_like_items\":152,\"test_like_items\":32,\"docs_like_items\":4,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"demo\",\"count\":164},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".vscode\",\"count\":2},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Student administration\",\"Instructor administration\",\"Plans and enrollment\",\"Payments\",\"Workout management\",\"Attendance\"],\"primary_flows\":[\"Manage students and instructors\",\"Manage plans and enrollments\",\"Track payments\",\"Create workout plans\",\"Track physical assessments\",\"Register attendance\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":6,\"primary_flows_count\":6}\nStrengths: Rich administrative domain, Desktop plus backend composition, Spring Boot in the portfolio stack, Useful project for gym/business system conversations\nTradeoffs: Repository documentation is thinner than the strongest projects, No explicit auth or test evidence, GitHub language breakdown is unavailable through the API\nRecommendation summary EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio.\nRecommendation summary PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
+        "content": "Project: Gym Management System\nEngineering metrics: {\"api_surface\":{\"external_services_count\":0,\"notes\":\"No external API surface is explicitly documented.\"},\"modules\":[\"demo\",\"diagrams\"],\"languages\":[],\"dates\":{\"created_at\":\"2025-10-14T10:56:17Z\",\"pushed_at\":\"2026-04-19T03:42:02Z\",\"last_activity_days\":182},\"size\":{\"repository_kb\":954,\"total_items\":170},\"repo_tree\":{\"total_items\":170,\"source_like_items\":152,\"test_like_items\":32,\"docs_like_items\":4,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"demo\",\"count\":164},{\"name\":\"diagrams\",\"count\":3},{\"name\":\".vscode\",\"count\":2},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Student administration\",\"Instructor administration\",\"Plans and enrollment\",\"Payments\",\"Workout management\",\"Attendance\"],\"primary_flows\":[\"Manage students and instructors\",\"Manage plans and enrollments\",\"Track payments\",\"Create workout plans\",\"Track physical assessments\",\"Register attendance\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":6,\"primary_flows_count\":6}\nStrengths: Rich administrative domain, Desktop plus backend composition, Spring Boot in the portfolio stack, Useful project for gym/business system conversations\nTradeoffs: Repository documentation is thinner than the strongest projects, No explicit auth or test evidence, GitHub language breakdown is unavailable through the API\nRecommendation summary EN: A good project for discussing administrative domain modeling, Spring Boot, and Java Swing, with less architectural evidence than the strongest projects in the portfolio.\nRecommendation summary PT: Bom projeto para conversar sobre domínio administrativo, Spring Boot e Java Swing, com foco menos forte em evidência arquitetural do que os melhores projetos do portfólio."
       },
       {
         "id": "project:referral-system:overview",
@@ -9424,7 +9424,7 @@
           "CSS",
           "class-validator"
         ],
-        "content": "Project: Referral System\nEngineering metrics: {\"api_surface\":{\"backend_modules\":[\"auth\",\"users\",\"common\",\"database\"]},\"modules\":[\"backend/src/auth\",\"backend/src/users\",\"backend/src/common\",\"frontend/src/components\",\"frontend/src/contexts\",\"frontend/src/pages\",\"frontend/src/services\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":108507,\"percentage\":66.13},{\"name\":\"CSS\",\"bytes\":50892,\"percentage\":31.01},{\"name\":\"HTML\",\"bytes\":2536,\"percentage\":1.55},{\"name\":\"JavaScript\",\"bytes\":2155,\"percentage\":1.31}],\"dates\":{\"created_at\":\"2025-10-05T22:21:26Z\",\"pushed_at\":\"2026-04-19T03:38:56Z\",\"last_activity_days\":180},\"size\":{\"repository_kb\":314,\"total_items\":113},\"repo_tree\":{\"total_items\":113,\"source_like_items\":112,\"test_like_items\":3,\"docs_like_items\":1,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"frontend\",\"count\":57},{\"name\":\"backend\",\"count\":55},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Authentication\",\"Referral flow\",\"Profile management\"],\"primary_flows\":[\"Register user\",\"Log in\",\"Persist session\",\"Generate referral link\",\"Copy referral link\",\"Access protected profile\"],\"user_roles_count\":2,\"key_features_count\":11,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Strongest NestJS example in the portfolio, Clear JWT and auth structure, Good TypeScript full-stack signal, Well-documented architecture and learning process\nTradeoffs: Smaller domain scope than Delivery System, No explicit production deployment evidence, Automated test evidence is limited\nRecommendation summary EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.\nRecommendation summary PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
+        "content": "Project: Referral System\nEngineering metrics: {\"api_surface\":{\"backend_modules\":[\"auth\",\"users\",\"common\",\"database\"]},\"modules\":[\"backend/src/auth\",\"backend/src/users\",\"backend/src/common\",\"frontend/src/components\",\"frontend/src/contexts\",\"frontend/src/pages\",\"frontend/src/services\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":108507,\"percentage\":66.13},{\"name\":\"CSS\",\"bytes\":50892,\"percentage\":31.01},{\"name\":\"HTML\",\"bytes\":2536,\"percentage\":1.55},{\"name\":\"JavaScript\",\"bytes\":2155,\"percentage\":1.31}],\"dates\":{\"created_at\":\"2025-10-05T22:21:26Z\",\"pushed_at\":\"2026-04-19T03:38:56Z\",\"last_activity_days\":182},\"size\":{\"repository_kb\":314,\"total_items\":113},\"repo_tree\":{\"total_items\":113,\"source_like_items\":112,\"test_like_items\":3,\"docs_like_items\":1,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"frontend\",\"count\":57},{\"name\":\"backend\",\"count\":55},{\"name\":\"README.md\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Authentication\",\"Referral flow\",\"Profile management\"],\"primary_flows\":[\"Register user\",\"Log in\",\"Persist session\",\"Generate referral link\",\"Copy referral link\",\"Access protected profile\"],\"user_roles_count\":2,\"key_features_count\":11,\"domain_areas_count\":3,\"primary_flows_count\":6}\nStrengths: Strongest NestJS example in the portfolio, Clear JWT and auth structure, Good TypeScript full-stack signal, Well-documented architecture and learning process\nTradeoffs: Smaller domain scope than Delivery System, No explicit production deployment evidence, Automated test evidence is limited\nRecommendation summary EN: The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.\nRecommendation summary PT: Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System."
       },
       {
         "id": "project:shizu0n-cv:overview",
@@ -9609,7 +9609,7 @@
           "Prettier",
           "Playwright"
         ],
-        "content": "Project: Shizu0n CV\nEngineering metrics: {\"api_surface\":{\"serverless_routes\":[\"/api/chat\",\"/api/health\"],\"provider_chain\":[\"gemini\",\"groq\"]},\"modules\":[\"src/components\",\"src/contexts\",\"src/hooks\",\"src/sections\",\"api\",\"data\",\"scripts\",\"supabase/migrations\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":179129,\"percentage\":58.47},{\"name\":\"JavaScript\",\"bytes\":85083,\"percentage\":27.77},{\"name\":\"CSS\",\"bytes\":40775,\"percentage\":13.31},{\"name\":\"HTML\",\"bytes\":1360,\"percentage\":0.44}],\"dates\":{\"created_at\":\"2025-10-04T03:42:39Z\",\"pushed_at\":\"2026-10-16T14:09:33Z\",\"last_activity_days\":0},\"size\":{\"repository_kb\":2989,\"total_items\":105},\"repo_tree\":{\"total_items\":105,\"source_like_items\":48,\"test_like_items\":6,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":44},{\"name\":\"public\",\"count\":14},{\"name\":\"data\",\"count\":8},{\"name\":\"supabase\",\"count\":8},{\"name\":\"scripts\",\"count\":6},{\"name\":\"api\",\"count\":4},{\"name\":\".github\",\"count\":3},{\"name\":\".taste-skill\",\"count\":2},{\"name\":\".editorconfig\",\"count\":1},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitattributes\",\"count\":1},{\"name\":\".gitignore\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Portfolio presentation\",\"Project showcase\",\"Contact flow\",\"AI Q&A\"],\"primary_flows\":[\"Read hero and sections\",\"Inspect GitHub-backed stats\",\"Browse selected projects\",\"Send contact message\",\"Ask questions in PT or EN\"],\"user_roles_count\":4,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Most polished frontend in the portfolio, Live deploy and current maintenance, Strongest AI and integration story, Bilingual UX plus chat, Good mix of product presentation and implementation depth\nTradeoffs: Public-content site rather than a business CRUD system, Chat accuracy depends on knowledge curation quality, Local dev chat behavior depends on backend availability\nCost, latency and failure handling EN: Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL), a per-session client response cache, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini → Groq) engages only on quota/overload errors; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice.\nCost, latency and failure handling PT: Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache de respostas no servidor (TTL de 10 min), cache de respostas no cliente por sessão e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini → Groq) acionada apenas em erros de quota/sobrecarga; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.\nRecommendation summary EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG.\nRecommendation summary PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG."
+        "content": "Project: Shizu0n CV\nEngineering metrics: {\"api_surface\":{\"serverless_routes\":[\"/api/chat\",\"/api/health\"],\"provider_chain\":[\"gemini\",\"groq\"]},\"modules\":[\"src/components\",\"src/contexts\",\"src/hooks\",\"src/sections\",\"api\",\"data\",\"scripts\",\"supabase/migrations\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":179158,\"percentage\":58.08},{\"name\":\"JavaScript\",\"bytes\":87150,\"percentage\":28.25},{\"name\":\"CSS\",\"bytes\":40775,\"percentage\":13.22},{\"name\":\"HTML\",\"bytes\":1360,\"percentage\":0.44}],\"dates\":{\"created_at\":\"2025-10-04T03:42:39Z\",\"pushed_at\":\"2026-10-16T15:02:16Z\",\"last_activity_days\":2},\"size\":{\"repository_kb\":2997,\"total_items\":105},\"repo_tree\":{\"total_items\":105,\"source_like_items\":48,\"test_like_items\":6,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"src\",\"count\":44},{\"name\":\"public\",\"count\":14},{\"name\":\"data\",\"count\":8},{\"name\":\"supabase\",\"count\":8},{\"name\":\"scripts\",\"count\":6},{\"name\":\"api\",\"count\":4},{\"name\":\".github\",\"count\":3},{\"name\":\".taste-skill\",\"count\":2},{\"name\":\".editorconfig\",\"count\":1},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitattributes\",\"count\":1},{\"name\":\".gitignore\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Portfolio presentation\",\"Project showcase\",\"Contact flow\",\"AI Q&A\"],\"primary_flows\":[\"Read hero and sections\",\"Inspect GitHub-backed stats\",\"Browse selected projects\",\"Send contact message\",\"Ask questions in PT or EN\"],\"user_roles_count\":4,\"key_features_count\":9,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Most polished frontend in the portfolio, Live deploy and current maintenance, Strongest AI and integration story, Bilingual UX plus chat, Good mix of product presentation and implementation depth\nTradeoffs: Public-content site rather than a business CRUD system, Chat accuracy depends on knowledge curation quality, Local dev chat behavior depends on backend availability\nCost, latency and failure handling EN: Cost: runs entirely on free tiers (Vercel, Supabase, Gemini/Groq). Latency: three cache layers cut calls and response time, a server-side response cache (10-min TTL) and a per-session client cache, both only for the question that opens a conversation, and an embedding cache (in-memory + Supabase table). Failures: 10 req/min per-IP rate limiting; the provider fallback chain (Gemini Flash → Flash-Lite → Groq) moves on after any provider error; vector enrichment degrades silently to the deterministic local context if Supabase/Gemini are unavailable, the chat always answers; a prompt-injection canary replaces compromised responses with a security notice.\nCost, latency and failure handling PT: Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache no servidor (TTL de 10 min) e no cliente por sessão, ambos só para a pergunta que abre a conversa, e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini Flash → Flash-Lite → Groq) que passa ao próximo após qualquer erro; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.\nRecommendation summary EN: The most visually polished and real-world-ready project, combining a strong frontend, serverless backend, and RAG.\nRecommendation summary PT: Projeto mais polido visualmente e mais pronto para uso real, combinando frontend forte, backend serverless e RAG."
       },
       {
         "id": "project:campus-cycle:overview",
@@ -9834,7 +9834,7 @@
           "Vercel",
           "Render"
         ],
-        "content": "Project: CampusCycle\nEngineering metrics: {\"automated_tests\":{\"total_discovered\":64,\"server\":39,\"web\":25},\"deployment\":{\"frontend\":\"Vercel\",\"api\":\"Render\",\"database\":\"Neon PostgreSQL\"},\"modules\":[\"web/src\",\"web/src/lib/offlineQueue\",\"web/src/sw.ts\",\"server/src/routes\",\"server/src/middleware\",\"server/prisma\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":123444,\"percentage\":89.87},{\"name\":\"CSS\",\"bytes\":13421,\"percentage\":9.77},{\"name\":\"HTML\",\"bytes\":493,\"percentage\":0.36}],\"dates\":{\"created_at\":\"2026-07-17T11:08:04Z\",\"pushed_at\":\"2026-07-27T20:12:53Z\",\"last_activity_days\":80},\"size\":{\"repository_kb\":241,\"total_items\":111},\"repo_tree\":{\"total_items\":111,\"source_like_items\":80,\"test_like_items\":14,\"docs_like_items\":5,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"web\",\"count\":59},{\"name\":\"server\",\"count\":42},{\"name\":\"docs\",\"count\":4},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"CLAUDE.md\",\"count\":1},{\"name\":\"DESIGN.md\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"TODOS.md\",\"count\":1},{\"name\":\"docker-compose.yml\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Marketplace discovery\",\"Listing lifecycle\",\"Offline synchronization\",\"Authentication and ownership\",\"Circular-economy impact\"],\"primary_flows\":[\"Browse and filter listings\",\"Create a listing online\",\"Create a listing offline\",\"Synchronize after reconnection\",\"Register or log in\",\"Mark an item sold or donated\",\"Remove an owned listing\"],\"user_roles_count\":2,\"key_features_count\":12,\"domain_areas_count\":5,\"primary_flows_count\":7}\nStrengths: Distinct offline-first product story, Full-stack deployment across independent managed services, Idempotent offline synchronization, Security-aware exclusive identity model, Strong automated and physical-device testing evidence, Project-specific Xilo-Feira visual system, Detailed engineering and AI-governance documentation\nTradeoffs: JWT is stored in localStorage instead of httpOnly cookies, Images use URLs instead of uploads, Background Sync is deliberately out of scope, Server integration tests require a local PostgreSQL instance, Repository documentation has a few stale test-count and phase-status references\nCost, latency and failure handling EN: Reads use NetworkFirst with a four-second timeout; offline writes remain in IndexedDB and follow a state machine. Network failures keep items pending, 401 waits for renewed login, 429 backs off, 5xx has bounded retries, and other 4xx responses become visible failures. Client UUIDs and ownership rules make resubmission idempotent.\nCost, latency and failure handling PT: Leituras usam NetworkFirst com timeout de quatro segundos; escritas offline permanecem no IndexedDB e seguem uma máquina de estados. Falhas de rede mantêm o item pendente, 401 aguarda novo login, 429 aplica backoff, 5xx tem tentativas limitadas e outros 4xx viram falhas visíveis. UUID do cliente e regra de propriedade tornam reenvios idempotentes.\nRecommendation summary EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests.\nRecommendation summary PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos."
+        "content": "Project: CampusCycle\nEngineering metrics: {\"automated_tests\":{\"total_discovered\":64,\"server\":39,\"web\":25},\"deployment\":{\"frontend\":\"Vercel\",\"api\":\"Render\",\"database\":\"Neon PostgreSQL\"},\"modules\":[\"web/src\",\"web/src/lib/offlineQueue\",\"web/src/sw.ts\",\"server/src/routes\",\"server/src/middleware\",\"server/prisma\"],\"languages\":[{\"name\":\"TypeScript\",\"bytes\":123444,\"percentage\":89.87},{\"name\":\"CSS\",\"bytes\":13421,\"percentage\":9.77},{\"name\":\"HTML\",\"bytes\":493,\"percentage\":0.36}],\"dates\":{\"created_at\":\"2026-07-17T11:08:04Z\",\"pushed_at\":\"2026-07-27T20:12:53Z\",\"last_activity_days\":82},\"size\":{\"repository_kb\":241,\"total_items\":111},\"repo_tree\":{\"total_items\":111,\"source_like_items\":80,\"test_like_items\":14,\"docs_like_items\":5,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\"web\",\"count\":59},{\"name\":\"server\",\"count\":42},{\"name\":\"docs\",\"count\":4},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"CLAUDE.md\",\"count\":1},{\"name\":\"DESIGN.md\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"TODOS.md\",\"count\":1},{\"name\":\"docker-compose.yml\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Marketplace discovery\",\"Listing lifecycle\",\"Offline synchronization\",\"Authentication and ownership\",\"Circular-economy impact\"],\"primary_flows\":[\"Browse and filter listings\",\"Create a listing online\",\"Create a listing offline\",\"Synchronize after reconnection\",\"Register or log in\",\"Mark an item sold or donated\",\"Remove an owned listing\"],\"user_roles_count\":2,\"key_features_count\":12,\"domain_areas_count\":5,\"primary_flows_count\":7}\nStrengths: Distinct offline-first product story, Full-stack deployment across independent managed services, Idempotent offline synchronization, Security-aware exclusive identity model, Strong automated and physical-device testing evidence, Project-specific Xilo-Feira visual system, Detailed engineering and AI-governance documentation\nTradeoffs: JWT is stored in localStorage instead of httpOnly cookies, Images use URLs instead of uploads, Background Sync is deliberately out of scope, Server integration tests require a local PostgreSQL instance, Repository documentation has a few stale test-count and phase-status references\nCost, latency and failure handling EN: Reads use NetworkFirst with a four-second timeout; offline writes remain in IndexedDB and follow a state machine. Network failures keep items pending, 401 waits for renewed login, 429 backs off, 5xx has bounded retries, and other 4xx responses become visible failures. Client UUIDs and ownership rules make resubmission idempotent.\nCost, latency and failure handling PT: Leituras usam NetworkFirst com timeout de quatro segundos; escritas offline permanecem no IndexedDB e seguem uma máquina de estados. Falhas de rede mantêm o item pendente, 401 aguarda novo login, 429 aplica backoff, 5xx tem tentativas limitadas e outros 4xx viram falhas visíveis. UUID do cliente e regra de propriedade tornam reenvios idempotentes.\nRecommendation summary EN: The strongest full-stack showcase for PWA, offline resilience, and product delivery: a deployed university marketplace with idempotent synchronization and 64 discovered tests.\nRecommendation summary PT: Vitrine full stack mais forte para PWA, resiliência offline e entrega de produto: marketplace universitário implantado com sincronização idempotente e 64 testes descobertos."
       },
       {
         "id": "project:react-agent:overview",
@@ -10079,7 +10079,7 @@
           "Retrieval-Augmented Generation",
           "Agent Memory"
         ],
-        "content": "Project: ReAct Agent\nEngineering metrics: {\"graph\":{\"nodes\":550,\"internal_edges\":913,\"communities\":39},\"testing\":{\"backend_unit_tests\":154,\"eval_cases\":22,\"eval_task_success_pct\":100,\"eval_tool_selection_pct\":100},\"modules\":[\"backend/agent\",\"backend/api\",\"backend/evals\",\"frontend/src/hooks\",\"frontend/src/components\"],\"languages\":[{\"name\":\"Python\",\"bytes\":260742,\"percentage\":59.65},{\"name\":\"TypeScript\",\"bytes\":156025,\"percentage\":35.69},{\"name\":\"CSS\",\"bytes\":10776,\"percentage\":2.47},{\"name\":\"JavaScript\",\"bytes\":7882,\"percentage\":1.8},{\"name\":\"Shell\",\"bytes\":863,\"percentage\":0.2},{\"name\":\"HTML\",\"bytes\":836,\"percentage\":0.19}],\"dates\":{\"created_at\":\"2026-04-26T22:33:25Z\",\"pushed_at\":\"2026-10-15T00:13:53Z\",\"last_activity_days\":1},\"size\":{\"repository_kb\":980,\"total_items\":208},\"repo_tree\":{\"total_items\":208,\"source_like_items\":100,\"test_like_items\":14,\"docs_like_items\":3,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\".planning\",\"count\":100},{\"name\":\"frontend\",\"count\":51},{\"name\":\"backend\",\"count\":46},{\"name\":\"api\",\"count\":3},{\"name\":\"scripts\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"package.json\",\"count\":1},{\"name\":\"pyrightconfig.json\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"vercel.json\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Agent orchestration\",\"Tool execution\",\"Cross-conversation memory\",\"Document RAG\",\"Trace observability\",\"MCP tool discovery\",\"Evaluation\"],\"primary_flows\":[\"Send a prompt\",\"Run the ReAct loop\",\"Call tools\",\"Read and write long-term memory\",\"Upload a document and ask cited questions about it\",\"Stream reasoning/action trace\",\"Replay a past run from history\",\"Discover MCP tools\",\"Run labeled evaluation cases\"],\"user_roles_count\":3,\"key_features_count\":13,\"domain_areas_count\":7,\"primary_flows_count\":9}\nStrengths: Reasoning/tool trace treated as a first-class product surface, Cross-conversation memory with memory operations visible in the trace, Document RAG with cited answers and a no-hallucination guard, Persisted replayable traces with provider-fallback capture, Dynamic MCP tool discovery rendered identically to native tools, 100% evaluation baseline on 22 labeled cases plus 154 backend tests, Entire system operated on $0 free-tier spend, Live public deployment\nTradeoffs: Python execution remains the most sensitive security surface despite subprocess isolation, Model-provider APIs and embedding quotas are unstable external dependencies, No end-user authentication layer (anonymous browser-scoped identity)\nCost, latency and failure handling EN: Cost: $0 total, the whole system runs on free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), with that constraint treated as part of the engineering. Latency: every trace step records elapsed_ms, tokens, and estimated cost via a UsageTracker. Failures: a free-provider fallback chain (Gemini → Groq → GitHub Models) with fallback events captured in the trace; 10 req/min/IP rate limiting (slowapi); the loop is hard-capped at 10 iterations; a Vercel keep-alive cron prevents the Supabase free-tier 7-day pause; embedding batching with 429 backoff; graceful degradation, without the DB pool/store the agent still answers, just without memory/RAG, instead of breaking.\nCost, latency and failure handling PT: Custo: US$ 0 total, operação inteira em free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), com a restrição tratada como parte da engenharia. Latência: cada passo do trace registra elapsed_ms, tokens e custo estimado via UsageTracker. Falhas: cadeia de fallback de provedores (Gemini → Groq → GitHub Models) com eventos de fallback capturados no trace; rate limiting de 10 req/min/IP (slowapi); loop limitado a 10 iterações; cron keep-alive na Vercel evita a pausa de 7 dias do Supabase free; batching de embeddings com backoff em 429; degradação graciosa, sem pool/store de banco, o agente continua respondendo sem memória/RAG em vez de quebrar.\nRecommendation summary EN: The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery, all on free tier, with evaluation over the real graph and public deployment.\nRecommendation summary PT: Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP, tudo em free-tier, com avaliação sobre o grafo real e deploy público."
+        "content": "Project: ReAct Agent\nEngineering metrics: {\"graph\":{\"nodes\":550,\"internal_edges\":913,\"communities\":39},\"testing\":{\"backend_unit_tests\":154,\"eval_cases\":22,\"eval_task_success_pct\":100,\"eval_tool_selection_pct\":100},\"modules\":[\"backend/agent\",\"backend/api\",\"backend/evals\",\"frontend/src/hooks\",\"frontend/src/components\"],\"languages\":[{\"name\":\"Python\",\"bytes\":260742,\"percentage\":59.65},{\"name\":\"TypeScript\",\"bytes\":156025,\"percentage\":35.69},{\"name\":\"CSS\",\"bytes\":10776,\"percentage\":2.47},{\"name\":\"JavaScript\",\"bytes\":7882,\"percentage\":1.8},{\"name\":\"Shell\",\"bytes\":863,\"percentage\":0.2},{\"name\":\"HTML\",\"bytes\":836,\"percentage\":0.19}],\"dates\":{\"created_at\":\"2026-04-26T22:33:25Z\",\"pushed_at\":\"2026-10-15T00:13:53Z\",\"last_activity_days\":3},\"size\":{\"repository_kb\":980,\"total_items\":208},\"repo_tree\":{\"total_items\":208,\"source_like_items\":100,\"test_like_items\":14,\"docs_like_items\":3,\"env_example_count\":2,\"top_level_areas\":[{\"name\":\".planning\",\"count\":100},{\"name\":\"frontend\",\"count\":51},{\"name\":\"backend\",\"count\":46},{\"name\":\"api\",\"count\":3},{\"name\":\"scripts\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"package.json\",\"count\":1},{\"name\":\"pyrightconfig.json\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"vercel.json\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Agent orchestration\",\"Tool execution\",\"Cross-conversation memory\",\"Document RAG\",\"Trace observability\",\"MCP tool discovery\",\"Evaluation\"],\"primary_flows\":[\"Send a prompt\",\"Run the ReAct loop\",\"Call tools\",\"Read and write long-term memory\",\"Upload a document and ask cited questions about it\",\"Stream reasoning/action trace\",\"Replay a past run from history\",\"Discover MCP tools\",\"Run labeled evaluation cases\"],\"user_roles_count\":3,\"key_features_count\":13,\"domain_areas_count\":7,\"primary_flows_count\":9}\nStrengths: Reasoning/tool trace treated as a first-class product surface, Cross-conversation memory with memory operations visible in the trace, Document RAG with cited answers and a no-hallucination guard, Persisted replayable traces with provider-fallback capture, Dynamic MCP tool discovery rendered identically to native tools, 100% evaluation baseline on 22 labeled cases plus 154 backend tests, Entire system operated on $0 free-tier spend, Live public deployment\nTradeoffs: Python execution remains the most sensitive security surface despite subprocess isolation, Model-provider APIs and embedding quotas are unstable external dependencies, No end-user authentication layer (anonymous browser-scoped identity)\nCost, latency and failure handling EN: Cost: $0 total, the whole system runs on free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), with that constraint treated as part of the engineering. Latency: every trace step records elapsed_ms, tokens, and estimated cost via a UsageTracker. Failures: a free-provider fallback chain (Gemini → Groq → GitHub Models) with fallback events captured in the trace; 10 req/min/IP rate limiting (slowapi); the loop is hard-capped at 10 iterations; a Vercel keep-alive cron prevents the Supabase free-tier 7-day pause; embedding batching with 429 backoff; graceful degradation, without the DB pool/store the agent still answers, just without memory/RAG, instead of breaking.\nCost, latency and failure handling PT: Custo: US$ 0 total, operação inteira em free tiers (Gemini, Groq, GitHub Models, Supabase, Vercel), com a restrição tratada como parte da engenharia. Latência: cada passo do trace registra elapsed_ms, tokens e custo estimado via UsageTracker. Falhas: cadeia de fallback de provedores (Gemini → Groq → GitHub Models) com eventos de fallback capturados no trace; rate limiting de 10 req/min/IP (slowapi); loop limitado a 10 iterações; cron keep-alive na Vercel evita a pausa de 7 dias do Supabase free; batching de embeddings com backoff em 429; degradação graciosa, sem pool/store de banco, o agente continua respondendo sem memória/RAG em vez de quebrar.\nRecommendation summary EN: The best showcase of agent engineering: a ReAct loop in LangGraph with an observable trace, cross-conversation memory, document RAG with citations, persisted replayable traces, and MCP tool discovery, all on free tier, with evaluation over the real graph and public deployment.\nRecommendation summary PT: Melhor vitrine de engenharia de agentes: laço ReAct em LangGraph com traço observável, memória entre conversas, RAG de documentos com citações, traces persistidos com replay e descoberta de ferramentas via MCP, tudo em free-tier, com avaliação sobre o grafo real e deploy público."
       },
       {
         "id": "project:advanced-rag:overview",
@@ -10244,7 +10244,7 @@
           "Retrieval-Augmented Generation",
           "LLM Evaluation"
         ],
-        "content": "Project: Advanced RAG\nEngineering metrics: {\"graph\":{\"nodes\":1206,\"internal_edges\":2725,\"communities\":46},\"modules\":[\"source_loader\",\"ingestion\",\"retrieval\",\"pipeline\",\"synthesis\",\"evaluate\",\"cloud_ragas\",\"app\"],\"languages\":[{\"name\":\"Python\",\"bytes\":816262,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T18:18:09Z\",\"pushed_at\":\"2026-10-14T23:21:02Z\",\"last_activity_days\":1},\"size\":{\"repository_kb\":1643,\"total_items\":22},\"repo_tree\":{\"total_items\":22,\"source_like_items\":0,\"test_like_items\":9,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"tests\",\"count\":9},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".python-version\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"app.py\",\"count\":1},{\"name\":\"cloud_ragas.py\",\"count\":1},{\"name\":\"evaluate.py\",\"count\":1},{\"name\":\"ingestion.py\",\"count\":1},{\"name\":\"pipeline.py\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"retrieval.py\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Source ingestion\",\"Indexing\",\"Hybrid retrieval\",\"Answer synthesis\",\"Evaluation\"],\"primary_flows\":[\"Load and persist sources\",\"Chunk and index into ChromaDB\",\"Hybrid retrieve and rerank\",\"Synthesize an answer with fallback\",\"Score against golden datasets\",\"Review evaluation in Streamlit\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":5,\"primary_flows_count\":6}\nStrengths: Treats RAG as a full engineering system, not a single vector-search demo, Works offline with honest lexical metrics and extractive fallback, Hybrid retrieval ablatable into individual strategies, Extensive test suite with fake Streamlit/runtime/provider components, Live public Streamlit deployment\nTradeoffs: Streamlit UI is utilitarian rather than highly polished, Some evaluation/UI modules show low community cohesion and could be decomposed, Persistent Chroma data needs a deliberate hosting target\nCost, latency and failure handling EN: Cost: designed to run on $0, the whole system stays useful without paid providers, with offline lexical metrics and an extractive fallback when no LLM is available. Failures: cloud RAGAS is opt-in, with bounded execution and explicit degradation states (offline evaluation never silently reports cloud metrics); ChromaDB corruption or missing collections are handled through reset-and-retry paths; the reranker is surfaced honestly instead of implying a cross-encoder is always active.\nCost, latency and failure handling PT: Custo: projetado para operar com US$ 0, o sistema inteiro continua útil sem provedores pagos, com métricas léxicas offline e fallback extrativo quando nenhum LLM está disponível. Falhas: RAGAS na nuvem é opt-in, com execução limitada e estados de degradação explícitos (a avaliação offline nunca reporta silenciosamente métricas de nuvem); corrupção ou coleção ausente no ChromaDB é tratada com caminhos de reset e retry; o reranker é exposto honestamente em vez de fingir que um cross-encoder está sempre ativo.\nRecommendation summary EN: RAG treated as a full engineering system, with hybrid retrieval, honest offline/RAGAS evaluation, and public deployment.\nRecommendation summary PT: RAG tratado como sistema de engenharia completo, com retrieval híbrido, avaliação honesta offline/RAGAS e deploy público."
+        "content": "Project: Advanced RAG\nEngineering metrics: {\"graph\":{\"nodes\":1206,\"internal_edges\":2725,\"communities\":46},\"modules\":[\"source_loader\",\"ingestion\",\"retrieval\",\"pipeline\",\"synthesis\",\"evaluate\",\"cloud_ragas\",\"app\"],\"languages\":[{\"name\":\"Python\",\"bytes\":816262,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T18:18:09Z\",\"pushed_at\":\"2026-10-14T23:21:02Z\",\"last_activity_days\":3},\"size\":{\"repository_kb\":1643,\"total_items\":22},\"repo_tree\":{\"total_items\":22,\"source_like_items\":0,\"test_like_items\":9,\"docs_like_items\":1,\"env_example_count\":1,\"top_level_areas\":[{\"name\":\"tests\",\"count\":9},{\"name\":\".env.example\",\"count\":1},{\"name\":\".gitignore\",\"count\":1},{\"name\":\".python-version\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"app.py\",\"count\":1},{\"name\":\"cloud_ragas.py\",\"count\":1},{\"name\":\"evaluate.py\",\"count\":1},{\"name\":\"ingestion.py\",\"count\":1},{\"name\":\"pipeline.py\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1},{\"name\":\"retrieval.py\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Source ingestion\",\"Indexing\",\"Hybrid retrieval\",\"Answer synthesis\",\"Evaluation\"],\"primary_flows\":[\"Load and persist sources\",\"Chunk and index into ChromaDB\",\"Hybrid retrieve and rerank\",\"Synthesize an answer with fallback\",\"Score against golden datasets\",\"Review evaluation in Streamlit\"],\"user_roles_count\":3,\"key_features_count\":9,\"domain_areas_count\":5,\"primary_flows_count\":6}\nStrengths: Treats RAG as a full engineering system, not a single vector-search demo, Works offline with honest lexical metrics and extractive fallback, Hybrid retrieval ablatable into individual strategies, Extensive test suite with fake Streamlit/runtime/provider components, Live public Streamlit deployment\nTradeoffs: Streamlit UI is utilitarian rather than highly polished, Some evaluation/UI modules show low community cohesion and could be decomposed, Persistent Chroma data needs a deliberate hosting target\nCost, latency and failure handling EN: Cost: designed to run on $0, the whole system stays useful without paid providers, with offline lexical metrics and an extractive fallback when no LLM is available. Failures: cloud RAGAS is opt-in, with bounded execution and explicit degradation states (offline evaluation never silently reports cloud metrics); ChromaDB corruption or missing collections are handled through reset-and-retry paths; the reranker is surfaced honestly instead of implying a cross-encoder is always active.\nCost, latency and failure handling PT: Custo: projetado para operar com US$ 0, o sistema inteiro continua útil sem provedores pagos, com métricas léxicas offline e fallback extrativo quando nenhum LLM está disponível. Falhas: RAGAS na nuvem é opt-in, com execução limitada e estados de degradação explícitos (a avaliação offline nunca reporta silenciosamente métricas de nuvem); corrupção ou coleção ausente no ChromaDB é tratada com caminhos de reset e retry; o reranker é exposto honestamente em vez de fingir que um cross-encoder está sempre ativo.\nRecommendation summary EN: RAG treated as a full engineering system, with hybrid retrieval, honest offline/RAGAS evaluation, and public deployment.\nRecommendation summary PT: RAG tratado como sistema de engenharia completo, com retrieval híbrido, avaliação honesta offline/RAGAS e deploy público."
       },
       {
         "id": "project:phi3-mini-sql:overview",
@@ -10404,7 +10404,7 @@
           "Hugging Face",
           "Text-to-SQL"
         ],
-        "content": "Project: Phi-3 Mini SQL Generator\nEngineering metrics: {\"training\":{\"base_model\":\"Phi-3-mini-4k-instruct (3.8B)\",\"method\":\"QLoRA (4-bit NF4)\",\"lora_rank\":16,\"lora_alpha\":32,\"hardware\":\"NVIDIA T4 (Google Colab)\",\"training_minutes\":21},\"modules\":[\"01_dataset_prep\",\"02_qlora_training\",\"03_evaluation\"],\"languages\":[{\"name\":\"Jupyter Notebook\",\"bytes\":590242,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T03:25:00Z\",\"pushed_at\":\"2026-05-17T03:33:24Z\",\"last_activity_days\":152},\"size\":{\"repository_kb\":110,\"total_items\":16},\"repo_tree\":{\"total_items\":16,\"source_like_items\":0,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":0,\"top_level_areas\":[{\"name\":\"notebooks\",\"count\":7},{\"name\":\"results\",\"count\":3},{\"name\":\"configs\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Dataset preparation\",\"Fine-tuning\",\"Evaluation\",\"Model publication\"],\"primary_flows\":[\"Prepare instruction dataset\",\"Train QLoRA adapter\",\"Evaluate exact match\",\"Merge adapter into base\",\"Publish to Hugging Face Hub\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Large measurable gain: 2% to 73.5% exact match, Efficient 4-bit training on a single free-tier T4, Complete pipeline from dataset to published artifacts, Adapter and merged model both published on the Hub, Public Hugging Face Spaces demo and detailed documentation\nTradeoffs: Trained on SELECT queries only (no INSERT/UPDATE/DELETE/DDL), Best on low-to-medium complexity queries; weaker on multi-JOINs and nested subqueries, Not tested against dialect-specific SQL (PostgreSQL, MySQL), Still misses 53 of the 200 held-out questions (26.5%) on exact match, Observed failure on the hosted demo (14 Oct 2026): asked for Engineering employees earning over 90,000, it dropped both conditions (department and salary)\nCost, latency and failure handling EN: Cost: $0 training, Colab free tier on a single T4 GPU, within tight daily usage caps; 4-bit NF4 quantization is what made training a 3.8B model feasible on that hardware. Training latency: ~21 minutes for 1,000 train + 200 validation examples. Known, documented failure limits: SELECT-only (no INSERT/UPDATE/DELETE/DDL), strongest on low-to-medium query complexity, untested on dialect-specific SQL, limitations published alongside the model rather than hidden.\nCost, latency and failure handling PT: Custo: US$ 0 de treino, Colab free tier com uma única GPU T4, dentro de limites diários apertados de uso; a quantização 4-bit NF4 foi o que tornou viável treinar um modelo de 3,8B nesse hardware. Latência de treino: ~21 minutos para 1.000 exemplos de treino + 200 de validação. Falhas/limites conhecidos e documentados: só SELECT (sem INSERT/UPDATE/DELETE/DDL), melhor em queries de complexidade baixa a média, não testado em dialetos específicos, limitações publicadas junto com o modelo em vez de escondidas.\nRecommendation summary EN: The best showcase of ML ops and efficient fine-tuning: a QLoRA of Phi-3 Mini for SQL with a measurable jump from 2% to 73.5%.\nRecommendation summary PT: Melhor vitrine de ML ops e fine-tuning eficiente: QLoRA do Phi-3 Mini para SQL com ganho mensurável de 2% para 73,5%."
+        "content": "Project: Phi-3 Mini SQL Generator\nEngineering metrics: {\"training\":{\"base_model\":\"Phi-3-mini-4k-instruct (3.8B)\",\"method\":\"QLoRA (4-bit NF4)\",\"lora_rank\":16,\"lora_alpha\":32,\"hardware\":\"NVIDIA T4 (Google Colab)\",\"training_minutes\":21},\"modules\":[\"01_dataset_prep\",\"02_qlora_training\",\"03_evaluation\"],\"languages\":[{\"name\":\"Jupyter Notebook\",\"bytes\":590242,\"percentage\":100}],\"dates\":{\"created_at\":\"2026-05-17T03:25:00Z\",\"pushed_at\":\"2026-05-17T03:33:24Z\",\"last_activity_days\":154},\"size\":{\"repository_kb\":110,\"total_items\":16},\"repo_tree\":{\"total_items\":16,\"source_like_items\":0,\"test_like_items\":0,\"docs_like_items\":1,\"env_example_count\":0,\"top_level_areas\":[{\"name\":\"notebooks\",\"count\":7},{\"name\":\"results\",\"count\":3},{\"name\":\"configs\",\"count\":2},{\"name\":\".gitignore\",\"count\":1},{\"name\":\"LICENSE\",\"count\":1},{\"name\":\"README.md\",\"count\":1},{\"name\":\"requirements.txt\",\"count\":1}]}}\nFunctional metrics: {\"domain_areas\":[\"Dataset preparation\",\"Fine-tuning\",\"Evaluation\",\"Model publication\"],\"primary_flows\":[\"Prepare instruction dataset\",\"Train QLoRA adapter\",\"Evaluate exact match\",\"Merge adapter into base\",\"Publish to Hugging Face Hub\"],\"user_roles_count\":3,\"key_features_count\":8,\"domain_areas_count\":4,\"primary_flows_count\":5}\nStrengths: Large measurable gain: 2% to 73.5% exact match, Efficient 4-bit training on a single free-tier T4, Complete pipeline from dataset to published artifacts, Adapter and merged model both published on the Hub, Public Hugging Face Spaces demo and detailed documentation\nTradeoffs: Trained on SELECT queries only (no INSERT/UPDATE/DELETE/DDL), Best on low-to-medium complexity queries; weaker on multi-JOINs and nested subqueries, Not tested against dialect-specific SQL (PostgreSQL, MySQL), Still misses 53 of the 200 held-out questions (26.5%) on exact match, Observed failure on the hosted demo (14 Oct 2026): asked for Engineering employees earning over 90,000, it dropped both conditions (department and salary)\nCost, latency and failure handling EN: Cost: $0 training, Colab free tier on a single T4 GPU, within tight daily usage caps; 4-bit NF4 quantization is what made training a 3.8B model feasible on that hardware. Training latency: ~21 minutes for 1,000 train + 200 validation examples. Known, documented failure limits: SELECT-only (no INSERT/UPDATE/DELETE/DDL), strongest on low-to-medium query complexity, untested on dialect-specific SQL, limitations published alongside the model rather than hidden.\nCost, latency and failure handling PT: Custo: US$ 0 de treino, Colab free tier com uma única GPU T4, dentro de limites diários apertados de uso; a quantização 4-bit NF4 foi o que tornou viável treinar um modelo de 3,8B nesse hardware. Latência de treino: ~21 minutos para 1.000 exemplos de treino + 200 de validação. Falhas/limites conhecidos e documentados: só SELECT (sem INSERT/UPDATE/DELETE/DDL), melhor em queries de complexidade baixa a média, não testado em dialetos específicos, limitações publicadas junto com o modelo em vez de escondidas.\nRecommendation summary EN: The best showcase of ML ops and efficient fine-tuning: a QLoRA of Phi-3 Mini for SQL with a measurable jump from 2% to 73.5%.\nRecommendation summary PT: Melhor vitrine de ML ops e fine-tuning eficiente: QLoRA do Phi-3 Mini para SQL com ganho mensurável de 2% para 73,5%."
       },
       {
         "id": "ranking:measured_results",
