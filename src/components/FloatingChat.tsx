@@ -228,7 +228,7 @@ export default function FloatingChat() {
   const [inputValue, setInputValue] = useState('');
   const [countdown, setCountdown] = useState(0);
 
-  const { messages, isLoading, error, errorCode, canRetry, retry, quotaInfo, sendMessage } = useChat();
+  const { messages, isLoading, error, errorCode, canRetry, retry, quotaInfo, sendMessage } = useChat(language);
   const panelRef = useRef<HTMLElement>(null);
   const logRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);

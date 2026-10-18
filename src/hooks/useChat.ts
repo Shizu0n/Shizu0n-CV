@@ -73,6 +73,14 @@ const extractApiErrorMessage = async (response: Response): Promise<{ error: stri
   return { error: 'Failed to send message.' };
 };
 
+// Splits buffered stream text into complete lines; the unfinished tail waits for the next read,
+// so a `data:` line cut between two network reads is not dropped.
+export const takeLines = (buffer: string): [string[], string] => {
+  const lines = buffer.split('\n');
+  const rest = lines.pop() ?? '';
+  return [lines, rest];
+};
+
 const buildRequestMessages = (messages: ChatMessage[], userMessage: ChatMessage) => {
   return [...messages, userMessage]
     .filter(message => !message.failed && message.content.trim().length > 0)
@@ -108,7 +116,13 @@ const classifyErrorCode = (err: any): ChatErrorCode => {
   return 'generic';
 };
 
-export function useChat() {
+interface CachedAnswer {
+  content: string;
+  intent: string | null;
+  suggestions?: string[];
+}
+
+export function useChat(language: 'en' | 'pt' = 'en') {
   const [messages, setMessages] = useState<ChatMessage[]>(() => {
     try {
       const saved = sessionStorage.getItem('chat_history');
@@ -132,19 +146,19 @@ export function useChat() {
     sessionStorage.setItem('chat_history', JSON.stringify(messages.slice(-20)));
   }, [messages]);
 
-  const getLocalCache = (text: string) => {
+  const getLocalCache = (key: string): CachedAnswer | null => {
     try {
-      const cacheBytes = sessionStorage.getItem(`chat_cache_${text.trim().toLowerCase()}`);
+      const cacheBytes = sessionStorage.getItem(key);
       if (cacheBytes) return JSON.parse(cacheBytes);
     } catch (e) {
       // ignore
     }
     return null;
   };
-  
-  const setLocalCache = (text: string, response: string) => {
+
+  const setLocalCache = (key: string, answer: CachedAnswer) => {
     try {
-      sessionStorage.setItem(`chat_cache_${text.trim().toLowerCase()}`, JSON.stringify(response));
+      sessionStorage.setItem(key, JSON.stringify(answer));
     } catch (e) {
       // ignore
     }
@@ -187,12 +201,13 @@ export function useChat() {
       }
     ]);
 
-    // Client-side cache check
-    const cachedResponse = getLocalCache(text);
-    if (cachedResponse) {
+    // Only an opening question is cached: a follow-up's answer depends on the conversation.
+    const cacheKey = messages.length === 0 ? `chat_cache_${language}_${text.trim().toLowerCase()}` : null;
+    const cachedAnswer = cacheKey ? getLocalCache(cacheKey) : null;
+    if (cachedAnswer) {
       setTimeout(() => {
         setMessages(prev => prev.map(m =>
-          m.id === assistantMessageId ? { ...m, content: cachedResponse } : m
+          m.id === assistantMessageId ? { ...m, ...cachedAnswer } : m
         ));
         setIsLoading(false);
       }, 400); // Small natural delay
@@ -212,7 +227,8 @@ export function useChat() {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              messages: buildRequestMessages(messages, userMessage)
+              messages: buildRequestMessages(messages, userMessage),
+              language
             })
           });
 
@@ -271,12 +287,16 @@ export function useChat() {
           if (!reader) throw new Error('No stream available.');
 
           let done = false;
+          let pending = '';
+          let answerSuggestions: string[] | undefined;
           while (!done) {
             const { value, done: readerDone } = await reader.read();
             done = readerDone;
-            if (value) {
-              const chunkString = decoder.decode(value, { stream: true });
-              const lines = chunkString.split('\n');
+            pending += value ? decoder.decode(value, { stream: true }) : decoder.decode();
+            if (pending) {
+              // At the end of the stream the tail is a complete line too.
+              const [lines, rest] = takeLines(done ? `${pending}\n` : pending);
+              pending = rest;
               for (const line of lines) {
                 if (line.startsWith('data: ')) {
                   const dataStr = line.slice(6);
@@ -294,20 +314,21 @@ export function useChat() {
                     }
                     if (Array.isArray(parsed.suggestions)) {
                       const suggestions = parsed.suggestions.filter((s: unknown): s is string => typeof s === 'string')
+                      answerSuggestions = suggestions;
                       setMessages(prev => prev.map(m =>
                         m.id === assistantMessageId ? { ...m, suggestions } : m
                       ));
                     }
                   } catch {
-                    // Ignore incomplete chunks
+                    // Ignore malformed lines
                   }
                 }
               }
             }
           }
           
-          if (currentAssistantText.trim()) {
-            setLocalCache(text, currentAssistantText);
+          if (cacheKey && currentAssistantText.trim()) {
+            setLocalCache(cacheKey, { content: currentAssistantText, intent: responseIntent, suggestions: answerSuggestions });
           }
 
           return;
@@ -354,7 +375,7 @@ export function useChat() {
     } finally {
       setIsLoading(false);
     }
-  }, [messages]);
+  }, [messages, language]);
 
   const retry = useCallback(() => {
     if (!lastFailedText) return;
