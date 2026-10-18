@@ -445,6 +445,13 @@ function getStackChunks(knowledge, stackMentions) {
   );
 }
 
+// Results and tradeoffs right after the overview: they are what visitors ask about most.
+const FACET_ORDER = ['overview', 'metrics-recommendation', 'problem-solution', 'architecture-features', 'stack-usage'];
+const facetRank = (chunk) => (FACET_ORDER.includes(chunk.facet) ? FACET_ORDER.indexOf(chunk.facet) : FACET_ORDER.length);
+
+// Chunks come most specific first, because fitInstruction trims from the end for Groq's small
+// budget: until 2026-10-18 the generic narrative came first and a follow-up about a project lost
+// every chunk of that project. The canonical profile is not here; buildSystemInstruction always sends it.
 export function buildLocalContext(knowledge, analysis) {
   const selected = [];
   const addChunk = (chunk) => {
@@ -453,31 +460,15 @@ export function buildLocalContext(knowledge, analysis) {
     }
   };
 
-  addChunk(getChunkById(knowledge, 'identity:canonical-profile'));
-
   // "What did he measure?" needs the exact numbers whatever the intent ("projetos" makes it
   // a project question), and early, before the 18-chunk cut.
   if (analysis.criterion === 'measured_results') {
     addChunk(getChunkById(knowledge, 'ranking:measured_results'));
   }
 
-  if (analysis.intent === 'personal' || analysis.intent === 'contact') {
-    addChunk(getChunkById(knowledge, 'skills:global-summary'));
-  }
-
-  // Grounded narrative for soft/personal questions (motivation, goals, learning,
-  // process, availability) so the model answers from documented facts instead of
-  // fabricating — covers the open-ended/fallback path too.
-  if (analysis.intent === 'personal' || analysis.intent === 'contact' || analysis.intent === 'fallback') {
-    addChunk(getChunkById(knowledge, 'identity:about-narrative'));
-    addChunk(getChunkById(knowledge, 'identity:ways-of-working'));
-  }
-
-  if (analysis.projectIds.length) {
-    for (const projectId of analysis.projectIds) {
-      for (const chunk of getProjectChunks(knowledge, projectId)) {
-        addChunk(chunk);
-      }
+  for (const projectId of analysis.projectIds) {
+    for (const chunk of getProjectChunks(knowledge, projectId).sort((a, b) => facetRank(a) - facetRank(b))) {
+      addChunk(chunk);
     }
   }
 
@@ -490,7 +481,6 @@ export function buildLocalContext(knowledge, analysis) {
   }
 
   if (analysis.intent === 'stack_lookup') {
-    addChunk(getChunkById(knowledge, 'skills:global-summary'));
     if (analysis.stackMentions.length) {
       for (const chunk of getStackChunks(knowledge, analysis.stackMentions)) {
         addChunk(chunk);
@@ -517,8 +507,19 @@ export function buildLocalContext(knowledge, analysis) {
     }
   }
 
-  if (analysis.intent === 'fallback') {
+  // Grounded narrative for soft/personal questions (motivation, goals, learning,
+  // process, availability) so the model answers from documented facts instead of
+  // fabricating; covers the open-ended/fallback path too.
+  if (analysis.intent === 'personal' || analysis.intent === 'contact' || analysis.intent === 'fallback') {
+    addChunk(getChunkById(knowledge, 'identity:about-narrative'));
+    addChunk(getChunkById(knowledge, 'identity:ways-of-working'));
+  }
+
+  if (['personal', 'contact', 'fallback', 'stack_lookup'].includes(analysis.intent)) {
     addChunk(getChunkById(knowledge, 'skills:global-summary'));
+  }
+
+  if (analysis.intent === 'fallback') {
     addChunk(getChunkById(knowledge, 'ranking:overall'));
   }
 
@@ -693,7 +694,7 @@ function buildContextBlock(localChunks, vectorChunks) {
   return lines.join('\n');
 }
 
-function buildSystemInstruction(prompt, knowledge, analysis, localChunks, vectorChunks, canary = crypto.randomUUID ? crypto.randomUUID() : `canary-${Date.now()}`) {
+export function buildSystemInstruction(prompt, knowledge, analysis, localChunks, vectorChunks, canary = crypto.randomUUID ? crypto.randomUUID() : `canary-${Date.now()}`) {
   const instruction = [
     prompt,
     '',
@@ -825,11 +826,11 @@ async function generateSuggestions(userText, answerText, language) {
 }
 
 // About 6,000 prompt tokens at ~3.5 characters per token, leaving room for the 1,024-token answer.
-const GROQ_PROMPT_CHARS = 21000;
+export const GROQ_PROMPT_CHARS = 21000;
 
-// Drops the least specific context first (retrieved chunks, then local ones from the end,
-// always keeping the identity chunk) until the prompt fits.
-function fitInstruction(build, localChunks, vectorChunks) {
+// Drops the least specific context first (retrieved chunks, then local ones from the end, which
+// buildLocalContext orders most specific first, always keeping the first one) until the prompt fits.
+export function fitInstruction(build, localChunks, vectorChunks) {
   let local = localChunks;
   let vector = vectorChunks;
   let text = build(local, vector);

@@ -313,9 +313,3 @@ npm run build
 - GitHub: https://github.com/Shizu0n
 - LinkedIn: https://www.linkedin.com/in/paulo-shizuo/
 - Portfolio: https://shizu0n.vercel.app
-
-## License
-
-MIT. See `LICENSE` for details.
-
-

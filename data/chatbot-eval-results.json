@@ -1,0 +1,235 @@
+{
+  "run_at": "2026-10-18T15:47:31.279Z",
+  "passed": 14,
+  "total": 20,
+  "providers": {
+    "gemini-2.5-flash-lite": 14,
+    "gemini-2.5-flash": 3,
+    "groq/openai/gpt-oss-120b": 2,
+    "null": 1
+  },
+  "cases": [
+    {
+      "id": "pt-all-stacks",
+      "pass": false,
+      "missing": [
+        "TypeScript",
+        "NestJS",
+        "Spring Boot",
+        "MySQL",
+        "SQLite",
+        "Referral System"
+      ],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 4640,
+      "answer": "Paulo utiliza uma variedade de tecnologias em seus projetos, focando em sistemas de IA e aplicações full-stack.\n\nAqui está uma lista das stacks e os projetos onde elas aparecem:\n\n*   **PostgreSQL**: Usado em **Shizu0n CV**, **CampusCycle** e **ReAct Agent**.\n*   **Gemini API**: Integrada em **Shizu0n CV** e **ReAct Agent**.\n*   **Supabase**: Utilizado como banco de dados em **Shizu0n CV** e **ReAct Agent**.\n*   **pgvector**: Empregado em **Shizu0n CV** e **ReAct Agent** para funcionalidades de banco de dados vetorial.\n*   **JavaScript**: Presente tanto no frontend quanto no backend do **Delivery System**, e também no backend do **Shizu0n CV**.\n*   **Groq**: Integrado em **Shizu0n CV** e **ReAct Agent** para processamento de IA.\n\nGostaria de saber mais sobre alguma stack ou projeto específico?"
+    },
+    {
+      "id": "pt-project-purpose",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3559,
+      "answer": "Paulo implementou o **Delivery System** para praticar um domínio full stack mais completo.\n\nEle resolve o problema de coordenar clientes, restaurantes e entregadores de forma eficiente, organizando o ciclo completo de pedidos, gerenciamento de cardápio, endereços, entregas e avaliações em um único sistema operacional.\n\nO sistema utiliza uma aplicação React + Node.js com backend autenticado via JWT e banco de dados MySQL, apresentando separação clara entre frontend e backend, com fluxos específicos para cada tipo de usuário (cliente, restaurante e entregador)."
+    },
+    {
+      "id": "pt-best-java",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3015,
+      "answer": "Para demonstrar habilidades em Java, Paulo recomenda dois projetos:\n\n*   **Academic System**: Este projeto é uma boa opção para discutir o backend em Java, a implementação de regras de negócio e a integração com serviços externos. Ele apresenta uma arquitetura em camadas clara e um modelo detalhado de integração externa.\n\n*   **Gym Management System**: Este projeto é útil para conversar sobre modelagem de domínio administrativo, uso de Spring Boot e Java Swing. Ele aborda áreas como administração de estudantes e instrutores, planos e matrículas, e pagamentos.\n\nAmbos os projetos utilizam Java, mas o **Academic System** se destaca pela sua arquitetura mais explícita e pela integração com serviços externos, enquanto o **Gym Management System** foca mais no domínio administrativo e em uma composição desktop/backend."
+    },
+    {
+      "id": "pt-best-complete",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3808,
+      "answer": "O projeto **Delivery System** é considerado o mais completo, pois combina múltiplos papéis, autenticação, API, banco de dados e abrange um amplo domínio de delivery.\n\nOutros projetos que se destacam pela completude em diferentes aspectos são:\n\n*   **Shizu0n CV**: Reúne apresentação, integrações, deploy, chat com IA e manutenção ativa.\n*   **CampusCycle**: Entrega descoberta, autenticação, CRUD, ciclo de anúncio, PWA instalável, operação offline, testes e documentação.\n*   **Advanced RAG**: Cobre todo o ciclo de RAG, incluindo ingestão, indexação, retrieval híbrido, síntese, avaliação e revisão.\n\nGostaria de saber mais sobre algum deles?"
+    },
+    {
+      "id": "pt-best-backend",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3802,
+      "answer": "Paulo construiu vários projetos com diferentes níveis de profundidade em seus backends. Para avaliar qual é o \"melhor\", é útil considerar os critérios de complexidade e funcionalidades.\n\nCom base na profundidade do backend, os projetos se destacam da seguinte forma:\n\n*   **Academic System**: Possui serviço, repositório, exceções de domínio e integração com três APIs, demonstrando uma arquitetura robusta.\n*   **Delivery System**: Apresenta uma API REST, JWT para autenticação e segurança básica, além de um domínio operacional bem definido.\n*   **Referral System**: O backend em NestJS inclui módulos, guards, decorators e TypeORM com uma relação recursiva, evidenciando uma estrutura organizada.\n*   **Shizu0n CV**: Embora não seja um CRUD tradicional, seu backend conta com Server-Sent Events (SSE), fallback de provedores, segurança básica e retrieval vetorial.\n\nGostaria de saber mais detalhes sobre algum desses projetos ou sobre outros aspectos do trabalho de Paulo?"
+    },
+    {
+      "id": "pt-personal",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 2787,
+      "answer": "Paulo Shizuo é um estudante de Ciência da Computação na Universidade de Fortaleza (UNIFOR), com previsão de formatura para dezembro de 2027.\n\nEle se dedica à construção de sistemas de IA e aplicações full-stack, combinando conhecimentos em inteligência artificial e desenvolvimento web para criar produtos funcionais do início ao fim."
+    },
+    {
+      "id": "en-all-stacks",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 4006,
+      "answer": "Paulo has utilized a variety of technologies across his projects, focusing on AI systems and full-stack applications.\n\nHere's a breakdown of the stacks and the projects they are associated with:\n\n*   **ReAct Agent**: This full-stack project utilizes Python with LangGraph for its backend, integrating Server-Sent Events for streaming and Supabase with PostgreSQL and pgvector for its database. It also incorporates the Gemini API and Groq.\n*   **Shizu0n CV**: Paulo's portfolio uses React for the frontend, with a backend supported by Vercel Functions, Server-Sent Events, the Gemini API, and Groq. The database is managed by Supabase, PostgreSQL, and pgvector.\n*   **CampusCycle**: This project features a React PWA frontend and a Node.js/Express backend with Prisma. It uses PostgreSQL and Neon for the database, with IndexedDB for offline capabilities, and JWT/bcrypt for authentication.\n*   **Referral System**: Built with NestJS and TypeScript on the backend, this system uses React 19 for the frontend and SQLite for its database. It also employs JWT and bcrypt for security.\n*   **Delivery System**: This project uses React 19 for the frontend and Node.js/Express for the backend, with MySQL as the database.\n*   **Gym Management System**: Paulo developed this with Java, Spring Boot, and JPA for the backend, while the frontend is a Java Swing application, using MySQL as the database.\n*   **Academic System**: This project is a Java console application using Java 21, JDBC, and Gson for the backend, with MySQL as the database.\n*   **Advanced RAG**: This project focuses on AI and uses Python with LlamaIndex and ChromaDB for its backend, featuring Retrieval-Augmented Generation and LLM Evaluation with tools like RAGAS.\n*   **Phi-3 Mini SQL Generator**: This project involves AI fine-tuning using Python, Transformers, PEFT, bitsandbytes, and QLoRA, focusing on Text-to-SQL generation.\n\nWould you like to know more about any specific project or technology?"
+    },
+    {
+      "id": "en-react-recommendation",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 2617,
+      "answer": "Paulo's React work is best represented by **Shizu0n CV**.\n\nThis project is highlighted as:\n- The most visually polished and real-world-ready project.\n- It combines a strong frontend built with React, a serverless backend, and RAG capabilities.\n\nOther projects showcasing React in a strong full-stack context include **CampusCycle** and **Delivery System**."
+    },
+    {
+      "id": "en-nestjs",
+      "pass": false,
+      "missing": [
+        "TypeORM"
+      ],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 7083,
+      "answer": "Paulo has one project that best showcases his NestJS experience: the **Referral System**.\n\nThis project matters because it stands out as his strongest example of NestJS and full-stack authentication implemented in TypeScript.\n\nHere's why it's significant:\n\n*   **Technology Showcase**: It demonstrates a clear JWT and authentication structure, providing a good signal of his full-stack capabilities with TypeScript.\n*   **Scope**: While having a leaner product scope than the Delivery System, it offers a focused look at authentication and referral flows.\n*   **Learning Process**: Paulo documented the architecture and his learning process, offering insights into his development approach.\n\nThe Referral System's tradeoffs include a smaller domain scope compared to other projects and limited evidence of automated testing and production deployment."
+    },
+    {
+      "id": "en-spring",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3078,
+      "answer": "Paulo built the **Gym Management System** using Spring Boot.\n\nThis project consolidates gym operations into a single system, managing students, plans, payments, workouts, and attendance. It features a Java Swing interface, a Java/Spring Boot backend, and MySQL persistence."
+    },
+    {
+      "id": "en-metrics",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash",
+      "ms": 4831,
+      "answer": "For the **Delivery System** project, here are some engineering and functional metrics:\n\n**Engineering Metrics:**\n- **API Surface**: Covers endpoint groups for Authentication, Addresses, Restaurant categories, Menu items, Orders, Couriers, and Reviews.\n- **Modules**: Structured into backend, frontend, database, and diagrams.\n- **Languages**: Predominantly JavaScript (81.87%) and CSS (18.03%).\n- **Repository Size**: 1612 KB with 941 total items.\n\n**Functional Metrics:**\n- **Domain Areas**: Includes Ordering, Catalog management, Delivery execution, and Reviews.\n- **Primary Flows**: Such as Register/login, Manage addresses, Manage categories and menu items, Create order, Courier flow, and Review restaurant.\n- **User Roles**: Supports 3 distinct user roles.\n- **Key Features**: 9 key features and 4 domain areas are covered.\n\nYou can find the repository for this project on GitHub: [https://github.com/Shizu0n/DeliverySystem](https://github.com/Shizu0n/DeliverySystem)."
+    },
+    {
+      "id": "en-unknown-fact",
+      "pass": false,
+      "missing": [
+        "contact",
+        "one of: not on record | don't have | not in | no record | not documented | not available"
+      ],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3082,
+      "answer": "I cannot provide information about the number of production users for Paulo's chatbot. The available context does not contain this specific detail."
+    },
+    {
+      "id": "en-ai-phi3-detail",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3502,
+      "answer": "Paulo built the **Phi-3 Mini SQL Generator** to demonstrate ML ops and end-to-end fine-tuning competence.\n\nThe project addresses the problem of small base models generating SQL with low accuracy, while full fine-tuning is too expensive for accessible hardware. Paulo's solution is a QLoRA pipeline using 4-bit NF4 quantization over Phi-3-mini-4k-instruct.\n\nThe stack for this project includes:\n*   **Backend:** Python, Transformers, PEFT, bitsandbytes, QLoRA\n*   **Database:** SQL Create Context dataset\n*   **Tooling:** Google Colab, Hugging Face Hub, Jupyter notebooks, Git\n\nThe fine-tuning process achieved a significant improvement, lifting exact-match accuracy from 2% for the base model to 73.5%. This was accomplished through a notebook pipeline on Google Colab with a T4 GPU, syncing via Drive, and publishing artifacts to the Hugging Face Hub.\n\nWould you like to know more about its architecture, specific features, or limitations?"
+    },
+    {
+      "id": "en-ai-rag",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 3877,
+      "answer": "Paulo's **Advanced RAG** project is an end-to-end Retrieval-Augmented Generation system designed to be configurable, evaluable, and functional even without paid cloud providers.\n\nIt matters because it treats RAG as a comprehensive engineering system, addressing the common issue where many RAG demos are limited to basic vector search and cease to function without paid services. Paulo's project separates key RAG components like ingestion, retrieval, synthesis, and evaluation. This modularity allows for independent swapping of retrieval strategies and provider policies, fostering auditable comparisons.\n\nKey aspects include:\n- **Offline Capability:** It includes robust offline evaluation using lexical metrics and an extractive fallback for synthesis, ensuring utility when cloud services are unavailable.\n- **Hybrid Retrieval:** It implements a sophisticated hybrid retrieval strategy combining BM25, dense retrieval, reciprocal-rank fusion, and reranking.\n- **Evaluation Focus:** The system incorporates golden datasets and offline metrics for honest evaluation, with an optional integration for cloud-based RAGAS.\n- **Streamlit Interface:** A Streamlit UI provides a review interface for ingestion, queries, and evaluation results.\n\nThe project is built using Python and Streamlit, leveraging LlamaIndex and ChromaDB for its backend and database needs, with BM25 and sentence reranking for retrieval. You can find the project on GitHub: [Advanced RAG](https://github.com/Shizu0n/Advanced-RAG)."
+    },
+    {
+      "id": "en-ai-agent",
+      "pass": false,
+      "missing": [
+        "LangGraph"
+      ],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash-lite",
+      "ms": 4254,
+      "answer": "The ReAct Agent project delivers a full-stack conversational AI agent. It addresses the common limitations of tool-using agents by providing:\n\n*   **Reasoning and Action Transparency:** The ReAct loop, including reasoning and action traces, is streamed over Server-Sent Events (SSE) for clear inspection.\n*   **Cross-Conversation Memory:** It remembers facts across different conversations using a combination of a checkpointer and a long-term store in PostgreSQL.\n*   **Retrieval-Augmented Generation (RAG):** The agent can answer questions based on user-uploaded documents, providing cited answers with a guard against hallucinations.\n*   **Persistent and Replayable Traces:** Every interaction is saved, allowing for replay and analysis of agent behavior, including latency and provider fallback events.\n*   **Dynamic Tool Discovery:** It can discover and utilize external tools defined via the Model Context Protocol (MCP).\n\nPaulo built this agent to demonstrate modern agent engineering principles, focusing on observability, memory, RAG, and tool use, all while operating within free-tier limitations. The project achieved a 100% evaluation baseline on 22 labeled cases and includes 154 backend unit tests."
+    },
+    {
+      "id": "pt-ai-engineering",
+      "pass": false,
+      "missing": [
+        "Phi-3"
+      ],
+      "forbidden": [],
+      "status": 200,
+      "provider": "groq/openai/gpt-oss-120b",
+      "ms": 4682,
+      "answer": "Os projetos que evidenciam a experiência de Paulo em engenharia de IA são:\n\n- **ReAct Agent** – agente full‑stack baseado em LangGraph, com memória persistente em Postgres, RAG sobre documentos enviados, rastreamento de raciocínio via SSE e descoberta dinâmica de ferramentas via **MCP**. Avaliado com 100 % de acurácia em 22 casos rotulados e 154 testes de backend. [GitHub](https://github.com/Shizu0n/ReAct-Agent)\n\n- **Advanced RAG** – pipeline completo de Retrieval‑Augmented Generation offline: ingestão, indexação no ChromaDB, recuperação híbrida (BM25 + dense + reciprocal‑rank fusion + reranking) e síntese LLM com fallback extrativo, tudo revisável em interface Streamlit. [GitHub](https://github.com/Shizu0n/Advanced-RAG)\n\n- **Shizu0n CV** – portfólio React/TypeScript que inclui um chatbot IA usando RAG sobre o próprio histórico técnico de Paulo, demonstrando integração de IA em UI e recuperação de conhecimento. [GitHub](https://github.com/Shizu0n/Shizu0n-CV)\n\nEsses trabalhos mostram a capacidade de Paulo de projetar, implementar e validar sistemas de IA complexos, combinando agentes, recuperação de informação e integração front‑end/back‑end.  \n\nPara mais detalhes ou contato: [paulosvtatibana@gmail.com](mailto:paulosvtatibana@gmail.com) ou [LinkedIn](https://linkedin.com/in/paulo-shizuo)."
+    },
+    {
+      "id": "pt-campus-cycle",
+      "pass": false,
+      "missing": [
+        "CampusCycle",
+        "IndexedDB",
+        "idempot",
+        "GitHub",
+        "campus-cycles.vercel.app"
+      ],
+      "forbidden": [],
+      "status": 429,
+      "provider": null,
+      "ms": 1891,
+      "answer": ""
+    },
+    {
+      "id": "en-follow-up-limits",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "groq/openai/gpt-oss-120b",
+      "ms": 3986,
+      "answer": "**Limits of the ReAct Agent**\n\n- **Security surface** – The Python execution environment is the most sensitive part of the system; it is isolated in a subprocess but still represents a potential attack vector.  \n\n- **External dependencies** – Model‑provider APIs and embedding‑service quotas can become unstable, which may affect availability or latency.  \n\n- **Authentication** – There is no end‑user authentication layer; the agent runs with an anonymous, browser‑scoped identity, limiting access control.  \n\n- **Operational constraints** – A free‑tier fallback chain (Gemini → Groq → GitHub Models) is used, with rate‑limiting (10 req/min/IP), a hard cap of 10 ReAct loop iterations, and reliance on Supabase free‑tier resources that pause after 7 days without keep‑alive.  \n\nThese trade‑offs were accepted to keep the system at **$0 cost** while showcasing full‑stack agent engineering. Let me know if you’d like more detail on any of these points."
+    },
+    {
+      "id": "en-question-on-pt-page",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash",
+      "ms": 2965,
+      "answer": "Yes, Paulo is available for a remote internship.\n\n*   He is open to any work model, including remote, hybrid, or on-site.\n*   He is based in Fortaleza, Brazil, and is open to national and international remote work.\n*   He is available part-time, around 4-6 hours per day, preferably in the afternoon/evening."
+    },
+    {
+      "id": "pt-measured-results",
+      "pass": true,
+      "missing": [],
+      "forbidden": [],
+      "status": 200,
+      "provider": "gemini-2.5-flash",
+      "ms": 3944,
+      "answer": "Paulo tem resultados medidos em alguns de seus projetos:\n\n*   **Phi-3 Mini SQL Generator**: A acurácia **exact-match** para text-to-SQL aumentou de 2% (modelo base) para **73,5%** após o fine-tuning QLoRA.\n*   **ReAct Agent**: Obteve **100%** de sucesso na tarefa e na seleção de ferramentas em 22 casos rotulados, além de ter 154 testes de backend.\n*   **CampusCycle**: Possui 64 testes automatizados e a fila de escrita offline com sincronização idempotente foi validada em um telefone Android físico.\n*   **Advanced RAG**: Foi avaliado com heurísticas offline e RAGAS opcional na nuvem, mas não possui uma métrica única de acurácia publicada.\n\nOutros projetos, como **Shizu0n CV**, **Academic System**, **Delivery System**, **Gym Management System** e **Referral System**, não têm métricas de acurácia ou benchmarks publicados."
+    }
+  ]
+}

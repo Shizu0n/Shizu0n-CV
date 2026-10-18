@@ -17,6 +17,7 @@
     "knowledge:build": "node --env-file-if-exists=.env ./scripts/build-chatbot-knowledge.js && node ./scripts/validate-chatbot-knowledge.js",
     "knowledge:validate": "node ./scripts/validate-chatbot-knowledge.js",
     "knowledge:ingest": "node --env-file=.env ./scripts/ingest.js",
+    "eval:chat": "node --env-file=.env ./scripts/run-chat-evals.js",
     "preview": "vite preview",
     "clean": "rm -rf dist"
   },

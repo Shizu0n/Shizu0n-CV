@@ -20,7 +20,7 @@ vi.mock('@google/generative-ai', () => ({
   },
 }))
 
-const { default: handler, buildLocalContext, classifyIntent, createCanaryGuard, detectLanguage, trimHistory } = await import('../api/chat.js')
+const { default: handler, buildLocalContext, buildSystemInstruction, classifyIntent, createCanaryGuard, detectLanguage, fitInstruction, GROQ_PROMPT_CHARS, trimHistory } = await import('../api/chat.js')
 const knowledge = JSON.parse(fs.readFileSync(new URL('../data/portfolio-knowledge.json', import.meta.url), 'utf8'))
 
 let ip = 0
@@ -64,6 +64,15 @@ describe('classifyIntent', () => {
     expect(analysis.projectIds).toEqual(['react-agent'])
     const facets = buildLocalContext(knowledge, analysis).filter(c => c.project_id === 'react-agent').map(c => c.facet)
     expect(facets).toContain('metrics-recommendation')
+  })
+
+  it("keeps the project's results and tradeoffs inside Groq's budget", () => {
+    const prompt = fs.readFileSync(new URL('../data/chatbot-prompt.txt', import.meta.url), 'utf8')
+    const analysis = classifyIntent('And what are its limits?', knowledge, { previous: ['What does the ReAct Agent do?'] })
+    const build = (local, vector) => buildSystemInstruction(prompt, knowledge, analysis, local, vector, 'canary').instruction
+    const fitted = fitInstruction(build, buildLocalContext(knowledge, analysis), [])
+    expect(fitted.length).toBeLessThanOrEqual(GROQ_PROMPT_CHARS)
+    expect(fitted).toContain('[recommendation/metrics-recommendation/react-agent]')
   })
 
   it('does not carry a project into a question with its own topic', () => {

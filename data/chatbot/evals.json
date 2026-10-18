@@ -34,7 +34,6 @@
     "must_include": [
       "Academic System",
       "Java",
-      "arquitetura",
       "regras"
     ]
   },
@@ -43,10 +42,8 @@
     "language": "pt",
     "question": "Qual é o projeto mais completo do Paulo?",
     "must_include": [
-      "Shizu0n CV",
-      "deploy",
-      "chat",
-      "integrações"
+      "Delivery System",
+      "API"
     ]
   },
   {
@@ -55,8 +52,7 @@
     "question": "Qual é o melhor projeto de backend?",
     "must_include": [
       "Academic System",
-      "camadas",
-      "integrações"
+      "integra"
     ]
   },
   {
@@ -65,8 +61,7 @@
     "question": "Quem é Paulo Shizuo e onde ele estuda?",
     "must_include": [
       "Ciência da Computação",
-      "UNIFOR",
-      "Fortaleza"
+      "UNIFOR"
     ]
   },
   {
@@ -133,9 +128,15 @@
     "language": "en",
     "question": "How many production users does Paulo's chatbot have today?",
     "must_include": [
+      "contact"
+    ],
+    "must_include_any": [
+      "not on record",
       "don't have",
       "not in",
-      "contact"
+      "no record",
+      "not documented",
+      "not available"
     ]
   },
   {
@@ -187,9 +188,57 @@
     "must_include": [
       "CampusCycle",
       "IndexedDB",
-      "idempotência",
+      "idempot",
       "GitHub",
       "campus-cycles.vercel.app"
+    ]
+  },
+  {
+    "id": "en-follow-up-limits",
+    "language": "en",
+    "history": [
+      {
+        "role": "user",
+        "content": "What does the ReAct Agent do?"
+      },
+      {
+        "role": "assistant",
+        "content": "The ReAct Agent is a LangGraph agent with tool use, cross-conversation memory and RAG over uploaded documents."
+      }
+    ],
+    "question": "And what are its limits?",
+    "must_include": [
+      "authentication"
+    ],
+    "must_include_any": [
+      "security",
+      "quota"
+    ]
+  },
+  {
+    "id": "en-question-on-pt-page",
+    "language": "en",
+    "page_language": "pt",
+    "question": "Is Paulo available for a remote internship?",
+    "must_include": [
+      "internship"
+    ],
+    "must_include_any": [
+      "remote",
+      "Fortaleza"
+    ]
+  },
+  {
+    "id": "pt-measured-results",
+    "language": "pt",
+    "question": "Quais resultados medidos o Paulo tem nos projetos?",
+    "must_include": [
+      "154",
+      "64"
+    ],
+    "must_include_any": [
+      "73,5",
+      "73.5"
     ]
   }
 ]

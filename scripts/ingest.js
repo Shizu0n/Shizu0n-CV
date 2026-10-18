@@ -41,44 +41,64 @@ async function embedWithRetry(model, content, attempts = 3) {
   }
 }
 
+const metadataOf = (chunk) => ({
+  chunk_id: chunk.id,
+  type: chunk.type,
+  project_id: chunk.project_id,
+  facet: chunk.facet,
+  language: chunk.language,
+  stack: chunk.stack,
+  stacks: chunk.stacks || [],
+  tags: chunk.tags || []
+});
+// jsonb reorders keys, so metadata is compared with sorted keys.
+const stable = (value) => JSON.stringify(value, Object.keys(value).sort());
+
+// Embeds only new or changed chunks, writes only after every embedding succeeded, and inserts
+// before deleting: a failure (quota) no longer leaves the table empty or half-filled, as it did
+// when this script deleted everything first.
 async function main() {
   console.log(`Starting RAG ingestion for ${chunks.length} chunks...`);
   const model = genAI.getGenerativeModel({ model: 'gemini-embedding-001' });
 
-  console.log('Cleaning up previous chunks...');
-  const { error: deleteError } = await supabase.from('chunks').delete().neq('id', -1);
-  if (deleteError) {
-    throw deleteError;
+  const { data: rows, error: readError } = await supabase.from('chunks').select('id, content, metadata');
+  if (readError) {
+    throw readError;
   }
+  const current = new Map(rows.filter((row) => row.metadata?.chunk_id).map((row) => [row.metadata.chunk_id, row]));
 
+  const keep = new Set();
+  const updates = [];
+  const inserts = [];
   for (const chunk of chunks) {
+    const metadata = metadataOf(chunk);
+    const row = current.get(chunk.id);
+    if (row && row.content === chunk.content) {
+      keep.add(row.id);
+      if (stable(row.metadata) !== stable(metadata)) updates.push({ id: row.id, metadata });
+      continue;
+    }
     console.log(`Embedding ${chunk.id} (${chunk.type}/${chunk.facet})...`);
     const result = await embedWithRetry(model, chunk.content);
-    const embedding = result.embedding.values;
-
-    const metadata = {
-      chunk_id: chunk.id,
-      type: chunk.type,
-      project_id: chunk.project_id,
-      facet: chunk.facet,
-      language: chunk.language,
-      stack: chunk.stack,
-      stacks: chunk.stacks || [],
-      tags: chunk.tags || []
-    };
-
-    const { error } = await supabase.from('chunks').insert({
-      content: chunk.content,
-      metadata,
-      embedding
-    });
-
-    if (error) {
-      throw error;
-    }
+    inserts.push({ content: chunk.content, metadata, embedding: result.embedding.values });
   }
 
-  console.log('RAG database updated successfully.');
+  for (let i = 0; i < inserts.length; i += 20) {
+    const { error } = await supabase.from('chunks').insert(inserts.slice(i, i + 20));
+    if (error) throw error;
+  }
+  for (const { id, metadata } of updates) {
+    const { error } = await supabase.from('chunks').update({ metadata }).eq('id', id);
+    if (error) throw error;
+  }
+  // Replaced, removed and duplicated rows from the read above; rows inserted just now are not in it.
+  const stale = rows.filter((row) => !keep.has(row.id)).map((row) => row.id);
+  for (let i = 0; i < stale.length; i += 100) {
+    const { error } = await supabase.from('chunks').delete().in('id', stale.slice(i, i + 100));
+    if (error) throw error;
+  }
+
+  console.log(`RAG database updated: ${inserts.length} embedded, ${updates.length} metadata updates, ${stale.length} removed, ${keep.size} unchanged.`);
 }
 
 main().catch((error) => {
