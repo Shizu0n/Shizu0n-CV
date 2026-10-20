@@ -209,8 +209,8 @@ export const PROJECT_PRESENTATION: Record<string, ProjectPresentation> = {
     year: '2025',
     kind: { en: 'This site', pt: 'Este site' },
     description: {
-      en: 'This portfolio. Its chat answers from my own project history: an intent classifier picks bundled context, Supabase pgvector adds retrieved chunks when available, and Gemini streams the answer over SSE, moving to the next free model (Flash-Lite, then Groq) when one fails.',
-      pt: 'Este portfólio. O chat responde a partir do meu próprio histórico de projetos: um classificador de intenção escolhe o contexto embutido, o Supabase pgvector acrescenta trechos recuperados quando disponível, e o Gemini transmite a resposta via SSE, passando para o próximo modelo gratuito (Flash-Lite, depois Groq) quando um falha.',
+      en: 'This portfolio. Its chat answers from my own project history: an intent classifier picks bundled context, Supabase pgvector adds retrieved chunks when available, and Gemini streams the answer over SSE, moving to the next free model (Flash-Lite, then Groq) when one fails. A 20-question eval checks its answers (required facts, no inflated titles): 17 passed in October 2026, answered by Gemini 2.5 Flash.',
+      pt: 'Este portfólio. O chat responde a partir do meu próprio histórico de projetos: um classificador de intenção escolhe o contexto embutido, o Supabase pgvector acrescenta trechos recuperados quando disponível, e o Gemini transmite a resposta via SSE, passando para o próximo modelo gratuito (Flash-Lite, depois Groq) quando um falha. Uma avaliação de 20 perguntas confere as respostas (fatos obrigatórios, nenhum cargo inflado): 17 passaram em outubro de 2026, respondidas pelo Gemini 2.5 Flash.',
     },
     diagram: {
       tiers: [

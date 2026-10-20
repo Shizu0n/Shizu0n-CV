@@ -11,7 +11,8 @@
     "ReAct Agent: 154 backend tests and 22 labeled cases run as a regression harness against the real graph (100% task success and tool selection on those 22 cases).",
     "CampusCycle: 64 automated tests; the offline write queue and idempotent sync were validated on a physical Android phone.",
     "Advanced RAG: evaluated with offline heuristics and opt-in cloud RAGAS across retrieval strategies; it has no single headline accuracy number.",
-    "Shizu0n CV (this portfolio) and the smaller application systems have no published accuracy or benchmark metric."
+    "Shizu0n CV (this portfolio): its chat passed 17 of 20 questions of its own eval (required facts present, no inflated titles), answered by Gemini 2.5 Flash in October 2026.",
+    "The smaller application systems have no published accuracy or benchmark metric."
   ],
   "project_kinds": [
     "Full-stack (frontend, backend and database): ReAct Agent (React + FastAPI + Supabase Postgres/pgvector, around an AI agent), CampusCycle (React PWA + Express + Prisma/PostgreSQL), Shizu0n CV (React + Vercel Functions + Supabase), Referral System (React + NestJS + SQLite), Delivery System (React + Express + MySQL).",
