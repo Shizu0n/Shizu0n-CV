@@ -113,6 +113,34 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18e
 .nav-toggle { padding: 4px 0; color: var(--text-muted); text-decoration: underline; text-underline-offset: 0.18em; }
 .nav-toggle:hover { color: var(--signal); }
 
+/* The running head (Nav.tsx): once the top nav scrolls away, the wordmark's corner keeps the
+   name of the section being read, after a short signal trace, and opens into the same links
+   and toggles on hover or tap. It floats over the text, so like the chat's floating parts it
+   keeps a hairline and a shadow. */
+.index {
+  position: fixed; top: 14px; left: var(--margin); z-index: 300; min-width: 184px;
+  border-radius: var(--radius); background: var(--ground-raised);
+  box-shadow: 0 0 0 1px var(--line), 0 10px 28px rgba(0, 0, 0, 0.22); /* taste-skill-ignore */
+  font-size: var(--step-small); line-height: 1.3;
+  opacity: 0; visibility: hidden; transform: translateY(-8px);
+  transition: opacity 300ms var(--ease), transform 400ms var(--ease), visibility 0s 400ms;
+}
+.index.is-shown { opacity: 1; visibility: visible; transform: none; transition: opacity 300ms var(--ease), transform 400ms var(--ease), visibility 0s; }
+.index-current { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px; padding: 0 14px; }
+.index-current::before { content: ''; width: 14px; height: 1px; background: var(--signal); }
+.index-body { display: none; padding: 0 14px 10px; }
+.index.is-open .index-body { display: block; }
+@media (hover: hover) { .index:hover .index-body { display: block; } }
+.index-body .nav-wordmark { display: block; margin-top: 4px; }
+.index ul { display: grid; justify-items: start; margin-top: 6px; }
+.index ul a { display: inline-flex; align-items: center; min-height: 36px; color: var(--text-muted); text-decoration: none; transition: color 200ms var(--ease); }
+.index ul a::before { content: ''; width: 0; height: 1px; margin-right: 0; background: var(--signal); transition: width 400ms var(--ease), margin-right 400ms var(--ease); }
+.index ul a[aria-current] { color: var(--text); }
+.index ul a[aria-current]::before { width: 14px; margin-right: 10px; }
+.index ul a:hover { color: var(--signal); }
+.index-toggles { display: grid; justify-items: start; margin-top: 4px; }
+.index-toggles .nav-toggle { min-height: 36px; }
+
 /* ---------- Buttons and links ---------- */
 /* The primary action fills with the signal colour from the left on hover. */
 .button {

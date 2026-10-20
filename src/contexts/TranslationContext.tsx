@@ -21,6 +21,7 @@ const translations = {
     'nav.contact': 'Contact',
     'nav.theme.light': 'Light mode',
     'nav.theme.dark': 'Dark mode',
+    'nav.sections': 'Sections',
 
     // Chat Widget
     'chat.title': 'Ask about my work',
@@ -132,6 +133,7 @@ const translations = {
     'nav.contact': 'Contato',
     'nav.theme.light': 'Modo claro',
     'nav.theme.dark': 'Modo escuro',
+    'nav.sections': 'Seções',
 
     // Chat Widget
     'chat.title': 'Pergunte sobre meu trabalho',
@@ -226,7 +228,7 @@ const translations = {
 
     // Contact
     'contact.title.1': 'Procurando estagiário?',
-    'contact.title.2': 'Me escreva.',
+    'contact.title.2': 'Me mande uma mensagem.',
     'contact.email.copy': 'Copiar o endereço de email',
     'contact.email.copyShort': 'Copiar',
     'contact.email.copied': 'Copiado',
