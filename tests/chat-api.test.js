@@ -20,7 +20,7 @@ vi.mock('@google/generative-ai', () => ({
   },
 }))
 
-const { default: handler, buildLocalContext, buildSystemInstruction, classifyIntent, createCanaryGuard, detectLanguage, fitInstruction, GROQ_PROMPT_CHARS, trimHistory } = await import('../api/chat.js')
+const { default: handler, buildLocalContext, buildSystemInstruction, classifyIntent, createCanaryGuard, detectLanguage, fitInstruction, GROQ_PROMPT_CHARS, parseProviderChain, trimHistory } = await import('../api/chat.js')
 const knowledge = JSON.parse(fs.readFileSync(new URL('../data/portfolio-knowledge.json', import.meta.url), 'utf8'))
 
 let ip = 0
@@ -82,6 +82,23 @@ describe('classifyIntent', () => {
   it('loads the measured results for a project question about results', () => {
     const analysis = classifyIntent('Quais resultados medidos o Paulo tem nos projetos?', knowledge)
     expect(buildLocalContext(knowledge, analysis).map(c => c.id)).toContain('ranking:measured_results')
+  })
+
+  it('loads the only project using a stack when the question names the stack, not the project', () => {
+    const analysis = classifyIntent("Show me Paulo's NestJS project and explain why it matters.", knowledge)
+    expect(analysis.projectIds).toEqual([])
+    const ids = buildLocalContext(knowledge, analysis).map(c => c.id)
+    expect(ids).toContain('project:referral-system:problem-solution')
+    expect(ids).toContain('project:referral-system:architecture-features')
+  })
+})
+
+describe('parseProviderChain', () => {
+  it('narrows the chain to known keys and falls back to the default', () => {
+    expect(parseProviderChain(undefined)).toEqual(['gemini', 'gemini-lite', 'groq'])
+    expect(parseProviderChain('gemini')).toEqual(['gemini'])
+    expect(parseProviderChain(' groq , gemini,groq ')).toEqual(['groq', 'gemini'])
+    expect(parseProviderChain('gpt,flash')).toEqual(['gemini', 'gemini-lite', 'groq'])
   })
 })
 

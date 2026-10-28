@@ -293,7 +293,7 @@
       "domain_areas": ["Authentication", "Referral flow", "Profile management"],
       "primary_flows": ["Register user", "Log in", "Persist session", "Generate referral link", "Copy referral link", "Access protected profile"]
     },
-    "strengths": ["Strongest NestJS example in the portfolio", "Clear JWT and auth structure", "Good TypeScript full-stack signal", "Well-documented architecture and learning process"],
+    "strengths": ["Only NestJS project in the portfolio, built as practice", "Clear JWT and auth structure", "Good TypeScript full-stack signal", "Well-documented architecture and learning process"],
     "tradeoffs": ["Smaller domain scope than Delivery System", "No explicit production deployment evidence", "Automated test evidence is limited"],
     "recommendation_tags": ["nestjs", "typescript", "react", "sqlite", "jwt", "typeorm", "auth", "referral"],
     "evidence_sources": [
@@ -370,7 +370,7 @@
       "domain_areas": ["Portfolio presentation", "Project showcase", "Contact flow", "AI Q&A"],
       "primary_flows": ["Read hero and sections", "Inspect GitHub-backed stats", "Browse selected projects", "Send contact message", "Ask questions in PT or EN"]
     },
-    "strengths": ["Most polished frontend in the portfolio", "Live deploy and current maintenance", "Strongest AI and integration story", "Bilingual UX plus chat", "Good mix of product presentation and implementation depth", "Chat eval (npm run eval:chat): 17 of 20 questions passed in October 2026 on Gemini 2.5 Flash, scored on required facts and no inflated titles"],
+    "strengths": ["Most polished frontend in the portfolio", "Live deploy and current maintenance", "Strongest AI and integration story", "Bilingual UX plus chat", "Good mix of product presentation and implementation depth", "Chat eval (npm run eval:chat): 19 of 20 questions passed in October 2026 on Gemini 2.5 Flash, scored on required facts and no inflated titles"],
     "tradeoffs": ["Public-content site rather than a business CRUD system", "Chat accuracy depends on knowledge curation quality", "Local dev chat behavior depends on backend availability", "3 of the 20 eval questions failed in October 2026: answers left out TypeORM (Referral System) and the run trace (ReAct Agent), and one said its retrieved context lacked a fact instead of pointing to contact"],
     "reliability": {
       "pt": "Custo: roda inteiro em free tiers (Vercel, Supabase, Gemini/Groq). Latência: três camadas de cache reduzem chamadas e tempo de resposta, cache no servidor (TTL de 10 min) e no cliente por sessão, ambos só para a pergunta que abre a conversa, e cache de embeddings (em memória + tabela no Supabase). Falhas: rate limiting de 10 req/min por IP; cadeia de fallback de provedores (Gemini Flash → Flash-Lite → Groq) que passa ao próximo após qualquer erro; o enriquecimento vetorial degrada silenciosamente para o contexto local determinístico se Supabase/Gemini estiverem indisponíveis, o chat sempre responde; canário anti-injeção de prompt substitui respostas comprometidas por um aviso de segurança.",
@@ -485,8 +485,8 @@
       "en": "A Python backend with a LangGraph StateGraph and a free-provider fallback chain (Gemini → Groq → GitHub Models), explicit tools (web search, sandboxed Python execution, math, memory_read/memory_write, document_search, MCP fetch_url), a single Supabase Postgres + pgvector persistence backbone (checkpointer, long-term memory, documents, and traces), and a FastAPI layer streaming events over SSE to a React 19/Vite frontend with per-conversation threads, replayable history, and in-prompt document upload."
     },
     "what_it_solves": {
-      "pt": "Entrega um agente que lembra fatos entre conversas (memory_read/memory_write aparecem como passos visíveis do traço), responde a partir de documentos enviados com citações de fonte e guarda anti-alucinação, persiste cada execução para replay com latência por passo e captura de fallback de provedor, e descobre ferramentas externas via MCP, tudo validado por casos rotulados executados contra o grafo real.",
-      "en": "It delivers an agent that remembers facts across conversations (memory_read/memory_write appear as visible trace steps), answers from uploaded documents with source citations and a no-hallucination guard, persists every run for replay with per-step latency and provider-fallback capture, and discovers external tools over MCP, all validated by labeled cases run against the real graph."
+      "pt": "Entrega um agente que lembra fatos entre conversas (memory_read/memory_write aparecem como passos visíveis do traço), responde a partir de documentos enviados com citações de fonte e guarda anti-alucinação, persiste cada execução como trace reexecutável com latência por passo e captura de fallback de provedor, e descobre ferramentas externas via MCP, tudo validado por casos rotulados executados contra o grafo real.",
+      "en": "It delivers an agent that remembers facts across conversations (memory_read/memory_write appear as visible trace steps), answers from uploaded documents with source citations and a no-hallucination guard, persists every run as a replayable trace with per-step latency and provider-fallback capture, and discovers external tools over MCP, all validated by labeled cases run against the real graph."
     },
     "target_users": {
       "roles": ["AI engineers", "Developers evaluating agents", "Technical reviewers"],

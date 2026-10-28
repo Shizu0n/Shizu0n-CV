@@ -11,7 +11,7 @@
     "ReAct Agent: 154 backend tests and 22 labeled cases run as a regression harness against the real graph (100% task success and tool selection on those 22 cases).",
     "CampusCycle: 64 automated tests; the offline write queue and idempotent sync were validated on a physical Android phone.",
     "Advanced RAG: evaluated with offline heuristics and opt-in cloud RAGAS across retrieval strategies; it has no single headline accuracy number.",
-    "Shizu0n CV (this portfolio): its chat passed 17 of 20 questions of its own eval (required facts present, no inflated titles), answered by Gemini 2.5 Flash in October 2026.",
+    "Shizu0n CV (this portfolio): its chat passed 19 of 20 questions of its own eval (required facts present, no inflated titles), answered by Gemini 2.5 Flash in October 2026.",
     "The smaller application systems have no published accuracy or benchmark metric."
   ],
   "project_kinds": [
@@ -206,8 +206,8 @@
     },
     {
       "project_id": "referral-system",
-      "summary_pt": "Melhor vitrine de NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System.",
-      "summary_en": "The best showcase of NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.",
+      "summary_pt": "O único projeto NestJS do portfólio, construído para praticar NestJS e autenticação full stack em TypeScript, com escopo de produto mais enxuto que o Delivery System.",
+      "summary_en": "The only NestJS project in the portfolio, built to practice NestJS and full-stack authentication in TypeScript, with a leaner product scope than Delivery System.",
       "scores": {
         "completeness": {
           "score": 4,

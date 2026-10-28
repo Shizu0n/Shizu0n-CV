@@ -2,6 +2,7 @@
 // data/chatbot-eval-results.json. Spends free-tier quota (one answer per case, 7 s apart).
 //   npm run eval:chat                        all cases, writes the results file
 //   npm run eval:chat -- en-nestjs pt-personal   only these, prints without writing
+// Set CHAT_PROVIDERS=gemini in the shell first for a Flash-only run (a shell variable wins over .env).
 import fs from 'fs';
 import { pathToFileURL } from 'url';
 

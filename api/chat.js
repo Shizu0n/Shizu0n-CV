@@ -21,7 +21,16 @@ const MAX_MESSAGE_LENGTH = 2000;
 const MAX_TOTAL_CONTENT_LENGTH = 10000;
 const ALLOWED_ORIGINS = buildAllowedOrigins(process.env.ALLOWED_ORIGINS);
 // Each free Gemini model has its own daily quota, so Flash-Lite still answers when Flash runs out.
-const PROVIDER_CHAIN = ['gemini', 'gemini-lite', 'groq'];
+const DEFAULT_PROVIDER_CHAIN = ['gemini', 'gemini-lite', 'groq'];
+
+// CHAT_PROVIDERS (comma-separated keys) narrows the chain, e.g. CHAT_PROVIDERS=gemini for a Flash-only eval.
+// Unknown keys are dropped; nothing valid left means the default chain.
+export function parseProviderChain(value) {
+  const keys = String(value || '').split(',').map((key) => key.trim()).filter((key) => DEFAULT_PROVIDER_CHAIN.includes(key));
+  return keys.length ? [...new Set(keys)] : DEFAULT_PROVIDER_CHAIN;
+}
+
+const PROVIDER_CHAIN = parseProviderChain(process.env.CHAT_PROVIDERS);
 
 const hashQuery = (text) =>
   crypto.createHash('md5').update((text || '').trim().toLowerCase()).digest('hex');
@@ -504,6 +513,17 @@ export function buildLocalContext(knowledge, analysis) {
 
     for (const stack of analysis.stackMentions) {
       addChunk(getChunkById(knowledge, `ranking:stack:${normalizeKey(stack).replace(/\s+/g, '-')}`));
+    }
+
+    // "Show me his NestJS project" names a stack, not a project: with only the one-line ranking the
+    // answer left out TypeORM. When a single project uses the stack, it is the project asked about.
+    if (!analysis.projectIds.length) {
+      const users = getProjectStackUsageChunks(knowledge)
+        .filter((chunk) => chunk.stacks.some((stack) => analysis.stackMentions.includes(stack)));
+      const chunks = users.length === 1
+        ? getProjectChunks(knowledge, users[0].project_id).sort((a, b) => facetRank(a) - facetRank(b))
+        : users;
+      for (const chunk of chunks) addChunk(chunk);
     }
   }
 

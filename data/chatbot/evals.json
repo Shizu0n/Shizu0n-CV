@@ -128,7 +128,7 @@
     "language": "en",
     "question": "How many production users does Paulo's chatbot have today?",
     "must_include": [
-      "contact"
+      "mailto:"
     ],
     "must_include_any": [
       "not on record",
